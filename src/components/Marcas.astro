@@ -1,0 +1,142 @@
+---
+const brands = [
+  { name: 'Miyota', category: 'Movimientos' },
+  { name: 'ETA', category: 'Movimientos' },
+  { name: 'Ronda', category: 'Movimientos' },
+  { name: 'ISA', category: 'Movimientos' },
+  { name: 'Epson', category: 'Movimientos' },
+  { name: 'SII', category: 'Movimientos' },
+  { name: 'Renata', category: 'Baterías' },
+  { name: 'GP', category: 'Baterías' },
+  { name: 'Maxell', category: 'Baterías' },
+  { name: 'Tianqiu', category: 'Baterías' },
+  { name: 'Polemik', category: 'Relojes' },
+  { name: 'Q&Q', category: 'Relojes' },
+];
+---
+
+<section class="marcas-section" id="marcas">
+  <div class="container">
+    <div class="marcas-header reveal">
+      <span class="section-tag">Marcas que distribuimos</span>
+      <h2 class="section-title">Trabajamos con los <span>mejores</span></h2>
+    </div>
+  </div>
+
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carouselTrack">
+      {brands.map(b => (
+        <div class="brand-chip">
+          <span class="brand-name">{b.name}</span>
+          <span class="brand-cat">{b.category}</span>
+        </div>
+      ))}
+      {brands.map(b => (
+        <div class="brand-chip" aria-hidden="true">
+          <span class="brand-name">{b.name}</span>
+          <span class="brand-cat">{b.category}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .marcas-section {
+    padding: 5rem 0;
+    background: var(--white);
+    overflow: hidden;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .marcas-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+  }
+
+  .carousel-wrapper::before,
+  .carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--white), transparent);
+  }
+
+  .carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--white), transparent);
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.25rem;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .brand-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    min-width: 140px;
+    transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    white-space: nowrap;
+  }
+
+  .brand-chip:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-3px);
+  }
+
+  .brand-chip:hover .brand-name { color: var(--white); }
+  .brand-chip:hover .brand-cat { color: var(--yellow); }
+
+  .brand-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--blue);
+    letter-spacing: 0.05em;
+    transition: color var(--transition);
+  }
+
+  .brand-cat {
+    font-size: 0.7rem;
+    color: var(--red);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+    transition: color var(--transition);
+  }
+</style>

@@ -1,0 +1,168 @@
+---
+const reasons = [
+  {
+    num: '01',
+    title: 'Stock inmediato',
+    desc: 'Más de 1,500 referencias disponibles para entrega inmediata. Sin esperas, sin sorpresas.',
+  },
+  {
+    num: '02',
+    title: 'Precios competitivos',
+    desc: 'Ubicados en la Zona Libre de Colón, ofrecemos precios de distribuidor directamente a su negocio.',
+  },
+  {
+    num: '03',
+    title: 'Soporte directo',
+    desc: 'Atención personalizada por WhatsApp. Hable con una persona real que conoce los productos.',
+  },
+  {
+    num: '04',
+    title: 'Envíos internacionales',
+    desc: 'Despachamos a toda Latinoamérica y el Caribe. Consulte disponibilidad y costos.',
+  },
+];
+---
+
+<section class="porque-section">
+  <div class="container">
+    <div class="porque-header">
+      <span class="section-tag reveal">¿Por qué elegirnos?</span>
+      <h2 class="section-title reveal delay-100">La diferencia <span>Colbateries</span></h2>
+    </div>
+
+    <div class="reasons-grid">
+      {reasons.map((r, i) => (
+        <div class={`reason-card reveal delay-${i * 100 + 100}`}>
+          <span class="reason-num">{r.num}</span>
+          <h3 class="reason-title">{r.title}</h3>
+          <p class="reason-desc">{r.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="porque-banner reveal">
+      <div class="banner-text">
+        <p class="banner-big">100%</p>
+        <p class="banner-label">Satisfacción garantizada</p>
+      </div>
+      <div class="banner-divider"></div>
+      <div class="banner-text">
+        <p class="banner-big">+20 años</p>
+        <p class="banner-label">De experiencia en el sector</p>
+      </div>
+      <div class="banner-divider"></div>
+      <div class="banner-text">
+        <p class="banner-big">ZLC</p>
+        <p class="banner-label">Zona Libre de Colón, Panamá</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .porque-section {
+    padding: 7rem 0;
+    background: var(--gray-100);
+  }
+
+  .porque-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .reason-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  }
+
+  .reason-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .reason-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--blue);
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .reason-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+  }
+
+  .reason-desc {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.65;
+  }
+
+  .porque-banner {
+    background: var(--blue);
+    border-radius: 16px;
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .banner-text {
+    text-align: center;
+  }
+
+  .banner-big {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--yellow);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .banner-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+
+  .banner-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  @media (max-width: 900px) {
+    .reasons-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .reasons-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .banner-divider { display: none; }
+  }
+</style>

@@ -1,0 +1,209 @@
+---
+const categories = [
+  {
+    img: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&h=380&fit=crop&q=80',
+    title: 'Movimientos',
+    desc: 'Miyota, ETA, Ronda, ISA, Epson, SII. Movimientos de cuarzo y automáticos.',
+    count: '+200 refs',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1608372842584-0d7a6d1d30f5?w=600&h=380&fit=crop&q=80',
+    title: 'Baterías',
+    desc: 'Renata, GP, Tianqiu, Maxell. Pilas de botón, litio y recargables.',
+    count: '+300 refs',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=380&fit=crop&q=80',
+    title: 'Relojes',
+    desc: 'Colecciones Polemik, Xinjia y surtidas para distribución al mayor.',
+    count: '+150 modelos',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&h=380&fit=crop&q=80',
+    title: 'Correas & Bandas',
+    desc: 'Resina, metal, PVC, silicona y cuero. Todos los anchos y colores.',
+    count: '+400 refs',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1622434641406-a158123450f0?w=600&h=380&fit=crop&q=80',
+    title: 'Cristales & Vidrios',
+    desc: 'Minerales, sapiro y acrílico. Amplio surtido de formas y tamaños.',
+    count: '+500 refs',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=380&fit=crop&q=80',
+    title: 'Herramientas',
+    desc: 'Equipos y herramientas profesionales para reparación de relojes.',
+    count: '+100 refs',
+  },
+];
+---
+
+<section class="categorias-section" id="categorias">
+  <div class="container">
+    <div class="categorias-header">
+      <span class="section-tag reveal">Catálogo</span>
+      <h2 class="section-title reveal delay-100">Nuestras <span>categorías</span></h2>
+      <p class="section-desc reveal delay-200">
+        Portafolio completo para distribuidores, comercios y profesionales del sector relojero.
+      </p>
+    </div>
+
+    <div class="categorias-grid">
+      {categories.map((cat, i) => (
+        <div class={`cat-card reveal delay-${(i % 3) * 100 + 100}`}>
+          <div class="cat-img-wrap">
+            <img src={cat.img} alt={cat.title} loading="lazy" />
+            <span class="cat-count">{cat.count}</span>
+          </div>
+          <div class="cat-body">
+            <h3 class="cat-title">{cat.title}</h3>
+            <p class="cat-desc">{cat.desc}</p>
+            <a href="/catalogo" class="cat-link">
+              Ver productos
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="categorias-cta reveal">
+      <p>¿Necesita un producto específico?</p>
+      <a href="/catalogo" class="btn-primary">
+        Ver catálogo completo
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .categorias-section {
+    padding: 7rem 0;
+    background: var(--gray-100);
+  }
+
+  .categorias-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .categorias-header .section-desc {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .cat-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .cat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cat-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .cat-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .cat-card:hover .cat-img-wrap img {
+    transform: scale(1.06);
+  }
+
+  .cat-count {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--red);
+    padding: 0.3rem 0.65rem;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .cat-body {
+    padding: 1.5rem;
+  }
+
+  .cat-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .cat-desc {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .cat-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--red);
+    transition: gap var(--transition);
+  }
+
+  .cat-link:hover {
+    gap: 0.6rem;
+  }
+
+  .categorias-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background: var(--blue);
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 900px) {
+    .categorias-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 560px) {
+    .categorias-grid { grid-template-columns: 1fr; }
+  }
+</style>
