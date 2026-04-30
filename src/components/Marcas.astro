@@ -100,43 +100,43 @@ const brands = [
 
   .brand-chip {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: var(--gray-100);
-    border: 1px solid var(--gray-200);
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    min-width: 140px;
-    transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    gap: 0.75rem;
+    padding: 0.5rem 2rem;
     white-space: nowrap;
+    position: relative;
   }
 
-  .brand-chip:hover {
-    background: var(--blue);
-    border-color: var(--blue);
-    transform: translateY(-3px);
+  .brand-chip::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background: var(--gray-200);
   }
-
-  .brand-chip:hover .brand-name { color: var(--white); }
-  .brand-chip:hover .brand-cat { color: var(--yellow); }
 
   .brand-name {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 800;
     color: var(--blue);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     transition: color var(--transition);
   }
 
+  .brand-chip:hover .brand-name { color: var(--yellow); }
+
   .brand-cat {
-    font-size: 0.7rem;
-    color: var(--red);
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-size: 0.65rem;
+    color: rgba(2,69,152,0.4);
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-top: 0.2rem;
     transition: color var(--transition);
   }
+
+  .brand-chip:hover .brand-cat { color: rgba(242,169,0,0.7); }
 </style>

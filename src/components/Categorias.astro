@@ -1,209 +1,416 @@
 ---
 const categories = [
   {
-    img: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&h=380&fit=crop&q=80',
-    title: 'Movimientos',
-    desc: 'Miyota, ETA, Ronda, ISA, Epson, SII. Movimientos de cuarzo y automáticos.',
-    count: '+200 refs',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1608372842584-0d7a6d1d30f5?w=600&h=380&fit=crop&q=80',
-    title: 'Baterías',
-    desc: 'Renata, GP, Tianqiu, Maxell. Pilas de botón, litio y recargables.',
+    img: 'https://images.unsplash.com/photo-1706166987870-539ffd8286e7?w=800&h=600&fit=crop&q=80',
+    title: 'Baterías & Pilas',
+    desc: 'Renata, GP, Tianqiu, Maxell. Botón, litio y alcalinas.',
     count: '+300 refs',
+    id: 'baterias',
+    featured: true,
   },
   {
     img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=380&fit=crop&q=80',
     title: 'Relojes',
-    desc: 'Colecciones Polemik, Xinjia y surtidas para distribución al mayor.',
+    desc: 'Colecciones Polemik, Xinjia y surtidas.',
     count: '+150 modelos',
+    id: 'relojes',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&h=380&fit=crop&q=80',
+    title: 'Movimientos',
+    desc: 'Miyota, ETA, Ronda, ISA, Epson. Cuarzo y automáticos.',
+    count: '+200 refs',
+    id: 'movimientos',
   },
   {
     img: 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&h=380&fit=crop&q=80',
-    title: 'Correas & Bandas',
-    desc: 'Resina, metal, PVC, silicona y cuero. Todos los anchos y colores.',
+    title: 'Pulsos & Correas',
+    desc: 'Resina, metal, PVC, silicona y cuero.',
     count: '+400 refs',
+    id: 'correas',
   },
   {
-    img: 'https://images.unsplash.com/photo-1622434641406-a158123450f0?w=600&h=380&fit=crop&q=80',
-    title: 'Cristales & Vidrios',
-    desc: 'Minerales, sapiro y acrílico. Amplio surtido de formas y tamaños.',
-    count: '+500 refs',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=380&fit=crop&q=80',
-    title: 'Herramientas',
-    desc: 'Equipos y herramientas profesionales para reparación de relojes.',
+    img: 'https://images.unsplash.com/photo-1593152167544-085d3b9c4938?w=600&h=380&fit=crop&q=80',
+    title: 'Accesorios',
+    desc: 'Coronas, vidrios, módulos e insumos de relojería.',
     count: '+100 refs',
+    id: 'accesorios',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=380&fit=crop&q=80',
+    title: 'Herramientas',
+    desc: 'Herramientas profesionales de relojería y joyería.',
+    count: '+50 refs',
+    id: 'herramientas',
+    wide: true,
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=380&fit=crop&q=80',
+    title: 'Otros',
+    desc: 'Gorras Polemik y gorras lisas.',
+    count: '+20 refs',
+    id: 'otros',
   },
 ];
 ---
 
 <section class="categorias-section" id="categorias">
   <div class="container">
-    <div class="categorias-header">
-      <span class="section-tag reveal">Catálogo</span>
-      <h2 class="section-title reveal delay-100">Nuestras <span>categorías</span></h2>
-      <p class="section-desc reveal delay-200">
-        Portafolio completo para distribuidores, comercios y profesionales del sector relojero.
-      </p>
+
+    <div class="categorias-header reveal">
+      <span class="section-tag">
+        <span class="tag-dot"></span>
+        Nuestros productos
+      </span>
+      <h2 class="section-title">Catálogo <span class="title-accent">mayorista</span></h2>
+      <p class="categorias-sub">Más de 1,500 referencias en stock. Despacho inmediato a toda la región.</p>
     </div>
 
-    <div class="categorias-grid">
-      {categories.map((cat, i) => (
-        <div class={`cat-card reveal delay-${(i % 3) * 100 + 100}`}>
-          <div class="cat-img-wrap">
-            <img src={cat.img} alt={cat.title} loading="lazy" />
-            <span class="cat-count">{cat.count}</span>
-          </div>
-          <div class="cat-body">
-            <h3 class="cat-title">{cat.title}</h3>
-            <p class="cat-desc">{cat.desc}</p>
-            <a href="/catalogo" class="cat-link">
-              Ver productos
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <div class="categorias-cta reveal">
-      <p>¿Necesita un producto específico?</p>
-      <a href="/catalogo" class="btn-primary">
-        Ver catálogo completo
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
+    <div class="catalogo-link reveal">
+      <a href="/catalogo" class="ver-catalogo">
+        Ver todos los catálogos
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
       </a>
     </div>
+
+    <div class="bento-grid">
+      {categories.map((c, i) => (
+        <a
+          href={`/catalogo#${c.id}`}
+          class={`bento-card reveal delay-${Math.min(i * 100, 400)}${c.featured ? ' bento-featured' : ''}${c.wide ? ' bento-wide' : ''}`}
+        >
+          <img src={c.img} alt={c.title} class="bento-img" loading="lazy" />
+          <div class="bento-overlay"></div>
+          <div class="bento-body">
+            <span class="bento-count">{c.count}</span>
+            <h3 class="bento-title">{c.title}</h3>
+            <p class="bento-desc">{c.desc}</p>
+            <span class="bento-btn">
+              Ver catálogo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+
   </div>
 </section>
 
 <style>
   .categorias-section {
-    padding: 7rem 0;
-    background: var(--gray-100);
+    background: var(--white);
+    padding: 7rem 0 6rem;
+    position: relative;
   }
 
+  /* ── HEADER ── */
   .categorias-header {
     text-align: center;
-    margin-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .section-tag {
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-  }
-
-  .categorias-header .section-desc {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-
-  .categorias-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-  }
-
-  .cat-card {
-    background: var(--white);
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--gray-200);
-    transition: transform var(--transition), box-shadow var(--transition);
-  }
-
-  .cat-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .cat-img-wrap {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .cat-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-
-  .cat-card:hover .cat-img-wrap img {
-    transform: scale(1.06);
-  }
-
-  .cat-count {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
     font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--white);
-    background: var(--red);
-    padding: 0.3rem 0.65rem;
-    border-radius: 20px;
-    letter-spacing: 0.05em;
-  }
-
-  .cat-body {
-    padding: 1.5rem;
-  }
-
-  .cat-title {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--blue);
-    margin-bottom: 0.5rem;
+    background: rgba(2, 29, 80, 0.06);
+    border: 1px solid rgba(2, 29, 80, 0.15);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.25rem;
   }
 
-  .cat-desc {
-    font-size: 0.875rem;
-    color: var(--gray-700);
-    line-height: 1.6;
+  .tag-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--yellow);
+    flex-shrink: 0;
+    box-shadow: 0 0 6px var(--yellow);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--blue);
     margin-bottom: 1rem;
   }
 
-  .cat-link {
+  .title-accent {
+    color: var(--yellow);
+    position: relative;
+    display: inline-block;
+  }
+
+  .title-accent::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.05em;
+    width: 100%;
+    height: 0.06em;
+    background: var(--yellow);
+    border-radius: 4px;
+    opacity: 0.35;
+  }
+
+  .categorias-sub {
+    color: rgba(2, 29, 80, 0.55);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+
+  /* ── TOP LINK ── */
+  .catalogo-link {
+    text-align: right;
+    margin-bottom: 2.25rem;
+  }
+
+  .ver-catalogo {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 0.5rem;
     font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--red);
-    transition: gap var(--transition);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: var(--blue);
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid rgba(2, 29, 80, 0.2);
+    padding: 0.55rem 1.2rem;
+    border-radius: 100px;
+    transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease, background 0.2s ease;
   }
 
-  .cat-link:hover {
-    gap: 0.6rem;
+  .ver-catalogo:hover {
+    color: var(--blue);
+    border-color: var(--yellow);
+    background: rgba(242, 169, 0, 0.06);
+    box-shadow:
+      0 0 0 1px rgba(242, 169, 0, 0.5),
+      0 0 18px rgba(242, 169, 0, 0.35),
+      0 0 40px rgba(242, 169, 0, 0.15);
   }
 
-  .categorias-cta {
+  /* ── BENTO GRID ── */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: 260px 260px 210px;
+    gap: 1.1rem;
+  }
+
+  .bento-featured { grid-row: span 2; }
+  .bento-wide     { grid-column: span 2; }
+
+  /* ── CARD ── */
+  .bento-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    border: 1.5px solid rgba(255,255,255,0);
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
+  }
+
+  .bento-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 0 0 1.5px rgba(242, 169, 0, 0.55),
+      0 8px 40px rgba(242, 169, 0, 0.18),
+      0 2px 12px rgba(2, 29, 80, 0.2);
+    border-color: rgba(242, 169, 0, 0.45);
+  }
+
+  .bento-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .bento-card:hover .bento-img { transform: scale(1.06); }
+
+  .bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(2, 29, 80, 0.92) 0%,
+      rgba(2, 29, 80, 0.45) 45%,
+      rgba(0,0,0,0.06) 100%
+    );
+    transition: background 0.35s ease;
+  }
+
+  .bento-card:hover .bento-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(2, 29, 80, 0.97) 0%,
+      rgba(2, 29, 80, 0.65) 50%,
+      rgba(0,0,0,0.12) 100%
+    );
+  }
+
+  .bento-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1.6rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    background: var(--blue);
-    border-radius: 16px;
-    padding: 2rem 3rem;
-    color: rgba(255,255,255,0.85);
-    font-size: 1rem;
-    font-weight: 500;
+    flex-direction: column;
+    gap: 0.3rem;
   }
 
+  .bento-count {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    background: rgba(242, 169, 0, 0.12);
+    border: 1px solid rgba(242, 169, 0, 0.35);
+    padding: 0.18rem 0.6rem;
+    border-radius: 100px;
+    align-self: flex-start;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .bento-card:hover .bento-count {
+    background: rgba(242, 169, 0, 0.2);
+    border-color: rgba(242, 169, 0, 0.6);
+    box-shadow: 0 0 10px rgba(242, 169, 0, 0.25);
+  }
+
+  .bento-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    line-height: 1.15;
+  }
+
+  .bento-featured .bento-title {
+    font-size: 1.75rem;
+    letter-spacing: -0.03em;
+  }
+
+  .bento-desc {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.55;
+    max-width: 280px;
+  }
+
+  /* ── GLOW BUTTON ── */
+  .bento-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--blue);
+    background: var(--yellow);
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.25s ease,
+      background 0.2s ease;
+  }
+
+  .bento-card:hover .bento-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .bento-btn:hover,
+  .bento-card:hover .bento-btn:hover {
+    background: #ffbe0b;
+    box-shadow:
+      0 0 0 2px rgba(242, 169, 0, 0.6),
+      0 0 16px rgba(242, 169, 0, 0.7),
+      0 0 40px rgba(242, 169, 0, 0.3);
+  }
+
+  /* Persistent glow on card hover (so button glows just from card hover too) */
+  .bento-card:hover .bento-btn {
+    box-shadow:
+      0 0 0 1.5px rgba(242, 169, 0, 0.4),
+      0 0 12px rgba(242, 169, 0, 0.45),
+      0 0 28px rgba(242, 169, 0, 0.2);
+  }
+
+  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    .categorias-grid { grid-template-columns: repeat(2, 1fr); }
+    .bento-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
+    .bento-featured {
+      grid-column: span 2;
+      grid-row: span 1;
+      min-height: 240px;
+    }
+
+    .bento-wide {
+      grid-column: span 2;
+      min-height: 200px;
+    }
+
+    .bento-card { min-height: 200px; }
+
+    .bento-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @media (max-width: 560px) {
-    .categorias-grid { grid-template-columns: 1fr; }
+    .bento-grid { grid-template-columns: 1fr; }
+
+    .bento-featured,
+    .bento-wide { grid-column: span 1; }
+
+    .bento-card,
+    .bento-featured,
+    .bento-wide { min-height: 180px; }
+
+    .bento-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>

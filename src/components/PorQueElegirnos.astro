@@ -40,29 +40,23 @@ const reasons = [
       ))}
     </div>
 
-    <div class="porque-banner reveal">
+    <div class="porque-banner reveal delay-400">
       <div class="banner-text">
-        <p class="banner-big">100%</p>
-        <p class="banner-label">Satisfacción garantizada</p>
+        <h3 class="banner-big">¿Listo para abastecer su inventario?</h3>
+        <p class="banner-sub">Únase a la red de distribuidores de Q&Q y más marcas líderes.</p>
       </div>
-      <div class="banner-divider"></div>
-      <div class="banner-text">
-        <p class="banner-big">+20 años</p>
-        <p class="banner-label">De experiencia en el sector</p>
-      </div>
-      <div class="banner-divider"></div>
-      <div class="banner-text">
-        <p class="banner-big">ZLC</p>
-        <p class="banner-label">Zona Libre de Colón, Panamá</p>
-      </div>
+      <a href="https://wa.me/50764156382" target="_blank" rel="noopener" class="btn-primary-red-accent">
+        Solicitar Lista de Precios
+      </a>
     </div>
   </div>
 </section>
 
 <style>
   .porque-section {
-    padding: 7rem 0;
-    background: var(--gray-100);
+    /* Base Inamovible: Blanco */
+    background: var(--white);
+    padding: 6rem 0;
   }
 
   .porque-header {
@@ -72,32 +66,35 @@ const reasons = [
 
   .reasons-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
   }
 
   .reason-card {
     background: var(--white);
-    border: 1px solid var(--gray-200);
+    padding: 2rem;
     border-radius: 16px;
-    padding: 2rem 1.5rem;
-    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    border: 1px solid var(--gray-100);
+    transition: all var(--transition);
+    /* 1er lugar sutil: Sombra amarilla al inicio */
+    box-shadow: 0 4px 15px rgba(242, 169, 0, 0.05);
   }
 
   .reason-card:hover {
-    border-color: var(--blue);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    /* 1er lugar fuerte: Borde amarillo al pasar el mouse */
+    border-color: var(--yellow);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-yellow);
   }
 
   .reason-num {
     display: block;
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 900;
-    color: var(--blue);
-    opacity: 0.2;
+    /* 1er lugar: El amarillo se lleva la mirada inicial */
+    color: var(--yellow);
     line-height: 1;
     margin-bottom: 1rem;
   }
@@ -105,64 +102,78 @@ const reasons = [
   .reason-title {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 800;
+    /* 2do lugar: Azul para la seriedad de la razón */
     color: var(--blue);
     margin-bottom: 0.75rem;
   }
 
   .reason-desc {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     color: var(--gray-700);
     line-height: 1.65;
   }
 
+  /* REDISEÑO DEL BANNER: De azul pesado a Blanco luminoso con marco amarillo */
   .porque-banner {
-    background: var(--blue);
-    border-radius: 16px;
-    padding: 2.5rem 3rem;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 2rem;
     flex-wrap: wrap;
+    /* 1er lugar: Borde grueso amarillo */
+    border: 4px solid var(--yellow);
+    box-shadow: var(--shadow-yellow);
   }
 
   .banner-text {
-    text-align: center;
+    flex: 1;
   }
 
   .banner-big {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
-    color: var(--yellow);
-    line-height: 1;
-    margin-bottom: 0.4rem;
+    /* 2do lugar: Azul para la lectura del banner */
+    color: var(--blue);
+    margin-bottom: 0.5rem;
   }
 
-  .banner-label {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.6);
-    font-weight: 500;
+  .banner-sub {
+    font-size: 1.1rem;
+    color: var(--gray-700);
   }
 
-  .banner-divider {
-    width: 1px;
-    height: 60px;
-    background: rgba(255,255,255,0.15);
+  /* Botón con el detalle del 3er Lugar (Rojo) */
+  .btn-primary-red-accent {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--yellow); /* Botón amarillo */
+    color: var(--gray-900);
+    font-weight: 800;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all var(--transition);
+    /* 3er lugar: Borde inferior rojo como detalle de acento */
+    border-bottom: 4px solid var(--red);
   }
 
-  @media (max-width: 900px) {
-    .reasons-grid {
-      grid-template-columns: repeat(2, 1fr);
+  .btn-primary-red-accent:hover {
+    background: #e09d00;
+    transform: translateY(2px);
+    border-bottom-width: 2px; /* Efecto de que se presiona el botón */
+  }
+
+  @media (max-width: 768px) {
+    .porque-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
     }
-  }
-
-  @media (max-width: 560px) {
-    .reasons-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .banner-divider { display: none; }
+    .banner-big { font-size: 1.6rem; }
   }
 </style>
