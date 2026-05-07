@@ -1,0 +1,260 @@
+---
+interface Detalles {
+  tipo?:        string;
+  dimensiones?: string;
+  altura?:      string;
+  joyas?:       number;
+  bateria?:     string;
+  placas?:      string;
+  intercambios?: string;
+}
+
+interface Props {
+  imagenSrc:        string;
+  titulo:           string;   // "ETA 251.262"
+  descripcionCorta?: string;
+  detalles:         Detalles;
+  tipo?:            string;
+  fecha?:           boolean;
+}
+
+const { imagenSrc, titulo, detalles, tipo, fecha } = Astro.props;
+
+// Split "ETA 251.262" → prefix "ETA", model "251.262"
+const spaceIdx  = titulo.indexOf(' ');
+const prefix    = spaceIdx > -1 ? titulo.slice(0, spaceIdx)       : '';
+const modelNum  = spaceIdx > -1 ? titulo.slice(spaceIdx + 1)      : titulo;
+
+const BADGE_CLASS: Record<string, string> = {
+  'CRONÓGRAFO': 'badge-crono',
+  'CABALLERO':  'badge-cab',
+  'DAMA':       'badge-dama',
+};
+
+const TIPO_LABEL: Record<string, string> = {
+  'CRONÓGRAFO': 'Cronógrafo',
+  'CABALLERO':  'Caballero',
+  'DAMA':       'Dama',
+};
+
+type SpecItem = { k: string; v: string };
+
+const specs: SpecItem[] = [
+  detalles.dimensiones               ? { k: 'Dimensiones', v: detalles.dimensiones }         : null,
+  detalles.altura                    ? { k: 'Altura',      v: `${detalles.altura}mm` }        : null,
+  (detalles.joyas != null)           ? { k: 'Joyas',       v: String(detalles.joyas) }        : null,
+  detalles.bateria                   ? { k: 'Batería',     v: `CR ${detalles.bateria}` }      : null,
+].filter((s): s is SpecItem => s !== null).slice(0, 4);
+---
+
+<article class="cc">
+  <!-- Image zone -->
+  <div class="cc-img-zone">
+    <img
+      src={imagenSrc}
+      alt={titulo}
+      class="cc-img"
+      loading="lazy"
+      decoding="async"
+    />
+    <!-- Badge strip sits at bottom of image zone -->
+    <div class="cc-badge-strip">
+      {tipo && (
+        <span class={`cc-badge ${BADGE_CLASS[tipo] ?? 'badge-cab'}`}>
+          {TIPO_LABEL[tipo] ?? tipo}
+        </span>
+      )}
+      {fecha && <span class="cc-badge badge-fecha">+ Fecha</span>}
+    </div>
+  </div>
+
+  <!-- Info zone -->
+  <div class="cc-body">
+    <div class="cc-header">
+      {prefix && <span class="cc-prefix">{prefix}</span>}
+      <h3 class="cc-modelo">{modelNum}</h3>
+    </div>
+
+    {specs.length > 0 && (
+      <div class="cc-rule"></div>
+      <dl class="cc-specs">
+        {specs.map(s => (
+          <div class="cc-spec">
+            <dd class="spec-v">{s.v}</dd>
+            <dt class="spec-k">{s.k}</dt>
+          </div>
+        ))}
+      </dl>
+    )}
+
+    {detalles.intercambios && (
+      <p class="cc-interchange">↔ {detalles.intercambios}</p>
+    )}
+  </div>
+</article>
+
+<style>
+  /* ── Card shell ── */
+  .cc {
+    background: #0c0c1a;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #14142a;
+    transition: border-color 0.22s ease, background 0.22s ease;
+    cursor: default;
+    height: 100%;
+  }
+
+  .cc:hover {
+    background: #0f0f20;
+    border-color: rgba(242, 169, 0, 0.28);
+  }
+
+  /* ── Image zone ── */
+  .cc-img-zone {
+    position: relative;
+    background: #f5f5f7;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .cc-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  .cc:hover .cc-img {
+    transform: scale(1.06);
+  }
+
+  /* ── Badge strip ── */
+  .cc-badge-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 0.3rem;
+    padding: 0.45rem 0.6rem;
+    background: linear-gradient(to top, rgba(8, 8, 20, 0.82), transparent);
+    flex-wrap: wrap;
+  }
+
+  .cc-badge {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.5rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.6rem;
+    border-radius: 3px;
+    line-height: 1.5;
+  }
+
+  .badge-crono { background: #f2a900; color: #111; }
+  .badge-cab   { background: #024598; color: #fff; }
+  .badge-dama  { background: #c8245a; color: #fff; }
+  .badge-fecha {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  /* ── Body ── */
+  .cc-body {
+    padding: 0.9rem 1rem 1.1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cc-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .cc-prefix {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    font-weight: 400;
+    color: #2e2e5a;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .cc-modelo {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-weight: 700;
+    color: #dde0f8;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  /* ── Hairline rule ── */
+  .cc-rule {
+    height: 1px;
+    background: #161632;
+    margin-bottom: 0.65rem;
+  }
+
+  /* ── Specs grid ── */
+  .cc-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 0.4rem;
+    margin: 0;
+  }
+
+  .cc-spec {
+    display: flex;
+    flex-direction: column;
+    gap: 0.04rem;
+  }
+
+  .spec-v {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #8888c0;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .spec-k {
+    font-family: var(--font-body);
+    font-size: 0.52rem;
+    font-weight: 700;
+    color: #22224a;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  /* ── Interchange line ── */
+  .cc-interchange {
+    margin-top: 0.65rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    color: #2a2a50;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .cc:hover .cc-interchange { color: #44447a; }
+</style>

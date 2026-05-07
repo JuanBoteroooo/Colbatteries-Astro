@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
+import CatalogCard from '../../components/CatalogCard.astro';
 import { groups } from '../../data/catalogs.js';
 import coronasData from '../../data/coronas.json';
 import etaData from '../../data/movimientos-eta.json';
@@ -230,8 +231,31 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
           <span class="eta-results-label"><span id="etaCount">{products.length}</span> MODELOS</span>
         </div>
 
-        <!-- Grid -->
-        <div class="eta-grid" id="etaGrid"></div>
+        <!-- Grid (server-rendered CatalogCard components) -->
+        <div class="eta-grid" id="etaGrid">
+          {products.map((p: any) => (
+            <div
+              class="eta-card-wrapper"
+              data-tipo={p.tipo}
+              data-fecha={String(p.fecha)}
+              data-modelo={p.modelo.toLowerCase()}
+            >
+              <CatalogCard
+                imagenSrc={p.img}
+                titulo={`ETA ${p.modelo}`}
+                detalles={{
+                  dimensiones: p.dimensiones,
+                  altura: p.altura,
+                  joyas: p.joyas,
+                  bateria: p.bateria,
+                  intercambios: p.intercambios,
+                }}
+                tipo={p.tipo}
+                fecha={p.fecha}
+              />
+            </div>
+          ))}
+        </div>
 
         <!-- Empty state -->
         <div class="eta-empty" id="etaEmpty" style="display:none">
@@ -1083,103 +1107,9 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     padding: 1px 0 0;
   }
 
-  /* ── Card ── */
-  .eta-card {
-    background: #080810;
-    display: flex; flex-direction: column;
-    overflow: hidden;
-    cursor: default;
-    transition: background 0.2s;
-  }
-
-  .eta-card:hover { background: #0d0d1a; }
-
-  /* Image */
-  .eta-img-wrap {
-    background: #f8f8fa;
-    aspect-ratio: 4 / 3;
-    position: relative; overflow: hidden;
-  }
-
-  .eta-img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    transition: transform 0.4s ease;
-  }
-
-  .eta-card:hover .eta-img { transform: scale(1.04); }
-
-  /* Badges on image */
-  .eta-badges {
-    position: absolute; top: 0.6rem; left: 0.6rem;
-    display: flex; flex-direction: column; gap: 0.25rem;
-  }
-
-  .eta-badge {
-    display: inline-block;
-    font-size: 0.5rem; font-weight: 900;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 0.2rem 0.55rem; border-radius: 3px;
-    line-height: 1.5; font-family: var(--font-body);
-  }
-
-  .eta-badge-crono  { background: #f2a900; color: #111; }
-  .eta-badge-cab    { background: #024598; color: #fff; }
-  .eta-badge-dama   { background: #c8245a; color: #fff; }
-  .eta-badge-fecha  { background: rgba(0,0,0,0.75); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
-
-  /* Body */
-  .eta-card-body {
-    padding: 1rem 1.15rem 1.25rem;
-    flex: 1; display: flex; flex-direction: column; gap: 0;
-    border-top: 1px solid #0e0e18;
-  }
-
-  .eta-modelo-num {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.05rem; font-weight: 700;
-    color: #e8e8f8; letter-spacing: -0.01em;
-    line-height: 1.15; margin-bottom: 0.2rem;
-  }
-
-  .eta-modelo-prefix {
-    font-size: 0.6rem; font-weight: 400;
-    color: #3a3a5a; letter-spacing: 0.1em;
-    text-transform: uppercase; margin-bottom: 0.1rem;
-  }
-
-  .eta-manos-row {
-    font-size: 0.68rem; color: #3a3a60;
-    font-weight: 600; letter-spacing: 0.02em;
-    margin-bottom: 0.75rem; margin-top: 0.1rem;
-  }
-
-  /* Spec divider */
-  .eta-spec-divider {
-    height: 1px; background: #111120;
-    margin: 0 0 0.7rem; width: 100%;
-  }
-
-  /* Specs grid */
-  .eta-specs {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 0.45rem 0.5rem;
-  }
-
-  .eta-spec-item {
-    display: flex; flex-direction: column; gap: 0.05rem;
-  }
-
-  .eta-spec-val {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.72rem; font-weight: 600;
-    color: #9898c0; line-height: 1.2;
-  }
-
-  .eta-spec-key {
-    font-size: 0.55rem; font-weight: 700;
-    color: #2a2a44; text-transform: uppercase; letter-spacing: 0.08em;
-  }
+  /* ── Card wrapper (grid item) ── */
+  .eta-card-wrapper { display: block; }
+  .eta-card-wrapper[hidden] { display: none !important; }
 
   /* Empty */
   .eta-empty {
@@ -1481,53 +1411,6 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   // ETA STRUCTURED MODE
   // ════════════════════════════
   if (isETA) {
-    const TIPO_CLASS = {
-      'CRONÓGRAFO': 'eta-badge-crono',
-      'CABALLERO':  'eta-badge-cab',
-      'DAMA':       'eta-badge-dama',
-    };
-
-    function buildETACard(p) {
-      const tipoClass = TIPO_CLASS[p.tipo] ?? 'eta-badge-cab';
-      const tipoLabel = p.tipo === 'CRONÓGRAFO' ? 'Cronógrafo' : p.tipo === 'CABALLERO' ? 'Caballero' : 'Dama';
-      const fechaBadge = p.fecha ? `<span class="eta-badge eta-badge-fecha">+ Fecha</span>` : '';
-      const manos = `${p.manecillas} manecilla${p.manecillas !== 1 ? 's' : ''}`;
-
-      const specs = [];
-      if (p.diametro) specs.push({ k: 'Diámetro', v: `⌀ ${p.diametro}mm` });
-      if (p.altura)   specs.push({ k: 'Altura',   v: `${p.altura}mm` });
-      if (p.joyas >= 0 && (p.joyas > 0 || p.diametro)) specs.push({ k: 'Joyas', v: `${p.joyas} joyas` });
-      if (p.bateria)  specs.push({ k: 'Batería',  v: `CR ${p.bateria}` });
-      if (p.placas)   specs.push({ k: 'Placas',   v: p.placas.charAt(0).toUpperCase() + p.placas.slice(1) });
-      if (p.altura_nivel) specs.push({ k: 'Nivel', v: p.altura_nivel });
-
-      const specsHTML = specs.slice(0, 4).map(s =>
-        `<div class="eta-spec-item">
-          <span class="eta-spec-val">${s.v}</span>
-          <span class="eta-spec-key">${s.k}</span>
-        </div>`
-      ).join('');
-
-      return `
-        <div class="eta-card">
-          <div class="eta-img-wrap">
-            <img src="${p.img}" alt="ETA ${p.modelo}" class="eta-img" loading="lazy" />
-            <div class="eta-badges">
-              <span class="eta-badge ${tipoClass}">${tipoLabel}</span>
-              ${fechaBadge}
-            </div>
-          </div>
-          <div class="eta-card-body">
-            <div class="eta-modelo-prefix">ETA</div>
-            <div class="eta-modelo-num">${p.modelo}</div>
-            <div class="eta-manos-row">${manos}${p.fecha ? ' · con fecha' : ''}</div>
-            <div class="eta-spec-divider"></div>
-            <div class="eta-specs">${specsHTML}</div>
-          </div>
-        </div>`;
-    }
-
-    const grid     = document.getElementById('etaGrid');
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');
@@ -1535,28 +1418,30 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     const fechaBtn = document.getElementById('etaFechaToggle');
     const resetBtn = document.getElementById('etaReset');
 
-    let activeTipo  = '';
-    let fechaOnly   = false;
-    let searchQ     = '';
+    let activeTipo = '';
+    let fechaOnly  = false;
+    let searchQ    = '';
 
     function applyETAFilters() {
       const q = searchQ.toLowerCase().trim();
-      const filtered = products.filter(p => {
-        const matchTipo  = !activeTipo || p.tipo === activeTipo;
-        const matchFecha = !fechaOnly  || p.fecha;
-        const matchQ     = !q || p.modelo.toLowerCase().includes(q) || p.tipo.toLowerCase().includes(q);
-        return matchTipo && matchFecha && matchQ;
+      let count = 0;
+      document.querySelectorAll('.eta-card-wrapper').forEach(wrapper => {
+        const tipo   = wrapper.dataset.tipo  ?? '';
+        const fecha  = wrapper.dataset.fecha === 'true';
+        const modelo = wrapper.dataset.modelo ?? '';
+        const show =
+          (!activeTipo || tipo === activeTipo) &&
+          (!fechaOnly  || fecha) &&
+          (!q          || modelo.includes(q) || tipo.toLowerCase().includes(q));
+        wrapper.hidden = !show;
+        if (show) count++;
       });
-
-      if (grid)    grid.innerHTML = filtered.map(buildETACard).join('');
-      if (countEl) countEl.textContent = filtered.length;
-      if (emptyEl) emptyEl.style.display = filtered.length === 0 ? 'flex' : 'none';
+      if (countEl) countEl.textContent = count;
+      if (emptyEl) emptyEl.style.display = count === 0 ? 'flex' : 'none';
     }
 
-    applyETAFilters();
     hideOverlay();
 
-    // Tipo filter
     tipoBar?.querySelectorAll('.eta-tipo-pill').forEach(btn => {
       btn.addEventListener('click', () => {
         tipoBar.querySelectorAll('.eta-tipo-pill').forEach(b => b.classList.remove('active'));
@@ -1566,20 +1451,17 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
       });
     });
 
-    // Fecha toggle
     fechaBtn?.addEventListener('click', () => {
       fechaOnly = !fechaOnly;
       fechaBtn.dataset.active = fechaOnly ? 'true' : 'false';
       applyETAFilters();
     });
 
-    // Search
     searchEl?.addEventListener('input', e => {
       searchQ = e.target.value;
       applyETAFilters();
     });
 
-    // Reset
     resetBtn?.addEventListener('click', () => {
       activeTipo = '';
       fechaOnly  = false;
