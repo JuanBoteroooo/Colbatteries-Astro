@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import { groups } from '../../data/catalogs.js';
 import coronasData from '../../data/coronas.json';
+import etaData from '../../data/movimientos-eta.json';
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -21,9 +22,11 @@ const prev = idx > 0 ? groupCats[idx - 1] : null;
 const next = idx < groupCats.length - 1 ? groupCats[idx + 1] : null;
 
 const waMsg = encodeURIComponent(`Hola, quisiera solicitar el catálogo de ${cat.label} de Colbateries S.A.`);
-const isGallery = !!cat.pages;
 const isStructured = !!cat.structured;
-const products = isStructured ? coronasData : [];
+const isGallery = !isStructured && !!cat.pages;
+const isETA     = isStructured && slug === 'movimientos-eta';
+const isCoronas = isStructured && slug === 'coronas';
+const products  = isCoronas ? coronasData : isETA ? etaData : [];
 
 // For cover fallback (PDF mode only)
 const labelUpper = cat.label.toUpperCase();
@@ -193,6 +196,50 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
           </svg>
           <p class="empty-msg">Sin resultados</p>
           <button class="empty-reset" id="emptyReset">Ver todas</button>
+        </div>
+
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         ETA STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isETA && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por modelo, tipo..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todos</button>
+            <button class="eta-tipo-pill" data-tipo="CRONÓGRAFO">Cronógrafo</button>
+            <button class="eta-tipo-pill" data-tipo="CABALLERO">Caballero</button>
+            <button class="eta-tipo-pill" data-tipo="DAMA">Dama</button>
+          </div>
+          <button class="eta-fecha-toggle" id="etaFechaToggle" data-active="false">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            Con Fecha
+          </button>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> MODELOS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid" id="etaGrid"></div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todos</button>
         </div>
 
       </div>
@@ -918,7 +965,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
 
   .empty-reset:hover { opacity: 0.85; }
 
-  /* ── RESPONSIVE ── */
+  /* ── RESPONSIVE (coronas/structured) ── */
   @media (max-width: 1100px) {
     .product-grid { grid-template-columns: repeat(3, 1fr); }
   }
@@ -944,9 +991,218 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     .tipo-pill { font-size: 0.68rem; padding: 0.32rem 0.65rem; }
     .results-label { display: none; }
   }
+
+  /* ══════════════════════════════
+     ETA STRUCTURED MODE
+  ══════════════════════════════ */
+
+  .viewer-page:has(.eta-viewer) {
+    height: auto;
+    min-height: 100vh;
+    background: #080810;
+  }
+
+  .eta-viewer {
+    display: flex;
+    flex-direction: column;
+    background: #080810;
+  }
+
+  /* ── Controls ── */
+  .eta-controls {
+    background: #0e0e18;
+    border-bottom: 1px solid #1a1a2e;
+    padding: 0.9rem 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+    flex-wrap: wrap;
+    position: sticky; top: 78px; z-index: 50;
+  }
+
+  .eta-search-wrap {
+    position: relative; flex: 1; min-width: 200px;
+  }
+
+  .eta-search-icon {
+    position: absolute; left: 0.85rem; top: 50%;
+    transform: translateY(-50%); color: #3a3a5a; pointer-events: none;
+  }
+
+  .eta-search-input {
+    width: 100%;
+    padding: 0.65rem 1rem 0.65rem 2.4rem;
+    font-size: 0.84rem; font-family: 'IBM Plex Mono', monospace;
+    background: #111120; border: 1px solid #1e1e38; border-radius: 6px;
+    color: #c8c8e0; outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .eta-search-input:focus { border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(242,169,0,0.08); }
+  .eta-search-input::placeholder { color: #2e2e4a; }
+
+  .eta-tipo-bar { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+
+  .eta-tipo-pill {
+    padding: 0.4rem 0.85rem; border-radius: 50px;
+    border: 1px solid #1e1e38; background: #111120;
+    color: #44446a; font-size: 0.71rem; font-weight: 700;
+    font-family: var(--font-body); cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: all 0.15s; white-space: nowrap;
+  }
+
+  .eta-tipo-pill:hover { border-color: #3a3a5a; color: #9898b8; }
+  .eta-tipo-pill.active { background: var(--yellow); border-color: var(--yellow); color: #111; }
+
+  .eta-fecha-toggle {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.4rem 0.85rem; border-radius: 50px;
+    border: 1px solid #1e1e38; background: #111120;
+    color: #44446a; font-size: 0.71rem; font-weight: 700;
+    font-family: var(--font-body); cursor: pointer;
+    letter-spacing: 0.04em; white-space: nowrap;
+    transition: all 0.15s;
+  }
+
+  .eta-fecha-toggle:hover { border-color: #3a3a5a; color: #9898b8; }
+  .eta-fecha-toggle[data-active="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+  .eta-results-label {
+    font-size: 0.68rem; font-weight: 800; color: #2a2a44;
+    letter-spacing: 0.1em; white-space: nowrap; margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  #etaCount { color: var(--yellow); }
+
+  /* ── Grid ── */
+  .eta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #0e0e18;
+    padding: 1px 0 0;
+  }
+
+  /* ── Card ── */
+  .eta-card {
+    background: #080810;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    cursor: default;
+    transition: background 0.2s;
+  }
+
+  .eta-card:hover { background: #0d0d1a; }
+
+  /* Image */
+  .eta-img-wrap {
+    background: #f8f8fa;
+    aspect-ratio: 4 / 3;
+    position: relative; overflow: hidden;
+  }
+
+  .eta-img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .eta-card:hover .eta-img { transform: scale(1.04); }
+
+  /* Badges on image */
+  .eta-badges {
+    position: absolute; top: 0.6rem; left: 0.6rem;
+    display: flex; flex-direction: column; gap: 0.25rem;
+  }
+
+  .eta-badge {
+    display: inline-block;
+    font-size: 0.5rem; font-weight: 900;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.2rem 0.55rem; border-radius: 3px;
+    line-height: 1.5; font-family: var(--font-body);
+  }
+
+  .eta-badge-crono  { background: #f2a900; color: #111; }
+  .eta-badge-cab    { background: #024598; color: #fff; }
+  .eta-badge-dama   { background: #c8245a; color: #fff; }
+  .eta-badge-fecha  { background: rgba(0,0,0,0.75); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+
+  /* Body */
+  .eta-card-body {
+    padding: 1rem 1.15rem 1.25rem;
+    flex: 1; display: flex; flex-direction: column; gap: 0;
+    border-top: 1px solid #0e0e18;
+  }
+
+  .eta-modelo-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.05rem; font-weight: 700;
+    color: #e8e8f8; letter-spacing: -0.01em;
+    line-height: 1.15; margin-bottom: 0.2rem;
+  }
+
+  .eta-modelo-prefix {
+    font-size: 0.6rem; font-weight: 400;
+    color: #3a3a5a; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 0.1rem;
+  }
+
+  .eta-manos-row {
+    font-size: 0.68rem; color: #3a3a60;
+    font-weight: 600; letter-spacing: 0.02em;
+    margin-bottom: 0.75rem; margin-top: 0.1rem;
+  }
+
+  /* Spec divider */
+  .eta-spec-divider {
+    height: 1px; background: #111120;
+    margin: 0 0 0.7rem; width: 100%;
+  }
+
+  /* Specs grid */
+  .eta-specs {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0.45rem 0.5rem;
+  }
+
+  .eta-spec-item {
+    display: flex; flex-direction: column; gap: 0.05rem;
+  }
+
+  .eta-spec-val {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem; font-weight: 600;
+    color: #9898c0; line-height: 1.2;
+  }
+
+  .eta-spec-key {
+    font-size: 0.55rem; font-weight: 700;
+    color: #2a2a44; text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  /* Empty */
+  .eta-empty {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 0.85rem; padding: 6rem 2rem; text-align: center;
+  }
+
+  .eta-reset-btn {
+    padding: 0.55rem 1.4rem; background: var(--yellow); color: #111;
+    border: none; border-radius: 6px; font-size: 0.82rem; font-weight: 800;
+    font-family: var(--font-body); cursor: pointer; transition: opacity 0.18s;
+  }
+
+  .eta-reset-btn:hover { opacity: 0.85; }
+
+  /* ── ETA Responsive ── */
+  @media (max-width: 1100px) { .eta-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); } .eta-controls { padding: 0.75rem 1rem; } }
+  @media (max-width: 500px)  { .eta-grid { grid-template-columns: 1fr 1fr; } .eta-fecha-toggle span { display: none; } }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -1123,9 +1379,9 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   }
 
   // ════════════════════════════
-  // STRUCTURED MODE
+  // CORONAS STRUCTURED MODE
   // ════════════════════════════
-  if (isStructured) {
+  if (isCoronas) {
     const SWATCH = {
       'PLATEADA': '#C0C0C8', 'DORADA': '#D4AF37',
       'NEGRA': '#3a3a3a',    'ORO ROSA': '#C88898',
@@ -1218,6 +1474,121 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
       document.querySelectorAll('.tipo-pill').forEach(b => b.classList.remove('active'));
       document.querySelector('.tipo-pill[data-tipo=""]')?.classList.add('active');
       applyFilters();
+    });
+  }
+
+  // ════════════════════════════
+  // ETA STRUCTURED MODE
+  // ════════════════════════════
+  if (isETA) {
+    const TIPO_CLASS = {
+      'CRONÓGRAFO': 'eta-badge-crono',
+      'CABALLERO':  'eta-badge-cab',
+      'DAMA':       'eta-badge-dama',
+    };
+
+    function buildETACard(p) {
+      const tipoClass = TIPO_CLASS[p.tipo] ?? 'eta-badge-cab';
+      const tipoLabel = p.tipo === 'CRONÓGRAFO' ? 'Cronógrafo' : p.tipo === 'CABALLERO' ? 'Caballero' : 'Dama';
+      const fechaBadge = p.fecha ? `<span class="eta-badge eta-badge-fecha">+ Fecha</span>` : '';
+      const manos = `${p.manecillas} manecilla${p.manecillas !== 1 ? 's' : ''}`;
+
+      const specs = [];
+      if (p.diametro) specs.push({ k: 'Diámetro', v: `⌀ ${p.diametro}mm` });
+      if (p.altura)   specs.push({ k: 'Altura',   v: `${p.altura}mm` });
+      if (p.joyas >= 0 && (p.joyas > 0 || p.diametro)) specs.push({ k: 'Joyas', v: `${p.joyas} joyas` });
+      if (p.bateria)  specs.push({ k: 'Batería',  v: `CR ${p.bateria}` });
+      if (p.placas)   specs.push({ k: 'Placas',   v: p.placas.charAt(0).toUpperCase() + p.placas.slice(1) });
+      if (p.altura_nivel) specs.push({ k: 'Nivel', v: p.altura_nivel });
+
+      const specsHTML = specs.slice(0, 4).map(s =>
+        `<div class="eta-spec-item">
+          <span class="eta-spec-val">${s.v}</span>
+          <span class="eta-spec-key">${s.k}</span>
+        </div>`
+      ).join('');
+
+      return `
+        <div class="eta-card">
+          <div class="eta-img-wrap">
+            <img src="${p.img}" alt="ETA ${p.modelo}" class="eta-img" loading="lazy" />
+            <div class="eta-badges">
+              <span class="eta-badge ${tipoClass}">${tipoLabel}</span>
+              ${fechaBadge}
+            </div>
+          </div>
+          <div class="eta-card-body">
+            <div class="eta-modelo-prefix">ETA</div>
+            <div class="eta-modelo-num">${p.modelo}</div>
+            <div class="eta-manos-row">${manos}${p.fecha ? ' · con fecha' : ''}</div>
+            <div class="eta-spec-divider"></div>
+            <div class="eta-specs">${specsHTML}</div>
+          </div>
+        </div>`;
+    }
+
+    const grid     = document.getElementById('etaGrid');
+    const countEl  = document.getElementById('etaCount');
+    const emptyEl  = document.getElementById('etaEmpty');
+    const searchEl = document.getElementById('etaSearch');
+    const tipoBar  = document.getElementById('etaTipoBar');
+    const fechaBtn = document.getElementById('etaFechaToggle');
+    const resetBtn = document.getElementById('etaReset');
+
+    let activeTipo  = '';
+    let fechaOnly   = false;
+    let searchQ     = '';
+
+    function applyETAFilters() {
+      const q = searchQ.toLowerCase().trim();
+      const filtered = products.filter(p => {
+        const matchTipo  = !activeTipo || p.tipo === activeTipo;
+        const matchFecha = !fechaOnly  || p.fecha;
+        const matchQ     = !q || p.modelo.toLowerCase().includes(q) || p.tipo.toLowerCase().includes(q);
+        return matchTipo && matchFecha && matchQ;
+      });
+
+      if (grid)    grid.innerHTML = filtered.map(buildETACard).join('');
+      if (countEl) countEl.textContent = filtered.length;
+      if (emptyEl) emptyEl.style.display = filtered.length === 0 ? 'flex' : 'none';
+    }
+
+    applyETAFilters();
+    hideOverlay();
+
+    // Tipo filter
+    tipoBar?.querySelectorAll('.eta-tipo-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        tipoBar.querySelectorAll('.eta-tipo-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeTipo = btn.dataset.tipo ?? '';
+        applyETAFilters();
+      });
+    });
+
+    // Fecha toggle
+    fechaBtn?.addEventListener('click', () => {
+      fechaOnly = !fechaOnly;
+      fechaBtn.dataset.active = fechaOnly ? 'true' : 'false';
+      applyETAFilters();
+    });
+
+    // Search
+    searchEl?.addEventListener('input', e => {
+      searchQ = e.target.value;
+      applyETAFilters();
+    });
+
+    // Reset
+    resetBtn?.addEventListener('click', () => {
+      activeTipo = '';
+      fechaOnly  = false;
+      searchQ    = '';
+      if (searchEl) searchEl.value = '';
+      tipoBar?.querySelectorAll('.eta-tipo-pill').forEach(b => b.classList.remove('active'));
+      tipoBar?.querySelector('.eta-tipo-pill[data-tipo=""]')?.classList.add('active');
+      if (fechaBtn) fechaBtn.dataset.active = 'false';
+      applyETAFilters();
     });
   }
 </script>

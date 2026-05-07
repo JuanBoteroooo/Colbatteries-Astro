@@ -29,7 +29,7 @@ export const groups = [
     image: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&h=300&fit=crop&q=80',
     catalogs: [
       { slug: 'movimientos-epson',  label: 'Movimientos EPSON & SII',  pages: 55 },
-      { slug: 'movimientos-eta',    label: 'Movimientos ETA',          pages: 19 },
+      { slug: 'movimientos-eta',    label: 'Movimientos ETA',          structured: true },
       { slug: 'movimientos-isa',    label: 'Movimientos ISA & China',  pages: 16 },
       { slug: 'movimientos-miyota', label: 'Movimientos Miyota',       pages: 56 },
       { slug: 'movimientos-ronda',  label: 'Movimientos Ronda',        pages: 29 },
