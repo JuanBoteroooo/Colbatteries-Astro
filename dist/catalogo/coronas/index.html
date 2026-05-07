@@ -354,8 +354,8 @@ const products = [{"ref":"C-1","rosca":"0.90MM","medida":"7.5MM X 4.6MM","color"
     }
 
     document.getElementById('etaGrid')?.addEventListener('click', e => {
-      const card = e.target.closest('[data-img]');
-      if (card) openModal(card.dataset.img, card.dataset.title);
+      const card = e.target.closest('[data-catalogo-src]');
+      if (card) openModal(card.dataset.catalogoSrc, card.dataset.title);
     });
 
     modalClose?.addEventListener('click', closeModal);

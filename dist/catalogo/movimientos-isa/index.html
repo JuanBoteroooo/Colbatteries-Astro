@@ -358,8 +358,8 @@ const products = [];
     }
 
     document.getElementById('etaGrid')?.addEventListener('click', e => {
-      const card = e.target.closest('[data-img]');
-      if (card) openModal(card.dataset.img, card.dataset.title);
+      const card = e.target.closest('[data-catalogo-src]');
+      if (card) openModal(card.dataset.catalogoSrc, card.dataset.title);
     });
 
     modalClose?.addEventListener('click', closeModal);

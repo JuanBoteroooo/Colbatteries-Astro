@@ -233,7 +233,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
 
         <!-- Grid (server-rendered CatalogCard components) -->
         <div class="eta-grid" id="etaGrid">
-          {products.map((p: any) => (
+          {products.map((p: any, i: number) => (
             <div
               class="eta-card-wrapper"
               data-tipo={p.tipo}
@@ -242,6 +242,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
             >
               <CatalogCard
                 imagenSrc={p.img}
+                imagenCatalogoSrc={`/catalogo-pages/${slug}/page-${String(i + 2).padStart(2, '0')}.jpg`}
                 titulo={`ETA ${p.modelo}`}
                 detalles={{
                   dimensiones: p.dimensiones,
@@ -1569,8 +1570,8 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     }
 
     document.getElementById('etaGrid')?.addEventListener('click', e => {
-      const card = e.target.closest('[data-img]');
-      if (card) openModal(card.dataset.img, card.dataset.title);
+      const card = e.target.closest('[data-catalogo-src]');
+      if (card) openModal(card.dataset.catalogoSrc, card.dataset.title);
     });
 
     modalClose?.addEventListener('click', closeModal);

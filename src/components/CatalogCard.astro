@@ -10,15 +10,16 @@ interface Detalles {
 }
 
 interface Props {
-  imagenSrc:         string;
-  titulo:            string;   // "ETA 251.262"
-  descripcionCorta?: string;
-  detalles:          Detalles;
-  tipo?:             string;
-  fecha?:            boolean;
+  imagenSrc:          string;
+  imagenCatalogoSrc:  string;
+  titulo:             string;   // "ETA 251.262"
+  descripcionCorta?:  string;
+  detalles:           Detalles;
+  tipo?:              string;
+  fecha?:             boolean;
 }
 
-const { imagenSrc, titulo, detalles, tipo, fecha } = Astro.props;
+const { imagenSrc, imagenCatalogoSrc, titulo, detalles, tipo, fecha } = Astro.props;
 
 const spaceIdx = titulo.indexOf(' ');
 const prefix   = spaceIdx > -1 ? titulo.slice(0, spaceIdx)  : '';
@@ -47,7 +48,7 @@ const specs: SpecItem[] = [
 
 ---
 
-<article class="cc" data-img={imagenSrc} data-title={titulo}>
+<article class="cc" data-img={imagenSrc} data-catalogo-src={imagenCatalogoSrc} data-title={titulo}>
   <!-- Image zone -->
   <div class="cc-img-zone">
     <img
