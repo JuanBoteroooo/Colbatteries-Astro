@@ -1564,11 +1564,23 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     const modalTitle = document.getElementById('etaModalTitle');
     const modalClose = document.getElementById('etaModalClose');
 
-    function openModal(img, title) {
-      if (!modal || !modalImg || !modalTitle) return;
-      modalImg.src   = img;
-      modalImg.alt   = title;
-      modalTitle.textContent = title;
+    let currentCard = null;
+
+    function visibleCards() {
+      return Array.from(document.querySelectorAll('#etaGrid .eta-card-wrapper:not([hidden]) [data-catalogo-src]'));
+    }
+
+    function showCard(card) {
+      if (!card || !modalImg || !modalTitle) return;
+      currentCard = card;
+      modalImg.src          = card.dataset.catalogoSrc;
+      modalImg.alt          = card.dataset.title;
+      modalTitle.textContent = card.dataset.title;
+    }
+
+    function openModal(card) {
+      if (!modal) return;
+      showCard(card);
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -1578,14 +1590,27 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
       document.body.style.overflow = '';
     }
 
+    function navigate(dir) {
+      const cards = visibleCards();
+      if (!cards.length) return;
+      const idx  = currentCard ? cards.indexOf(currentCard) : -1;
+      const next = cards[(idx + dir + cards.length) % cards.length];
+      showCard(next);
+    }
+
     document.getElementById('etaGrid')?.addEventListener('click', e => {
       const card = e.target.closest('[data-catalogo-src]');
-      if (card) openModal(card.dataset.catalogoSrc, card.dataset.title);
+      if (card) openModal(card);
     });
 
     modalClose?.addEventListener('click', closeModal);
     modal?.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    document.addEventListener('keydown', e => {
+      if (!modal?.classList.contains('open')) return;
+      if (e.key === 'Escape')      closeModal();
+      else if (e.key === 'ArrowRight') navigate(+1);
+      else if (e.key === 'ArrowLeft')  navigate(-1);
+    });
 
     tipoBar?.querySelectorAll('.eta-tipo-pill').forEach(btn => {
       btn.addEventListener('click', () => {
