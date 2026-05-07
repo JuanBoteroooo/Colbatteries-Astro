@@ -167,7 +167,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     <!-- ══════════════════════════════════════════
          STRUCTURED MODE (cat.structured defined)
     ══════════════════════════════════════════ -->
-    {isStructured && (
+    {isStructured && !isETA && (
       <div class="struct-viewer" id="structViewer">
 
         <!-- Sticky controls -->
@@ -1023,23 +1023,24 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .viewer-page:has(.eta-viewer) {
     height: auto;
     min-height: 100vh;
-    background: #080810;
+    background: #f4f6fa;
   }
 
   .eta-viewer {
     display: flex;
     flex-direction: column;
-    background: #080810;
+    background: #f4f6fa;
   }
 
   /* ── Controls ── */
   .eta-controls {
-    background: #0e0e18;
-    border-bottom: 1px solid #1a1a2e;
+    background: #fff;
+    border-bottom: 1px solid #dce4f0;
     padding: 0.9rem 1.5rem;
     display: flex; align-items: center; gap: 0.75rem;
     flex-wrap: wrap;
     position: sticky; top: 78px; z-index: 50;
+    box-shadow: 0 2px 8px rgba(2,69,152,0.06);
   }
 
   .eta-search-wrap {
@@ -1048,63 +1049,62 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
 
   .eta-search-icon {
     position: absolute; left: 0.85rem; top: 50%;
-    transform: translateY(-50%); color: #3a3a5a; pointer-events: none;
+    transform: translateY(-50%); color: #9aabbf; pointer-events: none;
   }
 
   .eta-search-input {
     width: 100%;
     padding: 0.65rem 1rem 0.65rem 2.4rem;
     font-size: 0.84rem; font-family: 'IBM Plex Mono', monospace;
-    background: #111120; border: 1px solid #1e1e38; border-radius: 6px;
-    color: #c8c8e0; outline: none;
-    transition: border-color 0.2s;
+    background: #f4f6fa; border: 1px solid #dce4f0; border-radius: 6px;
+    color: #1a2a4a; outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
 
-  .eta-search-input:focus { border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(242,169,0,0.08); }
-  .eta-search-input::placeholder { color: #2e2e4a; }
+  .eta-search-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(2,69,152,0.08); }
+  .eta-search-input::placeholder { color: #9aabbf; }
 
   .eta-tipo-bar { display: flex; gap: 0.35rem; flex-wrap: wrap; }
 
   .eta-tipo-pill {
     padding: 0.4rem 0.85rem; border-radius: 50px;
-    border: 1px solid #1e1e38; background: #111120;
-    color: #44446a; font-size: 0.71rem; font-weight: 700;
+    border: 1px solid #dce4f0; background: #f4f6fa;
+    color: #6680a0; font-size: 0.71rem; font-weight: 700;
     font-family: var(--font-body); cursor: pointer;
     letter-spacing: 0.04em;
     transition: all 0.15s; white-space: nowrap;
   }
 
-  .eta-tipo-pill:hover { border-color: #3a3a5a; color: #9898b8; }
+  .eta-tipo-pill:hover { border-color: var(--blue); color: var(--blue); background: #eef2fa; }
   .eta-tipo-pill.active { background: var(--yellow); border-color: var(--yellow); color: #111; }
 
   .eta-fecha-toggle {
     display: inline-flex; align-items: center; gap: 0.4rem;
     padding: 0.4rem 0.85rem; border-radius: 50px;
-    border: 1px solid #1e1e38; background: #111120;
-    color: #44446a; font-size: 0.71rem; font-weight: 700;
+    border: 1px solid #dce4f0; background: #f4f6fa;
+    color: #6680a0; font-size: 0.71rem; font-weight: 700;
     font-family: var(--font-body); cursor: pointer;
     letter-spacing: 0.04em; white-space: nowrap;
     transition: all 0.15s;
   }
 
-  .eta-fecha-toggle:hover { border-color: #3a3a5a; color: #9898b8; }
+  .eta-fecha-toggle:hover { border-color: var(--blue); color: var(--blue); background: #eef2fa; }
   .eta-fecha-toggle[data-active="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
 
   .eta-results-label {
-    font-size: 0.68rem; font-weight: 800; color: #2a2a44;
+    font-size: 0.68rem; font-weight: 800; color: #9aabbf;
     letter-spacing: 0.1em; white-space: nowrap; margin-left: auto;
     font-family: 'IBM Plex Mono', monospace;
   }
 
-  #etaCount { color: var(--yellow); }
+  #etaCount { color: var(--blue); }
 
   /* ── Grid ── */
   .eta-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: #0e0e18;
-    padding: 1px 0 0;
+    gap: 1.25rem;
+    padding: 1.5rem;
   }
 
   /* ── Card wrapper (grid item) ── */
@@ -1128,8 +1128,8 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
 
   /* ── ETA Responsive ── */
   @media (max-width: 1100px) { .eta-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 768px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); } .eta-controls { padding: 0.75rem 1rem; } }
-  @media (max-width: 500px)  { .eta-grid { grid-template-columns: 1fr 1fr; } .eta-fecha-toggle span { display: none; } }
+  @media (max-width: 768px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 1rem; } .eta-controls { padding: 0.75rem 1rem; } }
+  @media (max-width: 500px)  { .eta-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-fecha-toggle span { display: none; } }
 </style>
 
 <script define:vars={{ slug, isGallery, isStructured, isETA, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
