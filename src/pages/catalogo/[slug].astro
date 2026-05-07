@@ -267,6 +267,24 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
         </div>
 
       </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
     )}
 
     <!-- ══════════════════════════════════════════
@@ -1102,7 +1120,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   /* ── Grid ── */
   .eta-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
     padding: 1.5rem;
     width: 100%;
@@ -1129,8 +1147,95 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-reset-btn:hover { opacity: 0.85; }
 
   /* ── ETA Responsive ── */
-  @media (max-width: 768px)  { .eta-grid { gap: 1rem; padding: 1rem; } .eta-controls { padding: 0.75rem 1rem; } }
-  @media (max-width: 500px)  { .eta-grid { gap: 0.75rem; padding: 0.75rem; } .eta-fecha-toggle span { display: none; } }
+  @media (max-width: 1024px) { .eta-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { padding: 0.75rem 1rem; } .eta-fecha-toggle span { display: none; } }
+
+  /* ── Image modal ── */
+  .eta-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease;
+  }
+
+  .eta-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .eta-modal-inner {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    max-width: min(680px, 92vw);
+    width: 100%;
+    overflow: hidden;
+    transform: scale(0.94);
+    transition: transform 0.22s ease;
+  }
+
+  .eta-modal.open .eta-modal-inner {
+    transform: scale(1);
+  }
+
+  .eta-modal-img-wrap {
+    background: #f5f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: min(480px, 55vw);
+    padding: 2rem;
+  }
+
+  .eta-modal-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .eta-modal-footer {
+    padding: 1.1rem 1.4rem 1.2rem;
+    border-top: 1px solid #eef2f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .eta-modal-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #024598;
+    margin: 0;
+  }
+
+  .eta-modal-close {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 1rem;
+    background: #f4f6fa;
+    border: 1px solid #dce4f0;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .eta-modal-close:hover { background: #eef2f8; }
 </style>
 
 <script define:vars={{ slug, isGallery, isStructured, isETA, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
@@ -1442,6 +1547,35 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     }
 
     hideOverlay();
+
+    // ── Image modal ──
+    const modal      = document.getElementById('etaModal');
+    const modalImg   = document.getElementById('etaModalImg');
+    const modalTitle = document.getElementById('etaModalTitle');
+    const modalClose = document.getElementById('etaModalClose');
+
+    function openModal(img, title) {
+      if (!modal || !modalImg || !modalTitle) return;
+      modalImg.src   = img;
+      modalImg.alt   = title;
+      modalTitle.textContent = title;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal?.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('etaGrid')?.addEventListener('click', e => {
+      const card = e.target.closest('[data-img]');
+      if (card) openModal(card.dataset.img, card.dataset.title);
+    });
+
+    modalClose?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
     tipoBar?.querySelectorAll('.eta-tipo-pill').forEach(btn => {
       btn.addEventListener('click', () => {
