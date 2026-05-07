@@ -4,11 +4,11 @@ export const groups = [
     name: 'Pulsos & Correas',
     image: 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'pulso-resina',    label: 'Pulso Resina' },
-      { slug: 'pulso-silicona',  label: 'Pulso Silicona' },
-      { slug: 'pulso-cuero',     label: 'Pulso de Cuero' },
-      { slug: 'pulso-metalico',  label: 'Pulso Metálico' },
-      { slug: 'pulso-pvc',       label: 'Pulso PVC' },
+      { slug: 'pulso-resina',    label: 'Pulso Resina',    pages: 124 },
+      { slug: 'pulso-silicona',  label: 'Pulso Silicona',  pages: 53 },
+      { slug: 'pulso-cuero',     label: 'Pulso de Cuero',  pages: 47 },
+      { slug: 'pulso-metalico',  label: 'Pulso Metálico',  pages: 75 },
+      { slug: 'pulso-pvc',       label: 'Pulso PVC',       pages: 86 },
     ],
   },
   {
@@ -16,12 +16,11 @@ export const groups = [
     name: 'Baterías & Pilas',
     image: 'https://images.unsplash.com/photo-1619641782842-83f2446c560b?q=80&w=1200&auto=format&fit=crop',
     catalogs: [
-      { slug: 'baterias-gp',       label: 'Baterías GP' },
-      { slug: 'baterias-tianqiu',  label: 'Baterías Tianqiu' },
-      { slug: 'baterias-renata',   label: 'Baterías Renata' },
-      { slug: 'baterias-maxell',   label: 'Baterías Maxell' },
-      { slug: 'pilas-economicas',  label: 'Pilas Económicas' },
-      { slug: 'capacitores',       label: 'Capacitores' },
+      { slug: 'baterias-gp',       label: 'Baterías GP',       pages: 77 },
+      { slug: 'baterias-tianqiu',  label: 'Baterías Tianqiu',  pages: 33 },
+      { slug: 'baterias-maxell',   label: 'Baterías Maxell',   pages: 46 },
+      { slug: 'pilas-economicas',  label: 'Pilas Económicas',  pages: 20 },
+      { slug: 'capacitores',       label: 'Capacitores',       pages: 89 },
     ],
   },
   {
@@ -29,11 +28,11 @@ export const groups = [
     name: 'Movimientos',
     image: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'movimientos-epson',  label: 'Movimientos EPSON & SII' },
-      { slug: 'movimientos-eta',    label: 'Movimientos ETA' },
-      { slug: 'movimientos-isa',    label: 'Movimientos ISA & China' },
-      { slug: 'movimientos-miyota', label: 'Movimientos Miyota' },
-      { slug: 'movimientos-ronda',  label: 'Movimientos Ronda' },
+      { slug: 'movimientos-epson',  label: 'Movimientos EPSON & SII',  pages: 55 },
+      { slug: 'movimientos-eta',    label: 'Movimientos ETA',          pages: 19 },
+      { slug: 'movimientos-isa',    label: 'Movimientos ISA & China',  pages: 16 },
+      { slug: 'movimientos-miyota', label: 'Movimientos Miyota',       pages: 56 },
+      { slug: 'movimientos-ronda',  label: 'Movimientos Ronda',        pages: 29 },
     ],
   },
   {
@@ -41,9 +40,8 @@ export const groups = [
     name: 'Relojes',
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'relojes-polemik',  label: 'Reloj Polemik' },
-      { slug: 'relojes-surtidos', label: 'Relojes Surtidos' },
-      { slug: 'relojes-xinjia',   label: 'Relojes Xinjia' },
+      { slug: 'relojes-polemik',  label: 'Reloj Polemik',    pages: 68 },
+      { slug: 'relojes-xinjia',   label: 'Relojes Xinjia',   pages: 109 },
     ],
   },
   {
@@ -51,10 +49,10 @@ export const groups = [
     name: 'Accesorios',
     image: 'https://images.unsplash.com/photo-1593152167544-085d3b9c4938?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'coronas',           label: 'Coronas' },
-      { slug: 'vidrios',           label: 'Vidrios' },
-      { slug: 'modulos',           label: 'Módulos' },
-      { slug: 'insumos-relojeria', label: 'Insumos de Relojería' },
+      { slug: 'coronas',           label: 'Coronas',              structured: true },
+      { slug: 'vidrios',           label: 'Vidrios',              pages: 31 },
+      { slug: 'modulos',           label: 'Módulos',              pages: 34 },
+      { slug: 'insumos-relojeria', label: 'Insumos de Relojería', pages: 101 },
     ],
   },
   {
@@ -62,8 +60,8 @@ export const groups = [
     name: 'Herramientas',
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'herramientas',        label: 'Herramientas de Relojería' },
-      { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas' },
+      { slug: 'herramientas',         label: 'Herramientas de Relojería', pages: 286 },
+      { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas',    pages: 264 },
     ],
   },
   {
@@ -71,8 +69,8 @@ export const groups = [
     name: 'Gorras',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'gorras-polemik', label: 'Gorras Polemik' },
-      { slug: 'gorras-lisas',   label: 'Gorras Lisas' },
+      { slug: 'gorras-polemik', label: 'Gorras Polemik', pages: 189 },
+      { slug: 'gorras-lisas',   label: 'Gorras Lisas',   pages: 70 },
     ],
   },
 ];
