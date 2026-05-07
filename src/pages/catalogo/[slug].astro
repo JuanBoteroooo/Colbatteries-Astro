@@ -1155,14 +1155,16 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-modal {
     position: fixed;
     inset: 0;
-    z-index: 600;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.88);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.22s ease;
+    box-sizing: border-box;
   }
 
   .eta-modal.open {
@@ -1175,8 +1177,8 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     background: #111;
     border-radius: 8px;
     box-shadow: 0 24px 80px rgba(0,0,0,0.7);
-    width: 90vw;
-    height: 90vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -1195,12 +1197,14 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .eta-modal-img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     display: block;
   }
