@@ -1127,7 +1127,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   /* ── Grid ── */
   .eta-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     padding: 1.5rem;
     width: 100%;
@@ -1154,8 +1154,8 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-reset-btn:hover { opacity: 0.85; }
 
   /* ── ETA Responsive ── */
-  @media (max-width: 1024px) { .eta-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 640px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { padding: 0.75rem 1rem; } .eta-fecha-toggle span { display: none; } }
+  @media (max-width: 900px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { padding: 0.75rem 1rem; } .eta-fecha-toggle span { display: none; } }
 
   /* ── Image modal ── */
   .eta-modal {
