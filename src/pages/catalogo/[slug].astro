@@ -1102,13 +1102,15 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   /* ── Grid ── */
   .eta-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
     gap: 1.25rem;
     padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* ── Card wrapper (grid item) ── */
-  .eta-card-wrapper { display: block; }
+  .eta-card-wrapper { display: block; min-width: 0; }
   .eta-card-wrapper[hidden] { display: none !important; }
 
   /* Empty */
@@ -1127,9 +1129,8 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-reset-btn:hover { opacity: 0.85; }
 
   /* ── ETA Responsive ── */
-  @media (max-width: 1100px) { .eta-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 768px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 1rem; } .eta-controls { padding: 0.75rem 1rem; } }
-  @media (max-width: 500px)  { .eta-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-fecha-toggle span { display: none; } }
+  @media (max-width: 768px)  { .eta-grid { gap: 1rem; padding: 1rem; } .eta-controls { padding: 0.75rem 1rem; } }
+  @media (max-width: 500px)  { .eta-grid { gap: 0.75rem; padding: 0.75rem; } .eta-fecha-toggle span { display: none; } }
 </style>
 
 <script define:vars={{ slug, isGallery, isStructured, isETA, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
