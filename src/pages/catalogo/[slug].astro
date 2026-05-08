@@ -5,6 +5,7 @@ import CatalogCard from '../../components/CatalogCard.astro';
 import { groups } from '../../data/catalogs.js';
 import coronasData from '../../data/coronas.json';
 import etaData from '../../data/movimientos-eta.json';
+import rondaData from '../../data/movimientos-ronda.json';
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -26,8 +27,9 @@ const waMsg = encodeURIComponent(`Hola, quisiera solicitar el catálogo de ${cat
 const isStructured = !!cat.structured;
 const isGallery = !isStructured && !!cat.pages;
 const isETA     = isStructured && slug === 'movimientos-eta';
+const isRonda   = isStructured && slug === 'movimientos-ronda';
 const isCoronas = isStructured && slug === 'coronas';
-const products  = isCoronas ? coronasData : isETA ? etaData : [];
+const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : [];
 
 // For cover fallback (PDF mode only)
 const labelUpper = cat.label.toUpperCase();
@@ -203,9 +205,9 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     )}
 
     <!-- ══════════════════════════════════════════
-         ETA STRUCTURED MODE
+         ETA / RONDA STRUCTURED MODE
     ══════════════════════════════════════════ -->
-    {isETA && (
+    {(isETA || isRonda) && (
       <div class="eta-viewer" id="etaViewer">
 
         <!-- Sticky controls -->
@@ -243,7 +245,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
               <CatalogCard
                 imagenSrc={p.img}
                 imagenCatalogoSrc={`/catalogo-pages/${slug}/page-${String(i + 2).padStart(2, '0')}.jpg`}
-                titulo={`ETA ${p.modelo}`}
+                titulo={`${isETA ? 'ETA' : 'Ronda'} ${p.modelo}`}
                 detalles={{
                   dimensiones: p.dimensiones,
                   altura: p.altura,
@@ -1283,7 +1285,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-modal-close:hover { border-color: #f2a900; color: #f2a900; }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, isETA, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -1559,9 +1561,9 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   }
 
   // ════════════════════════════
-  // ETA STRUCTURED MODE
+  // ETA / RONDA STRUCTURED MODE
   // ════════════════════════════
-  if (isETA) {
+  if (isETA || isRonda) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');
