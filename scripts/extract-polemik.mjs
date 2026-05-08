@@ -158,6 +158,33 @@ async function single(view) {
         .toBuffer();
 }
 
+async function gridLayoutVertical(views) {
+    const ROW_H = 150;
+    const resized = await Promise.all(views.map(async ({ buf }) => {
+        const r = await sharp(buf)
+            .resize({ height: ROW_H, fit: 'inside', background: WHITE })
+            .flatten({ background: WHITE })
+            .png()
+            .toBuffer();
+        const m = await sharp(r).metadata();
+        return { buf: r, width: m.width, height: ROW_H };
+    }));
+    const maxW   = Math.max(...resized.map(v => v.width));
+    const totalW = maxW + PAD * 2;
+    const totalH = ROW_H * views.length + GAP * (views.length - 1) + PAD * 2;
+    let y = PAD;
+    const composites = resized.map(({ buf, width }) => {
+        const comp = { input: buf, left: PAD + Math.floor((maxW - width) / 2), top: y };
+        y += ROW_H + GAP;
+        return comp;
+    });
+    return sharp({ create: { width: totalW, height: totalH, channels: 3, background: WHITE } })
+        .composite(composites)
+        .flatten({ background: WHITE })
+        .png()
+        .toBuffer();
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 for (const { modelo, page, raws } of pages) {
     const safe    = modelo.replace(/\//g, '_').replace(/ /g, '-');
@@ -190,7 +217,11 @@ for (const { modelo, page, raws } of pages) {
         continue;
     }
 
-    const outBuf = final.length === 1 ? await single(final[0]) : await stitchH(final);
+    const outBuf = final.length >= 3
+        ? await gridLayoutVertical(final)
+        : final.length === 1
+        ? await single(final[0])
+        : await stitchH(final);
     await sharp(outBuf).toFile(outPath);
     const meta = await sharp(outPath).metadata();
     console.log(`  ${modelo} (pg ${page}): ${meta.width}×${meta.height}  [${strategy}]`);

@@ -16,6 +16,7 @@ interface Props {
   tipo?:              string;
   fecha?:             boolean;
   isCorona?:          boolean;
+  isWatch?:           boolean;
   rosca?:             string;
   medida?:            string;
   color?:             string;
@@ -24,7 +25,7 @@ interface Props {
 const {
   imagenSrc, imagenCatalogoSrc, titulo, detalles,
   tipo, fecha,
-  isCorona = false, rosca, medida, color,
+  isCorona = false, isWatch = false, rosca, medida, color,
 } = Astro.props;
 
 const BADGE_CLASS: Record<string, string> = {
@@ -34,6 +35,8 @@ const BADGE_CLASS: Record<string, string> = {
   'CON ROSCA':        'badge-rosca',
   'CON ROSCA Y TUBO': 'badge-tubo',
   'ECONÓMICAS':       'badge-eco',
+  'DIGITAL':          'badge-digital',
+  'ACCESORIO':        'badge-acc',
 };
 
 const TIPO_LABEL: Record<string, string> = {
@@ -43,6 +46,8 @@ const TIPO_LABEL: Record<string, string> = {
   'CON ROSCA':        'Con Rosca',
   'CON ROSCA Y TUBO': 'Rosca y Tubo',
   'ECONÓMICAS':       'Económica',
+  'DIGITAL':          'Digital',
+  'ACCESORIO':        'Accesorio',
 };
 
 // Title split — for movements: "ETA 251.262" → prefix "ETA", model "251.262"
@@ -61,6 +66,10 @@ const specs: SpecItem[] = isCorona
   ? [
       medida ? { k: 'Medida', v: medida.replace(/\s*[Xx]\s*/g, ' × ') } : null,
       rosca  ? { k: 'Rosca',  v: rosca } : null,
+    ].filter((s): s is SpecItem => s !== null)
+  : isWatch
+  ? [
+      tipo ? { k: 'Tipo', v: TIPO_LABEL[tipo] ?? tipo } : null,
     ].filter((s): s is SpecItem => s !== null)
   : [
       detalles.dimensiones      ? { k: 'Dimensiones', v: detalles.dimensiones }      : null,
@@ -236,9 +245,11 @@ const coronaColors = isCorona && color
     border: 1px solid rgba(2, 69, 152, 0.18);
   }
   /* Corona badges */
-  .badge-rosca { background: #f2a900; color: #111; }
-  .badge-tubo  { background: #024598; color: #fff; }
-  .badge-eco   { background: #e64132; color: #fff; }
+  .badge-rosca    { background: #f2a900; color: #111; }
+  .badge-tubo     { background: #024598; color: #fff; }
+  .badge-eco      { background: #e64132; color: #fff; }
+  .badge-digital  { background: #0a8a50; color: #fff; }
+  .badge-acc      { background: #777;    color: #fff; }
 
   /* ── Body ── */
   .cc-body {
