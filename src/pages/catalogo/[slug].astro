@@ -11,6 +11,7 @@ import siiData from '../../data/movimientos-sii.json';
 import miyotaData from '../../data/movimientos-miyota.json';
 import isaData from '../../data/movimientos-isa.json';
 import chinosData from '../../data/movimientos-chinos.json';
+import polemikData from '../../data/relojes-polemik.json';
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -38,8 +39,9 @@ const isSII     = isStructured && slug === 'movimientos-sii';
 const isMiyota  = isStructured && slug === 'movimientos-miyota';
 const isISA     = isStructured && slug === 'movimientos-isa';
 const isChinos  = isStructured && slug === 'movimientos-chinos';
+const isPolemik = isStructured && slug === 'relojes-polemik';
 const isCoronas = isStructured && slug === 'coronas';
-const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : [];
+const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : [];
 const pdfSlug   = isSII ? 'movimientos-epson' : slug;
 
 // For cover fallback (PDF mode only)
@@ -267,7 +269,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     <!-- ══════════════════════════════════════════
          ETA / RONDA STRUCTURED MODE
     ══════════════════════════════════════════ -->
-    {(isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos) && (
+    {(isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik) && (
       <div class="eta-viewer" id="etaViewer">
 
         <!-- Sticky controls -->
@@ -297,14 +299,14 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
         <div class="eta-grid" id="etaGrid">
           {products.map((p: any, i: number) => {
             const safe = (p.modelo as string).replace(/\//g, '_').replace(/ /g, '-');
-            const useImgCatalogPage = isMiyota || isISA || isChinos;
+            const useImgCatalogPage = isMiyota || isISA || isChinos || isPolemik;
             const productImgSrc = useImgCatalogPage
               ? `/images/productos/${slug}/${safe}.png`
               : (p.img as string);
             const catalogoSrc = useImgCatalogPage
               ? (p.img as string)
               : `/catalogo-pages/${slug}/page-${String(i + 2).padStart(2, '0')}.jpg`;
-            const brand = isETA ? 'ETA' : isRonda ? 'Ronda' : isEpson ? 'Epson' : isSII ? 'SII' : isMiyota ? 'Miyota' : isISA ? 'ISA' : '';
+            const brand = isETA ? 'ETA' : isRonda ? 'Ronda' : isEpson ? 'Epson' : isSII ? 'SII' : isMiyota ? 'Miyota' : isISA ? 'ISA' : isPolemik ? 'Polemik' : '';
             return (
               <div
                 class="eta-card-wrapper"
@@ -1356,7 +1358,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-modal-close:hover { border-color: #f2a900; color: #f2a900; }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isPolemik, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -1535,7 +1537,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   // ════════════════════════════
   // ETA / RONDA / EPSON / SII / CORONAS STRUCTURED MODE
   // ════════════════════════════
-  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isCoronas) {
+  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isCoronas) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');

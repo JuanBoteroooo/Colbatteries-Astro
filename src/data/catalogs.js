@@ -42,7 +42,7 @@ export const groups = [
     name: 'Relojes',
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'relojes-polemik',  label: 'Reloj Polemik',    pages: 68 },
+      { slug: 'relojes-polemik',  label: 'Reloj Polemik',    structured: true },
       { slug: 'relojes-xinjia',   label: 'Relojes Xinjia',   pages: 109 },
     ],
   },
