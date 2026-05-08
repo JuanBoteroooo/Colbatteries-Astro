@@ -1,6 +1,5 @@
 ---
 interface Detalles {
-  tipo?:         string;
   dimensiones?:  string;
   altura?:       string;
   joyas?:        number;
@@ -12,40 +11,74 @@ interface Detalles {
 interface Props {
   imagenSrc:          string;
   imagenCatalogoSrc:  string;
-  titulo:             string;   // "ETA 251.262"
-  descripcionCorta?:  string;
+  titulo:             string;
   detalles:           Detalles;
   tipo?:              string;
   fecha?:             boolean;
+  isCorona?:          boolean;
+  rosca?:             string;
+  medida?:            string;
+  color?:             string;
 }
 
-const { imagenSrc, imagenCatalogoSrc, titulo, detalles, tipo, fecha } = Astro.props;
-
-const spaceIdx = titulo.indexOf(' ');
-const prefix   = spaceIdx > -1 ? titulo.slice(0, spaceIdx)  : '';
-const modelNum = spaceIdx > -1 ? titulo.slice(spaceIdx + 1) : titulo;
+const {
+  imagenSrc, imagenCatalogoSrc, titulo, detalles,
+  tipo, fecha,
+  isCorona = false, rosca, medida, color,
+} = Astro.props;
 
 const BADGE_CLASS: Record<string, string> = {
-  'CRONÓGRAFO': 'badge-crono',
-  'CABALLERO':  'badge-cab',
-  'DAMA':       'badge-dama',
+  'CRONÓGRAFO':       'badge-crono',
+  'CABALLERO':        'badge-cab',
+  'DAMA':             'badge-dama',
+  'CON ROSCA':        'badge-rosca',
+  'CON ROSCA Y TUBO': 'badge-tubo',
+  'ECONÓMICAS':       'badge-eco',
 };
 
 const TIPO_LABEL: Record<string, string> = {
-  'CRONÓGRAFO': 'Cronógrafo',
-  'CABALLERO':  'Caballero',
-  'DAMA':       'Dama',
+  'CRONÓGRAFO':       'Cronógrafo',
+  'CABALLERO':        'Caballero',
+  'DAMA':             'Dama',
+  'CON ROSCA':        'Con Rosca',
+  'CON ROSCA Y TUBO': 'Rosca y Tubo',
+  'ECONÓMICAS':       'Económica',
 };
+
+// Title split — for movements: "ETA 251.262" → prefix "ETA", model "251.262"
+// For coronas: titulo IS the ref, prefix comes from tipo
+const spaceIdx = titulo.indexOf(' ');
+const prefix   = isCorona
+  ? (TIPO_LABEL[tipo ?? ''] ?? '')
+  : (spaceIdx > -1 ? titulo.slice(0, spaceIdx) : '');
+const modelNum = isCorona
+  ? titulo
+  : (spaceIdx > -1 ? titulo.slice(spaceIdx + 1) : titulo);
 
 type SpecItem = { k: string; v: string };
 
-const specs: SpecItem[] = [
-  detalles.dimensiones             ? { k: 'Dimensiones', v: detalles.dimensiones }    : null,
-  detalles.altura                  ? { k: 'Altura',      v: `${detalles.altura}mm` }  : null,
-  (detalles.joyas != null)         ? { k: 'Joyas',       v: String(detalles.joyas) }  : null,
-  detalles.bateria                 ? { k: 'Batería',     v: `CR ${detalles.bateria}` }: null,
-].filter((s): s is SpecItem => s !== null).slice(0, 4);
+const specs: SpecItem[] = isCorona
+  ? [
+      medida ? { k: 'Medida', v: medida.replace(/\s*[Xx]\s*/g, ' × ') } : null,
+      rosca  ? { k: 'Rosca',  v: rosca } : null,
+    ].filter((s): s is SpecItem => s !== null)
+  : [
+      detalles.dimensiones      ? { k: 'Dimensiones', v: detalles.dimensiones }      : null,
+      detalles.altura           ? { k: 'Altura',      v: `${detalles.altura}mm` }    : null,
+      detalles.joyas != null    ? { k: 'Joyas',       v: String(detalles.joyas) }    : null,
+      detalles.bateria          ? { k: 'Batería',     v: `CR ${detalles.bateria}` }  : null,
+    ].filter((s): s is SpecItem => s !== null).slice(0, 4);
 
+const SWATCH: Record<string, string> = {
+  'PLATEADA': '#C0C0C8',
+  'DORADA':   '#D4AF37',
+  'NEGRA':    '#3a3a3a',
+  'ORO ROSA': '#C88898',
+};
+
+const coronaColors = isCorona && color
+  ? color.split(', ').map(c => c.trim())
+  : [];
 ---
 
 <article class="cc" data-img={imagenSrc} data-catalogo-src={imagenCatalogoSrc} data-title={titulo}>
@@ -65,7 +98,7 @@ const specs: SpecItem[] = [
           {TIPO_LABEL[tipo] ?? tipo}
         </span>
       )}
-      {fecha && <span class="cc-badge badge-fecha">+ Fecha</span>}
+      {!isCorona && fecha && <span class="cc-badge badge-fecha">+ Fecha</span>}
     </div>
   </div>
 
@@ -88,7 +121,19 @@ const specs: SpecItem[] = [
       </dl>
     )}
 
-    {detalles.intercambios && (
+    {isCorona && coronaColors.length > 0 && (
+      <div class="cc-swatches">
+        {coronaColors.map(c => (
+          <span
+            class="cc-swatch"
+            title={c}
+            style={`background:${SWATCH[c] ?? '#888'}`}
+          ></span>
+        ))}
+      </div>
+    )}
+
+    {!isCorona && detalles.intercambios && (
       <p class="cc-interchange">↔ {detalles.intercambios}</p>
     )}
   </div>
@@ -190,6 +235,10 @@ const specs: SpecItem[] = [
     color: #024598;
     border: 1px solid rgba(2, 69, 152, 0.18);
   }
+  /* Corona badges */
+  .badge-rosca { background: #f2a900; color: #111; }
+  .badge-tubo  { background: #024598; color: #fff; }
+  .badge-eco   { background: #e64132; color: #fff; }
 
   /* ── Body ── */
   .cc-body {
@@ -277,5 +326,21 @@ const specs: SpecItem[] = [
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  /* ── Corona color swatches ── */
+  .cc-swatches {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    margin-top: 0.6rem;
+  }
+
+  .cc-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
   }
 </style>

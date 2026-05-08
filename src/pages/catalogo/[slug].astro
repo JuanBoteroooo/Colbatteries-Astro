@@ -34,6 +34,7 @@ const isEpson   = isStructured && slug === 'movimientos-epson';
 const isSII     = isStructured && slug === 'movimientos-sii';
 const isCoronas = isStructured && slug === 'coronas';
 const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : [];
+const pdfSlug   = isSII ? 'movimientos-epson' : slug;
 
 // For cover fallback (PDF mode only)
 const labelUpper = cat.label.toUpperCase();
@@ -94,7 +95,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
       </div>
 
       <div class="bar-actions">
-        <a href={`/catalogos/${slug}.pdf`} download class="btn-dl">
+        <a href={`/catalogos/${pdfSlug}.pdf`} download class="btn-dl">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
@@ -171,40 +172,89 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     )}
 
     <!-- ══════════════════════════════════════════
-         STRUCTURED MODE (cat.structured defined)
+         CORONAS STRUCTURED MODE
     ══════════════════════════════════════════ -->
-    {isStructured && !isETA && (
-      <div class="struct-viewer" id="structViewer">
+    {isCoronas && (
+      <div class="eta-viewer" id="etaViewer">
 
         <!-- Sticky controls -->
-        <div class="struct-controls">
-          <div class="struct-search-wrap">
-            <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
               <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
-            <input type="search" id="structSearch" placeholder="Buscar por referencia, medida o color..." autocomplete="off" class="struct-search-input" />
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia, medida o color..." autocomplete="off" class="eta-search-input" />
           </div>
-          <div class="tipo-bar" id="tipoBar">
-            <button class="tipo-pill active" data-tipo="">Todas</button>
-            <button class="tipo-pill" data-tipo="CON ROSCA">Con Rosca</button>
-            <button class="tipo-pill" data-tipo="CON ROSCA Y TUBO">Rosca y Tubo</button>
-            <button class="tipo-pill" data-tipo="ECONÓMICAS">Económicas</button>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="CON ROSCA">Con Rosca</button>
+            <button class="eta-tipo-pill" data-tipo="CON ROSCA Y TUBO">Rosca y Tubo</button>
+            <button class="eta-tipo-pill" data-tipo="ECONÓMICAS">Económicas</button>
           </div>
-          <span class="results-label"><span id="resultCount">{products.length}</span> RESULTADOS</span>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
         </div>
 
-        <!-- Product grid (populated by JS) -->
-        <div class="product-grid" id="productGrid"></div>
+        <!-- Grid (server-rendered CatalogCard components) -->
+        <div class="eta-grid" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.ref as string).replace(/\//g, '_');
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.tipo}
+                data-modelo={(p.ref as string).toLowerCase()}
+                data-medida={(p.medida as string)?.toLowerCase() ?? ''}
+                data-color={(p.color as string)?.toLowerCase() ?? ''}
+              >
+                <CatalogCard
+                  imagenSrc={`/coronas-imgs/${safe}.jpg`}
+                  imagenCatalogoSrc={`/coronas-imgs/${safe}.jpg`}
+                  titulo={p.ref as string}
+                  detalles={{}}
+                  tipo={p.tipo}
+                  isCorona={true}
+                  rosca={p.rosca}
+                  medida={p.medida}
+                  color={p.color}
+                />
+              </div>
+            );
+          })}
+        </div>
 
         <!-- Empty state -->
-        <div class="empty-state" id="emptyState" style="display:none">
+        <div class="eta-empty" id="etaEmpty" style="display:none">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
-          <p class="empty-msg">Sin resultados</p>
-          <button class="empty-reset" id="emptyReset">Ver todas</button>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
         </div>
 
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
       </div>
     )}
 
@@ -1466,108 +1516,9 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   }
 
   // ════════════════════════════
-  // CORONAS STRUCTURED MODE
+  // ETA / RONDA / EPSON / SII / CORONAS STRUCTURED MODE
   // ════════════════════════════
-  if (isCoronas) {
-    const SWATCH = {
-      'PLATEADA': '#C0C0C8', 'DORADA': '#D4AF37',
-      'NEGRA': '#3a3a3a',    'ORO ROSA': '#C88898',
-    };
-    const TIPO_STYLE = {
-      'CON ROSCA':        'background:#f2a900;color:#111',
-      'CON ROSCA Y TUBO': 'background:#024598;color:#fff',
-      'ECONÓMICAS':       'background:#e64132;color:#fff',
-    };
-    const TIPO_LABEL = {
-      'CON ROSCA': 'Con Rosca',
-      'CON ROSCA Y TUBO': 'Rosca y Tubo',
-      'ECONÓMICAS': 'Económica',
-    };
-
-    function buildCard(p) {
-      const safe = p.ref.replace(/\//g, '_');
-      const imgSrc = `/coronas-imgs/${safe}.jpg`;
-      const colors = p.color.split(', ').map(c => c.trim());
-      const swatches = colors.map(c =>
-        `<span class="prod-swatch" title="${c}" style="background:${SWATCH[c] ?? '#888'}"></span>`
-      ).join('');
-      const notas = p.notas ? `<div class="prod-notas">${p.notas}</div>` : '';
-      const tipoStyle = TIPO_STYLE[p.tipo] ?? 'background:#444;color:#fff';
-      const tipoLabel = TIPO_LABEL[p.tipo] ?? p.tipo;
-      return `
-        <div class="prod-card">
-          <div class="prod-img-wrap">
-            <img src="${imgSrc}" alt="Corona ${p.ref}" class="prod-img" loading="lazy" />
-            <span class="prod-tipo-tag" style="${tipoStyle}">${tipoLabel}</span>
-          </div>
-          <div class="prod-card-body">
-            <div class="prod-ref">${p.ref}</div>
-            <div class="prod-medida">${p.medida.replace(/\s*X\s*/g, ' × ')}</div>
-            <div class="prod-rosca">Rosca ${p.rosca}</div>
-            <div class="prod-swatches">${swatches}</div>
-            ${notas}
-          </div>
-        </div>
-      `;
-    }
-
-    const grid       = document.getElementById('productGrid');
-    const countEl    = document.getElementById('resultCount');
-    const emptyState = document.getElementById('emptyState');
-    const emptyReset = document.getElementById('emptyReset');
-    const searchEl   = document.getElementById('structSearch');
-
-    let activeTipo = '';
-    let searchQ    = '';
-
-    function applyFilters() {
-      const q = searchQ.toLowerCase().trim();
-      const filtered = products.filter(p => {
-        const matchTipo = !activeTipo || p.tipo === activeTipo;
-        const matchQ    = !q || p.ref.toLowerCase().includes(q) || p.medida.toLowerCase().includes(q) || p.color.toLowerCase().includes(q);
-        return matchTipo && matchQ;
-      });
-
-      if (grid) grid.innerHTML = filtered.map(buildCard).join('');
-      if (countEl) countEl.textContent = filtered.length;
-      if (emptyState) emptyState.style.display = filtered.length === 0 ? 'flex' : 'none';
-    }
-
-    // Initial render
-    applyFilters();
-    hideOverlay();
-
-    // Tipo filters
-    document.querySelectorAll('.tipo-pill').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tipo-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeTipo = btn.dataset.tipo ?? '';
-        applyFilters();
-      });
-    });
-
-    // Search
-    searchEl?.addEventListener('input', (e) => {
-      searchQ = e.target.value;
-      applyFilters();
-    });
-
-    // Empty reset
-    emptyReset?.addEventListener('click', () => {
-      searchQ = '';
-      activeTipo = '';
-      if (searchEl) searchEl.value = '';
-      document.querySelectorAll('.tipo-pill').forEach(b => b.classList.remove('active'));
-      document.querySelector('.tipo-pill[data-tipo=""]')?.classList.add('active');
-      applyFilters();
-    });
-  }
-
-  // ════════════════════════════
-  // ETA / RONDA STRUCTURED MODE
-  // ════════════════════════════
-  if (isETA || isRonda || isEpson || isSII) {
+  if (isETA || isRonda || isEpson || isSII || isCoronas) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');
@@ -1583,13 +1534,15 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
       const q = searchQ.toLowerCase().trim();
       let count = 0;
       document.querySelectorAll('.eta-card-wrapper').forEach(wrapper => {
-        const tipo   = wrapper.dataset.tipo  ?? '';
+        const tipo   = wrapper.dataset.tipo   ?? '';
         const fecha  = wrapper.dataset.fecha === 'true';
         const modelo = wrapper.dataset.modelo ?? '';
+        const medida = wrapper.dataset.medida ?? '';
+        const color  = wrapper.dataset.color  ?? '';
         const show =
           (!activeTipo || tipo === activeTipo) &&
           (!fechaOnly  || fecha) &&
-          (!q          || modelo.includes(q) || tipo.toLowerCase().includes(q));
+          (!q          || modelo.includes(q) || tipo.toLowerCase().includes(q) || medida.includes(q) || color.includes(q));
         wrapper.hidden = !show;
         if (show) count++;
       });
