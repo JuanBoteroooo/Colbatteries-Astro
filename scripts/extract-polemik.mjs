@@ -2,13 +2,16 @@
  * extract-polemik.mjs
  * Extracts product images from relojes-polemik.pdf (pages 19-67).
  *
- * Each product page has 2-3 images showing color variants and/or product shots.
- * All usable images per page are cropped, normalized to the same height
- * (fit: 'inside'), then stitched horizontally on a white canvas.
+ * Pipeline per raw image:
+ *   1. Flatten alpha → white
+ *   2. Tight content-bounds crop (thresh=232, pad=25px)
+ *   3. Resize to uniform CELL_W×CELL_H (600×800) via fit:'contain' on white bg
  *
- * Filters applied per image:
- *  - MIN_DIM = 180px: removes small logos/badges (e.g. 566×176 Polemik PNG)
- *  - MAX_RATIO = 5.0: removes extreme banners
+ * Grid assembly:
+ *   n=1 → 1×1   n=2 → 2×1   n=3 → 2×2 (last centered)
+ *   n=4 → 2×2   n=6 → 3×2   general: ceil(√n) cols
+ *
+ * Filters: MIN_DIM=180 removes logos; MAX_RATIO=5.0 removes banners.
  *
  * Usage:  node scripts/extract-polemik.mjs
  */
@@ -21,20 +24,24 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT     = path.resolve(__dirname, '..');
-const OUT_DIR  = path.join(ROOT, 'public/images/productos/relojes-polemik');
-const TARGET_H = 302;
-const GAP      = 50;
-const PAD      = 20;
-const WHITE    = { r: 255, g: 255, b: 255 };
-const MIN_DIM  = 180;
+const ROOT      = path.resolve(__dirname, '..');
+const OUT_DIR   = path.join(ROOT, 'public/images/productos/relojes-polemik');
+
+const CELL_W    = 600;   // uniform width per watch cell
+const CELL_H    = 800;   // uniform height per watch cell
+const GRID_GAP  = 20;    // gap between cells in grid
+const GRID_PAD  = 40;    // outer margin of assembled grid
+const CROP_PAD  = 25;    // px added around detected content bbox
+const THRESH    = 232;   // brightness threshold — pixels below this count as content
+const MIN_DIM   = 180;
 const MAX_RATIO = 5.0;
+const WHITE     = { r: 255, g: 255, b: 255 };
 
 mkdirSync(OUT_DIR, { recursive: true });
 
-// ─── Python ───────────────────────────────────────────────────────────────────
+// ─── Python extraction ────────────────────────────────────────────────────────
 const PY_CODE = String.raw`
-import fitz, json, base64, re, sys
+import fitz, json, base64, sys
 
 PDF = 'public/catalogos/relojes-polemik.pdf'
 
@@ -80,7 +87,7 @@ console.log(`Got ${pages.length} products\n`);
 
 // ─── Sharp helpers ────────────────────────────────────────────────────────────
 
-async function contentBounds(buf, thresh = 238) {
+async function contentBounds(buf) {
     const { data, info } = await sharp(buf)
         .flatten({ background: WHITE })
         .raw()
@@ -90,7 +97,7 @@ async function contentBounds(buf, thresh = 238) {
     for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
             const i = (y * width + x) * channels;
-            if (data[i] < thresh || data[i + 1] < thresh || data[i + 2] < thresh) {
+            if (data[i] < THRESH || data[i + 1] < THRESH || data[i + 2] < THRESH) {
                 if (y < top)   top   = y;
                 if (y > bot)   bot   = y;
                 if (x < left)  left  = x;
@@ -101,27 +108,27 @@ async function contentBounds(buf, thresh = 238) {
     return { top, bot, left, right, width, height };
 }
 
-async function cropAndNormalize(inputBuf) {
-    const CROP_PAD = 14;
-    const b = await contentBounds(inputBuf);
+// Crop to content then normalize to exact CELL_W×CELL_H with fit:contain.
+async function processWatch(rawBuf) {
+    const b = await contentBounds(rawBuf);
     if (b.bot < 0) return null;
+
     const left  = Math.max(0, b.left  - CROP_PAD);
     const top   = Math.max(0, b.top   - CROP_PAD);
     const right = Math.min(b.width,  b.right  + CROP_PAD + 1);
     const bot   = Math.min(b.height, b.bot    + CROP_PAD + 1);
-    const buf = await sharp(inputBuf)
+
+    return sharp(rawBuf)
         .flatten({ background: WHITE })
         .extract({ left, top, width: right - left, height: bot - top })
-        .resize({ height: TARGET_H, fit: 'inside', background: WHITE })
+        .resize({ width: CELL_W, height: CELL_H, fit: 'contain', background: WHITE })
         .flatten({ background: WHITE })
         .png()
         .toBuffer();
-    const meta = await sharp(buf).metadata();
-    return { buf, width: meta.width, height: TARGET_H };
 }
 
-async function darkFrac(inputBuf) {
-    const { data, info } = await sharp(inputBuf)
+async function darkFrac(buf) {
+    const { data, info } = await sharp(buf)
         .flatten({ background: WHITE })
         .raw()
         .toBuffer({ resolveWithObject: true });
@@ -133,51 +140,34 @@ async function darkFrac(inputBuf) {
     return dark / n;
 }
 
-async function stitchH(views) {
-    const totalW = views.reduce((s, v) => s + v.width, 0) + GAP * (views.length - 1) + PAD * 2;
-    const totalH = TARGET_H + PAD * 2;
-    let x = PAD;
-    const composites = views.map(({ buf, width }) => {
-        const comp = { input: buf, left: x, top: PAD };
-        x += width + GAP;
-        return comp;
-    });
-    return sharp({ create: { width: totalW, height: totalH, channels: 3, background: WHITE } })
-        .composite(composites)
-        .flatten({ background: WHITE })
-        .png()
-        .toBuffer();
+// Grid layout: ceil(√n) cols, ceil(n/cols) rows.
+function gridDims(n) {
+    if (n <= 1) return { cols: 1, rows: 1 };
+    if (n === 2) return { cols: 2, rows: 1 };
+    const cols = Math.ceil(Math.sqrt(n));
+    const rows = Math.ceil(n / cols);
+    return { cols, rows };
 }
 
-async function single(view) {
-    const { buf, width } = view;
-    return sharp({ create: { width: width + PAD * 2, height: TARGET_H + PAD * 2, channels: 3, background: WHITE } })
-        .composite([{ input: buf, left: PAD, top: PAD }])
-        .flatten({ background: WHITE })
-        .png()
-        .toBuffer();
-}
+async function assembleGrid(cellBufs) {
+    const n = cellBufs.length;
+    const { cols, rows } = gridDims(n);
+    const totalW = cols * CELL_W + (cols - 1) * GRID_GAP + GRID_PAD * 2;
+    const totalH = rows * CELL_H + (rows - 1) * GRID_GAP + GRID_PAD * 2;
 
-async function gridLayoutVertical(views) {
-    const ROW_H = 150;
-    const resized = await Promise.all(views.map(async ({ buf }) => {
-        const r = await sharp(buf)
-            .resize({ height: ROW_H, fit: 'inside', background: WHITE })
-            .flatten({ background: WHITE })
-            .png()
-            .toBuffer();
-        const m = await sharp(r).metadata();
-        return { buf: r, width: m.width, height: ROW_H };
-    }));
-    const maxW   = Math.max(...resized.map(v => v.width));
-    const totalW = maxW + PAD * 2;
-    const totalH = ROW_H * views.length + GAP * (views.length - 1) + PAD * 2;
-    let y = PAD;
-    const composites = resized.map(({ buf, width }) => {
-        const comp = { input: buf, left: PAD + Math.floor((maxW - width) / 2), top: y };
-        y += ROW_H + GAP;
-        return comp;
+    const composites = cellBufs.map((buf, i) => {
+        const col = i % cols;
+        const row = Math.floor(i / cols);
+        // Center the last row when it has fewer items than cols
+        const itemsInRow = Math.min(cols, n - row * cols);
+        const rowShift = Math.round((cols - itemsInRow) * (CELL_W + GRID_GAP) / 2);
+        return {
+            input: buf,
+            left: GRID_PAD + col * (CELL_W + GRID_GAP) + rowShift,
+            top:  GRID_PAD + row * (CELL_H + GRID_GAP),
+        };
     });
+
     return sharp({ create: { width: totalW, height: totalH, channels: 3, background: WHITE } })
         .composite(composites)
         .flatten({ background: WHITE })
@@ -201,30 +191,25 @@ for (const { modelo, page, raws } of pages) {
         continue;
     }
 
-    const strategy = usable.length === 1 ? 'single' : `multi × ${usable.length}`;
-    const rawBufs  = usable.map(({ b64 }) => Buffer.from(b64, 'base64'));
-
-    const normalized = (await Promise.all(rawBufs.map(cropAndNormalize))).filter(Boolean);
+    const rawBufs = usable.map(({ b64 }) => Buffer.from(b64, 'base64'));
+    const cells   = (await Promise.all(rawBufs.map(processWatch))).filter(Boolean);
 
     const valid = [];
-    for (const v of normalized) {
-        if ((await darkFrac(v.buf)) > 0.003) valid.push(v);
+    for (const buf of cells) {
+        if ((await darkFrac(buf)) > 0.003) valid.push(buf);
     }
-    const final = valid.length > 0 ? valid : normalized.slice(0, 1);
+    const finalCells = valid.length > 0 ? valid : cells.slice(0, 1);
 
-    if (final.length === 0) {
-        console.log(`  [SKIP] ${modelo} — all blank`);
+    if (finalCells.length === 0) {
+        console.log(`  [SKIP] ${modelo} — all blank after processing`);
         continue;
     }
 
-    const outBuf = final.length >= 3
-        ? await gridLayoutVertical(final)
-        : final.length === 1
-        ? await single(final[0])
-        : await stitchH(final);
+    const { cols, rows } = gridDims(finalCells.length);
+    const outBuf = await assembleGrid(finalCells);
     await sharp(outBuf).toFile(outPath);
     const meta = await sharp(outPath).metadata();
-    console.log(`  ${modelo} (pg ${page}): ${meta.width}×${meta.height}  [${strategy}]`);
+    console.log(`  ${modelo} (pg ${page}): ${meta.width}×${meta.height}  [${finalCells.length} cells, ${cols}×${rows} grid]`);
 }
 
 console.log('\n✅ Done. All Polemik images written.');
