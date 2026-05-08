@@ -1,0 +1,86 @@
+[
+  {
+    "modelo": "2331-3",
+    "brand": "ISA",
+    "tipo": "3 MANECILLAS",
+    "fecha": true,
+    "dimensiones": "⌀ 25.60mm (11½ L)",
+    "altura": "2.95",
+    "joyas": 0,
+    "bateria": "371",
+    "intercambios": "",
+    "img": "/catalogo-pages/movimientos-isa/page-03.jpg"
+  },
+  {
+    "modelo": "8171-4",
+    "brand": "ISA",
+    "tipo": "MULTIFUNCIÓN",
+    "fecha": true,
+    "dimensiones": "⌀ 25.60mm (11½ L)",
+    "altura": "3.70",
+    "joyas": 1,
+    "bateria": "395",
+    "intercambios": "ISA8161/202, ISA8161/207",
+    "img": "/catalogo-pages/movimientos-isa/page-04.jpg"
+  },
+  {
+    "modelo": "8172-4",
+    "brand": "ISA",
+    "tipo": "CRONÓGRAFO",
+    "fecha": true,
+    "dimensiones": "⌀ 25.60mm (11½ L)",
+    "altura": "4.20",
+    "joyas": 1,
+    "bateria": "399",
+    "intercambios": "ISA8162/220",
+    "img": "/catalogo-pages/movimientos-isa/page-05.jpg"
+  },
+  {
+    "modelo": "8371-6",
+    "brand": "ISA",
+    "tipo": "CRONÓGRAFO",
+    "fecha": true,
+    "dimensiones": "⌀ 30.60mm (13¼ L)",
+    "altura": "5.50",
+    "joyas": 0,
+    "bateria": "394",
+    "intercambios": "ISA8371D",
+    "img": "/catalogo-pages/movimientos-isa/page-06.jpg"
+  },
+  {
+    "modelo": "9232-3",
+    "brand": "ISA",
+    "tipo": "MULTIFUNCIÓN",
+    "fecha": true,
+    "dimensiones": "⌀ 23.30mm (10½ L)",
+    "altura": "4.13",
+    "joyas": 0,
+    "bateria": "371",
+    "intercambios": "",
+    "img": "/catalogo-pages/movimientos-isa/page-07.jpg"
+  },
+  {
+    "modelo": "9238",
+    "brand": "ISA",
+    "tipo": "MULTIFUNCIÓN",
+    "fecha": true,
+    "dimensiones": "⌀ 23.30mm (10½ L)",
+    "altura": "4.13",
+    "joyas": 0,
+    "bateria": "371",
+    "intercambios": "",
+    "img": "/catalogo-pages/movimientos-isa/page-08.jpg"
+  },
+  {
+    "modelo": "9239",
+    "brand": "ISA",
+    "tipo": "MULTIFUNCIÓN",
+    "fecha": true,
+    "dimensiones": "⌀ 23.30mm (10½ L)",
+    "altura": "4.13",
+    "joyas": 0,
+    "bateria": "371",
+    "intercambios": "",
+    "img": "/catalogo-pages/movimientos-isa/page-09.jpg"
+  }
+]
