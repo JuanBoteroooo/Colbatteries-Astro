@@ -1,20 +1,11 @@
 /**
- * extract-miyota.mjs
- * Extracts product images from movimientos-miyota.pdf.
+ * fix-miyota-smask.mjs
+ * Re-processes 4 Miyota models whose raw JPEG extraction produced black
+ * backgrounds because their embedded images have SMask (alpha) channels.
+ * Uses PyMuPDF page-render (clips each image rect) so the mask is composited
+ * correctly onto white before we stitch horizontally.
  *
- * Strategies applied per page:
- *  A) Raw-image, multi-view  — pages with 2-3 embedded images (each ≥ MIN_DIM
- *     in both dimensions, not too thin) are extracted raw and stitched H.
- *  B) Portrait auto-split    — single embedded image taller than wide by ≥ 30%
- *     is scanned for a white horizontal band; if found, the two segments are
- *     split, then stitched H.  Falls back to Strategy C if no split found.
- *  C) Single image           — one usable raw image is cropped and padded.
- *  D) Page-render fallback   — if no usable raw images remain after filtering.
- *
- * All outputs use sharp .flatten({ background: white }) for guaranteed pure-
- * white backgrounds.
- *
- * Usage:  node scripts/extract-miyota.mjs
+ * Usage:  node scripts/fix-miyota-smask.mjs
  */
 
 import sharp from 'sharp';
@@ -31,16 +22,12 @@ const TARGET_H  = 302;
 const GAP       = 20;
 const PAD       = 16;
 const WHITE     = { r: 255, g: 255, b: 255 };
-const MIN_DIM   = 180;   // px — smaller images are decorative/ignored
-const MAX_RATIO = 5.0;   // w/h or h/w above this → decorative stripe
 
-// Models with SMask (alpha) channels on multi-view images — raw JPEG extraction
-// drops the mask, producing black backgrounds. Force page-render for these.
-const FORCE_PAGE_RENDER = new Set(['0S60-3', '5Y20', '5Y30', 'JS10']);
+const TARGETS = new Set(['0S60-3', '5Y20', '5Y30', 'JS10']);
 
 mkdirSync(OUT_DIR, { recursive: true });
 
-// ─── Python renderer ──────────────────────────────────────────────────────────
+// ─── Python: page-render per image rect ───────────────────────────────────────
 const PY_CODE = String.raw`
 import fitz, json, base64, re, io, sys
 import numpy as np
@@ -50,6 +37,7 @@ PDF   = 'public/catalogos/movimientos-miyota.pdf'
 SCALE = 3.0
 PAD   = 14
 THRESH = 238
+TARGETS = {'0S60-3', '5Y20', '5Y30', 'JS10'}
 
 def crop_content(arr):
     dark = (arr[:,:,0] < THRESH) | (arr[:,:,1] < THRESH) | (arr[:,:,2] < THRESH)
@@ -75,21 +63,12 @@ for i in range(len(doc)):
     if not m:
         continue
     modelo = m.group(1).strip().split('\n')[0].strip()
+    if modelo not in TARGETS:
+        continue
 
     imgs = page.get_images(full=True)
 
-    # Raw bytes for each embedded image (for strategies A/B/C)
-    raws_b64 = []
-    for img_info in imgs:
-        xref    = img_info[0]
-        meta    = doc.extract_image(xref)
-        w, h    = meta['width'], meta['height']
-        raws_b64.append({
-            'b64': base64.b64encode(meta['image']).decode(),
-            'w': w, 'h': h, 'ext': meta['ext'],
-        })
-
-    # Page-rendered crops per image rect (fallback strategy D)
+    # Collect image rects sorted top-to-bottom
     rects_data = []
     for img_info in imgs:
         xref      = img_info[0]
@@ -99,6 +78,7 @@ for i in range(len(doc)):
             rects_data.append((float(r.y0), r))
     rects_data.sort(key=lambda t: t[0])
 
+    # Page-render each rect — PyMuPDF composites SMask onto white
     crops_b64 = []
     for _, rect in rects_data:
         mat = fitz.Matrix(SCALE, SCALE)
@@ -111,28 +91,26 @@ for i in range(len(doc)):
         Image.fromarray(cropped).save(buf, format='PNG')
         crops_b64.append(base64.b64encode(buf.getvalue()).decode())
 
-    result.append({
-        'modelo':    modelo,
-        'raws_b64':  raws_b64,
-        'crops_b64': crops_b64,
-    })
+    result.append({'modelo': modelo, 'crops_b64': crops_b64})
+    print(f'  Rendered {len(crops_b64)} crops for {modelo}', file=sys.stderr)
 
 doc.close()
 json.dump(result, sys.stdout, ensure_ascii=False)
 `;
 
-const tmpPy = path.join(tmpdir(), '_render_miyota.py');
+const tmpPy = path.join(tmpdir(), '_fix_miyota_smask.py');
 writeFileSync(tmpPy, PY_CODE, 'utf8');
 
-console.log('Rendering PDF pages via PyMuPDF…');
+console.log('Page-rendering 4 SMask models via PyMuPDF…');
 const jsonStr = execFileSync('python3', [tmpPy], {
     cwd: ROOT,
-    maxBuffer: 500 * 1024 * 1024,
+    maxBuffer: 200 * 1024 * 1024,
+    stdio: ['pipe', 'pipe', 'inherit'],
 }).toString();
 const pages = JSON.parse(jsonStr);
-console.log(`Parsed ${pages.length} products\n`);
+console.log(`Got ${pages.length} products\n`);
 
-// ─── Sharp helpers ────────────────────────────────────────────────────────────
+// ─── Sharp helpers (identical to extract-miyota.mjs) ─────────────────────────
 
 async function contentBounds(buf, thresh = 238) {
     const { data, info } = await sharp(buf)
@@ -153,49 +131,6 @@ async function contentBounds(buf, thresh = 238) {
         }
     }
     return { top, bot, left, right, width, height };
-}
-
-async function splitVertical(buf) {
-    const { data, info } = await sharp(buf)
-        .flatten({ background: WHITE })
-        .raw()
-        .toBuffer({ resolveWithObject: true });
-    const { width, height, channels } = info;
-
-    const isWhite = new Uint8Array(height);
-    for (let y = 0; y < height; y++) {
-        let w = true;
-        for (let x = 0; x < width && w; x++) {
-            const i = (y * width + x) * channels;
-            if (data[i] < 245 || data[i + 1] < 245 || data[i + 2] < 245) w = false;
-        }
-        isWhite[y] = w ? 1 : 0;
-    }
-
-    const segs = [];
-    let inSeg = false, start = 0;
-    for (let y = 0; y < height; y++) {
-        if (!isWhite[y] && !inSeg) { start = y; inSeg = true; }
-        else if (isWhite[y] && inSeg) { segs.push([start, y]); inSeg = false; }
-    }
-    if (inSeg) segs.push([start, height]);
-
-    const bigSegs = segs.filter(([a, b]) => b - a >= 40);
-    if (bigSegs.length < 2) return [buf];
-
-    const SEG_PAD = 8;
-    const crops = [];
-    for (const [segTop, segBot] of bigSegs) {
-        const top = Math.max(0, segTop - SEG_PAD);
-        const bot = Math.min(height, segBot + SEG_PAD);
-        const segBuf = await sharp(buf)
-            .flatten({ background: WHITE })
-            .extract({ left: 0, top, width, height: bot - top })
-            .png()
-            .toBuffer();
-        crops.push(segBuf);
-    }
-    return crops;
 }
 
 async function cropAndResize(inputBuf) {
@@ -260,52 +195,14 @@ async function single(crop) {
         .toBuffer();
 }
 
-// ─── Main loop ────────────────────────────────────────────────────────────────
-for (const { modelo, raws_b64, crops_b64 } of pages) {
+// ─── Main ─────────────────────────────────────────────────────────────────────
+for (const { modelo, crops_b64 } of pages) {
     const safe    = modelo.replace(/\//g, '_').replace(/ /g, '-');
     const outPath = path.join(OUT_DIR, `${safe}.png`);
 
-    // Filter usable raw images: not too small, not extreme aspect ratio
-    const usable = raws_b64.filter(({ w, h }) => {
-        if (w < MIN_DIM || h < MIN_DIM) return false;
-        const ratio = w / h;
-        return ratio >= (1 / MAX_RATIO) && ratio <= MAX_RATIO;
-    });
+    const rawBufs = (crops_b64 ?? []).map(b => Buffer.from(b, 'base64'));
 
-    let rawSegBufs = [];
-    let strategy   = '';
-
-    if (FORCE_PAGE_RENDER.has(modelo) || usable.length === 0) {
-        // Strategy D: page-render (forced for SMask models, or fallback when no usable raws)
-        rawSegBufs = (crops_b64 ?? []).map(b => Buffer.from(b, 'base64'));
-        strategy   = `page-render × ${rawSegBufs.length}`;
-    } else if (usable.length === 1) {
-        const rawBuf = Buffer.from(usable[0].b64, 'base64');
-        const { w, h } = usable[0];
-        if (h > w * 1.3) {
-            // Strategy B: portrait → try vertical split
-            const segs = await splitVertical(rawBuf);
-            rawSegBufs = segs;
-            strategy   = segs.length > 1
-                ? `portrait-split → ${segs.length} segs`
-                : 'portrait (no split found)';
-        } else {
-            // Strategy C: single landscape/square image
-            rawSegBufs = [rawBuf];
-            strategy   = 'single raw';
-        }
-    } else {
-        // Strategy A: multiple usable images → stitch horizontally
-        rawSegBufs = usable.map(({ b64 }) => Buffer.from(b64, 'base64'));
-        strategy   = `multi-raw × ${rawSegBufs.length}`;
-    }
-
-    if (rawSegBufs.length === 0) {
-        console.log(`  [SKIP] ${modelo} — no image data`);
-        continue;
-    }
-
-    const resized = (await Promise.all(rawSegBufs.map(cropAndResize))).filter(Boolean);
+    const resized = (await Promise.all(rawBufs.map(cropAndResize))).filter(Boolean);
 
     const valid = [];
     for (const r of resized) {
@@ -321,7 +218,7 @@ for (const { modelo, raws_b64, crops_b64 } of pages) {
     const outBuf = final.length === 1 ? await single(final[0]) : await stitchH(final);
     await sharp(outBuf).toFile(outPath);
     const meta = await sharp(outPath).metadata();
-    console.log(`  ${modelo}: ${meta.width}×${meta.height}  [${strategy}]`);
+    console.log(`  ✓ ${modelo}: ${meta.width}×${meta.height}  [page-render × ${final.length} crops, white bg]`);
 }
 
-console.log('\n✅ Done. All Miyota images written.');
+console.log('\n✅ Done. 4 images overwritten with clean white backgrounds.');
