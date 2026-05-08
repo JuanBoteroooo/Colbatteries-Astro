@@ -1613,16 +1613,20 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
       modalTitle.textContent = card.dataset.title;
     }
 
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      // Belt-and-suspenders: ensure the overlay never blocks cards
+      modal.style.pointerEvents = 'none';
+    }
+
     function openModal(card) {
       if (!modal) return;
       showCard(card);
       modal.classList.add('open');
+      modal.style.pointerEvents = '';   // restore CSS control
       document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal?.classList.remove('open');
-      document.body.style.overflow = '';
     }
 
     function navigate(dir) {
@@ -1642,7 +1646,10 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     document.getElementById('etaModalNext')?.addEventListener('click', () => navigate(+1));
 
     modalClose?.addEventListener('click', closeModal);
-    modal?.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    // Close on backdrop click — guard against clicks inside the inner panel
+    modal?.addEventListener('click', e => {
+      if (!e.target.closest('#etaModalInner')) closeModal();
+    });
     document.addEventListener('keydown', e => {
       if (!modal?.classList.contains('open')) return;
       if (e.key === 'Escape')      closeModal();
