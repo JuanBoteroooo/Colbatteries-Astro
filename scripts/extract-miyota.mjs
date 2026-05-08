@@ -173,32 +173,48 @@ async function splitVertical(buf) {
         .toBuffer({ resolveWithObject: true });
     const { width, height, channels } = info;
 
-    // "Mostly white" row: 95 % of pixels have all channels >= 245.
-    // More lenient than 100 % to survive JPEG compression artifacts at separator bands.
-    const WHITE_THRESH = 245;
-    const WHITE_FRAC   = 0.95;
-    const isWhite = new Uint8Array(height);
+    // STRICT white-row test: ALL pixels must have every channel >= 245.
+    // Threshold 245 (not 255) absorbs minor JPEG compression artifacts at true-white
+    // regions while correctly rejecting mechanism-detail rows (min brightness < 200).
+    // The 95%-fraction approach was reverted because rows with 1-2 dark mechanism
+    // pixels (e.g. min=130, mean=254) were misclassified as "white," fragmenting
+    // movement views into tiny sub-pieces.
+    const WHITE_CH = 245;
+    const MIN_BAND = 5;    // min consecutive strict-white rows = valid separator
+    const MIN_SEG  = 40;   // min content-segment height (px)
+    const SEG_PAD  = 6;
+
+    const strictWhite = new Uint8Array(height);
     for (let y = 0; y < height; y++) {
-        let whitePx = 0;
-        for (let x = 0; x < width; x++) {
+        let all = true;
+        for (let x = 0; x < width && all; x++) {
             const i = (y * width + x) * channels;
-            if (data[i] >= WHITE_THRESH && data[i + 1] >= WHITE_THRESH && data[i + 2] >= WHITE_THRESH) whitePx++;
+            if (data[i] < WHITE_CH || data[i + 1] < WHITE_CH || data[i + 2] < WHITE_CH) all = false;
         }
-        isWhite[y] = (whitePx / width) >= WHITE_FRAC ? 1 : 0;
+        strictWhite[y] = all ? 1 : 0;
+    }
+
+    // Build separator mask: only rows inside a band >= MIN_BAND consecutive white rows
+    const sepMask = new Uint8Array(height);
+    let y = 0;
+    while (y < height) {
+        if (!strictWhite[y]) { y++; continue; }
+        const bs = y;
+        while (y < height && strictWhite[y]) y++;
+        if (y - bs >= MIN_BAND) for (let r = bs; r < y; r++) sepMask[r] = 1;
     }
 
     const segs = [];
     let inSeg = false, start = 0;
-    for (let y = 0; y < height; y++) {
-        if (!isWhite[y] && !inSeg) { start = y; inSeg = true; }
-        else if (isWhite[y] && inSeg) { segs.push([start, y]); inSeg = false; }
+    for (let r = 0; r < height; r++) {
+        if (!sepMask[r] && !inSeg) { start = r; inSeg = true; }
+        else if (sepMask[r] && inSeg) { segs.push([start, r]); inSeg = false; }
     }
     if (inSeg) segs.push([start, height]);
 
-    const bigSegs = segs.filter(([a, b]) => b - a >= 40);
+    const bigSegs = segs.filter(([a, b]) => b - a >= MIN_SEG);
     if (bigSegs.length < 2) return [buf];
 
-    const SEG_PAD = 8;
     const crops = [];
     for (const [segTop, segBot] of bigSegs) {
         const top = Math.max(0, segTop - SEG_PAD);
@@ -236,6 +252,25 @@ async function cropAndResize(inputBuf) {
     return { buf, width: newW, height: TARGET_H };
 }
 
+async function cropAndNormalize(inputBuf) {
+    const CROP_PAD = 12;
+    const b = await contentBounds(inputBuf);
+    if (b.bot < 0) return null;
+    const left  = Math.max(0, b.left  - CROP_PAD);
+    const top   = Math.max(0, b.top   - CROP_PAD);
+    const right = Math.min(b.width,  b.right  + CROP_PAD + 1);
+    const bot   = Math.min(b.height, b.bot    + CROP_PAD + 1);
+    const buf = await sharp(inputBuf)
+        .flatten({ background: WHITE })
+        .extract({ left, top, width: right - left, height: bot - top })
+        .resize({ height: TARGET_H, fit: 'inside', background: WHITE })
+        .flatten({ background: WHITE })
+        .png()
+        .toBuffer();
+    const meta = await sharp(buf).metadata();
+    return { buf, width: meta.width, height: TARGET_H };
+}
+
 async function darkFrac(inputBuf) {
     const { data, info } = await sharp(inputBuf)
         .flatten({ background: WHITE })
@@ -249,14 +284,14 @@ async function darkFrac(inputBuf) {
     return dark / n;
 }
 
-async function stitchH(crops) {
+async function stitchH(crops, gap = GAP, pad = PAD) {
     const totalW = crops.reduce((s, c) => s + c.width, 0)
-                 + GAP * (crops.length - 1) + PAD * 2;
-    const totalH = TARGET_H + PAD * 2;
-    let x = PAD;
+                 + gap * (crops.length - 1) + pad * 2;
+    const totalH = TARGET_H + pad * 2;
+    let x = pad;
     const composites = crops.map(({ buf, width }) => {
-        const comp = { input: buf, left: x, top: PAD };
-        x += width + GAP;
+        const comp = { input: buf, left: x, top: pad };
+        x += width + gap;
         return comp;
     });
     return sharp({ create: { width: totalW, height: totalH, channels: 3, background: WHITE } })
@@ -266,10 +301,10 @@ async function stitchH(crops) {
         .toBuffer();
 }
 
-async function single(crop) {
-    const { buf, width, height } = crop;
-    return sharp({ create: { width: width + PAD * 2, height: height + PAD * 2, channels: 3, background: WHITE } })
-        .composite([{ input: buf, left: PAD, top: PAD }])
+async function single(crop, pad = PAD) {
+    const { buf, width } = crop;
+    return sharp({ create: { width: width + pad * 2, height: TARGET_H + pad * 2, channels: 3, background: WHITE } })
+        .composite([{ input: buf, left: pad, top: pad }])
         .flatten({ background: WHITE })
         .png()
         .toBuffer();
@@ -298,10 +333,22 @@ for (const { modelo, raws_b64, crops_b64 } of pages) {
         // Strategy B-forced: composite portrait JPEG → vertical split → stitch H
         const rawBuf = Buffer.from(usable[0].b64, 'base64');
         const segs   = await splitVertical(rawBuf);
-        rawSegBufs   = segs;
         strategy     = segs.length > 1
             ? `force-split → ${segs.length} segs`
             : 'force-split (no band found, single)';
+
+        const normalized = (await Promise.all(segs.map(cropAndNormalize))).filter(Boolean);
+        const valid = [];
+        for (const v of normalized) {
+            if ((await darkFrac(v.buf)) > 0.005) valid.push(v);
+        }
+        const final = valid.length > 0 ? valid : normalized.slice(0, 1);
+        if (final.length === 0) { console.log(`  [SKIP] ${modelo} — all blank`); continue; }
+        const outBuf = final.length === 1 ? await single(final[0], 20) : await stitchH(final, 50, 20);
+        await sharp(outBuf).toFile(outPath);
+        const meta = await sharp(outPath).metadata();
+        console.log(`  ${modelo}: ${meta.width}×${meta.height}  [${strategy}]`);
+        continue;
     } else if (usable.length === 1) {
         const rawBuf = Buffer.from(usable[0].b64, 'base64');
         const { w, h } = usable[0];
