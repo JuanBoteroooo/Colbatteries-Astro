@@ -105,16 +105,22 @@ const specs: SpecItem[] = [
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(2, 69, 152, 0.06);
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-    cursor: pointer !important;
-    user-select: none !important;
-    -webkit-user-select: none !important;
     height: 100%;
   }
 
+  /* Force all children to be unselectabe/unblocking — clicks pass through to .cc */
+  .cc,
   .cc * {
     cursor: pointer !important;
-    user-select: none !important;
     -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+
+  .cc * {
+    pointer-events: none !important;
   }
 
   .cc:hover {
