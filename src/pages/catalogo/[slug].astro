@@ -6,6 +6,8 @@ import { groups } from '../../data/catalogs.js';
 import coronasData from '../../data/coronas.json';
 import etaData from '../../data/movimientos-eta.json';
 import rondaData from '../../data/movimientos-ronda.json';
+import epsonData from '../../data/movimientos-epson.json';
+import siiData from '../../data/movimientos-sii.json';
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -28,8 +30,10 @@ const isStructured = !!cat.structured;
 const isGallery = !isStructured && !!cat.pages;
 const isETA     = isStructured && slug === 'movimientos-eta';
 const isRonda   = isStructured && slug === 'movimientos-ronda';
+const isEpson   = isStructured && slug === 'movimientos-epson';
+const isSII     = isStructured && slug === 'movimientos-sii';
 const isCoronas = isStructured && slug === 'coronas';
-const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : [];
+const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : [];
 
 // For cover fallback (PDF mode only)
 const labelUpper = cat.label.toUpperCase();
@@ -207,7 +211,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     <!-- ══════════════════════════════════════════
          ETA / RONDA STRUCTURED MODE
     ══════════════════════════════════════════ -->
-    {(isETA || isRonda) && (
+    {(isETA || isRonda || isEpson || isSII) && (
       <div class="eta-viewer" id="etaViewer">
 
         <!-- Sticky controls -->
@@ -245,7 +249,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
               <CatalogCard
                 imagenSrc={p.img}
                 imagenCatalogoSrc={`/catalogo-pages/${slug}/page-${String(i + 2).padStart(2, '0')}.jpg`}
-                titulo={`${isETA ? 'ETA' : 'Ronda'} ${p.modelo}`}
+                titulo={`${isETA ? 'ETA' : isRonda ? 'Ronda' : isEpson ? 'Epson' : 'SII'} ${p.modelo}`}
                 detalles={{
                   dimensiones: p.dimensiones,
                   altura: p.altura,
@@ -1285,7 +1289,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-modal-close:hover { border-color: #f2a900; color: #f2a900; }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -1563,7 +1567,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   // ════════════════════════════
   // ETA / RONDA STRUCTURED MODE
   // ════════════════════════════
-  if (isETA || isRonda) {
+  if (isETA || isRonda || isEpson || isSII) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');
