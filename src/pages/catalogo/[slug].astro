@@ -8,6 +8,7 @@ import etaData from '../../data/movimientos-eta.json';
 import rondaData from '../../data/movimientos-ronda.json';
 import epsonData from '../../data/movimientos-epson.json';
 import siiData from '../../data/movimientos-sii.json';
+import miyotaData from '../../data/movimientos-miyota.json';
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -32,8 +33,9 @@ const isETA     = isStructured && slug === 'movimientos-eta';
 const isRonda   = isStructured && slug === 'movimientos-ronda';
 const isEpson   = isStructured && slug === 'movimientos-epson';
 const isSII     = isStructured && slug === 'movimientos-sii';
+const isMiyota  = isStructured && slug === 'movimientos-miyota';
 const isCoronas = isStructured && slug === 'coronas';
-const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : [];
+const products  = isCoronas ? coronasData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : [];
 const pdfSlug   = isSII ? 'movimientos-epson' : slug;
 
 // For cover fallback (PDF mode only)
@@ -261,7 +263,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
     <!-- ══════════════════════════════════════════
          ETA / RONDA STRUCTURED MODE
     ══════════════════════════════════════════ -->
-    {(isETA || isRonda || isEpson || isSII) && (
+    {(isETA || isRonda || isEpson || isSII || isMiyota) && (
       <div class="eta-viewer" id="etaViewer">
 
         <!-- Sticky controls -->
@@ -289,29 +291,39 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
 
         <!-- Grid (server-rendered CatalogCard components) -->
         <div class="eta-grid" id="etaGrid">
-          {products.map((p: any, i: number) => (
-            <div
-              class="eta-card-wrapper"
-              data-tipo={p.tipo}
-              data-fecha={String(p.fecha)}
-              data-modelo={p.modelo.toLowerCase()}
-            >
-              <CatalogCard
-                imagenSrc={p.img}
-                imagenCatalogoSrc={`/catalogo-pages/${slug}/page-${String(i + 2).padStart(2, '0')}.jpg`}
-                titulo={`${isETA ? 'ETA' : isRonda ? 'Ronda' : isEpson ? 'Epson' : 'SII'} ${p.modelo}`}
-                detalles={{
-                  dimensiones: p.dimensiones,
-                  altura: p.altura,
-                  joyas: p.joyas,
-                  bateria: p.bateria,
-                  intercambios: p.intercambios,
-                }}
-                tipo={p.tipo}
-                fecha={p.fecha}
-              />
-            </div>
-          ))}
+          {products.map((p: any, i: number) => {
+            const safe = (p.modelo as string).replace(/\//g, '_').replace(/ /g, '-');
+            const productImgSrc = isMiyota
+              ? `/images/productos/movimientos-miyota/${safe}.png`
+              : (p.img as string);
+            const catalogoSrc = isMiyota
+              ? (p.img as string)
+              : `/catalogo-pages/${slug}/page-${String(i + 2).padStart(2, '0')}.jpg`;
+            const brand = isETA ? 'ETA' : isRonda ? 'Ronda' : isEpson ? 'Epson' : isSII ? 'SII' : 'Miyota';
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.tipo}
+                data-fecha={String(p.fecha)}
+                data-modelo={p.modelo.toLowerCase()}
+              >
+                <CatalogCard
+                  imagenSrc={productImgSrc}
+                  imagenCatalogoSrc={catalogoSrc}
+                  titulo={`${brand} ${p.modelo}`}
+                  detalles={{
+                    dimensiones: p.dimensiones,
+                    altura: p.altura,
+                    joyas: p.joyas,
+                    bateria: p.bateria,
+                    intercambios: p.intercambios,
+                  }}
+                  tipo={p.tipo}
+                  fecha={p.fecha}
+                />
+              </div>
+            );
+          })}
         </div>
 
         <!-- Empty state -->
@@ -1339,7 +1351,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-modal-close:hover { border-color: #f2a900; color: #f2a900; }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isCoronas, totalPages: cat.pages ?? 0, catLabel: cat.label, products }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -1518,7 +1530,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   // ════════════════════════════
   // ETA / RONDA / EPSON / SII / CORONAS STRUCTURED MODE
   // ════════════════════════════
-  if (isETA || isRonda || isEpson || isSII || isCoronas) {
+  if (isETA || isRonda || isEpson || isSII || isMiyota || isCoronas) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');

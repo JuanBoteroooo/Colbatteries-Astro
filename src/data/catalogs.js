@@ -32,7 +32,7 @@ export const groups = [
       { slug: 'movimientos-sii',    label: 'Movimientos SII',           structured: true },
       { slug: 'movimientos-eta',    label: 'Movimientos ETA',          structured: true },
       { slug: 'movimientos-isa',    label: 'Movimientos ISA & China',  pages: 16 },
-      { slug: 'movimientos-miyota', label: 'Movimientos Miyota',       pages: 56 },
+      { slug: 'movimientos-miyota', label: 'Movimientos Miyota',       structured: true },
       { slug: 'movimientos-ronda',  label: 'Movimientos Ronda',        structured: true },
     ],
   },
