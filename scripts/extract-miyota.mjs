@@ -34,9 +34,20 @@ const WHITE     = { r: 255, g: 255, b: 255 };
 const MIN_DIM   = 180;   // px — smaller images are decorative/ignored
 const MAX_RATIO = 5.0;   // w/h or h/w above this → decorative stripe
 
-// Models with SMask (alpha) channels on multi-view images — raw JPEG extraction
-// drops the mask, producing black backgrounds. Force page-render for these.
+// Models with SMask (alpha) channels — raw JPEG extraction drops the mask,
+// producing black backgrounds. Force page-render for these.
 const FORCE_PAGE_RENDER = new Set(['0S60-3', '5Y20', '5Y30', 'JS10']);
+
+// Models whose single embedded JPEG is a portrait composite (two or three views
+// stacked vertically). Force vertical-split + horizontal stitch for these.
+const FORCE_SPLIT = new Set([
+    '0S10-3', '0S21-4', '1L40', '1L45', '5R21', '5R32',
+    '6P27', '6P29', '9T13-3', '9T22', '9T33',
+    '2005-3', '2015-3/6', '2035', '2036', '2039',
+    '2105-3', '2115-3/6', '2315-3/6', '2415-3/6',
+    'GL02-3', 'GL12-3/6', 'GL32', 'GM02-3',
+    'JR20-6', 'JS15-3', 'JS25-4', 'JS26-4',
+]);
 
 mkdirSync(OUT_DIR, { recursive: true });
 
@@ -162,14 +173,18 @@ async function splitVertical(buf) {
         .toBuffer({ resolveWithObject: true });
     const { width, height, channels } = info;
 
+    // "Mostly white" row: 95 % of pixels have all channels >= 245.
+    // More lenient than 100 % to survive JPEG compression artifacts at separator bands.
+    const WHITE_THRESH = 245;
+    const WHITE_FRAC   = 0.95;
     const isWhite = new Uint8Array(height);
     for (let y = 0; y < height; y++) {
-        let w = true;
-        for (let x = 0; x < width && w; x++) {
+        let whitePx = 0;
+        for (let x = 0; x < width; x++) {
             const i = (y * width + x) * channels;
-            if (data[i] < 245 || data[i + 1] < 245 || data[i + 2] < 245) w = false;
+            if (data[i] >= WHITE_THRESH && data[i + 1] >= WHITE_THRESH && data[i + 2] >= WHITE_THRESH) whitePx++;
         }
-        isWhite[y] = w ? 1 : 0;
+        isWhite[y] = (whitePx / width) >= WHITE_FRAC ? 1 : 0;
     }
 
     const segs = [];
@@ -279,11 +294,19 @@ for (const { modelo, raws_b64, crops_b64 } of pages) {
         // Strategy D: page-render (forced for SMask models, or fallback when no usable raws)
         rawSegBufs = (crops_b64 ?? []).map(b => Buffer.from(b, 'base64'));
         strategy   = `page-render × ${rawSegBufs.length}`;
+    } else if (FORCE_SPLIT.has(modelo) && usable.length >= 1) {
+        // Strategy B-forced: composite portrait JPEG → vertical split → stitch H
+        const rawBuf = Buffer.from(usable[0].b64, 'base64');
+        const segs   = await splitVertical(rawBuf);
+        rawSegBufs   = segs;
+        strategy     = segs.length > 1
+            ? `force-split → ${segs.length} segs`
+            : 'force-split (no band found, single)';
     } else if (usable.length === 1) {
         const rawBuf = Buffer.from(usable[0].b64, 'base64');
         const { w, h } = usable[0];
         if (h > w * 1.3) {
-            // Strategy B: portrait → try vertical split
+            // Strategy B: auto-portrait → try vertical split
             const segs = await splitVertical(rawBuf);
             rawSegBufs = segs;
             strategy   = segs.length > 1
