@@ -316,8 +316,9 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
           {products.map((p: any, i: number) => {
             const safe = (p.modelo as string).replace(/\//g, '_').replace(/ /g, '-');
             const useImgCatalogPage = isMiyota || isISA || isChinos || isWatch;
+            const imgExt = isXinjia ? 'jpg' : 'png';
             const productImgSrc = useImgCatalogPage
-              ? `/images/productos/${slug}/${safe}.png`
+              ? `/images/productos/${slug}/${safe}.${imgExt}`
               : (p.img as string);
             const catalogoSrc = useImgCatalogPage
               ? (p.img as string)

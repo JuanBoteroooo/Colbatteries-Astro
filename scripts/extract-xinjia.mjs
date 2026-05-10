@@ -37,6 +37,8 @@ const STRIP_RATIO = 2.0;
 const MIN_DIM     = 180;
 const MAX_RATIO   = 5.0;
 const WHITE       = { r: 255, g: 255, b: 255 };
+const OUT_MAX_W   = 800;   // final composite capped at this width
+const JPEG_Q      = 80;    // JPEG quality for saved files
 
 mkdirSync(OUT_DIR, { recursive: true });
 
@@ -263,7 +265,7 @@ async function combineStripsCell(stripBufs) {
 let done = 0;
 for (const { modelo, page, raws } of pages) {
     const safe    = modelo.replace(/\//g, '_').replace(/ /g, '-');
-    const outPath = path.join(OUT_DIR, `${safe}.png`);
+    const outPath = path.join(OUT_DIR, `${safe}.jpg`);
 
     console.log(`[${done + 1}/${pages.length}] Processing ${modelo} (pg ${page})…`);
 
@@ -327,8 +329,12 @@ for (const { modelo, page, raws } of pages) {
         }
 
         const { cols, rows } = gridDims(finalCells.length);
-        const outBuf = await assembleGrid(finalCells);
-        await sharp(outBuf).toFile(outPath);
+        const gridBuf = await assembleGrid(finalCells);
+        // Cap width at OUT_MAX_W, then save as compressed JPEG
+        await sharp(gridBuf)
+            .resize({ width: OUT_MAX_W, fit: 'inside', withoutEnlargement: true })
+            .jpeg({ quality: JPEG_Q, mozjpeg: true })
+            .toFile(outPath);
         const meta = await sharp(outPath).metadata();
         console.log(`  → saved ${meta.width}×${meta.height}  [${finalCells.length} cells ${cols}×${rows} — ${strategyLabel}]`);
 
