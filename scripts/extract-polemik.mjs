@@ -2,7 +2,7 @@
  * extract-polemik.mjs
  * Extracts product images from relojes-polemik.pdf (pages 19-67).
  *
- * Pipeline per raw image:
+ * Standard pipeline per raw image:
  *   1. Flatten alpha → white
  *   2. Tight content-bounds crop (thresh=232, pad=25px)
  *   3. Resize to uniform CELL_W×CELL_H (600×800) via fit:'contain' on white bg
@@ -10,6 +10,12 @@
  * Grid assembly:
  *   n=1 → 1×1   n=2 → 2×1   n=3 → 2×2 (last centered)
  *   n=4 → 2×2   n=6 → 3×2   general: ceil(√n) cols
+ *
+ * Special handling — COMBINE_STRIPS models (P-1925, P-7209):
+ *   These embed their color variants as two wide horizontal strips (w/h > 1.5).
+ *   Standard processing squeezes them into portrait cells → tiny, bad.
+ *   Fix: stack the two strips vertically into one "variants" composite cell,
+ *   pair with the portrait hero shot → clean 2×1 grid identical to P-1617.
  *
  * Filters: MIN_DIM=180 removes logos; MAX_RATIO=5.0 removes banners.
  *
@@ -36,6 +42,10 @@ const THRESH    = 232;   // brightness threshold — pixels below this count as 
 const MIN_DIM   = 180;
 const MAX_RATIO = 5.0;
 const WHITE     = { r: 255, g: 255, b: 255 };
+
+// Models whose variant images are embedded as wide horizontal strips.
+// They are handled via combineStripsCell() instead of the standard pipeline.
+const COMBINE_STRIPS = new Set(['P-1925', 'P-7209']);
 
 mkdirSync(OUT_DIR, { recursive: true });
 
@@ -175,6 +185,68 @@ async function assembleGrid(cellBufs) {
         .toBuffer();
 }
 
+// Stacks multiple landscape strip images vertically (uniform width, CROP_PAD around
+// each) and returns a single buffer normalized to CELL_W×CELL_H via fit:contain.
+// Used for COMBINE_STRIPS models so all variant watches land in one tidy cell.
+async function combineStripsCell(stripBufs) {
+    // Crop each strip to its content bounding box
+    const cropped = [];
+    for (const buf of stripBufs) {
+        const b = await contentBounds(buf);
+        if (b.bot < 0) continue;
+        const l = Math.max(0, b.left  - CROP_PAD);
+        const t = Math.max(0, b.top   - CROP_PAD);
+        const r = Math.min(b.width,  b.right + CROP_PAD + 1);
+        const bt = Math.min(b.height, b.bot   + CROP_PAD + 1);
+        const c = await sharp(buf)
+            .flatten({ background: WHITE })
+            .extract({ left: l, top: t, width: r - l, height: bt - t })
+            .flatten({ background: WHITE })
+            .png()
+            .toBuffer();
+        cropped.push(c);
+    }
+    if (cropped.length === 0) return null;
+
+    // Normalize all strips to the same width (widest strip wins)
+    const metas = await Promise.all(cropped.map(b => sharp(b).metadata()));
+    const maxW  = Math.max(...metas.map(m => m.width));
+
+    const equalized = await Promise.all(cropped.map((buf, i) => {
+        if (metas[i].width === maxW) return buf;
+        return sharp(buf)
+            .resize({ width: maxW, fit: 'contain', background: WHITE })
+            .flatten({ background: WHITE })
+            .png()
+            .toBuffer();
+    }));
+
+    // Stack vertically with a small gap between strips
+    const eqMetas   = await Promise.all(equalized.map(b => sharp(b).metadata()));
+    const STRIP_GAP = 12;
+    const totalH    = eqMetas.reduce((s, m) => s + m.height, 0) + STRIP_GAP * (equalized.length - 1);
+
+    let y = 0;
+    const composites = equalized.map((buf, i) => {
+        const comp = { input: buf, left: 0, top: y };
+        y += eqMetas[i].height + STRIP_GAP;
+        return comp;
+    });
+
+    const combined = await sharp({ create: { width: maxW, height: totalH, channels: 3, background: WHITE } })
+        .composite(composites)
+        .flatten({ background: WHITE })
+        .png()
+        .toBuffer();
+
+    // Final normalization to CELL_W×CELL_H
+    return sharp(combined)
+        .resize({ width: CELL_W, height: CELL_H, fit: 'contain', background: WHITE })
+        .flatten({ background: WHITE })
+        .png()
+        .toBuffer();
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 for (const { modelo, page, raws } of pages) {
     const safe    = modelo.replace(/\//g, '_').replace(/ /g, '-');
@@ -188,6 +260,35 @@ for (const { modelo, page, raws } of pages) {
 
     if (usable.length === 0) {
         console.log(`  [SKIP] ${modelo} (pg ${page}) — no usable images`);
+        continue;
+    }
+
+    // ── Special path: stack landscape strips + hero into 2-cell grid (P-1925, P-7209)
+    if (COMBINE_STRIPS.has(modelo)) {
+        const strips = usable.filter(({ w, h }) => w / h > 1.5);
+        const heroes = usable.filter(({ w, h }) => w / h <= 1.5);
+
+        const stripBufs = strips.map(({ b64 }) => Buffer.from(b64, 'base64'));
+        const heroBufs  = heroes.map(({ b64 }) => Buffer.from(b64, 'base64'));
+
+        const variantsCell = strips.length > 0 ? await combineStripsCell(stripBufs) : null;
+        const heroCells    = (await Promise.all(heroBufs.map(processWatch))).filter(Boolean);
+
+        const finalCells = [
+            ...(variantsCell ? [variantsCell] : []),
+            ...heroCells,
+        ];
+
+        if (finalCells.length === 0) {
+            console.log(`  [SKIP] ${modelo} — all blank after processing`);
+            continue;
+        }
+
+        const { cols, rows } = gridDims(finalCells.length);
+        const outBuf = await assembleGrid(finalCells);
+        await sharp(outBuf).toFile(outPath);
+        const meta = await sharp(outPath).metadata();
+        console.log(`  ${modelo} (pg ${page}): ${meta.width}×${meta.height}  [combine-strips: ${finalCells.length} cells, ${cols}×${rows} grid]`);
         continue;
     }
 
