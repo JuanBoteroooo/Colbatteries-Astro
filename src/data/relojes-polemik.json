@@ -62,7 +62,7 @@
   {
     "modelo": "P-518-F91",
     "brand": "POLEMIK",
-    "tipo": "DIGITAL",
+    "tipo": "DAMA",
     "fecha": false,
     "dimensiones": "",
     "altura": "",
@@ -122,7 +122,7 @@
   {
     "modelo": "P-651",
     "brand": "POLEMIK",
-    "tipo": "DIGITAL",
+    "tipo": "DAMA",
     "fecha": false,
     "dimensiones": "",
     "altura": "",
@@ -362,7 +362,7 @@
   {
     "modelo": "P-2136",
     "brand": "POLEMIK",
-    "tipo": "CABALLERO",
+    "tipo": "DAMA",
     "fecha": false,
     "dimensiones": "",
     "altura": "",
@@ -410,7 +410,7 @@
   {
     "modelo": "P-6876",
     "brand": "POLEMIK",
-    "tipo": "CABALLERO",
+    "tipo": "DAMA",
     "fecha": false,
     "dimensiones": "",
     "altura": "",
@@ -422,7 +422,7 @@
   {
     "modelo": "P-6877",
     "brand": "POLEMIK",
-    "tipo": "CABALLERO",
+    "tipo": "DAMA",
     "fecha": false,
     "dimensiones": "",
     "altura": "",
@@ -494,7 +494,7 @@
   {
     "modelo": "P-9037",
     "brand": "POLEMIK",
-    "tipo": "CABALLERO",
+    "tipo": "DAMA",
     "fecha": false,
     "dimensiones": "",
     "altura": "",

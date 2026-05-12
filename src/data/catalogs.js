@@ -52,9 +52,9 @@ export const groups = [
     image: 'https://images.unsplash.com/photo-1593152167544-085d3b9c4938?w=600&h=300&fit=crop&q=80',
     catalogs: [
       { slug: 'coronas',           label: 'Coronas',              structured: true },
-      { slug: 'vidrios',           label: 'Vidrios',              pages: 31 },
-      { slug: 'modulos',           label: 'Módulos',              pages: 34 },
-      { slug: 'insumos-relojeria', label: 'Insumos de Relojería', pages: 101 },
+      { slug: 'vidrios',           label: 'Vidrios',              structured: true },
+      { slug: 'modulos',           label: 'Módulos',              structured: true },
+      { slug: 'insumos-relojeria', label: 'Insumos de Relojería', structured: true },
     ],
   },
   {
@@ -62,8 +62,8 @@ export const groups = [
     name: 'Herramientas',
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'herramientas',         label: 'Herramientas de Relojería', pages: 286 },
-      { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas',    pages: 264 },
+      { slug: 'herramientas',         label: 'Herramientas de Relojería', structured: true },
+      { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas',    structured: true },
     ],
   },
   {
@@ -71,8 +71,8 @@ export const groups = [
     name: 'Gorras',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'gorras-polemik', label: 'Gorras Polemik', pages: 189 },
-      { slug: 'gorras-lisas',   label: 'Gorras Lisas',   pages: 70 },
+      { slug: 'gorras-polemik', label: 'Gorras Polemik', structured: true },
+      { slug: 'gorras-lisas',   label: 'Gorras Lisas',   structured: true },
     ],
   },
 ];

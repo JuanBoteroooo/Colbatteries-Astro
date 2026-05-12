@@ -1,0 +1,380 @@
+[
+  {
+    "modelo": "P-08",
+    "descripcion": "LISA GALLETA",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-03.jpg"
+  },
+  {
+    "modelo": "P-200",
+    "descripcion": "LISA",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-04.jpg"
+  },
+  {
+    "modelo": "L-001",
+    "descripcion": "A/B/C CAMUFLADA",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-05.jpg"
+  },
+  {
+    "modelo": "L-002",
+    "descripcion": "A/B/C CACERIA",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-06.jpg"
+  },
+  {
+    "modelo": "P-524",
+    "descripcion": "CAMUFLADA",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-07.jpg"
+  },
+  {
+    "modelo": "P-525",
+    "descripcion": "CAMUFLADA",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-08.jpg"
+  },
+  {
+    "modelo": "G-1010",
+    "descripcion": "FLEX",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-09.jpg"
+  },
+  {
+    "modelo": "G-1012",
+    "descripcion": "FLEX",
+    "estilo": "CAMIONERA",
+    "img": "/catalogo-pages/gorras-lisas/page-10.jpg"
+  },
+  {
+    "modelo": "P-601",
+    "descripcion": "CIERRE MAGICO",
+    "estilo": "IMPERMEABLE",
+    "img": "/catalogo-pages/gorras-lisas/page-12.jpg"
+  },
+  {
+    "modelo": "P-602",
+    "descripcion": "CIERRE MAGICO",
+    "estilo": "IMPERMEABLE",
+    "img": "/catalogo-pages/gorras-lisas/page-13.jpg"
+  },
+  {
+    "modelo": "P-603",
+    "descripcion": "CIERRE MAGICO",
+    "estilo": "IMPERMEABLE",
+    "img": "/catalogo-pages/gorras-lisas/page-14.jpg"
+  },
+  {
+    "modelo": "P-604",
+    "descripcion": "CIERRE MAGICO",
+    "estilo": "IMPERMEABLE",
+    "img": "/catalogo-pages/gorras-lisas/page-15.jpg"
+  },
+  {
+    "modelo": "P-605",
+    "descripcion": "CIERRE MAGICO",
+    "estilo": "IMPERMEABLE",
+    "img": "/catalogo-pages/gorras-lisas/page-16.jpg"
+  },
+  {
+    "modelo": "G-348BG",
+    "descripcion": "BEIGE",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-18.jpg"
+  },
+  {
+    "modelo": "G-348AZ",
+    "descripcion": "AZUL",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-19.jpg"
+  },
+  {
+    "modelo": "G-348REY",
+    "descripcion": "AZUL REY",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-20.jpg"
+  },
+  {
+    "modelo": "G-348BC",
+    "descripcion": "BLANCO",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-21.jpg"
+  },
+  {
+    "modelo": "G-348CF",
+    "descripcion": "CAFE",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-22.jpg"
+  },
+  {
+    "modelo": "G-348GRIS",
+    "descripcion": "GRIS",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-23.jpg"
+  },
+  {
+    "modelo": "G-348NG",
+    "descripcion": "NEGRO",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-24.jpg"
+  },
+  {
+    "modelo": "G-348VD",
+    "descripcion": "VERDE CALI",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-25.jpg"
+  },
+  {
+    "modelo": "G-348RJ",
+    "descripcion": "ROJO",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-26.jpg"
+  },
+  {
+    "modelo": "G-348VINO",
+    "descripcion": "VINO TINTO",
+    "estilo": "DRIL",
+    "img": "/catalogo-pages/gorras-lisas/page-27.jpg"
+  },
+  {
+    "modelo": "G-207MIPI-AZ",
+    "descripcion": "PIXELADA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-29.jpg"
+  },
+  {
+    "modelo": "G-207MIPI-CF",
+    "descripcion": "PIXELADA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-30.jpg"
+  },
+  {
+    "modelo": "G-207MIPI-VD",
+    "descripcion": "PIXELADA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-31.jpg"
+  },
+  {
+    "modelo": "G-207MIPI-VD2",
+    "descripcion": "PIXELADA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-32.jpg"
+  },
+  {
+    "modelo": "G-207MICA-VD",
+    "descripcion": "CAMUFLADA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-33.jpg"
+  },
+  {
+    "modelo": "G-207MICA-BC",
+    "descripcion": "CAMUFLADA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-34.jpg"
+  },
+  {
+    "modelo": "G-207NG",
+    "descripcion": "NEGRO",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-35.jpg"
+  },
+  {
+    "modelo": "G-207BC",
+    "descripcion": "BLANCO",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-36.jpg"
+  },
+  {
+    "modelo": "G-207RJ",
+    "descripcion": "ROJO",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-37.jpg"
+  },
+  {
+    "modelo": "G-207VINO",
+    "descripcion": "VINO TINTO",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-38.jpg"
+  },
+  {
+    "modelo": "G-207VD",
+    "descripcion": "VERDE CALI",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-39.jpg"
+  },
+  {
+    "modelo": "G-207VDOS",
+    "descripcion": "VERDE OSCURO",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-40.jpg"
+  },
+  {
+    "modelo": "G-207REY",
+    "descripcion": "AZUL REY",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-41.jpg"
+  },
+  {
+    "modelo": "G-207AZ",
+    "descripcion": "AZUL",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-42.jpg"
+  },
+  {
+    "modelo": "G-207GRIS",
+    "descripcion": "GRIS",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-43.jpg"
+  },
+  {
+    "modelo": "G-207CF",
+    "descripcion": "CAFE",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-44.jpg"
+  },
+  {
+    "modelo": "G-207BEIGE",
+    "descripcion": "",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-45.jpg"
+  },
+  {
+    "modelo": "G-207NJ",
+    "descripcion": "NARANJA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-46.jpg"
+  },
+  {
+    "modelo": "G-207AM",
+    "descripcion": "AMARILLA",
+    "estilo": "HEBILLA",
+    "img": "/catalogo-pages/gorras-lisas/page-47.jpg"
+  },
+  {
+    "modelo": "P-11MACA-FNG",
+    "descripcion": "CAMUFLADA",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-49.jpg"
+  },
+  {
+    "modelo": "P-11MACA-FBC",
+    "descripcion": "CAMUFLADA",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-50.jpg"
+  },
+  {
+    "modelo": "P-11MACA-FBC",
+    "descripcion": "CAMUFLADA",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-51.jpg"
+  },
+  {
+    "modelo": "G-346P",
+    "descripcion": "TRICOLOR",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-52.jpg"
+  },
+  {
+    "modelo": "G-346NG/NG-FB",
+    "descripcion": "NEGRA",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-53.jpg"
+  },
+  {
+    "modelo": "G-346GRIS/GRIS-FB",
+    "descripcion": "GRIS",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-54.jpg"
+  },
+  {
+    "modelo": "G-346AZ/AZ-FB",
+    "descripcion": "AZUL OSCURO",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-55.jpg"
+  },
+  {
+    "modelo": "G-346REY/REY-FB",
+    "descripcion": "REY",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-56.jpg"
+  },
+  {
+    "modelo": "G-346BC",
+    "descripcion": "BLANCA",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-57.jpg"
+  },
+  {
+    "modelo": "G-346VDOS/VDOS-FB",
+    "descripcion": "VERDE OS",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-58.jpg"
+  },
+  {
+    "modelo": "G-346VD/VD-FB",
+    "descripcion": "VERDE",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-59.jpg"
+  },
+  {
+    "modelo": "G-346VDNEON/VDNEON-FB",
+    "descripcion": "",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-60.jpg"
+  },
+  {
+    "modelo": "G-346CF/CF-FB",
+    "descripcion": "CAFE",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-61.jpg"
+  },
+  {
+    "modelo": "G-346BEIGE/BEIGE-FB",
+    "descripcion": "BEIGE",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-62.jpg"
+  },
+  {
+    "modelo": "G-346VINO/VINO-FB",
+    "descripcion": "VINO T.",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-63.jpg"
+  },
+  {
+    "modelo": "G-346RJ/RJ-FB",
+    "descripcion": "ROJO",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-64.jpg"
+  },
+  {
+    "modelo": "G-346FUCNEON/FUCNEON-FB",
+    "descripcion": "",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-65.jpg"
+  },
+  {
+    "modelo": "G-346NJ/NJ-FB",
+    "descripcion": "NARANJA",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-66.jpg"
+  },
+  {
+    "modelo": "G-346NJNEON/NJNEON-FB",
+    "descripcion": "",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-67.jpg"
+  },
+  {
+    "modelo": "G-346AM/AM-FB",
+    "descripcion": "AMARILLO",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-68.jpg"
+  },
+  {
+    "modelo": "G-496NG/NG-FB",
+    "descripcion": "NEGRA",
+    "estilo": "MALLA",
+    "img": "/catalogo-pages/gorras-lisas/page-70.jpg"
+  }
+]

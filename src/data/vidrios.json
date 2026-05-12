@@ -1,0 +1,250 @@
+[
+  {
+    "modelo": "VIP1",
+    "nombre": "VIDRIO PLANO DE MINERAL",
+    "forma": "PLANO",
+    "grosor": "1MM",
+    "medida": "10MM AL 50MM",
+    "img": "/catalogo-pages/vidrios/page-02.jpg"
+  },
+  {
+    "modelo": "VIP1.5",
+    "nombre": "VIDRIO PLANO DE MINERAL",
+    "forma": "PLANO",
+    "grosor": "1.5MM",
+    "medida": "20MM AL 50MM",
+    "img": "/catalogo-pages/vidrios/page-03.jpg"
+  },
+  {
+    "modelo": "VIP2",
+    "nombre": "VIDRIO PLANO DE MINERAL",
+    "forma": "PLANO",
+    "grosor": "2MM",
+    "medida": "20MM AL 50MM",
+    "img": "/catalogo-pages/vidrios/page-04.jpg"
+  },
+  {
+    "modelo": "VIP2.5",
+    "nombre": "VIDRIO PLANO DE MINERAL",
+    "forma": "PLANO",
+    "grosor": "2.5MM",
+    "medida": "20MM AL 50MM",
+    "img": "/catalogo-pages/vidrios/page-05.jpg"
+  },
+  {
+    "modelo": "VIP3",
+    "nombre": "VIDRIO PLANO DE MINERAL",
+    "forma": "PLANO",
+    "grosor": "3MM",
+    "medida": "20MM AL 50MM",
+    "img": "/catalogo-pages/vidrios/page-06.jpg"
+  },
+  {
+    "modelo": "VIP4",
+    "nombre": "VIDRIO PLANO DE MINERAL",
+    "forma": "PLANO",
+    "grosor": "4MM",
+    "medida": "34MM AL 40MM",
+    "img": "/catalogo-pages/vidrios/page-07.jpg"
+  },
+  {
+    "modelo": "VIP5",
+    "nombre": "VIDRIO PLANO DE MINERAL",
+    "forma": "PLANO",
+    "grosor": "5MM",
+    "medida": "34MM AL 40MM",
+    "img": "/catalogo-pages/vidrios/page-08.jpg"
+  },
+  {
+    "modelo": "VILU1",
+    "nombre": "VIDRIO LUPA DE MINERAL",
+    "forma": "LUPA",
+    "grosor": "1MM",
+    "medida": "25MM AL 45MM",
+    "img": "/catalogo-pages/vidrios/page-09.jpg"
+  },
+  {
+    "modelo": "VILU2",
+    "nombre": "VIDRIO LUPA DE MINERAL",
+    "forma": "LUPA",
+    "grosor": "2MM",
+    "medida": "25MM AL 45MM",
+    "img": "/catalogo-pages/vidrios/page-10.jpg"
+  },
+  {
+    "modelo": "VICO1",
+    "nombre": "VIDRIO CONCAVO DE MINERAL",
+    "forma": "CONCAVO",
+    "grosor": "1MM",
+    "medida": "25MM AL 40MM",
+    "img": "/catalogo-pages/vidrios/page-11.jpg"
+  },
+  {
+    "modelo": "MICA",
+    "nombre": "MICA ACRILICA O LUNA",
+    "forma": "ACRILICO",
+    "grosor": "",
+    "medida": "29MM AL 34MM",
+    "img": "/catalogo-pages/vidrios/page-12.jpg"
+  },
+  {
+    "modelo": "VILA1",
+    "nombre": "LAMINA DE CRISTAL PLANO",
+    "forma": "LAMINA",
+    "grosor": "1MM",
+    "medida": "100X100MM",
+    "img": "/catalogo-pages/vidrios/page-13.jpg"
+  },
+  {
+    "modelo": "CH-12045",
+    "nombre": "PEGANTE PARA VIDRIOS",
+    "forma": "PEGANTE",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-14.jpg"
+  },
+  {
+    "modelo": "CH-12052",
+    "nombre": "PEGANTE PARA VIDRIOS",
+    "forma": "PEGANTE",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-15.jpg"
+  },
+  {
+    "modelo": "ZLD-312UV",
+    "nombre": "PEGANTE PARA VIDRIOS",
+    "forma": "PEGANTE",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-16.jpg"
+  },
+  {
+    "modelo": "VILUFE 5/5.5/6",
+    "nombre": "VIDRIO LUPA PARA FECHA",
+    "forma": "LUPA",
+    "grosor": "",
+    "medida": "5MM / 5.5MM / 6MM",
+    "img": "/catalogo-pages/vidrios/page-17.jpg"
+  },
+  {
+    "modelo": "VIZA1",
+    "nombre": "VIDRIO ZAFIRADO",
+    "forma": "ZAFIRADO",
+    "grosor": "1MM",
+    "medida": "25MM AL 40MM",
+    "img": "/catalogo-pages/vidrios/page-18.jpg"
+  },
+  {
+    "modelo": "VIZA2",
+    "nombre": "VIDRIO ZAFIRADO",
+    "forma": "ZAFIRADO",
+    "grosor": "2MM",
+    "medida": "30MM AL 40MM",
+    "img": "/catalogo-pages/vidrios/page-19.jpg"
+  },
+  {
+    "modelo": "VIES-1",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-20.jpg"
+  },
+  {
+    "modelo": "VIES-2",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-21.jpg"
+  },
+  {
+    "modelo": "VIES-3",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-22.jpg"
+  },
+  {
+    "modelo": "VIES-4",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-23.jpg"
+  },
+  {
+    "modelo": "VIES-5",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-24.jpg"
+  },
+  {
+    "modelo": "VIES-6",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-25.jpg"
+  },
+  {
+    "modelo": "VIES-7",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-26.jpg"
+  },
+  {
+    "modelo": "VIES-8",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-27.jpg"
+  },
+  {
+    "modelo": "VIES-9",
+    "nombre": "VIDRIO ESPECIAL",
+    "forma": "ESPECIAL",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-28.jpg"
+  },
+  {
+    "modelo": "1357",
+    "nombre": "Vidrio plástico de domo alto",
+    "forma": "DOMO",
+    "grosor": "",
+    "medida": "",
+    "img": "/catalogo-pages/vidrios/page-29.jpg"
+  },
+  {
+    "modelo": "842A",
+    "nombre": "Vidrio plástico de cúpula alta",
+    "forma": "DOMO",
+    "grosor": "",
+    "medida": "190-236MM",
+    "img": "/catalogo-pages/vidrios/page-30.jpg"
+  },
+  {
+    "modelo": "1184",
+    "nombre": "Vidrio Mineral de 1 mm",
+    "forma": "DOMO",
+    "grosor": "1MM",
+    "medida": "30 mm a 40 mm",
+    "img": "/catalogo-pages/vidrios/page-31.jpg"
+  },
+  {
+    "modelo": "1184A",
+    "nombre": "Vidrio Mineral de 1 mm",
+    "forma": "DOMO",
+    "grosor": "1MM",
+    "medida": "410 mm a 500 mm",
+    "img": "/catalogo-pages/vidrios/page-31.jpg"
+  }
+]

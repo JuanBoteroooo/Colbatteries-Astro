@@ -1,14 +1,19 @@
 /**
- * extract-xinjia.mjs
- * Extracts product images from relojes-xinjia.pdf (pages 2-108, 107 products).
+ * extract-xinjia.mjs — Symmetrical Grid layout (P1617 Standard)
  *
- * Pipeline — P1617 Standard:
+ * Pipeline per raw image:
  *   1. Flatten alpha → white
- *   2. Content-bounds crop (thresh=232, pad=25px)
+ *   2. Tight content-bounds crop (thresh=232, pad=25px)
  *   3. Resize to uniform CELL_W×CELL_H (600×800) via fit:'contain' on white bg
  *
- * Strip detection (w/h > 2.0): horizontal strips stacked vertically → variants cell.
- * Grid assembly: ceil(√n) cols.  n=1→1×1  n=2→2×1  n=3→2×2  n=4→2×2
+ * Grid layout:
+ *   n=1       → 1×1
+ *   n=2       → 2×1
+ *   n=3,4     → 2×2
+ *   n=5,6     → 3×2
+ *   n≥7       → 3×3
+ *
+ * Post-assembly: .trim({ threshold: 15 }) → JPEG q80
  *
  * Usage:  node scripts/extract-xinjia.mjs
  */
@@ -20,25 +25,23 @@ import { tmpdir } from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Prevent sharp from caching decoded image tiles — avoids memory growth over 100+ images.
 sharp.cache(false);
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT       = path.resolve(__dirname, '..');
-const OUT_DIR    = path.join(ROOT, 'public/images/productos/relojes-xinjia');
+const ROOT    = path.resolve(__dirname, '..');
+const OUT_DIR = path.join(ROOT, 'public/images/productos/relojes-xinjia');
 
-const CELL_W      = 600;
-const CELL_H      = 800;
-const GRID_GAP    = 20;
-const GRID_PAD    = 40;
-const CROP_PAD    = 25;
-const THRESH      = 232;
-const STRIP_RATIO = 2.0;
-const MIN_DIM     = 180;
-const MAX_RATIO   = 5.0;
-const WHITE       = { r: 255, g: 255, b: 255 };
-const OUT_MAX_W   = 800;   // final composite capped at this width
-const JPEG_Q      = 80;    // JPEG quality for saved files
+const CELL_W  = 600;
+const CELL_H  = 800;
+const GRID_GAP = 20;
+const GRID_PAD = 40;
+const CROP_PAD = 25;
+const THRESH   = 232;
+const MIN_DIM  = 180;
+const MAX_RATIO = 5.0;
+const OUT_MAX_W = 900;
+const JPEG_Q   = 80;
+const WHITE    = { r: 255, g: 255, b: 255 };
 
 mkdirSync(OUT_DIR, { recursive: true });
 
@@ -104,7 +107,7 @@ const jsonStr = execFileSync('python3', [tmpPy], {
 const pages = JSON.parse(jsonStr);
 console.log(`Got ${pages.length} products\n`);
 
-// ─── Sharp helpers (all sequential — no Promise.all) ─────────────────────────
+// ─── Sharp helpers ────────────────────────────────────────────────────────────
 
 async function contentBounds(buf) {
     const { data, info } = await sharp(buf)
@@ -159,9 +162,9 @@ async function darkFrac(buf) {
 function gridDims(n) {
     if (n <= 1) return { cols: 1, rows: 1 };
     if (n === 2) return { cols: 2, rows: 1 };
-    const cols = Math.ceil(Math.sqrt(n));
-    const rows = Math.ceil(n / cols);
-    return { cols, rows };
+    if (n <= 4)  return { cols: 2, rows: 2 };
+    if (n <= 6)  return { cols: 3, rows: 2 };
+    return { cols: 3, rows: 3 };
 }
 
 async function assembleGrid(cellBufs) {
@@ -169,6 +172,7 @@ async function assembleGrid(cellBufs) {
     const { cols, rows } = gridDims(n);
     const totalW = cols * CELL_W + (cols - 1) * GRID_GAP + GRID_PAD * 2;
     const totalH = rows * CELL_H + (rows - 1) * GRID_GAP + GRID_PAD * 2;
+
     const composites = cellBufs.map((buf, i) => {
         const col = i % cols;
         const row = Math.floor(i / cols);
@@ -180,6 +184,7 @@ async function assembleGrid(cellBufs) {
             top:  GRID_PAD + row * (CELL_H + GRID_GAP),
         };
     });
+
     return sharp({ create: { width: totalW, height: totalH, channels: 3, background: WHITE } })
         .composite(composites)
         .flatten({ background: WHITE })
@@ -187,81 +192,7 @@ async function assembleGrid(cellBufs) {
         .toBuffer();
 }
 
-// Stack landscape strips vertically — fully sequential, no Promise.all.
-async function combineStripsCell(stripBufs) {
-    const cropped = [];
-    for (const buf of stripBufs) {
-        const b = await contentBounds(buf);
-        if (b.bot < 0) continue;
-        const l  = Math.max(0, b.left  - CROP_PAD);
-        const t  = Math.max(0, b.top   - CROP_PAD);
-        const r  = Math.min(b.width,  b.right + CROP_PAD + 1);
-        const bt = Math.min(b.height, b.bot   + CROP_PAD + 1);
-        const c  = await sharp(buf)
-            .flatten({ background: WHITE })
-            .extract({ left: l, top: t, width: r - l, height: bt - t })
-            .flatten({ background: WHITE })
-            .png()
-            .toBuffer();
-        cropped.push(c);
-    }
-    if (cropped.length === 0) return null;
-
-    // Find max width sequentially
-    let maxW = 0;
-    const metas = [];
-    for (const buf of cropped) {
-        const m = await sharp(buf).metadata();
-        metas.push(m);
-        if (m.width > maxW) maxW = m.width;
-    }
-
-    // Equalize widths sequentially
-    const equalized = [];
-    for (let i = 0; i < cropped.length; i++) {
-        if (metas[i].width === maxW) {
-            equalized.push(cropped[i]);
-        } else {
-            const eq = await sharp(cropped[i])
-                .resize({ width: maxW, fit: 'contain', background: WHITE })
-                .flatten({ background: WHITE })
-                .png()
-                .toBuffer();
-            equalized.push(eq);
-        }
-    }
-
-    // Stack vertically
-    const STRIP_GAP = 12;
-    let totalH = STRIP_GAP * (equalized.length - 1);
-    const eqMetas = [];
-    for (const buf of equalized) {
-        const m = await sharp(buf).metadata();
-        eqMetas.push(m);
-        totalH += m.height;
-    }
-
-    let y = 0;
-    const composites = equalized.map((buf, i) => {
-        const comp = { input: buf, left: 0, top: y };
-        y += eqMetas[i].height + STRIP_GAP;
-        return comp;
-    });
-
-    const combined = await sharp({ create: { width: maxW, height: totalH, channels: 3, background: WHITE } })
-        .composite(composites)
-        .flatten({ background: WHITE })
-        .png()
-        .toBuffer();
-
-    return sharp(combined)
-        .resize({ width: CELL_W, height: CELL_H, fit: 'contain', background: WHITE })
-        .flatten({ background: WHITE })
-        .png()
-        .toBuffer();
-}
-
-// ─── Main loop — strictly sequential, one model at a time ────────────────────
+// ─── Main loop ────────────────────────────────────────────────────────────────
 let done = 0;
 for (const { modelo, page, raws } of pages) {
     const safe    = modelo.replace(/\//g, '_').replace(/ /g, '-');
@@ -282,45 +213,17 @@ for (const { modelo, page, raws } of pages) {
             continue;
         }
 
-        const strips = usable.filter(({ w, h }) => w / h > STRIP_RATIO);
-        const heroes = usable.filter(({ w, h }) => w / h <= STRIP_RATIO);
-
-        let finalCells = [];
-        let strategyLabel;
-
-        if (strips.length > 0 && heroes.length > 0) {
-            const stripBufs = strips.map(({ b64 }) => Buffer.from(b64, 'base64'));
-            const variantsCell = await combineStripsCell(stripBufs);
-
-            const heroCells = [];
-            for (const { b64 } of heroes) {
-                const cell = await processWatch(Buffer.from(b64, 'base64'));
-                if (cell) heroCells.push(cell);
-            }
-
-            finalCells    = [...(variantsCell ? [variantsCell] : []), ...heroCells];
-            strategyLabel = `combine-strips+hero [${strips.length}s+${heroes.length}h]`;
-
-        } else if (strips.length > 0) {
-            const stripBufs = strips.map(({ b64 }) => Buffer.from(b64, 'base64'));
-            const cell = await combineStripsCell(stripBufs);
-            finalCells    = cell ? [cell] : [];
-            strategyLabel = `strips-only [${strips.length}]`;
-
-        } else {
-            const cells = [];
-            for (const { b64 } of heroes) {
-                const cell = await processWatch(Buffer.from(b64, 'base64'));
-                if (cell) cells.push(cell);
-            }
-
-            const valid = [];
-            for (const buf of cells) {
-                if ((await darkFrac(buf)) > 0.003) valid.push(buf);
-            }
-            finalCells    = valid.length > 0 ? valid : cells.slice(0, 1);
-            strategyLabel = `heroes [${heroes.length}]`;
+        const cells = [];
+        for (const { b64 } of usable) {
+            const cell = await processWatch(Buffer.from(b64, 'base64'));
+            if (cell) cells.push(cell);
         }
+
+        const valid = [];
+        for (const buf of cells) {
+            if ((await darkFrac(buf)) > 0.003) valid.push(buf);
+        }
+        const finalCells = valid.length > 0 ? valid : cells.slice(0, 1);
 
         if (finalCells.length === 0) {
             console.log(`  → SKIP: all blank after processing`);
@@ -330,13 +233,15 @@ for (const { modelo, page, raws } of pages) {
 
         const { cols, rows } = gridDims(finalCells.length);
         const gridBuf = await assembleGrid(finalCells);
-        // Cap width at OUT_MAX_W, then save as compressed JPEG
+
         await sharp(gridBuf)
+            .trim({ threshold: 15 })
             .resize({ width: OUT_MAX_W, fit: 'inside', withoutEnlargement: true })
             .jpeg({ quality: JPEG_Q, mozjpeg: true })
             .toFile(outPath);
+
         const meta = await sharp(outPath).metadata();
-        console.log(`  → saved ${meta.width}×${meta.height}  [${finalCells.length} cells ${cols}×${rows} — ${strategyLabel}]`);
+        console.log(`  → saved ${meta.width}×${meta.height}  [${finalCells.length} cells, ${cols}×${rows} grid]`);
 
     } catch (err) {
         console.error(`  → ERROR on ${modelo}:`, err.message);

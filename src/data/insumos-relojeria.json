@@ -1,0 +1,786 @@
+[
+  {
+    "modelo": "TAC-018/020/022/024/026",
+    "nombre": "CAJA CON TERMINALES SURTIDAS (20PARES)",
+    "marca": "",
+    "tipo": "TERMINALES",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-02.jpg"
+  },
+  {
+    "modelo": "N4004",
+    "nombre": "PASADOR ESPECIAL SURTIDOS",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-03.jpg"
+  },
+  {
+    "modelo": "CH-1212-A",
+    "nombre": "TORNILLOS DE ROSCA FINA SURTIDOS",
+    "marca": "",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-04.jpg"
+  },
+  {
+    "modelo": "N4023",
+    "nombre": "TORNILLOS DE ROSCA FINA SURTIDOS",
+    "marca": "",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-05.jpg"
+  },
+  {
+    "modelo": "TORES-A/B/C",
+    "nombre": "TORNILLOS DE ROSCA FINA SURTIDOS",
+    "marca": "",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-06.jpg"
+  },
+  {
+    "modelo": "N6900",
+    "nombre": "CAJA DE TORNILLOS PARA RELOJES Y LENTES SURTIDOS",
+    "marca": "",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-07.jpg"
+  },
+  {
+    "modelo": "N4048",
+    "nombre": "CAJA DE TORNILLOS LARGOS PARA PULSOS METALICOS",
+    "marca": "",
+    "tipo": "TORNILLOS",
+    "especificacion": "ROSCA ESPECIAL",
+    "img": "/catalogo-pages/insumos-relojeria/page-08.jpg"
+  },
+  {
+    "modelo": "TOR HUBLOT",
+    "nombre": "TORNILLOS PARA RELOJES HUBLOT LARGO Y CORTO",
+    "marca": "Hublot",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-09.jpg"
+  },
+  {
+    "modelo": "N4031",
+    "nombre": "EMPAQUES PARA CORONA SURTIDOS",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-10.jpg"
+  },
+  {
+    "modelo": "N4032",
+    "nombre": "BRIDAS SOPORTES MAQUINA RELOJ SURTIDAS",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-11.jpg"
+  },
+  {
+    "modelo": "N4033",
+    "nombre": "TUBOS DE CORONA SURTIDOS",
+    "marca": "",
+    "tipo": "CORONAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-12.jpg"
+  },
+  {
+    "modelo": "N4042",
+    "nombre": "CAJA DE SEGUROS PARA PULSADORES SURTIDA",
+    "marca": "",
+    "tipo": "OTROS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-13.jpg"
+  },
+  {
+    "modelo": "N4008",
+    "nombre": "CAJA DE PIN SURTIDOS (270 UND) DE 8-25MM DE 1.5MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-14.jpg"
+  },
+  {
+    "modelo": "N4006",
+    "nombre": "CAJA DE PIN DELGADO SURTIDO (360 UND) 8 AL 25MM/ 1.3MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-15.jpg"
+  },
+  {
+    "modelo": "N4006-1.78MM",
+    "nombre": "CAJA DE PIN GRUESO SURTIDO (360 UND) 8 AL 25MM/ 1.78MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-16.jpg"
+  },
+  {
+    "modelo": "CH-4010",
+    "nombre": "CAJA DE PIN LARGO SURTIDO DEL 28 AL 37MM DE 1.5MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-17.jpg"
+  },
+  {
+    "modelo": "611A",
+    "nombre": "Pasadores de rosca, tipo estrella, amarillo",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "Paquete surtido de 100 piezas en caja de plástico",
+    "img": "/catalogo-pages/insumos-relojeria/page-18.jpg"
+  },
+  {
+    "modelo": "1196",
+    "nombre": "Pasadores de resorte XL",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "Tamaño: 29 mm, 30 mm, 31 mm, 33 mm, 34 mm (Paquete de 100 piezas)",
+    "img": "/catalogo-pages/insumos-relojeria/page-19.jpg"
+  },
+  {
+    "modelo": "N1028",
+    "nombre": "CAJA PIN DE PRESION (200 UND) SURTIDA 1.3MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "10MM A 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-20.jpg"
+  },
+  {
+    "modelo": "N4043",
+    "nombre": "CAJA DE PIN DE PRESION PARA CHAPETA (200 UND) SURTIDA",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "1.3MM 12MM A 21MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-21.jpg"
+  },
+  {
+    "modelo": "N8027",
+    "nombre": "CAJA DE PIN PARA CHAPETA (200 UND) 1.2MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "8MM A 27MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-22.jpg"
+  },
+  {
+    "modelo": "1687",
+    "nombre": "280 Coronas surtidas en acero para relojes",
+    "marca": "",
+    "tipo": "CORONAS",
+    "especificacion": "28 tamaños x 10 piezas cada una",
+    "img": "/catalogo-pages/insumos-relojeria/page-23.jpg"
+  },
+  {
+    "modelo": "CH-4013-20A",
+    "nombre": "CAJA DE CORONAS SURTIDAS X 300 UNDADES",
+    "marca": "",
+    "tipo": "CORONAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-24.jpg"
+  },
+  {
+    "modelo": "N4013",
+    "nombre": "CAJA DE CORONAS SURTIDAS X 140 UNIDADES",
+    "marca": "",
+    "tipo": "CORONAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-25.jpg"
+  },
+  {
+    "modelo": "CH-4013-10A",
+    "nombre": "CAJA DE CORONAS SURTIDAS X 100 UNIDADES",
+    "marca": "",
+    "tipo": "CORONAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-26.jpg"
+  },
+  {
+    "modelo": "CH-4016",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, COBRE, 20 AL 28MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-27.jpg"
+  },
+  {
+    "modelo": "CH-4016A",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, DORADA DEL 20 AL 28MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-28.jpg"
+  },
+  {
+    "modelo": "CH-4016B",
+    "nombre": "CAJA SURTIDA PIN DE CABEZA, PRESION, NEGRA LISA",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "20 AL 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-29.jpg"
+  },
+  {
+    "modelo": "CH-4016C",
+    "nombre": "CAJA DE PIN DE CABEZA, PRESION, NEGRA TROQUELADA",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "20 AL 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-30.jpg"
+  },
+  {
+    "modelo": "CH-4016D",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, ACERO RAYA",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "20 AL 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-31.jpg"
+  },
+  {
+    "modelo": "CH-4016E",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, ACERO LISO 20 AL 28MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-32.jpg"
+  },
+  {
+    "modelo": "CH-4016F",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, ACERO ESTRIADO",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "20 AL 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-33.jpg"
+  },
+  {
+    "modelo": "CH-4016G",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, ACERO LISO RAYA",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "PABONADO 20 AL 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-34.jpg"
+  },
+  {
+    "modelo": "CH-4016H",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, DORADO ESTIADO",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "20 AL 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-35.jpg"
+  },
+  {
+    "modelo": "CH-4016I",
+    "nombre": "CAJA SURTIDA PIN CABEZA, PRESION, DORADO LISO RAYA",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "20 AL 28MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-36.jpg"
+  },
+  {
+    "modelo": "N4012-0.8MM",
+    "nombre": "PASADOR DE ESTRIA CAJA (360 UND) SURTIDA 0.8MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "6MM A 23MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-37.jpg"
+  },
+  {
+    "modelo": "N4012-0.9MM",
+    "nombre": "PASADOR DE ESTRIA CAJA (360 UND) SURTIDA DE 0.9MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "6MM A 23MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-38.jpg"
+  },
+  {
+    "modelo": "N4012-1.0MM",
+    "nombre": "PASADOR DE ESTRIA CAJA (360 UND)  SURTIDA DE 1.0MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "8MM A 25MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-39.jpg"
+  },
+  {
+    "modelo": "PINDEL CDF-1.30MM",
+    "nombre": "PIN O PASADOR CDF-1.30MM DELGADO",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "MEDIDAS DEL 12MM AL 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-40.jpg"
+  },
+  {
+    "modelo": "PIN CDF-1.50MM",
+    "nombre": "PIN O PASADOR NORMAL CDF-1.50MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "MEDIDAS DEL 8MM AL 36MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-41.jpg"
+  },
+  {
+    "modelo": "PIN CSB-1.50MM (CHAPETA)",
+    "nombre": "PIN O PASADOR PARA CHAPETA CSB-1.50MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "MEDIDAS DEL 8MM AL 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-42.jpg"
+  },
+  {
+    "modelo": "PINGRU CDF-1.78MM",
+    "nombre": "PIN O PASADOR GRUESO CDF-1.78MM",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "MEDIDAS DEL 8MM AL 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-43.jpg"
+  },
+  {
+    "modelo": "PINAC SDF-1.50MM (ACERO FINO)",
+    "nombre": "PIN O PASADOR SDF-1.50MM ACERO FINO",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "MEDIDAS DEL 8MM AL 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-44.jpg"
+  },
+  {
+    "modelo": "N4021",
+    "nombre": "CAJA DE PIEDRAS SURTIDAS X UND",
+    "marca": "",
+    "tipo": "OTROS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-45.jpg"
+  },
+  {
+    "modelo": "R-001",
+    "nombre": "CAJA CON PIEDRAS DE COLOR SURTIDA",
+    "marca": "",
+    "tipo": "OTROS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-46.jpg"
+  },
+  {
+    "modelo": "RODICO-6033-1",
+    "nombre": "PLASTILINA RODICO PARA LIMPIEZA",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-47.jpg"
+  },
+  {
+    "modelo": "8000-4",
+    "nombre": "CAJA DE ACEITE MOEBIUS X 4 UND",
+    "marca": "Moebius",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-48.jpg"
+  },
+  {
+    "modelo": "SILIMPE-12038",
+    "nombre": "SILICONA PARA IMPERMEABILIZAR EMPAQUES DE RELOJ",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-49.jpg"
+  },
+  {
+    "modelo": "207",
+    "nombre": "Grasa de silicona, marca ANCHOR",
+    "marca": "Anchor",
+    "tipo": "QUIMICOS",
+    "especificacion": "grasa para impermeabilizar cajas de relojes",
+    "img": "/catalogo-pages/insumos-relojeria/page-50.jpg"
+  },
+  {
+    "modelo": "421",
+    "nombre": "Pasta para soldar marca ANCHOR",
+    "marca": "Anchor",
+    "tipo": "QUIMICOS",
+    "especificacion": "15 Gramos",
+    "img": "/catalogo-pages/insumos-relojeria/page-51.jpg"
+  },
+  {
+    "modelo": "423",
+    "nombre": "Cable de soldadura",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-52.jpg"
+  },
+  {
+    "modelo": "497",
+    "nombre": "Tapas para dedos de goma para ensamblaje de reloj",
+    "marca": "",
+    "tipo": "OTROS",
+    "especificacion": "Dedales plásticos para no dejar huella o marcas, paquete de 100 unidades",
+    "img": "/catalogo-pages/insumos-relojeria/page-53.jpg"
+  },
+  {
+    "modelo": "CH-12045",
+    "nombre": "PEGANTE PARA VIDRIOS DE RELOJ Y MAS",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-54.jpg"
+  },
+  {
+    "modelo": "CH-12052",
+    "nombre": "PEGANTE PARA VIDRIOS DE RELOJ Y MAS",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-55.jpg"
+  },
+  {
+    "modelo": "ZLD-312UV",
+    "nombre": "PEGAMENTO ZLD-312 UV",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-56.jpg"
+  },
+  {
+    "modelo": "415A",
+    "nombre": "Solución Adhesiva Multipropósito BONFIX",
+    "marca": "Bonfix",
+    "tipo": "QUIMICOS",
+    "especificacion": "Pegante de 30 ml.",
+    "img": "/catalogo-pages/insumos-relojeria/page-57.jpg"
+  },
+  {
+    "modelo": "EMTEFLON",
+    "nombre": "BOLSA DE EMPAQUE DE TEFLON ROJO 50 UNIDADES SURTIDAS",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "29MM AL 38,5MM (2UND X MEDIDA + 33,5 Y 34,5=7UND)",
+    "img": "/catalogo-pages/insumos-relojeria/page-58.jpg"
+  },
+  {
+    "modelo": "CH-4040-XL",
+    "nombre": "EMPAQUE PARA TAPAS DE RELOJ 0.8MM PAQ X 200UND",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "MEDIDAS DEL 41MM AL 44MM 0.8 MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-59.jpg"
+  },
+  {
+    "modelo": "CH-4040-A",
+    "nombre": "EMPAQUE PARA TAPAS DE RELOJ 0.8MM PAQ X 500UND",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "MEDIDAS DEL 31MM AL 40MM 0.8 MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-60.jpg"
+  },
+  {
+    "modelo": "CH-4040-B",
+    "nombre": "EMPAQUE PARA TAPAS DE RELOJ 0.7MM PAQ X 500UND",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "MEDIDAS DEL 31MM AL 40MM 0.7 MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-61.jpg"
+  },
+  {
+    "modelo": "CH-4040-C",
+    "nombre": "EMPAQUE PARA TAPAS DE RELOJ 0.7MM PAQ X 750UND",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "MEDIDAS DEL 16MM AL 30MM 0.7 MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-62.jpg"
+  },
+  {
+    "modelo": "CH-4040-E",
+    "nombre": "EMPAQUE PARA TAPAS DE RELOJ 0.5MM PAQ X 950UND",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "MEDIDAS DEL 12MM AL 30MM 0.5 MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-63.jpg"
+  },
+  {
+    "modelo": "CH-2035",
+    "nombre": "TIJA PARA MAQUINA MIYOTA 2035 X MILLAR",
+    "marca": "Miyota",
+    "tipo": "TIJAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-65.jpg"
+  },
+  {
+    "modelo": "CH-0909",
+    "nombre": "ALARGA TIJA 0.9 MM X MILLAR",
+    "marca": "",
+    "tipo": "TIJAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-66.jpg"
+  },
+  {
+    "modelo": "CH-0709",
+    "nombre": "CONVERSOR DE TIJA 0.7MM A 0.9MM X MILLAR",
+    "marca": "",
+    "tipo": "TIJAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-67.jpg"
+  },
+  {
+    "modelo": "LINGUETE-7900,7S26C Y 46943",
+    "nombre": "LINGUETE PARA SEIKO 7900 o 7S26C Y ORIENT 46943",
+    "marca": "Seiko",
+    "tipo": "TIJAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-68.jpg"
+  },
+  {
+    "modelo": "CH-5072-A",
+    "nombre": "PUNTAS DE REMPLAZO PARA CORTADORAS DE PULSO X MILLAR",
+    "marca": "",
+    "tipo": "REPUESTOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-69.jpg"
+  },
+  {
+    "modelo": "CH-5072-AX10",
+    "nombre": "PUNTAS DE REMPLAZO PARA CORTADORAS DE PULSO",
+    "marca": "",
+    "tipo": "REPUESTOS",
+    "especificacion": "X 10 UNIDADES",
+    "img": "/catalogo-pages/insumos-relojeria/page-70.jpg"
+  },
+  {
+    "modelo": "CH-5071",
+    "nombre": "CH-5071-A",
+    "marca": "",
+    "tipo": "REPUESTOS",
+    "especificacion": "CH-5071-XL REPUESTOS PARA RECORTADORAS METALICAS DE PULSOS",
+    "img": "/catalogo-pages/insumos-relojeria/page-71.jpg"
+  },
+  {
+    "modelo": "CH-6014",
+    "nombre": "REPUESTO PARA DESTAPADORA METALICA 6014",
+    "marca": "",
+    "tipo": "REPUESTOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-72.jpg"
+  },
+  {
+    "modelo": "CH-9065",
+    "nombre": "MECHAS DE REPUESTO PARA DESTORNILLADOR",
+    "marca": "",
+    "tipo": "REPUESTOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-73.jpg"
+  },
+  {
+    "modelo": "900.01",
+    "nombre": "Removedor de eslabones de pulsos de calidad superior",
+    "marca": "",
+    "tipo": "PINS",
+    "especificacion": "Juego de 3 pasadores de repuestos",
+    "img": "/catalogo-pages/insumos-relojeria/page-74.jpg"
+  },
+  {
+    "modelo": "CHABOLAEN 18,20,22 Y 24MM",
+    "nombre": "CHAPETA BOTON LATERAR CON ENTRADA",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "MEDIDAS 18, 20,22 Y 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-75.jpg"
+  },
+  {
+    "modelo": "CHAC3PA 12,16,18,20,22 Y 24MM",
+    "nombre": "CHAPETA ACERO TRES PARTES",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "MEDIDAS 12,16,18,20,22 Y 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-76.jpg"
+  },
+  {
+    "modelo": "CHADOSE 18,20,22 Y 24MM",
+    "nombre": "CHAPETA DOBLE SEGURO",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "MEDIDAS 18, 20,22 Y 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-77.jpg"
+  },
+  {
+    "modelo": "CHAMON 16,18,20,22 Y 24MM",
+    "nombre": "CHAPETA",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "MEDIDAS 16, 18,20,22 Y 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-78.jpg"
+  },
+  {
+    "modelo": "CHADOBOLI 18,20,22 Y 24MM",
+    "nombre": "CHAPETA DOBLE BOTON LISA",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "MEDIDAS 18,20,22 Y 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-79.jpg"
+  },
+  {
+    "modelo": "CHADOBOEN 18,20,22 Y 24MM",
+    "nombre": "CHAPETA DOBLE BOTON CON ENTRADA",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "MEDIDAS 18, 20,22 Y 24MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-80.jpg"
+  },
+  {
+    "modelo": "CHACDO3PA 12 AL 24MM",
+    "nombre": "CAPETA ACERO DORADO 3 PARTES DEL 12 AL 24MM",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-81.jpg"
+  },
+  {
+    "modelo": "CHAMONDO 18MM AL 24MM",
+    "nombre": "CHAPETA MONTOYA DORADA MEDIDAS 18 AL 24MM",
+    "marca": "",
+    "tipo": "CHAPETAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-82.jpg"
+  },
+  {
+    "modelo": "EXDO-12/24 EXAC-12/24",
+    "nombre": "EXTENSION DORADA Y PLATEADA MEDIDAS 12 AL 24MM",
+    "marca": "",
+    "tipo": "TERMINALES",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-83.jpg"
+  },
+  {
+    "modelo": "1323",
+    "nombre": "Caja Surtida de 57 hebillas para correas de relojes",
+    "marca": "",
+    "tipo": "HEBILLAS",
+    "especificacion": "18 piezas de hebillas plateadas, 3 piezas cada una de 10 mm - 12 mm - 14 mm - 16 mm -18 mm - 20",
+    "img": "/catalogo-pages/insumos-relojeria/page-84.jpg"
+  },
+  {
+    "modelo": "HEBILLA-16/18/20/22/24",
+    "nombre": "HEBILLAS METALICAS MEDIDAS 16 AL 24MM",
+    "marca": "",
+    "tipo": "HEBILLAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-85.jpg"
+  },
+  {
+    "modelo": "HBP(HBD)-8-10-12-14-16/18/20/22/24",
+    "nombre": "HEBILLAS METALICAS PLATEADAS O DORADAS",
+    "marca": "",
+    "tipo": "HEBILLAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-86.jpg"
+  },
+  {
+    "modelo": "HEBILLA2-16/18/20/22/24",
+    "nombre": "HEBILLAS METALICAS PLATEADAS",
+    "marca": "",
+    "tipo": "HEBILLAS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-87.jpg"
+  },
+  {
+    "modelo": "TSW-38/42P-D-N",
+    "nombre": "TERMINALES EN ACERO PARA IWACH",
+    "marca": "",
+    "tipo": "TERMINALES",
+    "especificacion": "MEDIDAS 38MM AL 42MM, ENTRADA DE PULSO 22MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-88.jpg"
+  },
+  {
+    "modelo": "TSW-44/49P-D-N",
+    "nombre": "TERMINALES EN ACERO PARA IWACH",
+    "marca": "",
+    "tipo": "TERMINALES",
+    "especificacion": "MEDIDAS 44MM AL 49MM, ENTRADA DE PULSO 22MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-89.jpg"
+  },
+  {
+    "modelo": "TSW-38 Y 42",
+    "nombre": "TERMINALES EN ACERO PARA IWATCH",
+    "marca": "",
+    "tipo": "TERMINALES",
+    "especificacion": "MEDIDAS 38MM Y 42MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-90.jpg"
+  },
+  {
+    "modelo": "HEBIN-4MM/5MM y 6MM",
+    "nombre": "HEBILLA O CIERRE EN ACERO TIPO MARIPOSA",
+    "marca": "",
+    "tipo": "HEBILLAS",
+    "especificacion": "4MM, 5MM Y 6MM 6MM",
+    "img": "/catalogo-pages/insumos-relojeria/page-91.jpg"
+  },
+  {
+    "modelo": "HEBINBO",
+    "nombre": "15X5",
+    "marca": "",
+    "tipo": "HEBILLAS",
+    "especificacion": "17X5 19X6 21X6 23X6 25X6 HEBILLA O CIERRE TIPO MARIPOSA CON DOBLE BOTON EN 6 MEDIDAS",
+    "img": "/catalogo-pages/insumos-relojeria/page-92.jpg"
+  },
+  {
+    "modelo": "CARRITO-12MM AL 22MM",
+    "nombre": "CARRITO ACERO PLATEADO 12MM AL 22MM",
+    "marca": "",
+    "tipo": "TERMINALES",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-93.jpg"
+  },
+  {
+    "modelo": "EXTEPULACE",
+    "nombre": "EXTENCION PARA PULSOS METALICOS",
+    "marca": "",
+    "tipo": "TERMINALES",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-94.jpg"
+  },
+  {
+    "modelo": "414",
+    "nombre": "Solución para la limpieza de relojes mecánicos, marca Mercury (100 ml)",
+    "marca": "Mercury",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-95.jpg"
+  },
+  {
+    "modelo": "637A",
+    "nombre": "Limpiador de cuarzo",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-96.jpg"
+  },
+  {
+    "modelo": "637",
+    "nombre": "Solución de espiral Marca ANCHOR",
+    "marca": "Anchor",
+    "tipo": "QUIMICOS",
+    "especificacion": "15ML",
+    "img": "/catalogo-pages/insumos-relojeria/page-97.jpg"
+  },
+  {
+    "modelo": "1589",
+    "nombre": "Tinta conductora para PCB y bobinas, marca ANCHOR",
+    "marca": "Anchor",
+    "tipo": "QUIMICOS",
+    "especificacion": "Sella las grietas, 10ML",
+    "img": "/catalogo-pages/insumos-relojeria/page-98.jpg"
+  },
+  {
+    "modelo": "278",
+    "nombre": "Aceites Marca ANCHOR",
+    "marca": "Anchor",
+    "tipo": "QUIMICOS",
+    "especificacion": "Aceite Extrafino para alarma y reloj de pared, 20ML",
+    "img": "/catalogo-pages/insumos-relojeria/page-99.jpg"
+  },
+  {
+    "modelo": "1986",
+    "nombre": "Liquido Impermeabilizante para Relojes",
+    "marca": "",
+    "tipo": "QUIMICOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-100.jpg"
+  }
+]

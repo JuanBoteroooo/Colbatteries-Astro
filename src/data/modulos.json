@@ -1,0 +1,258 @@
+[
+  {
+    "modelo": "MO5168SA-8MM",
+    "descripcion": "MODULO TIC-TAC O SALTO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "8MM",
+    "img": "/catalogo-pages/modulos/page-02.jpg"
+  },
+  {
+    "modelo": "MO5168SA-9MM",
+    "descripcion": "MODULO TIC-TAC O SALTO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "9MM",
+    "img": "/catalogo-pages/modulos/page-03.jpg"
+  },
+  {
+    "modelo": "MO5166SA-12MM",
+    "descripcion": "MODULO TIC-TAC O SALTO CON INTERRUPTOR",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "12MM",
+    "img": "/catalogo-pages/modulos/page-04.jpg"
+  },
+  {
+    "modelo": "MO5168SA/SI-12MM",
+    "descripcion": "MODULO TIC-TAC O SALTO/SILENCIOSO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "12MM",
+    "img": "/catalogo-pages/modulos/page-05.jpg"
+  },
+  {
+    "modelo": "MO5168SA/SI-14MM",
+    "descripcion": "MODULO TIC-TAC O SALTO/SILENCIOSO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "14MM",
+    "img": "/catalogo-pages/modulos/page-06.jpg"
+  },
+  {
+    "modelo": "MO5168SAC-14MM",
+    "descripcion": "MODULO TIC-TAC O SALTO CON CABLES",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "14MM",
+    "img": "/catalogo-pages/modulos/page-07.jpg"
+  },
+  {
+    "modelo": "MO5168SA/SI-16MM",
+    "descripcion": "MODULO TIC-TAC O SALTO/SILENCIOSO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "16MM",
+    "img": "/catalogo-pages/modulos/page-08.jpg"
+  },
+  {
+    "modelo": "MO5168SAC-16MM",
+    "descripcion": "MODULO TIC-TAC O SALTO CON CABLES",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "16MM",
+    "img": "/catalogo-pages/modulos/page-09.jpg"
+  },
+  {
+    "modelo": "MO5168SA/SI-20MM",
+    "descripcion": "MODULO TIC-TAC O SALTO/SILENCIOSO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "20MM",
+    "img": "/catalogo-pages/modulos/page-10.jpg"
+  },
+  {
+    "modelo": "MO5168SAC-22MM",
+    "descripcion": "MODULO TIC-TAC O SALTO CON CABLES",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "22MM",
+    "img": "/catalogo-pages/modulos/page-11.jpg"
+  },
+  {
+    "modelo": "MO5168SA-22MM",
+    "descripcion": "MODULO TIC-TAC O SALTO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "22MM",
+    "img": "/catalogo-pages/modulos/page-12.jpg"
+  },
+  {
+    "modelo": "MOPEHD1688SA-14MM",
+    "descripcion": "MODULO DE PENDULO TIC-TAC O SALTO",
+    "tipo": "PENDULO",
+    "bateria": "AA",
+    "dimensiones": "14MM",
+    "img": "/catalogo-pages/modulos/page-13.jpg"
+  },
+  {
+    "modelo": "MOPEHD1688SA-20MM",
+    "descripcion": "MODULO DE PENDULO TIC-TAC O SALTO",
+    "tipo": "PENDULO",
+    "bateria": "AA",
+    "dimensiones": "20MM",
+    "img": "/catalogo-pages/modulos/page-14.jpg"
+  },
+  {
+    "modelo": "KIT DE MODULOS CON PENDULOS Y MUSICA",
+    "descripcion": "TIC-TAC O SALTO",
+    "tipo": "SALTO",
+    "bateria": "AA",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-15.jpg"
+  },
+  {
+    "modelo": "MOMU",
+    "descripcion": "MODULO MUSICAL",
+    "tipo": "MUSICAL",
+    "bateria": "AA",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-16.jpg"
+  },
+  {
+    "modelo": "WP-1",
+    "descripcion": "SISTEMA DE PENDULO PARA MODULO",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-17.jpg"
+  },
+  {
+    "modelo": "MOFU",
+    "descripcion": "MODULO DE FUERZA",
+    "tipo": "FUERZA",
+    "bateria": "C",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-18.jpg"
+  },
+  {
+    "modelo": "MOFU + WP-1",
+    "descripcion": "MODULO DE FUERZA + SISTEMA DE PENDULO",
+    "tipo": "FUERZA",
+    "bateria": "C",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-19.jpg"
+  },
+  {
+    "modelo": "PUNTE-3446",
+    "descripcion": "PUNTEROS PARA MODULO DE FUERZA",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-20.jpg"
+  },
+  {
+    "modelo": "M2188A RELOJ PARA EMPOTRAR",
+    "descripcion": "Números Arábigos · 6.5 cm",
+    "tipo": "EMPOTRABLE",
+    "bateria": "AA",
+    "dimensiones": "6.5CM",
+    "img": "/catalogo-pages/modulos/page-22.jpg"
+  },
+  {
+    "modelo": "M2188R RELOJ PARA EMPOTRAR",
+    "descripcion": "Números Romanos · 6.5 cm",
+    "tipo": "EMPOTRABLE",
+    "bateria": "AA",
+    "dimensiones": "6.5CM",
+    "img": "/catalogo-pages/modulos/page-23.jpg"
+  },
+  {
+    "modelo": "BYM508 RELOJ PARA EMPOTRAR",
+    "descripcion": "Reloj para empotrar · 6 cm",
+    "tipo": "EMPOTRABLE",
+    "bateria": "AA",
+    "dimensiones": "6CM",
+    "img": "/catalogo-pages/modulos/page-24.jpg"
+  },
+  {
+    "modelo": "E23 RELOJ PARA EMPOTRAR",
+    "descripcion": "Reloj para empotrar · 5 cm",
+    "tipo": "EMPOTRABLE",
+    "bateria": "AA",
+    "dimensiones": "5CM",
+    "img": "/catalogo-pages/modulos/page-25.jpg"
+  },
+  {
+    "modelo": "RP-1",
+    "descripcion": "PENDULO PARA RELOJ DE PARED",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-26.jpg"
+  },
+  {
+    "modelo": "RP-2",
+    "descripcion": "PENDULO PARA RELOJ DE PARED",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-27.jpg"
+  },
+  {
+    "modelo": "RP-3",
+    "descripcion": "PENDULO PARA RELOJ DE PARED",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-28.jpg"
+  },
+  {
+    "modelo": "NU15RD / NU15RP",
+    "descripcion": "NUMEROS ROMANOS 15MM",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-29.jpg"
+  },
+  {
+    "modelo": "NU15AD / NU15AP",
+    "descripcion": "NUMEROS ARABIGOS 15MM",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-30.jpg"
+  },
+  {
+    "modelo": "NU20RD / NU20RP",
+    "descripcion": "NUMEROS ROMANOS 20MM",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-31.jpg"
+  },
+  {
+    "modelo": "NU20AD / NU20AP",
+    "descripcion": "NUMEROS ARABIGOS 20MM",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-32.jpg"
+  },
+  {
+    "modelo": "NU25RD / NU25RP",
+    "descripcion": "NUMEROS ROMANOS 25MM",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-33.jpg"
+  },
+  {
+    "modelo": "NU25AD / NU25AP",
+    "descripcion": "NUMEROS ARABIGOS 25MM",
+    "tipo": "ACCESORIO",
+    "bateria": "",
+    "dimensiones": "",
+    "img": "/catalogo-pages/modulos/page-34.jpg"
+  }
+]

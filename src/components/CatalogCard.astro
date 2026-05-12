@@ -17,15 +17,27 @@ interface Props {
   fecha?:             boolean;
   isCorona?:          boolean;
   isWatch?:           boolean;
+  isVidrios?:         boolean;
+  isModulos?:         boolean;
+  isInsumos?:         boolean;
+  isHerramientas?:    boolean;
+  isJoyeria?:         boolean;
+  isGorras?:          boolean;
   rosca?:             string;
   medida?:            string;
   color?:             string;
+  grosor?:            string;
+  forma?:             string;
+  nombre?:            string;
+  marca?:             string;
+  especificacion?:    string;
 }
 
 const {
   imagenSrc, imagenCatalogoSrc, titulo, detalles,
   tipo, fecha,
-  isCorona = false, isWatch = false, rosca, medida, color,
+  isCorona = false, isWatch = false, isVidrios = false, isModulos = false, isInsumos = false, isHerramientas = false, isJoyeria = false, isGorras = false,
+  rosca, medida, color, grosor, forma, nombre, marca, especificacion,
 } = Astro.props;
 
 const BADGE_CLASS: Record<string, string> = {
@@ -37,6 +49,64 @@ const BADGE_CLASS: Record<string, string> = {
   'ECONÓMICAS':       'badge-eco',
   'DIGITAL':          'badge-digital',
   'ACCESORIO':        'badge-acc',
+  'PLANO':            'badge-vidrio-plano',
+  'LUPA':             'badge-vidrio-lupa',
+  'ZAFIRADO':         'badge-vidrio-zaf',
+  'ESPECIAL':         'badge-vidrio-esp',
+  'PEGANTE':          'badge-vidrio-peg',
+  'ACRILICO':         'badge-vidrio-acr',
+  'CONCAVO':          'badge-vidrio-plano',
+  'LAMINA':           'badge-vidrio-plano',
+  'DOMO':             'badge-vidrio-lupa',
+  'OTRO':             'badge-acc',
+  'SALTO':            'badge-mod-salto',
+  'PENDULO':          'badge-mod-pen',
+  'MUSICAL':          'badge-mod-mus',
+  'FUERZA':           'badge-mod-fuerza',
+  'EMPOTRABLE':       'badge-mod-emp',
+  'PINS':             'badge-ins-pins',
+  'EMPAQUES':         'badge-ins-emp',
+  'CHAPETAS':         'badge-ins-cha',
+  'HEBILLAS':         'badge-ins-heb',
+  'QUIMICOS':         'badge-ins-qui',
+  'TORNILLOS':        'badge-ins-tor',
+  'TERMINALES':       'badge-ins-ter',
+  'TIJAS':            'badge-ins-tij',
+  'CORONAS':          'badge-ins-cor',
+  'REPUESTOS':        'badge-ins-rep',
+  'OTROS':            'badge-acc',
+  'TAPADORA':         'badge-her-tap',
+  'DESTAPADORA':      'badge-her-des',
+  'PINZA':            'badge-her-pin',
+  'DESTORNILLADOR':   'badge-her-dst',
+  'MAQUINA':          'badge-her-maq',
+  'LUPA':             'badge-her-lup',
+  'BASE':             'badge-her-bas',
+  'PRECISION':        'badge-her-pre',
+  'LLAVE':            'badge-her-lla',
+  'HERRAMIENTA':      'badge-her-her',
+  'LIMA':             'badge-joy-lima',
+  'SIERRA':           'badge-joy-sie',
+  'CEPILLO':          'badge-joy-cep',
+  'ABRASIVO':         'badge-joy-abr',
+  'MANDRIL':          'badge-joy-man',
+  'QUIMICO':          'badge-joy-qui',
+  'CAMIONERA':        'badge-gor-cam',
+  'ECONOMICA':        'badge-gor-eco',
+  'HEBILLA':          'badge-gor-heb',
+  'BORDADA':          'badge-gor-bor',
+  'FLEX':             'badge-gor-fle',
+  'PLANA':            'badge-gor-pla',
+  'IMPERMEABLE':      'badge-gor-imp',
+  'DAMA':             'badge-gor-dam',
+  'GOLEANA':          'badge-gor-gol',
+  'BOINA':            'badge-gor-boi',
+  'NINO':             'badge-gor-nin',
+  'NINA':             'badge-gor-nina',
+  'CUERINA':          'badge-gor-cue',
+  'DRIL':             'badge-gor-dri',
+  'MALLA':            'badge-gor-mal',
+  'MALLA-NINO':       'badge-gor-mni',
 };
 
 const TIPO_LABEL: Record<string, string> = {
@@ -48,15 +118,64 @@ const TIPO_LABEL: Record<string, string> = {
   'ECONÓMICAS':       'Económica',
   'DIGITAL':          'Digital',
   'ACCESORIO':        'Accesorio',
+  'SALTO':            'Salto',
+  'PENDULO':          'Péndulo',
+  'MUSICAL':          'Musical',
+  'FUERZA':           'Fuerza',
+  'EMPOTRABLE':       'Empotrable',
+  'PINS':             'Pins',
+  'EMPAQUES':         'Empaques',
+  'CHAPETAS':         'Chapetas',
+  'HEBILLAS':         'Hebillas',
+  'QUIMICOS':         'Químicos',
+  'TORNILLOS':        'Tornillos',
+  'TERMINALES':       'Terminales',
+  'TIJAS':            'Tijas',
+  'CORONAS':          'Coronas',
+  'REPUESTOS':        'Repuestos',
+  'OTROS':            'Otros',
+  'TAPADORA':         'Tapadora',
+  'DESTAPADORA':      'Destapadora',
+  'PINZA':            'Pinza',
+  'DESTORNILLADOR':   'Destornillador',
+  'MAQUINA':          'Máquina',
+  'LUPA':             'Lupa',
+  'BASE':             'Base',
+  'PRECISION':        'Precisión',
+  'LLAVE':            'Llave',
+  'HERRAMIENTA':      'Herramienta',
+  'LIMA':             'Lima',
+  'SIERRA':           'Sierra',
+  'CEPILLO':          'Cepillo',
+  'ABRASIVO':         'Abrasivo',
+  'MANDRIL':          'Mandril',
+  'QUIMICO':          'Químico',
+  'CAMIONERA':        'Camionera',
+  'ECONOMICA':        'Económica',
+  'HEBILLA':          'Hebilla',
+  'BORDADA':          'Bordada',
+  'FLEX':             'Flex',
+  'PLANA':            'Plana',
+  'IMPERMEABLE':      'Impermeable',
+  'DAMA':             'Dama',
+  'GOLEANA':          'Goleana',
+  'BOINA':            'Boina',
+  'NINO':             'Niño',
+  'NINA':             'Niña',
+  'CUERINA':          'Cuerina',
 };
 
 // Title split — for movements: "ETA 251.262" → prefix "ETA", model "251.262"
-// For coronas: titulo IS the ref, prefix comes from tipo
+// For coronas/vidrios/modulos: titulo IS the ref, prefix is descriptive name
 const spaceIdx = titulo.indexOf(' ');
 const prefix   = isCorona
   ? (TIPO_LABEL[tipo ?? ''] ?? '')
+  : isGorras
+  ? (TIPO_LABEL[tipo ?? ''] ?? '')
+  : (isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria)
+  ? (nombre ?? '')
   : (spaceIdx > -1 ? titulo.slice(0, spaceIdx) : '');
-const modelNum = isCorona
+const modelNum = isCorona || isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria || isGorras
   ? titulo
   : (spaceIdx > -1 ? titulo.slice(spaceIdx + 1) : titulo);
 
@@ -67,6 +186,34 @@ const specs: SpecItem[] = isCorona
       medida ? { k: 'Medida', v: medida.replace(/\s*[Xx]\s*/g, ' × ') } : null,
       rosca  ? { k: 'Rosca',  v: rosca } : null,
     ].filter((s): s is SpecItem => s !== null)
+  : isVidrios
+  ? [
+      medida ? { k: 'Medida', v: medida } : null,
+      grosor ? { k: 'Grosor', v: grosor } : null,
+      forma  ? { k: 'Tipo',   v: forma.charAt(0) + forma.slice(1).toLowerCase() } : null,
+    ].filter((s): s is SpecItem => s !== null)
+  : isModulos
+  ? [
+      detalles.bateria     ? { k: 'Batería',    v: `Pila ${detalles.bateria}` } : null,
+      detalles.dimensiones ? { k: 'Eje',        v: detalles.dimensiones }       : null,
+      tipo                 ? { k: 'Tipo',       v: TIPO_LABEL[tipo] ?? tipo }    : null,
+    ].filter((s): s is SpecItem => s !== null)
+  : isInsumos
+  ? [
+      marca         ? { k: 'Marca',  v: marca }                          : null,
+      especificacion ? { k: 'Espec.', v: especificacion.slice(0, 40) }   : null,
+      tipo           ? { k: 'Cat.',   v: TIPO_LABEL[tipo] ?? tipo }       : null,
+    ].filter((s): s is SpecItem => s !== null)
+  : isHerramientas
+  ? [
+      tipo ? { k: 'Tipo', v: TIPO_LABEL[tipo] ?? tipo } : null,
+    ].filter((s): s is SpecItem => s !== null)
+  : isJoyeria
+  ? [
+      tipo ? { k: 'Tipo', v: TIPO_LABEL[tipo] ?? tipo } : null,
+    ].filter((s): s is SpecItem => s !== null)
+  : isGorras
+  ? []
   : isWatch
   ? [
       tipo ? { k: 'Tipo', v: TIPO_LABEL[tipo] ?? tipo } : null,
@@ -102,12 +249,16 @@ const coronaColors = isCorona && color
     />
     <!-- Badges -->
     <div class="cc-badge-strip">
-      {tipo && (
+      {isVidrios && forma ? (
+        <span class={`cc-badge ${BADGE_CLASS[forma] ?? 'badge-acc'}`}>
+          {forma.charAt(0) + forma.slice(1).toLowerCase()}
+        </span>
+      ) : tipo ? (
         <span class={`cc-badge ${BADGE_CLASS[tipo] ?? 'badge-cab'}`}>
           {TIPO_LABEL[tipo] ?? tipo}
         </span>
-      )}
-      {!isCorona && fecha && <span class="cc-badge badge-fecha">+ Fecha</span>}
+      ) : null}
+      {!isCorona && !isVidrios && fecha && <span class="cc-badge badge-fecha">+ Fecha</span>}
     </div>
   </div>
 
@@ -250,6 +401,68 @@ const coronaColors = isCorona && color
   .badge-eco      { background: #e64132; color: #fff; }
   .badge-digital  { background: #0a8a50; color: #fff; }
   .badge-acc      { background: #777;    color: #fff; }
+  /* Vidrios badges */
+  .badge-vidrio-plano { background: #4a7fb5; color: #fff; }
+  .badge-vidrio-lupa  { background: #7b5ea7; color: #fff; }
+  .badge-vidrio-zaf   { background: #1a7a5e; color: #fff; }
+  .badge-vidrio-esp   { background: #c56a1e; color: #fff; }
+  .badge-vidrio-peg   { background: #666;    color: #fff; }
+  .badge-vidrio-acr   { background: #3a8fa8; color: #fff; }
+  /* Módulos badges */
+  .badge-mod-salto    { background: #024598; color: #fff; }
+  .badge-mod-pen      { background: #5a3d8a; color: #fff; }
+  .badge-mod-mus      { background: #c56a1e; color: #fff; }
+  .badge-mod-fuerza   { background: #c0392b; color: #fff; }
+  .badge-mod-emp      { background: #1a7a5e; color: #fff; }
+  /* Insumos badges */
+  .badge-ins-pins  { background: #024598; color: #fff; }
+  .badge-ins-emp   { background: #2e7d5e; color: #fff; }
+  .badge-ins-cha   { background: #7b5ea7; color: #fff; }
+  .badge-ins-heb   { background: #a05195; color: #fff; }
+  .badge-ins-qui   { background: #c0392b; color: #fff; }
+  .badge-ins-tor   { background: #555;    color: #fff; }
+  .badge-ins-ter   { background: #c56a1e; color: #fff; }
+  .badge-ins-tij   { background: #1a6fa8; color: #fff; }
+  .badge-ins-cor   { background: #d4af37; color: #111; }
+  .badge-ins-rep   { background: #4a7fb5; color: #fff; }
+
+  /* ── Herramientas badges ── */
+  .badge-her-tap { background: #c0392b; color: #fff; }
+  .badge-her-des { background: #e74c3c; color: #fff; }
+  .badge-her-pin { background: #16a085; color: #fff; }
+  .badge-her-dst { background: #2980b9; color: #fff; }
+  .badge-her-maq { background: #6c3483; color: #fff; }
+  .badge-her-lup { background: #d4ac0d; color: #111; }
+  .badge-her-bas { background: #7f8c8d; color: #fff; }
+  .badge-her-pre { background: #0097a7; color: #fff; }
+  .badge-her-lla { background: #795548; color: #fff; }
+  .badge-her-her { background: #546e7a; color: #fff; }
+
+  /* ── Joyería badges ── */
+  .badge-joy-lima { background: #b7410e; color: #fff; }
+  .badge-joy-sie  { background: #2471a3; color: #fff; }
+  .badge-joy-cep  { background: #1e8449; color: #fff; }
+  .badge-joy-abr  { background: #7d6608; color: #fff; }
+  .badge-joy-man  { background: #4a235a; color: #fff; }
+  .badge-joy-qui  { background: #784212; color: #fff; }
+
+  /* ── Gorras Polemik badges ── */
+  .badge-gor-cam  { background: #024598; color: #fff; }
+  .badge-gor-eco  { background: #2e7d5e; color: #fff; }
+  .badge-gor-heb  { background: #6c3483; color: #fff; }
+  .badge-gor-bor  { background: #c0392b; color: #fff; }
+  .badge-gor-fle  { background: #0097a7; color: #fff; }
+  .badge-gor-pla  { background: #546e7a; color: #fff; }
+  .badge-gor-imp  { background: #1565c0; color: #fff; }
+  .badge-gor-dam  { background: #ad1457; color: #fff; }
+  .badge-gor-gol  { background: #558b2f; color: #fff; }
+  .badge-gor-boi  { background: #4e342e; color: #fff; }
+  .badge-gor-nin  { background: #1565c0; color: #fff; }
+  .badge-gor-nina { background: #ad1457; color: #fff; }
+  .badge-gor-cue  { background: #795548; color: #fff; }
+  .badge-gor-dri  { background: #5d4037; color: #fff; }
+  .badge-gor-mal  { background: #1565c0; color: #fff; }
+  .badge-gor-mni  { background: #283593; color: #fff; }
 
   /* ── Body ── */
   .cc-body {

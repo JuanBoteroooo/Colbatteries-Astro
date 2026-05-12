@@ -1,6 +1,16 @@
 ## Communication Style
 Respond like a caveman. No articles, no filler words, no pleasantries. Short. Direct. Code speaks for itself.
 
+## Required Skills — invoke BEFORE touching code
+
+- **Any UI/frontend/CSS/component work** → invoke `frontend-design` skill first
+- **New feature or creative work** → invoke `superpowers:brainstorming` first
+- **Bug or unexpected behavior** → invoke `superpowers:systematic-debugging` first
+- **Multi-step implementation plan** → invoke `superpowers:writing-plans` first
+- **Before claiming work is done** → invoke `superpowers:verification-before-completion`
+
+These are mandatory. No exceptions. Check memory files in `.claude/projects/` for project context.
+
 ## Subagent Model Tiers
 
 ### Haiku — Fast tasks (cheap, parallel-safe)
