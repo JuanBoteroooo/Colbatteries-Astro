@@ -1,0 +1,164 @@
+[
+  {
+    "modelo": "LR521",
+    "equivalente": "379",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-03.jpg"
+  },
+  {
+    "modelo": "LR621",
+    "equivalente": "364",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-04.jpg"
+  },
+  {
+    "modelo": "LR626",
+    "equivalente": "377",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-05.jpg"
+  },
+  {
+    "modelo": "LR920",
+    "equivalente": "371",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-06.jpg"
+  },
+  {
+    "modelo": "LR927",
+    "equivalente": "395",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-07.jpg"
+  },
+  {
+    "modelo": "LR936",
+    "equivalente": "394",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-08.jpg"
+  },
+  {
+    "modelo": "LR41",
+    "equivalente": "192",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-09.jpg"
+  },
+  {
+    "modelo": "LR1130",
+    "equivalente": "189",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-10.jpg"
+  },
+  {
+    "modelo": "LR44-A76",
+    "equivalente": "",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-11.jpg"
+  },
+  {
+    "modelo": "CR2016",
+    "equivalente": "",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/pilas-economicas/page-12.jpg"
+  },
+  {
+    "modelo": "CR2025",
+    "equivalente": "",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/pilas-economicas/page-13.jpg"
+  },
+  {
+    "modelo": "CR2032",
+    "equivalente": "",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/pilas-economicas/page-14.jpg"
+  },
+  {
+    "modelo": "LR6",
+    "equivalente": "",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/pilas-economicas/page-15.jpg"
+  },
+  {
+    "modelo": "AAA LR03",
+    "equivalente": "",
+    "marca": "Q&Q COLBATTERIES",
+    "descripcion": "AAA LR03",
+    "quimica": "Alcalina",
+    "voltaje": "",
+    "img": "/catalogo-pages/pilas-economicas/page-16.jpg"
+  },
+  {
+    "modelo": "CR2430",
+    "equivalente": "",
+    "marca": "SSUO",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/pilas-economicas/page-17.jpg"
+  },
+  {
+    "modelo": "CR2450",
+    "equivalente": "",
+    "marca": "SSUO",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/pilas-economicas/page-18.jpg"
+  },
+  {
+    "modelo": "23A",
+    "equivalente": "",
+    "marca": "SSOU",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "12V",
+    "img": "/catalogo-pages/pilas-economicas/page-19.jpg"
+  },
+  {
+    "modelo": "27A",
+    "equivalente": "",
+    "marca": "SSUO",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "12V",
+    "img": "/catalogo-pages/pilas-economicas/page-20.jpg"
+  }
+]

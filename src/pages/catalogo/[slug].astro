@@ -20,6 +20,16 @@ import herramientasData  from '../../data/herramientas.json';
 import joyeriaData       from '../../data/joyeria-herramientas.json';
 import gorrasPolemikData from '../../data/gorras-polemik.json';
 import gorrasLisasData   from '../../data/gorras-lisas.json';
+import pulsoResinaData   from '../../data/pulsos-resina.json';
+import pulsoSiliconaData from '../../data/pulsos-silicona.json';
+import pulsoCueroData      from '../../data/pulsos-cuero.json';
+import pulsoMetalicosData  from '../../data/pulsos-metalicos.json';
+import pulsoPvcData        from '../../data/pulsos-pvc.json';
+import bateriasMaxellData  from '../../data/baterias-maxell.json';
+import pilasEconData       from '../../data/pilas-economicas.json';
+import capacitoresData     from '../../data/capacitores.json';
+import batTianqiuData     from '../../data/baterias-tianqiu.json';
+import batGpData          from '../../data/baterias-gp.json';
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -57,8 +67,25 @@ const isHerramientas = isStructured && slug === 'herramientas';
 const isJoyeria      = isStructured && slug === 'joyeria-herramientas';
 const isGorrasP      = isStructured && slug === 'gorras-polemik';
 const isGorrasL      = isStructured && slug === 'gorras-lisas';
+const isPulsoResina  = isStructured && slug === 'pulso-resina';
+const isPulsoSilicona = isStructured && slug === 'pulso-silicona';
+const isPulsoCuero      = isStructured && slug === 'pulso-cuero';
+const isPulsoMetalico   = isStructured && slug === 'pulso-metalico';
+const isPulsoPvc        = isStructured && slug === 'pulso-pvc';
+const isBatMaxell       = isStructured && slug === 'baterias-maxell';
+const isPilasEcon       = isStructured && slug === 'pilas-economicas';
+const isCapacitores     = isStructured && slug === 'capacitores';
+const isBatTianqiu      = isStructured && slug === 'baterias-tianqiu';
+const isBatGp           = isStructured && slug === 'baterias-gp';
+
+const fourColumnSlugs = [
+    'pulso-resina', 'pulso-silicona', 'pulso-cuero', 'pulso-metalico', 'pulso-pvc',
+    'baterias-maxell', 'pilas-economicas', 'capacitores', 'baterias-tianqiu', 'baterias-gp',
+];
+const isFourColumn = fourColumnSlugs.includes(slug);
+
 const isWatch   = isPolemik || isXinjia;
-const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
+const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
 const pdfSlug   = isSII ? 'movimientos-epson' : slug;
 
 // For cover fallback (PDF mode only)
@@ -883,6 +910,865 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
                   detalles={{}}
                   isGorras={true}
                   tipo={p.estilo}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         PULSO RESINA STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isPulsoResina && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o medida..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="16mm">16mm</button>
+            <button class="eta-tipo-pill" data-tipo="18mm">18mm</button>
+            <button class="eta-tipo-pill" data-tipo="20mm">20mm</button>
+            <button class="eta-tipo-pill" data-tipo="22mm">22mm</button>
+            <button class="eta-tipo-pill" data-tipo="24mm">24mm</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.medida}
+                data-modelo={(p.modelo as string).toLowerCase()}
+                data-medida={p.medida}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/pulso-resina/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.medida}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         PULSO SILICONA STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isPulsoSilicona && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o medida..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="16mm">16mm</button>
+            <button class="eta-tipo-pill" data-tipo="18mm">18mm</button>
+            <button class="eta-tipo-pill" data-tipo="20mm">20mm</button>
+            <button class="eta-tipo-pill" data-tipo="22mm">22mm</button>
+            <button class="eta-tipo-pill" data-tipo="24mm">24mm</button>
+            <button class="eta-tipo-pill" data-tipo="26mm">26mm</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.medida}
+                data-modelo={(p.modelo as string).toLowerCase()}
+                data-medida={p.medida}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/pulso-silicona/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.medida}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         BATERIAS TIANQIU STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isBatTianqiu && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o equivalente..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="Litio">Litio</button>
+            <button class="eta-tipo-pill" data-tipo="Alcalina">Alcalina</button>
+            <button class="eta-tipo-pill" data-tipo="Zinc-Carbón">Zinc-Carbón</button>
+            <button class="eta-tipo-pill" data-tipo="Li-Ion Recargable">Recargable</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const imgKey = (p.nombreImagen as string ?? p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.quimica}
+                data-modelo={((p.modelo as string) + ' ' + (p.equivalente as string ?? '')).toLowerCase()}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/baterias-tianqiu/${imgKey}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.quimica}
+                  medida={p.voltaje}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         BATERIAS GP STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isBatGp && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia, SKU o equivalente..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="Alcalina">Alcalina</button>
+            <button class="eta-tipo-pill" data-tipo="Litio">Litio</button>
+            <button class="eta-tipo-pill" data-tipo="NiMH Recargable">Recargable</button>
+            <button class="eta-tipo-pill" data-tipo="Zinc-Aire">Zinc-Aire</button>
+            <button class="eta-tipo-pill" data-tipo="Zinc-Carbón">Zinc-Carbón</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const imgKey = (p.nombreImagen as string ?? p.sku as string ?? p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.quimica}
+                data-modelo={((p.modelo as string) + ' ' + (p.sku as string ?? '') + ' ' + (p.descripcion as string ?? '')).toLowerCase()}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/baterias-gp/${imgKey}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.quimica}
+                  medida={p.voltaje}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         BATERIAS MAXELL STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isBatMaxell && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o equivalente..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="Litio">Litio</button>
+            <button class="eta-tipo-pill" data-tipo="Óxido de Plata">Óxido de Plata</button>
+            <button class="eta-tipo-pill" data-tipo="Alcalina">Alcalina</button>
+            <button class="eta-tipo-pill" data-tipo="Zinc-Air">Zinc-Air</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.quimica}
+                data-modelo={((p.modelo as string) + ' ' + (p.equivalente as string ?? '')).toLowerCase()}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/baterias-maxell/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.quimica}
+                  medida={p.voltaje}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         CAPACITORES STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isCapacitores && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia, marca o equivalente..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todos</button>
+            <button class="eta-tipo-pill" data-tipo="Capacitor">Capacitor</button>
+            <button class="eta-tipo-pill" data-tipo="Circuito">Circuito</button>
+            <button class="eta-tipo-pill" data-tipo="Componente">Componente</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.categoria}
+                data-modelo={((p.modelo as string) + ' ' + (p.equivalente as string ?? '') + ' ' + (p.marca as string ?? '')).toLowerCase()}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/capacitores/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.categoria}
+                  nombre={p.marca}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         PILAS ECONOMICAS STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isPilasEcon && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o equivalente..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="Litio">Litio</button>
+            <button class="eta-tipo-pill" data-tipo="Alcalina">Alcalina</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.quimica}
+                data-modelo={((p.modelo as string) + ' ' + (p.equivalente as string ?? '')).toLowerCase()}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/pilas-economicas/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.quimica}
+                  medida={p.voltaje}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         PULSO PVC STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isPulsoPvc && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o medida..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="14mm">14mm</button>
+            <button class="eta-tipo-pill" data-tipo="16mm">16mm</button>
+            <button class="eta-tipo-pill" data-tipo="18mm">18mm</button>
+            <button class="eta-tipo-pill" data-tipo="20mm">20mm</button>
+            <button class="eta-tipo-pill" data-tipo="22mm">22mm</button>
+            <button class="eta-tipo-pill" data-tipo="24mm">24mm</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.medida?.split(',')[0]?.trim()}
+                data-modelo={(p.modelo as string).toLowerCase()}
+                data-medida={p.medida}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/pulso-pvc/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.medida}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         PULSO METALICO STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isPulsoMetalico && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia, color o medida..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todos</button>
+            <button class="eta-tipo-pill" data-tipo="Plateado">Plateado</button>
+            <button class="eta-tipo-pill" data-tipo="Dorado">Dorado</button>
+            <button class="eta-tipo-pill" data-tipo="Pavonado">Pavonado</button>
+            <button class="eta-tipo-pill" data-tipo="Bicolor">Bicolor</button>
+            <button class="eta-tipo-pill" data-tipo="Oro Rosa">Oro Rosa</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.color}
+                data-modelo={(p.modelo as string).toLowerCase()}
+                data-medida={p.medida}
+                data-color={(p.color as string)?.toLowerCase() ?? ''}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/pulso-metalico/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.color}
+                  medida={p.medida}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todas</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         PULSO CUERO STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isPulsoCuero && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o medida..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            <button class="eta-tipo-pill" data-tipo="12mm">12mm</button>
+            <button class="eta-tipo-pill" data-tipo="14mm">14mm</button>
+            <button class="eta-tipo-pill" data-tipo="16mm">16mm</button>
+            <button class="eta-tipo-pill" data-tipo="18mm">18mm</button>
+            <button class="eta-tipo-pill" data-tipo="20mm">20mm</button>
+            <button class="eta-tipo-pill" data-tipo="22mm">22mm</button>
+            <button class="eta-tipo-pill" data-tipo="24mm">24mm</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.medida}
+                data-modelo={(p.modelo as string).toLowerCase()}
+                data-medida={p.medida}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/pulso-cuero/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.medida}
                 />
               </div>
             );
@@ -1903,6 +2789,8 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-reset-btn:hover { opacity: 0.85; }
 
   /* ── ETA Responsive ── */
+  .eta-grid--4col { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 1100px) { .eta-grid--4col { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 900px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { padding: 0.75rem 1rem; } .eta-fecha-toggle span { display: none; } }
 
@@ -2032,7 +2920,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-modal-close:hover { border-color: #f2a900; color: #f2a900; }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isPolemik, isCoronas, isXinjia, isVidrios, isModulos, isInsumos, isHerramientas, isJoyeria, isGorrasP, isGorrasL, totalPages: cat.pages ?? 0, catLabel: cat.label }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isPolemik, isCoronas, isXinjia, isVidrios, isModulos, isInsumos, isHerramientas, isJoyeria, isGorrasP, isGorrasL, isPulsoResina, isPulsoSilicona, isPulsoCuero, isPulsoMetalico, isPulsoPvc, isBatMaxell, isPilasEcon, isCapacitores, isBatTianqiu, isBatGp, totalPages: cat.pages ?? 0, catLabel: cat.label }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -2212,7 +3100,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   // ════════════════════════════
   // ETA / RONDA / EPSON / SII / CORONAS STRUCTURED MODE
   // ════════════════════════════
-  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isCoronas || isXinjia || isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria || isGorrasP || isGorrasL) {
+  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isCoronas || isXinjia || isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria || isGorrasP || isGorrasL || isPulsoResina || isPulsoSilicona || isPulsoCuero || isPulsoMetalico || isPulsoPvc || isBatMaxell || isPilasEcon || isCapacitores || isBatTianqiu || isBatGp) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');

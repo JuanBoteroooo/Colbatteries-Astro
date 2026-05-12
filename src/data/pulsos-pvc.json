@@ -1,0 +1,597 @@
+[
+  {
+    "modelo": "PPVC/1148",
+    "descripcion": "MATERIAL PVC MEDIDAS 12, 14, 16, 18, 20 Y 22MM PAQUETE X 100 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-02.jpg"
+  },
+  {
+    "modelo": "PPVC/1817-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-03.jpg"
+  },
+  {
+    "modelo": "PPVC/2014-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-04.jpg"
+  },
+  {
+    "modelo": "PPVC/2209-22",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM PAQUETE X 100 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-05.jpg"
+  },
+  {
+    "modelo": "PPVC/2220-18/20/22/24/26/28",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM AL 28MM PAQUETE X 100 UNIDADES",
+    "medida": "22mm, 28mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-06.jpg"
+  },
+  {
+    "modelo": "PPVC/2857-22",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM PAQUETE X 50 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-07.jpg"
+  },
+  {
+    "modelo": "PPVC/3004-18/20",
+    "descripcion": "MATERIAL PVC MEDIDAS 18MM Y 20MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm, 20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-08.jpg"
+  },
+  {
+    "modelo": "PPVC/3005",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 100 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-09.jpg"
+  },
+  {
+    "modelo": "PPVC/3102-14 (TECHNOMARINE)",
+    "descripcion": "MATERIAL PVC MEDIDA 14MM PAQUETE X 100 UNIDADES",
+    "medida": "14mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-10.jpg"
+  },
+  {
+    "modelo": "PPVC/3102-16 (TECHNOMARINE)",
+    "descripcion": "MATERIAL PVC MEDIDA16MM PAQUETE X 50 UNIDADES",
+    "medida": "",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-11.jpg"
+  },
+  {
+    "modelo": "PPVC/3102-20 (TECHNOMARINE)",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-12.jpg"
+  },
+  {
+    "modelo": "PPVC/3108-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 100 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-13.jpg"
+  },
+  {
+    "modelo": "PPVC/3121-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-14.jpg"
+  },
+  {
+    "modelo": "PPVC/3124-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-15.jpg"
+  },
+  {
+    "modelo": "PPVC/3125-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-16.jpg"
+  },
+  {
+    "modelo": "PPVC/3133-16 (TECHNOMARINE)",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-17.jpg"
+  },
+  {
+    "modelo": "PPVC/3140-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-18.jpg"
+  },
+  {
+    "modelo": "PPVC/3153-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-19.jpg"
+  },
+  {
+    "modelo": "PPVC/3167-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-20.jpg"
+  },
+  {
+    "modelo": "PPVC/3168-29",
+    "descripcion": "MATERIAL PVC MEDIDA 29MM PAQUETE X 50 UNIDADES",
+    "medida": "29mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-21.jpg"
+  },
+  {
+    "modelo": "PPVC/3176-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-22.jpg"
+  },
+  {
+    "modelo": "PPVC/3191-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-23.jpg"
+  },
+  {
+    "modelo": "PPVC/3212-22",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM PAQUETE X 50 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-24.jpg"
+  },
+  {
+    "modelo": "PPVC/3213-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-25.jpg"
+  },
+  {
+    "modelo": "PPVC/3216-22",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM PAQUETE X 50 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-26.jpg"
+  },
+  {
+    "modelo": "PPVC/3220-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-27.jpg"
+  },
+  {
+    "modelo": "PPVC/3221-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-28.jpg"
+  },
+  {
+    "modelo": "PPVC/3223-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-29.jpg"
+  },
+  {
+    "modelo": "PPVC/3225-22",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM PAQUETE X 50 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-30.jpg"
+  },
+  {
+    "modelo": "PPVC/3226-30",
+    "descripcion": "MATERIAL PVC MEDIDA 30MM PAQUETE X 50 UNIDADES",
+    "medida": "30mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-31.jpg"
+  },
+  {
+    "modelo": "PPVC/3229-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-32.jpg"
+  },
+  {
+    "modelo": "PPVC/3233-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-33.jpg"
+  },
+  {
+    "modelo": "PPVC/3234-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-34.jpg"
+  },
+  {
+    "modelo": "PPVC/3237-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-35.jpg"
+  },
+  {
+    "modelo": "PPVC/3241-31",
+    "descripcion": "MATERIAL PVC MEDIDA 31MM PAQUETE X 50 UNIDADES",
+    "medida": "31mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-36.jpg"
+  },
+  {
+    "modelo": "PPVC/3242-28",
+    "descripcion": "MATERIAL PVC MEDIDA 28MM PAQUETE X 50 UNIDADES",
+    "medida": "28mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-37.jpg"
+  },
+  {
+    "modelo": "PPVC/3244-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-38.jpg"
+  },
+  {
+    "modelo": "PPVC/3245-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-39.jpg"
+  },
+  {
+    "modelo": "PPVC/3250-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-40.jpg"
+  },
+  {
+    "modelo": "PPVC/3253-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-41.jpg"
+  },
+  {
+    "modelo": "PPVC/3261-28",
+    "descripcion": "MATERIAL PVC MEDIDA 28MM PAQUETE X 50 UNIDADES",
+    "medida": "28mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-42.jpg"
+  },
+  {
+    "modelo": "PPVC/3262-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-43.jpg"
+  },
+  {
+    "modelo": "PPVC/3264-18",
+    "descripcion": ".MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-44.jpg"
+  },
+  {
+    "modelo": "PPVC/3290-18/20/22",
+    "descripcion": "MATERIAL PVC MEDIDAS 18MM, 20MM Y 22MM NEGRO Y CAFE PAQUETE X 100 UNIDADES",
+    "medida": "18mm, 20mm, 22mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-pvc/page-45.jpg"
+  },
+  {
+    "modelo": "PPVC/3291-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-46.jpg"
+  },
+  {
+    "modelo": "PPVC/3294-28",
+    "descripcion": "MATERIAL PVC MEDIDA 28MM PAQUETE X 50 UNIDADES",
+    "medida": "28mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-47.jpg"
+  },
+  {
+    "modelo": "PPVC/3297-19",
+    "descripcion": "MATERIAL PVC MEDIDA 19MM PAQUETE X 50 UNIDADES",
+    "medida": "19mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-48.jpg"
+  },
+  {
+    "modelo": "PPVC/3298-15",
+    "descripcion": "MATERIAL PVC MEDIDA 15MM PAQUETE X 50 UNIDADES",
+    "medida": "15mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-49.jpg"
+  },
+  {
+    "modelo": "PPVC/3301-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-50.jpg"
+  },
+  {
+    "modelo": "PPVC/3305-12/18/20/22/24",
+    "descripcion": "MATERIAL PVC MEDIDA 12, 18, 20, 22 Y 24MM NEGRO Y CAFE PAQUETE X 100 UNIDADES",
+    "medida": "24mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-pvc/page-51.jpg"
+  },
+  {
+    "modelo": "PPVC/3308-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-52.jpg"
+  },
+  {
+    "modelo": "PPVC/A3308-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-53.jpg"
+  },
+  {
+    "modelo": "PPVC/3312-29",
+    "descripcion": "MATERIAL PVC MEDIDA 29MM PAQUETE X 50 UNIDADES",
+    "medida": "29mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-54.jpg"
+  },
+  {
+    "modelo": "PPVC/3316-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-55.jpg"
+  },
+  {
+    "modelo": "PPVC/3331-34",
+    "descripcion": "MATERIAL PVC MEDIDA 34MM PAQUETE X 50 UNIDADES",
+    "medida": "34mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-56.jpg"
+  },
+  {
+    "modelo": "PPVC/3334-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-57.jpg"
+  },
+  {
+    "modelo": "PPVC/3335-31",
+    "descripcion": "MATERIAL PVC MEDIDA 31MM PAQUETE X 50 UNIDADES",
+    "medida": "31mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-58.jpg"
+  },
+  {
+    "modelo": "PPVC/3366-30",
+    "descripcion": "MATERIAL PVC MEDIDA 30MM PAQUETE X 50 UNIDADES",
+    "medida": "30mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-59.jpg"
+  },
+  {
+    "modelo": "PPVC/3374-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-60.jpg"
+  },
+  {
+    "modelo": "PPVC/3375-30",
+    "descripcion": "MATERIAL PVC MEDIDA 30MM PAQUETE X 50 UNIDADES",
+    "medida": "30mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-61.jpg"
+  },
+  {
+    "modelo": "PPVC/3382-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 50 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-62.jpg"
+  },
+  {
+    "modelo": "PPVC/3389-22",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM PAQUETE X 50 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-63.jpg"
+  },
+  {
+    "modelo": "PPVC/3390-15",
+    "descripcion": "MATERIAL PVC MEDIDA 15MM PAQUETE X 50 UNIDADES",
+    "medida": "15mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-64.jpg"
+  },
+  {
+    "modelo": "PPVC/3393-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 50 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-65.jpg"
+  },
+  {
+    "modelo": "PPVC/3408-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-66.jpg"
+  },
+  {
+    "modelo": "PPVC/3410-24",
+    "descripcion": "MATERIAL PVC MEDIDA 24MM PAQUETE X 50 UNIDADES",
+    "medida": "24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-67.jpg"
+  },
+  {
+    "modelo": "PPVC/3414-16",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 50 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-68.jpg"
+  },
+  {
+    "modelo": "PPVC/3415-14",
+    "descripcion": "MATERIAL PVC MEDIDA 14MM PAQUETE X 50 UNIDADES",
+    "medida": "14mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-69.jpg"
+  },
+  {
+    "modelo": "PPVC/3418-32",
+    "descripcion": "MATERIAL PVC MEDIDA 32MM PAQUETE X 50 UNIDADES",
+    "medida": "32mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-70.jpg"
+  },
+  {
+    "modelo": "PPVC/3417-16 (15.35MM)",
+    "descripcion": "MATERIAL PVC MEDIDA 15.35MM PAQUETE X 50 UNIDADES",
+    "medida": "35mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-71.jpg"
+  },
+  {
+    "modelo": "PPVC/3424-27",
+    "descripcion": "MATERIAL PVC MEDIDA 27MM PAQUETE X 50 UNIDADES",
+    "medida": "27mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-72.jpg"
+  },
+  {
+    "modelo": "PPVC/3425-30 (DE PRESION)",
+    "descripcion": "MATERIAL PVC MEDIDA 30MM PAQUETE X 50 UNIDADES",
+    "medida": "30mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-73.jpg"
+  },
+  {
+    "modelo": "PPVC/501-20",
+    "descripcion": "MATERIAL PVC MEDIDA 20MM PAQUETE X 100 UNIDADES",
+    "medida": "20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-74.jpg"
+  },
+  {
+    "modelo": "PPVC/6081-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 100 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-75.jpg"
+  },
+  {
+    "modelo": "PPVC/6205-16MM",
+    "descripcion": "MATERIAL PVC MEDIDA 16MM PAQUETE X 100 UNIDADES",
+    "medida": "16mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-76.jpg"
+  },
+  {
+    "modelo": "PPVC/7173-22",
+    "descripcion": "MATERIAL PVC MEDIDA 22MM PAQUETE X 100 UNIDADES",
+    "medida": "22mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-77.jpg"
+  },
+  {
+    "modelo": "PPVC/7200-18",
+    "descripcion": "MATERIAL PVC MEDIDA 18MM PAQUETE X 100 UNIDADES",
+    "medida": "18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-78.jpg"
+  },
+  {
+    "modelo": "PPVC/9001-20/22/24",
+    "descripcion": "MATERIAL PVC MEDIDAS 20MM, 22MM, 24MM PAQUETES X 50 UNIDADES",
+    "medida": "20mm, 22mm, 24mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-79.jpg"
+  },
+  {
+    "modelo": "PPVC/A9516-20/22/24/26",
+    "descripcion": "MATERIAL PVC MEDIDAS DEL 20MM AL 26MM EXTRALARGO PAQUETE X 50 UNIDADES",
+    "medida": "20mm, 26mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-80.jpg"
+  },
+  {
+    "modelo": "PPVC/9602-12/14/16/18/20",
+    "descripcion": "MATERIAL PVC MEDIDAS 12MM, 14MM, 16MM, 18MM Y 20MM PAQUETE X 100 UNIDADES",
+    "medida": "12mm, 14mm, 16mm, 18mm, 20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-81.jpg"
+  },
+  {
+    "modelo": "PPVC/9709-12/16/18/20",
+    "descripcion": "MATERIAL PVC MEDIDAS 12MM, 16MM, 18MM Y 20MM TIPO CASIO F-91 PAQUETES X 100 UNIDADES #18",
+    "medida": "12mm, 16mm, 18mm, 20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-82.jpg"
+  },
+  {
+    "modelo": "PPVC/9804-18/20/22/24/26/28",
+    "descripcion": "MATERIAL PVC MEDIDAS 18MM AL 28MM PAQUETE X 100 UNIDADES",
+    "medida": "18mm, 28mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-83.jpg"
+  },
+  {
+    "modelo": "PPVC/9809-12/14/18",
+    "descripcion": "MATERIAL PVC MEDIDAS 12MM, 14MM, 16MM,18MM PAQUETES X 100 UNIDADES",
+    "medida": "12mm, 14mm, 16mm, 18mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-84.jpg"
+  },
+  {
+    "modelo": "PPVC/A9809-12/14/16/18/20",
+    "descripcion": "MATERIAL PVC MEDIDAS 12MM AL 20MM PAQUETES X 100 UNIDADES",
+    "medida": "12mm, 20mm",
+    "color": "",
+    "img": "/catalogo-pages/pulso-pvc/page-85.jpg"
+  },
+  {
+    "modelo": "PVCBRONCE/DORADO/NEGRO/PLATA",
+    "descripcion": "MATERIAL PVC COLORES BRILLANTES 12MM, 18MM Y 20MM",
+    "medida": "12mm, 18mm, 20mm",
+    "color": "Dorado",
+    "img": "/catalogo-pages/pulso-pvc/page-86.jpg"
+  }
+]

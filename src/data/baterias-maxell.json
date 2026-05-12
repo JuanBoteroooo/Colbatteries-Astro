@@ -1,0 +1,362 @@
+[
+  {
+    "modelo": "CR1216",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-02.jpg"
+  },
+  {
+    "modelo": "CR1220",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-03.jpg"
+  },
+  {
+    "modelo": "CR1616",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-04.jpg"
+  },
+  {
+    "modelo": "CR1620",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-05.jpg"
+  },
+  {
+    "modelo": "CR1632",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-06.jpg"
+  },
+  {
+    "modelo": "CR2012",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-07.jpg"
+  },
+  {
+    "modelo": "CR2016",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-08.jpg"
+  },
+  {
+    "modelo": "CR2025",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-09.jpg"
+  },
+  {
+    "modelo": "CR2032",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-10.jpg"
+  },
+  {
+    "modelo": "LR1130",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-11.jpg"
+  },
+  {
+    "modelo": "LR41",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-12.jpg"
+  },
+  {
+    "modelo": "LR44",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-13.jpg"
+  },
+  {
+    "modelo": "SR1116",
+    "equivalente": "366",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-14.jpg"
+  },
+  {
+    "modelo": "SR1120SW",
+    "equivalente": "381",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-15.jpg"
+  },
+  {
+    "modelo": "SR1130SW",
+    "equivalente": "390",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-16.jpg"
+  },
+  {
+    "modelo": "SR416SW",
+    "equivalente": "337",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-17.jpg"
+  },
+  {
+    "modelo": "SR512SW",
+    "equivalente": "335",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-18.jpg"
+  },
+  {
+    "modelo": "SR516SW",
+    "equivalente": "317",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-19.jpg"
+  },
+  {
+    "modelo": "SR521SW",
+    "equivalente": "379",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-20.jpg"
+  },
+  {
+    "modelo": "SR527",
+    "equivalente": "319",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-21.jpg"
+  },
+  {
+    "modelo": "SR616SW",
+    "equivalente": "621",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-22.jpg"
+  },
+  {
+    "modelo": "SR621SW",
+    "equivalente": "364",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-23.jpg"
+  },
+  {
+    "modelo": "SR621SW",
+    "equivalente": "364 X 20PCS",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-24.jpg"
+  },
+  {
+    "modelo": "SR626SW",
+    "equivalente": "377",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-25.jpg"
+  },
+  {
+    "modelo": "SR626SW",
+    "equivalente": "377 X 20 PCS",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-26.jpg"
+  },
+  {
+    "modelo": "SR712SW",
+    "equivalente": "346",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-27.jpg"
+  },
+  {
+    "modelo": "SR716SW",
+    "equivalente": "315",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-28.jpg"
+  },
+  {
+    "modelo": "SR721SW",
+    "equivalente": "362",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-29.jpg"
+  },
+  {
+    "modelo": "SR726SW",
+    "equivalente": "397",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-30.jpg"
+  },
+  {
+    "modelo": "SR916SW",
+    "equivalente": "373",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-31.jpg"
+  },
+  {
+    "modelo": "SR920SW",
+    "equivalente": "371",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-32.jpg"
+  },
+  {
+    "modelo": "SR927SW",
+    "equivalente": "395",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-33.jpg"
+  },
+  {
+    "modelo": "SR936SW",
+    "equivalente": "394",
+    "descripcion": "",
+    "quimica": "Óxido de Plata",
+    "voltaje": "1.55V",
+    "img": "/catalogo-pages/baterias-maxell/page-34.jpg"
+  },
+  {
+    "modelo": "CR2412 NEW ENERGY",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-maxell/page-35.jpg"
+  },
+  {
+    "modelo": "M-ZA10 PILA AUDITIVA",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Zinc-Air",
+    "voltaje": "1.4V",
+    "img": "/catalogo-pages/baterias-maxell/page-36.jpg"
+  },
+  {
+    "modelo": "M-ZA13 PILA AUDITIVA",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Zinc-Air",
+    "voltaje": "1.4V",
+    "img": "/catalogo-pages/baterias-maxell/page-37.jpg"
+  },
+  {
+    "modelo": "M-ZA312 PILA AUDITIVA",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Zinc-Air",
+    "voltaje": "1.4V",
+    "img": "/catalogo-pages/baterias-maxell/page-38.jpg"
+  },
+  {
+    "modelo": "M-ZA675 PILA AUDITIVA",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Zinc-Air",
+    "voltaje": "1.4V",
+    "img": "/catalogo-pages/baterias-maxell/page-39.jpg"
+  },
+  {
+    "modelo": "AA-LR6X2 MAXELL",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-40.jpg"
+  },
+  {
+    "modelo": "AA-LR6X5 MAXELL",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-41.jpg"
+  },
+  {
+    "modelo": "AAA-LR03X2 MAXELL",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-42.jpg"
+  },
+  {
+    "modelo": "AAA-LR03X5 MAXELL",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-43.jpg"
+  },
+  {
+    "modelo": "MAXELL-C2",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-44.jpg"
+  },
+  {
+    "modelo": "MAXELL-D2",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-maxell/page-45.jpg"
+  },
+  {
+    "modelo": "MAXELL 9V",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "9V",
+    "img": "/catalogo-pages/baterias-maxell/page-46.jpg"
+  }
+]

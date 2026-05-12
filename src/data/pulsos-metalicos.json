@@ -1,0 +1,594 @@
+[
+  {
+    "modelo": "PUAC/OMG-G08-20MM Y 22MM",
+    "descripcion": "PULSO ACERO MACIZO TIPO OMEGA",
+    "medida": "20mm, 22mm",
+    "color": "",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-02.jpg"
+  },
+  {
+    "modelo": "PUAC/OMG-G09-20MM Y 22MM",
+    "descripcion": "PULSO ACERO MACIZO TIPO OMEGA",
+    "medida": "20mm, 22mm",
+    "color": "",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-03.jpg"
+  },
+  {
+    "modelo": "PUAC/OMG-EG-18MM Y 20MM",
+    "descripcion": "PULSO ACERO MACIZO TIPO OMEGA",
+    "medida": "18mm, 20mm",
+    "color": "",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-04.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G12-12MM",
+    "descripcion": "PULSO ACERO MACIZO TIPO SWATCH",
+    "medida": "12mm",
+    "color": "",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-05.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G18-17MM Y 19MM",
+    "descripcion": "PULSO ACERO Y PAVONADO MACIZO TIPO SWATCH",
+    "medida": "17mm, 19mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-06.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G27/PUPASWQ-G27",
+    "descripcion": "17MM,19MM Y 21MM PULSO ACERO,PAVONADO MACIZO TIPO SWATCH",
+    "medida": "17mm, 19mm, 21mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-07.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G30-12MM",
+    "descripcion": "PULSO ACERO MALLA TIPO SWATCH",
+    "medida": "12mm",
+    "color": "",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-08.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G30/PUPASWQ-G30/PUROSWQ-G30",
+    "descripcion": "17MM Y 19MM PULSO ACERO,PAVONADO, ORO ROSA MALLA TIPO SWATCH",
+    "medida": "17mm, 19mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-09.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G32/PUPASWQ-G32-19MM Y 21MM",
+    "descripcion": "PULSO ACERO Y PAVONADO MACIZO TIPO SWATCH",
+    "medida": "19mm, 21mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-10.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G37/PUPASWQ-G37-23MM",
+    "descripcion": "PULSO ACERO Y PAVONADO MACIZO TIPO SWATCH",
+    "medida": "23mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-11.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G38/PUPASWQ-G38-20MM",
+    "descripcion": "PULSO ACERO Y PAVONADO MACIZO TIPO SWATCH",
+    "medida": "20mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-12.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-135/PUPASWQ-135-17MM",
+    "descripcion": "PULSO ACERO Y PAVONADO MACIZO TIPO SWATCH",
+    "medida": "17mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-13.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-158/PUPASWQ-158-19MM",
+    "descripcion": "PULSO ACERO Y PAVONADO MACIZO TIPO SWATCH",
+    "medida": "19mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-14.jpg"
+  },
+  {
+    "modelo": "PUACSWQ-G171-17MM",
+    "descripcion": "PULSO ACERO MACIZO",
+    "medida": "17mm",
+    "color": "",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-15.jpg"
+  },
+  {
+    "modelo": "PUPASWQ-G171-17 Y 19MM",
+    "descripcion": "PULSO ACERO Y PAVONADO MACIZO",
+    "medida": "19mm",
+    "color": "Pavonado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-16.jpg"
+  },
+  {
+    "modelo": "PUPAMARI-18/20/22 Y 24MM",
+    "descripcion": "PULSO PAVONADO MACIZO HEBILLA MARIPOSA",
+    "medida": "24mm",
+    "color": "Pavonado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-17.jpg"
+  },
+  {
+    "modelo": "PUDOMARI-18/20/22 Y 24MM",
+    "descripcion": "PULSO DORADO MACIZO HEBILLA MARIPOSA",
+    "medida": "24mm",
+    "color": "Dorado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-18.jpg"
+  },
+  {
+    "modelo": "PUBIMARI-20/22 Y 24MM",
+    "descripcion": "PULSO BICOLOR MACIZO HEBILLA MARIPOSA",
+    "medida": "24mm",
+    "color": "Bicolor",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-19.jpg"
+  },
+  {
+    "modelo": "PUACMARI-18/20/22 Y 24MM",
+    "descripcion": "PULSO PLATEADO MACIZO HEBILLA MARIPOSA",
+    "medida": "24mm",
+    "color": "Plateado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-20.jpg"
+  },
+  {
+    "modelo": "PUPAMATE-18/20/22/24MM",
+    "descripcion": "PULSO PAVONADO MACIZO CON TERMINAL",
+    "medida": "24mm",
+    "color": "Pavonado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-21.jpg"
+  },
+  {
+    "modelo": "PUDOMATE-18/20/22 Y 24MM",
+    "descripcion": "PULSO DORADO MACIZO CON TERMINAL",
+    "medida": "24mm",
+    "color": "Dorado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-22.jpg"
+  },
+  {
+    "modelo": "PUBIMATE-20/22 Y 24MM",
+    "descripcion": "PULSO BICOLOR MACIZO CON TERMINAL",
+    "medida": "24mm",
+    "color": "Bicolor",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-23.jpg"
+  },
+  {
+    "modelo": "PUACMATE-18/20/22 Y 24MM",
+    "descripcion": "PULSO PLATEADO MACIZO CON TERMINAL",
+    "medida": "24mm",
+    "color": "Plateado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-24.jpg"
+  },
+  {
+    "modelo": "PUPAMA-18/20/22/24 Y 26MM",
+    "descripcion": "PULSO PAVONADO MACIZO RECTO",
+    "medida": "26mm",
+    "color": "Pavonado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-25.jpg"
+  },
+  {
+    "modelo": "PUDOMA-18/20/22/24 Y 26MM",
+    "descripcion": "PULSO DORADO MACIZO RECTO",
+    "medida": "26mm",
+    "color": "Dorado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-26.jpg"
+  },
+  {
+    "modelo": "PUACMA-18/20/22/24 Y 26MM",
+    "descripcion": "PULSO PLATEADO MACIZO RECTO",
+    "medida": "26mm",
+    "color": "Plateado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-27.jpg"
+  },
+  {
+    "modelo": "PUBIMA-20/22/24 Y 26MM",
+    "descripcion": "PULSO BICOLOR MACIZO RECTO",
+    "medida": "26mm",
+    "color": "Bicolor",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-28.jpg"
+  },
+  {
+    "modelo": "PUROMA-20/22/24/26MM",
+    "descripcion": "PULSO ORO ROSA MACIZO RECTO",
+    "medida": "26mm",
+    "color": "Oro Rosa",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-29.jpg"
+  },
+  {
+    "modelo": "PUPAMAF-18/20/22/24 Y 26MM",
+    "descripcion": "PULSO PAVONADO MACIZO RECTO",
+    "medida": "26mm",
+    "color": "Pavonado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-30.jpg"
+  },
+  {
+    "modelo": "PUDOMAF-18/20/22/24MM",
+    "descripcion": "PULSO DORADO MACIZO RECTO",
+    "medida": "24mm",
+    "color": "Dorado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-31.jpg"
+  },
+  {
+    "modelo": "PUACMAF-18/20/22/24 Y 26MM",
+    "descripcion": "PULSO PLATEADO MACIZO RECTO",
+    "medida": "26mm",
+    "color": "Plateado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-32.jpg"
+  },
+  {
+    "modelo": "PUMALLAC-12/14/16/18/20/22/24MM",
+    "descripcion": "PULSO MALLA PLATEADO",
+    "medida": "24mm",
+    "color": "Plateado",
+    "material": "Malla",
+    "img": "/catalogo-pages/pulso-metalico/page-33.jpg"
+  },
+  {
+    "modelo": "PUMACH-18/20/22D/N/R",
+    "descripcion": "PULSO MALLA CON CHAPETA DORADO/ORO ROSA/NEGRO",
+    "medida": "",
+    "color": "Dorado",
+    "material": "Malla",
+    "img": "/catalogo-pages/pulso-metalico/page-34.jpg"
+  },
+  {
+    "modelo": "PUMALLADO-20/22 Y 24MM",
+    "descripcion": "PULSO MALLA DORADO",
+    "medida": "24mm",
+    "color": "Dorado",
+    "material": "Malla",
+    "img": "/catalogo-pages/pulso-metalico/page-35.jpg"
+  },
+  {
+    "modelo": "PUMAIM-12/14/16/18/20P/D/N/R",
+    "descripcion": "PULSO MALLA SUAVE CON IMAN PLATEADO/ DORADO/NEGRO/ORO ROSA",
+    "medida": "",
+    "color": "Plateado",
+    "material": "Malla",
+    "img": "/catalogo-pages/pulso-metalico/page-36.jpg"
+  },
+  {
+    "modelo": "PUREDO-10/12/14/16/18/20/22MM",
+    "descripcion": "PULSO RESORTE DORADO 12MM Y 22MM",
+    "medida": "22mm, 12mm",
+    "color": "Dorado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-37.jpg"
+  },
+  {
+    "modelo": "PURE-10/12/14/16/18/20 Y 22MM",
+    "descripcion": "PULSO RESORTE PLATEADO DEL 12MM AL 22MM",
+    "medida": "22mm, 12mm",
+    "color": "Plateado",
+    "material": "",
+    "img": "/catalogo-pages/pulso-metalico/page-38.jpg"
+  },
+  {
+    "modelo": "PUACTE-18MM",
+    "descripcion": "PULSO ACERO PLATEADO CON TERMINAL CURVA",
+    "medida": "18mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-39.jpg"
+  },
+  {
+    "modelo": "PUACTE-20MM",
+    "descripcion": "PULSO ACERO PLATEADO CON TERMINAL CURVA",
+    "medida": "20mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-40.jpg"
+  },
+  {
+    "modelo": "PUACTE-22MM",
+    "descripcion": "PULSO ACERO PLATEADO CON TERMINAL CURVA",
+    "medida": "22mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-41.jpg"
+  },
+  {
+    "modelo": "PUBITE-20MM",
+    "descripcion": "PULSO ACERO BICOLOR CON TERMINAL CURVA",
+    "medida": "20mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-42.jpg"
+  },
+  {
+    "modelo": "PUBITE-22MM",
+    "descripcion": "PULSO ACERO BICOLOR CON TERMINAL CURVA",
+    "medida": "22mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-43.jpg"
+  },
+  {
+    "modelo": "PUDOTE-18MM",
+    "descripcion": "PULSO ACERO DORADO CON TERMINAL CURVA",
+    "medida": "18mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-44.jpg"
+  },
+  {
+    "modelo": "PUDOTE-20MM",
+    "descripcion": "PULSO ACERO DORADO CON TERMINAL CURVA",
+    "medida": "20mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-45.jpg"
+  },
+  {
+    "modelo": "PUDOTE-22MM",
+    "descripcion": "PULSO ACERO DORADO CON TERMINAL CURVA",
+    "medida": "22mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-46.jpg"
+  },
+  {
+    "modelo": "PUACAJ-18/22",
+    "descripcion": "PULSO ACERO CON TERMINAL AJUSTABLE ENTRE 18MM AL 22MM",
+    "medida": "18mm, 22mm",
+    "color": "",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-47.jpg"
+  },
+  {
+    "modelo": "PUDOAJ-18/22",
+    "descripcion": "PULSO ACERO DORADO CON TERMINAL AJUSTABLE ENTRE 18MM AL 22MM",
+    "medida": "18mm, 22mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-48.jpg"
+  },
+  {
+    "modelo": "PUDO-10MM/PUPA-10MM",
+    "descripcion": "PULSO ACERO DORADO O NEGRO 10MM",
+    "medida": "10mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-49.jpg"
+  },
+  {
+    "modelo": "PUDO-12MM",
+    "descripcion": "PULSO ACERO DORADO 12MM",
+    "medida": "12mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-50.jpg"
+  },
+  {
+    "modelo": "PUDO-14MM",
+    "descripcion": "PULSO ACERO DORADO 14MM",
+    "medida": "14mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-51.jpg"
+  },
+  {
+    "modelo": "PUDO-16MM",
+    "descripcion": "PULSO ACERO DORADO 16MM",
+    "medida": "16mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-52.jpg"
+  },
+  {
+    "modelo": "PUDO-18MM",
+    "descripcion": "PULSO ACERO DORADO 18MM",
+    "medida": "18mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-53.jpg"
+  },
+  {
+    "modelo": "PUDO-20MM",
+    "descripcion": "PULSO ACERO DORADO 20MM",
+    "medida": "20mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-54.jpg"
+  },
+  {
+    "modelo": "PUDO-22MM",
+    "descripcion": "PULSO ACERO DORADO 22MM",
+    "medida": "22mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-55.jpg"
+  },
+  {
+    "modelo": "PUDO-24MM",
+    "descripcion": "PULSO ACERO DORADO 24MM",
+    "medida": "24mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-56.jpg"
+  },
+  {
+    "modelo": "PUDO-26MM",
+    "descripcion": "PULSO ACERO DORADO 26MM",
+    "medida": "26mm",
+    "color": "Dorado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-57.jpg"
+  },
+  {
+    "modelo": "PUBI-10MM",
+    "descripcion": "PULSO ACERO BICOLOR 10MM",
+    "medida": "10mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-58.jpg"
+  },
+  {
+    "modelo": "PUBI-12MM",
+    "descripcion": "PULSO ACERO BICOLOR 12MM",
+    "medida": "12mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-59.jpg"
+  },
+  {
+    "modelo": "PUBI-14MM",
+    "descripcion": "PULSO ACERO BICOLOR 14MM",
+    "medida": "14mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-60.jpg"
+  },
+  {
+    "modelo": "PUBI-16MM",
+    "descripcion": "PULSO ACERO BICOLOR 16MM",
+    "medida": "16mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-61.jpg"
+  },
+  {
+    "modelo": "PUBI-18MM",
+    "descripcion": "PULSO ACERO BICOLOR 18MM",
+    "medida": "18mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-62.jpg"
+  },
+  {
+    "modelo": "PUBI-20MM",
+    "descripcion": "PULSO ACERO BICOLOR 20MM",
+    "medida": "20mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-63.jpg"
+  },
+  {
+    "modelo": "PUBI-22MM",
+    "descripcion": "PULSO ACERO BICOLOR 22MM",
+    "medida": "22mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-64.jpg"
+  },
+  {
+    "modelo": "PUBI-24MM",
+    "descripcion": "PULSO ACERO BICOLOR 24MM",
+    "medida": "24mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-65.jpg"
+  },
+  {
+    "modelo": "PUBI-26MM",
+    "descripcion": "PULSO ACERO BICOLOR 26MM",
+    "medida": "26mm",
+    "color": "Bicolor",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-66.jpg"
+  },
+  {
+    "modelo": "PUAC-10MM",
+    "descripcion": "PULSO ACERO PLATEADO 10MM",
+    "medida": "10mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-67.jpg"
+  },
+  {
+    "modelo": "PUAC-12MM",
+    "descripcion": "PULSO ACERO PLATEADO 12MM",
+    "medida": "12mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-68.jpg"
+  },
+  {
+    "modelo": "PUAC-14MM",
+    "descripcion": "PULSO ACERO PLATEADO 14MM",
+    "medida": "14mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-69.jpg"
+  },
+  {
+    "modelo": "PUAC-16MM",
+    "descripcion": "PULSO ACERO PLATEADO 16MM",
+    "medida": "16mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-70.jpg"
+  },
+  {
+    "modelo": "PUAC-18MM",
+    "descripcion": "PULSO ACERO PLATEADO 18MM",
+    "medida": "18mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-71.jpg"
+  },
+  {
+    "modelo": "PUAC-20MM",
+    "descripcion": "PULSO ACERO PLATEADO 20MM",
+    "medida": "20mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-72.jpg"
+  },
+  {
+    "modelo": "PUAC-22MM",
+    "descripcion": "PULSO ACERO PLATEADO 22MM",
+    "medida": "22mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-73.jpg"
+  },
+  {
+    "modelo": "PUAC-24MM",
+    "descripcion": "PULSO ACERO PLATEADO 24MM",
+    "medida": "24mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-74.jpg"
+  },
+  {
+    "modelo": "PUAC-26MM",
+    "descripcion": "PULSO ACERO PLATEADO 26MM",
+    "medida": "26mm",
+    "color": "Plateado",
+    "material": "Acero",
+    "img": "/catalogo-pages/pulso-metalico/page-75.jpg"
+  }
+]

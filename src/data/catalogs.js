@@ -4,11 +4,11 @@ export const groups = [
     name: 'Pulsos & Correas',
     image: 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&h=300&fit=crop&q=80',
     catalogs: [
-      { slug: 'pulso-resina',    label: 'Pulso Resina',    pages: 124 },
-      { slug: 'pulso-silicona',  label: 'Pulso Silicona',  pages: 53 },
-      { slug: 'pulso-cuero',     label: 'Pulso de Cuero',  pages: 47 },
-      { slug: 'pulso-metalico',  label: 'Pulso Metálico',  pages: 75 },
-      { slug: 'pulso-pvc',       label: 'Pulso PVC',       pages: 86 },
+      { slug: 'pulso-resina',    label: 'Pulso Resina',    structured: true },
+      { slug: 'pulso-silicona',  label: 'Pulso Silicona',  structured: true },
+      { slug: 'pulso-cuero',     label: 'Pulso de Cuero',  structured: true },
+      { slug: 'pulso-metalico',  label: 'Pulso Metálico',  structured: true },
+      { slug: 'pulso-pvc',       label: 'Pulso PVC',       structured: true },
     ],
   },
   {
@@ -16,11 +16,11 @@ export const groups = [
     name: 'Baterías & Pilas',
     image: 'https://images.unsplash.com/photo-1619641782842-83f2446c560b?q=80&w=1200&auto=format&fit=crop',
     catalogs: [
-      { slug: 'baterias-gp',       label: 'Baterías GP',       pages: 77 },
-      { slug: 'baterias-tianqiu',  label: 'Baterías Tianqiu',  pages: 33 },
-      { slug: 'baterias-maxell',   label: 'Baterías Maxell',   pages: 46 },
-      { slug: 'pilas-economicas',  label: 'Pilas Económicas',  pages: 20 },
-      { slug: 'capacitores',       label: 'Capacitores',       pages: 89 },
+      { slug: 'baterias-gp',       label: 'Baterías GP',       structured: true },
+      { slug: 'baterias-tianqiu',  label: 'Baterías Tianqiu',  structured: true },
+      { slug: 'baterias-maxell',   label: 'Baterías Maxell',   structured: true },
+      { slug: 'pilas-economicas',  label: 'Pilas Económicas',  structured: true },
+      { slug: 'capacitores',       label: 'Capacitores',       structured: true },
     ],
   },
   {

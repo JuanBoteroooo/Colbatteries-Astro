@@ -1,0 +1,281 @@
+[
+  {
+    "modelo": "18650",
+    "nombreImagen": "18650",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Li-Ion Recargable",
+    "voltaje": "3.7V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-02.jpg"
+  },
+  {
+    "modelo": "Pila Tipo D (R20)",
+    "nombreImagen": "R20",
+    "equivalente": "D",
+    "descripcion": "",
+    "quimica": "Zinc-Carbón",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-03.jpg"
+  },
+  {
+    "modelo": "23A",
+    "nombreImagen": "23A",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "12V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-04.jpg"
+  },
+  {
+    "modelo": "27A",
+    "nombreImagen": "27A",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "12V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-05.jpg"
+  },
+  {
+    "modelo": "9V",
+    "nombreImagen": "9V",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Zinc-Carbón",
+    "voltaje": "9V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-06.jpg"
+  },
+  {
+    "modelo": "Pila AA (LR6)",
+    "nombreImagen": "LR6",
+    "equivalente": "AA",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-07.jpg"
+  },
+  {
+    "modelo": "Pila AAA (LR03)",
+    "nombreImagen": "LR03",
+    "equivalente": "AAA",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-08.jpg"
+  },
+  {
+    "modelo": "Pila AA (R6P)",
+    "nombreImagen": "R6P",
+    "equivalente": "AA",
+    "descripcion": "",
+    "quimica": "Zinc-Carbón",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-09.jpg"
+  },
+  {
+    "modelo": "Pila AAA (R03)",
+    "nombreImagen": "R03",
+    "equivalente": "AAA",
+    "descripcion": "",
+    "quimica": "Zinc-Carbón",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-10.jpg"
+  },
+  {
+    "modelo": "CR1216",
+    "nombreImagen": "CR1216",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-11.jpg"
+  },
+  {
+    "modelo": "CR1220",
+    "nombreImagen": "CR1220",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-12.jpg"
+  },
+  {
+    "modelo": "CR1616",
+    "nombreImagen": "CR1616",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-13.jpg"
+  },
+  {
+    "modelo": "CR1620",
+    "nombreImagen": "CR1620",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-14.jpg"
+  },
+  {
+    "modelo": "CR1632",
+    "nombreImagen": "CR1632",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-15.jpg"
+  },
+  {
+    "modelo": "CR2016",
+    "nombreImagen": "CR2016",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-16.jpg"
+  },
+  {
+    "modelo": "CR2025",
+    "nombreImagen": "CR2025",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-17.jpg"
+  },
+  {
+    "modelo": "CR2032",
+    "nombreImagen": "CR2032",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-18.jpg"
+  },
+  {
+    "modelo": "CR2430",
+    "nombreImagen": "CR2430",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-19.jpg"
+  },
+  {
+    "modelo": "CR2450",
+    "nombreImagen": "CR2450",
+    "equivalente": "",
+    "descripcion": "",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-20.jpg"
+  },
+  {
+    "modelo": "LR521H",
+    "nombreImagen": "LR521H",
+    "equivalente": "AG0",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-21.jpg"
+  },
+  {
+    "modelo": "LR621H",
+    "nombreImagen": "LR621H",
+    "equivalente": "AG1",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-22.jpg"
+  },
+  {
+    "modelo": "LR626H",
+    "nombreImagen": "LR626H",
+    "equivalente": "AG4",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-23.jpg"
+  },
+  {
+    "modelo": "LR721H",
+    "nombreImagen": "LR721H",
+    "equivalente": "AG11",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-24.jpg"
+  },
+  {
+    "modelo": "LR726H",
+    "nombreImagen": "LR726H",
+    "equivalente": "AG2",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-25.jpg"
+  },
+  {
+    "modelo": "LR920H",
+    "nombreImagen": "LR920H",
+    "equivalente": "AG6",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-26.jpg"
+  },
+  {
+    "modelo": "LR927H",
+    "nombreImagen": "LR927H",
+    "equivalente": "AG7",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-27.jpg"
+  },
+  {
+    "modelo": "LR936H",
+    "nombreImagen": "LR936H",
+    "equivalente": "AG9",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-28.jpg"
+  },
+  {
+    "modelo": "LR1120H",
+    "nombreImagen": "LR1120H",
+    "equivalente": "AG8",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-29.jpg"
+  },
+  {
+    "modelo": "LR1130H",
+    "nombreImagen": "LR1130H",
+    "equivalente": "AG10",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-30.jpg"
+  },
+  {
+    "modelo": "LR41H",
+    "nombreImagen": "LR41H",
+    "equivalente": "AG3",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-31.jpg"
+  },
+  {
+    "modelo": "LR44H",
+    "nombreImagen": "LR44H",
+    "equivalente": "AG13",
+    "descripcion": "",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "img": "/catalogo-pages/baterias-tianqiu/page-32.jpg"
+  }
+]

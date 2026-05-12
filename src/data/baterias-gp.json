@@ -1,0 +1,542 @@
+[
+  {
+    "modelo": "Pila AA (GP15A)",
+    "nombreImagen": "GP15AETA21-2GSBC2",
+    "sku": "GP15AETA21-2GSBC2",
+    "descripcion": "GP súper alcalina AA",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 3,
+    "img": "/catalogo-pages/baterias-gp/page-03.jpg"
+  },
+  {
+    "modelo": "Pila AA (GP15A)",
+    "nombreImagen": "GP15AETA21-2GSBC4",
+    "sku": "GP15AETA21-2GSBC4",
+    "descripcion": "GP súper alcalina AA",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 4,
+    "img": "/catalogo-pages/baterias-gp/page-04.jpg"
+  },
+  {
+    "modelo": "Pila AA (GP15A)",
+    "nombreImagen": "GP15AETA-2LASC10",
+    "sku": "GP15AETA-2LASC10",
+    "descripcion": "GP súper alcalina AA",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 5,
+    "img": "/catalogo-pages/baterias-gp/page-05.jpg"
+  },
+  {
+    "modelo": "Pila AAA (GP24A)",
+    "nombreImagen": "GP24AETA21-2GSBC2",
+    "sku": "GP24AETA21-2GSBC2",
+    "descripcion": "GP súper alcalina AAA",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 6,
+    "img": "/catalogo-pages/baterias-gp/page-06.jpg"
+  },
+  {
+    "modelo": "Pila AAA (GP24A)",
+    "nombreImagen": "GP24AETA21-2GSBC4",
+    "sku": "GP24AETA21-2GSBC4",
+    "descripcion": "GP súper alcalina AAA",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 7,
+    "img": "/catalogo-pages/baterias-gp/page-07.jpg"
+  },
+  {
+    "modelo": "Pila AAA (GP24A)",
+    "nombreImagen": "GP24AETA21-2LASC10",
+    "sku": "GP24AETA21-2LASC10",
+    "descripcion": "GP súper alcalina AAA",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 8,
+    "img": "/catalogo-pages/baterias-gp/page-08.jpg"
+  },
+  {
+    "modelo": "Pila C (GP14A)",
+    "nombreImagen": "GP14AETA21-2GSBC2",
+    "sku": "GP14AETA21-2GSBC2",
+    "descripcion": "GP súper alcalina Tipo C",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 9,
+    "img": "/catalogo-pages/baterias-gp/page-09.jpg"
+  },
+  {
+    "modelo": "Pila D (GP13A)",
+    "nombreImagen": "GP13AETA21-2GSBC2",
+    "sku": "GP13AETA21-2GSBC2",
+    "descripcion": "GP súper alcalina D",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 10,
+    "img": "/catalogo-pages/baterias-gp/page-10.jpg"
+  },
+  {
+    "modelo": "Pila 9V Alcalina (GP1604A)",
+    "nombreImagen": "GP1604AA21-5GSBC1",
+    "sku": "GP1604AA21-5GSBC1",
+    "descripcion": "GP Super Alcalina 9 Voltios",
+    "quimica": "Alcalina",
+    "voltaje": "9V",
+    "page": 11,
+    "img": "/catalogo-pages/baterias-gp/page-11.jpg"
+  },
+  {
+    "modelo": "Pila AAAA (GP25A)",
+    "nombreImagen": "GP25A-2U2",
+    "sku": "GP25A-2U2",
+    "descripcion": "Pila Super alcalina GP AAAA",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 12,
+    "img": "/catalogo-pages/baterias-gp/page-12.jpg"
+  },
+  {
+    "modelo": "Pila N/LR1 (GP910A)",
+    "nombreImagen": "GP910A-2U2",
+    "sku": "GP910A-2U2",
+    "descripcion": "GP súper alcalina N/LR1",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 13,
+    "img": "/catalogo-pages/baterias-gp/page-13.jpg"
+  },
+  {
+    "modelo": "Pila 23A (GP23A)",
+    "nombreImagen": "GP23AF-2C5",
+    "sku": "GP23AF-2C5",
+    "descripcion": "Batería GP de alto voltaje 23A",
+    "quimica": "Alcalina",
+    "voltaje": "12V",
+    "page": 15,
+    "img": "/catalogo-pages/baterias-gp/page-15.jpg"
+  },
+  {
+    "modelo": "Pila 27A (GP27A)",
+    "nombreImagen": "GP27AF-C5",
+    "sku": "GP27AF-C5",
+    "descripcion": "Batería GP de alto voltaje 27A",
+    "quimica": "Alcalina",
+    "voltaje": "12V",
+    "page": 16,
+    "img": "/catalogo-pages/baterias-gp/page-16.jpg"
+  },
+  {
+    "modelo": "Pila 476A (GP476A)",
+    "nombreImagen": "GP476AF-2C1",
+    "sku": "GP476AF-2C1",
+    "descripcion": "Batería GP de alto voltaje 476A",
+    "quimica": "Alcalina",
+    "voltaje": "12V",
+    "page": 17,
+    "img": "/catalogo-pages/baterias-gp/page-17.jpg"
+  },
+  {
+    "modelo": "Pila AG10 / LR1130 (GP189)",
+    "nombreImagen": "GP189F-2C10",
+    "sku": "GP189F-2C10",
+    "descripcion": "Pila alcalina GP 189 (LR1130)",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 19,
+    "img": "/catalogo-pages/baterias-gp/page-19.jpg"
+  },
+  {
+    "modelo": "Pila AG3 / LR41 (GP192)",
+    "nombreImagen": "GP192F-2C10",
+    "sku": "GP192F-2C10",
+    "descripcion": "Pila alcalina GP 192 (LR41)",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 20,
+    "img": "/catalogo-pages/baterias-gp/page-20.jpg"
+  },
+  {
+    "modelo": "Pila AG13 / LR44 (GPA76)",
+    "nombreImagen": "GPA76F-2C10",
+    "sku": "GPA76F-2C10",
+    "descripcion": "Pila alcalina GP A76 (LR44)",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 21,
+    "img": "/catalogo-pages/baterias-gp/page-21.jpg"
+  },
+  {
+    "modelo": "Batería 2CR5 Litio (GP2CR5)",
+    "nombreImagen": "GP2CR5-2U1",
+    "sku": "GP2CR5-2U1",
+    "descripcion": "Batería de litio GP 2CR5",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 23,
+    "img": "/catalogo-pages/baterias-gp/page-23.jpg"
+  },
+  {
+    "modelo": "Batería CRP2 Litio (GPCRP2)",
+    "nombreImagen": "GPCRP2-2U1",
+    "sku": "GPCRP2-2U1",
+    "descripcion": "Batería GP Litio DESCRIPCIÓN",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 24,
+    "img": "/catalogo-pages/baterias-gp/page-24.jpg"
+  },
+  {
+    "modelo": "Batería CR-2 Litio (GPCR2P)",
+    "nombreImagen": "GPCR2P-2GSBC1",
+    "sku": "GPCR2P-2GSBC1",
+    "descripcion": "Batería GP Litio Pro CR2",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 25,
+    "img": "/catalogo-pages/baterias-gp/page-25.jpg"
+  },
+  {
+    "modelo": "Batería de litio GP CR123A",
+    "nombreImagen": "GPCR123AP-2GSBC1",
+    "sku": "GPCR123AP-2GSBC1",
+    "descripcion": "Batería de litio GP CR123A",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 26,
+    "img": "/catalogo-pages/baterias-gp/page-26.jpg"
+  },
+  {
+    "modelo": "Pila CR1216 Litio (GPCR1216)",
+    "nombreImagen": "GPCR1216-7C5",
+    "sku": "GPCR1216-7C5",
+    "descripcion": "Pila de botón de litio GP CR1216",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 28,
+    "img": "/catalogo-pages/baterias-gp/page-28.jpg"
+  },
+  {
+    "modelo": "Pila CR1220 Litio (GPCR1220)",
+    "nombreImagen": "GPCR1220E-2CPU5",
+    "sku": "GPCR1220E-2CPU5",
+    "descripcion": "Pila de botón de litio GP CR1220",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 29,
+    "img": "/catalogo-pages/baterias-gp/page-29.jpg"
+  },
+  {
+    "modelo": "Pila CR1616 Litio (GPCR1616)",
+    "nombreImagen": "GPCR1616E-2CPU5",
+    "sku": "GPCR1616E-2CPU5",
+    "descripcion": "Pila de botón de litio GP CR1616",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 30,
+    "img": "/catalogo-pages/baterias-gp/page-30.jpg"
+  },
+  {
+    "modelo": "Pila CR1620 Litio (GPCR1620)",
+    "nombreImagen": "GPCR1620E-2CPU5",
+    "sku": "GPCR1620E-2CPU5",
+    "descripcion": "Pila de botón de litio GP CR1620",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 31,
+    "img": "/catalogo-pages/baterias-gp/page-31.jpg"
+  },
+  {
+    "modelo": "Pila CR1632 Litio (GPCR1632)",
+    "nombreImagen": "GPCR1632E-2CPU5",
+    "sku": "GPCR1632E-2CPU5",
+    "descripcion": "Pila de botón de litio GP CR1632",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 32,
+    "img": "/catalogo-pages/baterias-gp/page-32.jpg"
+  },
+  {
+    "modelo": "Pila CR2016 Litio (GPCR2016)",
+    "nombreImagen": "GPCR2016-2CAMSBC5",
+    "sku": "GPCR2016-2CAMSBC5",
+    "descripcion": "Pila de botón de litio GP CR2016",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 33,
+    "img": "/catalogo-pages/baterias-gp/page-33.jpg"
+  },
+  {
+    "modelo": "Pila CR2025 Litio (GPCR2025)",
+    "nombreImagen": "GPCR2025-2CAMSBCV5",
+    "sku": "GPCR2025-2CAMSBCV5",
+    "descripcion": "Pila de botón de litio GP CR2025",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 34,
+    "img": "/catalogo-pages/baterias-gp/page-34.jpg"
+  },
+  {
+    "modelo": "Pila CR2032 Litio (GPCR2032)",
+    "nombreImagen": "GPCR2032-2CAMSBCV5",
+    "sku": "GPCR2032-2CAMSBCV5",
+    "descripcion": "Pila de botón de litio GP CR2032",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 35,
+    "img": "/catalogo-pages/baterias-gp/page-35.jpg"
+  },
+  {
+    "modelo": "Pila CR2430 Litio (GPCR2430)",
+    "nombreImagen": "GPCR2430-2CPU5",
+    "sku": "GPCR2430-2CPU5",
+    "descripcion": "Pila de botón de litio GP CR2430",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 36,
+    "img": "/catalogo-pages/baterias-gp/page-36.jpg"
+  },
+  {
+    "modelo": "Pila CR2450 Litio (GPCR2450)",
+    "nombreImagen": "GPCR2450-2CPU5",
+    "sku": "GPCR2450-2CPU5",
+    "descripcion": "Pila de botón de litio GP CR2450",
+    "quimica": "Litio",
+    "voltaje": "3V",
+    "page": 37,
+    "img": "/catalogo-pages/baterias-gp/page-37.jpg"
+  },
+  {
+    "modelo": "Pila 9V Zinc-Carbón (GP1604GL)",
+    "nombreImagen": "GP1604GLF-2U1",
+    "sku": "GP1604GLF-2U1",
+    "descripcion": "GP Greencell Carbón Zinc 9V",
+    "quimica": "Zinc-Carbón",
+    "voltaje": "9V",
+    "page": 39,
+    "img": "/catalogo-pages/baterias-gp/page-39.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 650mAh AAA (Ideal para teléfono",
+    "nombreImagen": "GP65AAAHCER21-TLB2",
+    "sku": "GP65AAAHCER21-TLB2",
+    "descripcion": "Batería GP ReCyko 650mAh AAA (Ideal para teléfono",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 41,
+    "img": "/catalogo-pages/baterias-gp/page-41.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 650mAh AAA (Ideal para teléfono",
+    "nombreImagen": "GP65AAAHCER21-TLB4",
+    "sku": "GP65AAAHCER21-TLB4",
+    "descripcion": "Batería GP ReCyko 650mAh AAA (Ideal para teléfono",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 42,
+    "img": "/catalogo-pages/baterias-gp/page-42.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 650mAh AAA (Ideal para teléfono",
+    "nombreImagen": "GP65AAAHCER21-2APC",
+    "sku": "GP65AAAHCER21-2APC",
+    "descripcion": "Batería GP ReCyko 650mAh AAA (Ideal para teléfono",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 43,
+    "img": "/catalogo-pages/baterias-gp/page-43.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 850mAh AAA (paquete de 2 baterías)",
+    "nombreImagen": "GP85AAAHCE-2EB2",
+    "sku": "GP85AAAHCE-2EB2",
+    "descripcion": "Batería GP ReCyko 850mAh AAA (paquete de 2 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 44,
+    "img": "/catalogo-pages/baterias-gp/page-44.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 950mAh AAA (paquete de 2 baterías)",
+    "nombreImagen": "GP100AAHCER21-LB2",
+    "sku": "GP100AAHCER21-LB2",
+    "descripcion": "Batería GP ReCyko 950mAh AAA (paquete de 2 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 45,
+    "img": "/catalogo-pages/baterias-gp/page-45.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 950mAh AAA (paquete de 4 baterías)",
+    "nombreImagen": "GP100AAHCER21-LB4",
+    "sku": "GP100AAHCER21-LB4",
+    "descripcion": "Batería GP ReCyko 950mAh AAA (paquete de 4 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 46,
+    "img": "/catalogo-pages/baterias-gp/page-46.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 1300mAh AA (paquete de 2 baterías)",
+    "nombreImagen": "GP130AAHCER21-TLB2",
+    "sku": "GP130AAHCER21-TLB2",
+    "descripcion": "Batería GP ReCyko 1300mAh AA (paquete de 2 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 47,
+    "img": "/catalogo-pages/baterias-gp/page-47.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 1300mAh AA (paquete de 4 baterías)",
+    "nombreImagen": "GP130AAHCER21-TLB4",
+    "sku": "GP130AAHCER21-TLB4",
+    "descripcion": "Batería GP ReCyko 1300mAh AA (paquete de 4 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 48,
+    "img": "/catalogo-pages/baterias-gp/page-48.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 2100mAh AA (paquete de 2 baterías)",
+    "nombreImagen": "GP210AAHCER21-TLB2",
+    "sku": "GP210AAHCER21-TLB2",
+    "descripcion": "Batería GP ReCyko 2100mAh AA (paquete de 2 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 49,
+    "img": "/catalogo-pages/baterias-gp/page-49.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 2600mAh AA (paquete de 2 baterías)",
+    "nombreImagen": "GP270AAHCER21-TLB2",
+    "sku": "GP270AAHCER21-TLB2",
+    "descripcion": "Batería GP ReCyko 2600mAh AA (paquete de 2 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 50,
+    "img": "/catalogo-pages/baterias-gp/page-50.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 3000mAh AA (paquete de 2 baterías)",
+    "nombreImagen": "GP300CHCR21-2TLB2",
+    "sku": "GP300CHCR21-2TLB2",
+    "descripcion": "Batería GP ReCyko 3000mAh AA (paquete de 2 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 51,
+    "img": "/catalogo-pages/baterias-gp/page-51.jpg"
+  },
+  {
+    "modelo": "Batería GP ReCyko 2600mAh AA (paquete de 2 baterías)",
+    "nombreImagen": "GP300DHCR21-2TLB2",
+    "sku": "GP300DHCR21-2TLB2",
+    "descripcion": "Batería GP ReCyko 2600mAh AA (paquete de 2 baterías)",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 52,
+    "img": "/catalogo-pages/baterias-gp/page-52.jpg"
+  },
+  {
+    "modelo": "Batería 9V NiMH Recargable (GP20R8HR)",
+    "nombreImagen": "GP20R8HR21-2TLB1",
+    "sku": "GP20R8HR21-2TLB1",
+    "descripcion": "Una batería recargable NiMH de 9 V con",
+    "quimica": "NiMH Recargable",
+    "voltaje": "8.4V",
+    "page": 53,
+    "img": "/catalogo-pages/baterias-gp/page-53.jpg"
+  },
+  {
+    "modelo": "Pila Audífono ZA10 (GPZA10)",
+    "nombreImagen": "GPZA10F-ELTD6",
+    "sku": "GPZA10F-ELTD6",
+    "descripcion": "Diseñada para que los audífonos funcionen al máximo, la",
+    "quimica": "Zinc-Aire",
+    "voltaje": "1.4V",
+    "page": 67,
+    "img": "/catalogo-pages/baterias-gp/page-67.jpg"
+  },
+  {
+    "modelo": "Pila Audífono ZA13 (GPZA13)",
+    "nombreImagen": "GPZA13F-ELTD6",
+    "sku": "GPZA13F-ELTD6",
+    "descripcion": "Diseñada para que los audífonos funcionen al máximo, la",
+    "quimica": "Zinc-Aire",
+    "voltaje": "1.4V",
+    "page": 68,
+    "img": "/catalogo-pages/baterias-gp/page-68.jpg"
+  },
+  {
+    "modelo": "Pila Audífono ZA312 (GPZA312)",
+    "nombreImagen": "GPZA312F-ELTD6",
+    "sku": "GPZA312F-ELTD6",
+    "descripcion": "Diseñada para que los audífonos funcionen al máximo, la",
+    "quimica": "Zinc-Aire",
+    "voltaje": "1.4V",
+    "page": 69,
+    "img": "/catalogo-pages/baterias-gp/page-69.jpg"
+  },
+  {
+    "modelo": "Pila Audífono ZA675 (GPZA675)",
+    "nombreImagen": "GPZA675F-ELTD6",
+    "sku": "GPZA675F-ELTD6",
+    "descripcion": "Diseñada para que los audífonos funcionen al máximo, la",
+    "quimica": "Zinc-Aire",
+    "voltaje": "1.4V",
+    "page": 70,
+    "img": "/catalogo-pages/baterias-gp/page-70.jpg"
+  },
+  {
+    "modelo": "Baterías para teléfonos inalámbricos",
+    "nombreImagen": "GP60AAH3BMU-2U1",
+    "sku": "GP60AAH3BMU-2U1",
+    "descripcion": "Baterías para teléfonos inalámbricos",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 72,
+    "img": "/catalogo-pages/baterias-gp/page-72.jpg"
+  },
+  {
+    "modelo": "Baterías para teléfonos inalámbricos",
+    "nombreImagen": "GP60AAM2BMU-2U1",
+    "sku": "GP60AAM2BMU-2U1",
+    "descripcion": "Baterías para teléfonos inalámbricos",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 73,
+    "img": "/catalogo-pages/baterias-gp/page-73.jpg"
+  },
+  {
+    "modelo": "Baterías para teléfonos inalámbricos",
+    "nombreImagen": "GP65AAAH3BXZ-2U1",
+    "sku": "GP65AAAH3BXZ-2U1",
+    "descripcion": "Baterías para teléfonos inalámbricos",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 74,
+    "img": "/catalogo-pages/baterias-gp/page-74.jpg"
+  },
+  {
+    "modelo": "Baterías para teléfonos inalámbricos",
+    "nombreImagen": "GP91AAALH3BXZ-2U1",
+    "sku": "GP91AAALH3BXZ-2U1",
+    "descripcion": "Baterías para teléfonos inalámbricos",
+    "quimica": "NiMH Recargable",
+    "voltaje": "1.2V",
+    "page": 75,
+    "img": "/catalogo-pages/baterias-gp/page-75.jpg"
+  },
+  {
+    "modelo": "Baterías para teléfonos inalámbricos",
+    "nombreImagen": "GPT160-2U1",
+    "sku": "GPT160-2U1",
+    "descripcion": "Baterías para teléfonos inalámbricos",
+    "quimica": "Alcalina",
+    "voltaje": "1.5V",
+    "page": 76,
+    "img": "/catalogo-pages/baterias-gp/page-76.jpg"
+  }
+]
