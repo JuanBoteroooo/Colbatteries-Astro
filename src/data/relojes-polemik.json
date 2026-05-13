@@ -1,5 +1,77 @@
 [
   {
+    "modelo": "REPOME-P-A",
+    "brand": "POLEMIK",
+    "tipo": "ANÁLOGO",
+    "fecha": false,
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "img": "/catalogo-pages/relojes-polemik/page-03.jpg"
+  },
+  {
+    "modelo": "REPOME-P-B",
+    "brand": "POLEMIK",
+    "tipo": "ANÁLOGO",
+    "fecha": false,
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "img": "/catalogo-pages/relojes-polemik/page-04.jpg"
+  },
+  {
+    "modelo": "REPOME-P-C",
+    "brand": "POLEMIK",
+    "tipo": "ANÁLOGO",
+    "fecha": false,
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "img": "/catalogo-pages/relojes-polemik/page-05.jpg"
+  },
+  {
+    "modelo": "REPOME-D-A",
+    "brand": "POLEMIK",
+    "tipo": "ANÁLOGO",
+    "fecha": false,
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "img": "/catalogo-pages/relojes-polemik/page-06.jpg"
+  },
+  {
+    "modelo": "REPOME-D-B",
+    "brand": "POLEMIK",
+    "tipo": "ANÁLOGO",
+    "fecha": false,
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "img": "/catalogo-pages/relojes-polemik/page-07.jpg"
+  },
+  {
+    "modelo": "REPOME-D-C",
+    "brand": "POLEMIK",
+    "tipo": "ANÁLOGO",
+    "fecha": false,
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "img": "/catalogo-pages/relojes-polemik/page-08.jpg"
+  },
+  {
     "modelo": "PCF-436",
     "brand": "POLEMIK",
     "tipo": "DIGITAL",

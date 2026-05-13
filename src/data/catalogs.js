@@ -2,7 +2,7 @@ export const groups = [
   {
     id: 'correas',
     name: 'Pulsos & Correas',
-    image: 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&h=300&fit=crop&q=80',
+    image: '/images/categorias/cuero-categoria.png',
     catalogs: [
       { slug: 'pulso-resina',    label: 'Pulso Resina',    structured: true },
       { slug: 'pulso-silicona',  label: 'Pulso Silicona',  structured: true },
@@ -14,7 +14,7 @@ export const groups = [
   {
     id: 'baterias',
     name: 'Baterías & Pilas',
-    image: 'https://images.unsplash.com/photo-1619641782842-83f2446c560b?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/categorias/bateria-categoria.png',
     catalogs: [
       { slug: 'baterias-gp',       label: 'Baterías GP',       structured: true },
       { slug: 'baterias-tianqiu',  label: 'Baterías Tianqiu',  structured: true },
@@ -26,7 +26,7 @@ export const groups = [
   {
     id: 'movimientos',
     name: 'Movimientos',
-    image: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&h=300&fit=crop&q=80',
+    image: '/images/categorias/movimiento-categoria.png',
     catalogs: [
       { slug: 'movimientos-epson',  label: 'Movimientos EPSON',         structured: true },
       { slug: 'movimientos-sii',    label: 'Movimientos SII',           structured: true },
@@ -40,7 +40,7 @@ export const groups = [
   {
     id: 'relojes',
     name: 'Relojes',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=300&fit=crop&q=80',
+    image: '/images/categorias/reloj-categoria.png',
     catalogs: [
       { slug: 'relojes-polemik',  label: 'Reloj Polemik',    structured: true },
       { slug: 'relojes-xinjia',   label: 'Relojes Xinjia',   structured: true },
@@ -49,7 +49,7 @@ export const groups = [
   {
     id: 'accesorios',
     name: 'Accesorios',
-    image: 'https://images.unsplash.com/photo-1593152167544-085d3b9c4938?w=600&h=300&fit=crop&q=80',
+    image: '/images/categorias/accesorio-categoria.png',
     catalogs: [
       { slug: 'coronas',           label: 'Coronas',              structured: true },
       { slug: 'vidrios',           label: 'Vidrios',              structured: true },
@@ -60,7 +60,7 @@ export const groups = [
   {
     id: 'herramientas',
     name: 'Herramientas',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=300&fit=crop&q=80',
+    image: '/images/categorias/herramienta-categoria.png',
     catalogs: [
       { slug: 'herramientas',         label: 'Herramientas de Relojería', structured: true },
       { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas',    structured: true },
@@ -69,7 +69,7 @@ export const groups = [
   {
     id: 'Gorras',
     name: 'Gorras',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop&q=80',
+    image: '/images/categorias/gorra-categoria.png',
     catalogs: [
       { slug: 'gorras-polemik', label: 'Gorras Polemik', structured: true },
       { slug: 'gorras-lisas',   label: 'Gorras Lisas',   structured: true },

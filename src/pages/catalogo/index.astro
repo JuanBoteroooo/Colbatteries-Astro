@@ -485,16 +485,13 @@ function waUrl(label) {
   }
 
   .group-img-wrap {
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--gray-200);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    background: transparent;
   }
 
   .group-img {
     width: 100%;
     aspect-ratio: 4 / 5;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     transition: transform 0.6s ease;
   }
@@ -570,8 +567,6 @@ function waUrl(label) {
       position: static;
       order: -1;
     }
-
-    .group-img-wrap { border-radius: 12px; }
 
     .group-img { aspect-ratio: 16 / 7; }
   }

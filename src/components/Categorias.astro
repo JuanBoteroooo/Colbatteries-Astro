@@ -1,43 +1,44 @@
 ---
 const categories = [
   {
-    img: 'https://images.unsplash.com/photo-1706166987870-539ffd8286e7?w=800&h=600&fit=crop&q=80',
+    img: '/images/productos/baterias-gp/GP130AAHCER21-TLB4.jpg',
     title: 'Baterías & Pilas',
     desc: 'Renata, GP, Tianqiu, Maxell. Botón, litio y alcalinas.',
     count: '+300 refs',
     id: 'baterias',
     featured: true,
+    imgZoom: 0.78,
   },
   {
-    img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=380&fit=crop&q=80',
+    img: '/images/productos/relojes-polemik/REPOME-P-bento.jpg',
     title: 'Relojes',
     desc: 'Colecciones Polemik, Xinjia y surtidas.',
     count: '+150 modelos',
     id: 'relojes',
   },
   {
-    img: 'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&h=380&fit=crop&q=80',
+    img: '/images/productos/movimientos-miyota/0S10-3.png',
     title: 'Movimientos',
     desc: 'Miyota, ETA, Ronda, ISA, Epson. Cuarzo y automáticos.',
     count: '+200 refs',
     id: 'movimientos',
   },
   {
-    img: 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&h=380&fit=crop&q=80',
+    img: '/images/productos/pulso-cuero/PUCUCOL-12MM-AL-26MM-NG_CF_MIEL_BC_AZ_GRIS_RJ.jpg',
     title: 'Pulsos & Correas',
     desc: 'Resina, metal, PVC, silicona y cuero.',
     count: '+400 refs',
     id: 'correas',
   },
   {
-    img: 'https://images.unsplash.com/photo-1593152167544-085d3b9c4938?w=600&h=380&fit=crop&q=80',
+    img: '/images/productos/insumos-relojeria/HEBILLA-16_18_20_22_24.jpg',
     title: 'Accesorios',
     desc: 'Coronas, vidrios, módulos e insumos de relojería.',
     count: '+100 refs',
     id: 'accesorios',
   },
   {
-    img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=380&fit=crop&q=80',
+    img: '/images/productos/herramientas/BACUM-7003-A.jpg',
     title: 'Herramientas',
     desc: 'Herramientas profesionales de relojería y joyería.',
     count: '+50 refs',
@@ -45,7 +46,7 @@ const categories = [
     wide: true,
   },
   {
-    img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=380&fit=crop&q=80',
+    img: '/images/productos/gorras-polemik/G-1003.jpg',
     title: 'Otros',
     desc: 'Gorras Polemik y gorras lisas.',
     count: '+20 refs',
@@ -82,7 +83,7 @@ const categories = [
           href={`/catalogo#${c.id}`}
           class={`bento-card reveal delay-${Math.min(i * 100, 400)}${c.featured ? ' bento-featured' : ''}${c.wide ? ' bento-wide' : ''}`}
         >
-          <img src={c.img} alt={c.title} class="bento-img" loading="lazy" />
+          <img src={c.img} alt={c.title} class="bento-img" loading="lazy" style={c.imgZoom ? `--img-zoom:${c.imgZoom}` : undefined} />
           <div class="bento-overlay"></div>
           <div class="bento-body">
             <span class="bento-count">{c.count}</span>
@@ -249,10 +250,11 @@ const categories = [
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(var(--img-zoom, 1));
     transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .bento-card:hover .bento-img { transform: scale(1.06); }
+  .bento-card:hover .bento-img { transform: scale(calc(var(--img-zoom, 1) * 1.06)); }
 
   .bento-overlay {
     position: absolute;
