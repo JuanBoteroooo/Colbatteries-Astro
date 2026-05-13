@@ -1,17 +1,17 @@
 ---
 const brands = [
-  { name: 'Miyota',  category: 'Movimientos', logo: '/images/marcas/miyota.svg' },
-  { name: 'ETA',     category: 'Movimientos', logo: '/images/marcas/eta.png'    },
-  { name: 'Ronda',   category: 'Movimientos', logo: '/images/marcas/ronda.svg'  },
-  { name: 'ISA',     category: 'Movimientos'                                     },
-  { name: 'Epson',   category: 'Movimientos', logo: '/images/marcas/epson.svg'  },
-  { name: 'SII',     category: 'Movimientos', logo: '/images/marcas/sii.png'    },
-  { name: 'Renata',  category: 'Baterías',    logo: '/images/marcas/renata.svg' },
-  { name: 'GP',      category: 'Baterías',    logo: '/images/marcas/gp.svg'     },
-  { name: 'Maxell',  category: 'Baterías',    logo: '/images/marcas/maxell.svg' },
-  { name: 'Tianqiu', category: 'Baterías'                                        },
-  { name: 'Polemik', category: 'Relojes'                                         },
-  { name: 'Q&Q',     category: 'Relojes',     logo: '/images/marcas/qq.png'     },
+  { name: 'Miyota',  category: 'Movimientos', logo: '/images/marcas/miyota.svg'   },
+  { name: 'ETA',     category: 'Movimientos', logo: '/images/marcas/eta.png'      },
+  { name: 'Ronda',   category: 'Movimientos', logo: '/images/marcas/ronda.svg'    },
+  { name: 'ISA',     category: 'Movimientos', logo: '/images/marcas/isa-logo.png' },
+  { name: 'Epson',   category: 'Movimientos', logo: '/images/marcas/epson.svg'    },
+  { name: 'SII',     category: 'Movimientos', logo: '/images/marcas/sii.png',        big: true },
+  { name: 'Renata',  category: 'Baterías',    logo: '/images/marcas/renata.svg'   },
+  { name: 'GP',      category: 'Baterías',    logo: '/images/marcas/gp.svg',         big: true },
+  { name: 'Maxell',  category: 'Baterías',    logo: '/images/marcas/maxell.svg'   },
+  { name: 'Tianqiu', category: 'Baterías',    logo: '/images/marcas/tianqiu-logo.png' },
+  { name: 'Polemik', category: 'Relojes',     logo: '/images/marcas/polemik-logo.png' },
+  { name: 'Q&Q',     category: 'Relojes',     logo: '/images/marcas/qq.png',         big: true },
 ];
 ---
 
@@ -28,7 +28,7 @@ const brands = [
       {brands.map(b => (
         <div class="brand-chip">
           {b.logo
-            ? <img src={b.logo} alt={b.name} class="brand-logo" loading="lazy" />
+            ? <img src={b.logo} alt={b.name} class={`brand-logo${b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
             : (
               <Fragment>
                 <span class="brand-name">{b.name}</span>
@@ -41,7 +41,7 @@ const brands = [
       {brands.map(b => (
         <div class="brand-chip" aria-hidden="true">
           {b.logo
-            ? <img src={b.logo} alt="" class="brand-logo" loading="lazy" />
+            ? <img src={b.logo} alt="" class={`brand-logo${b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
             : (
               <Fragment>
                 <span class="brand-name">{b.name}</span>
@@ -177,6 +177,11 @@ const brands = [
     transition: filter 0.35s ease;
     position: relative;
     z-index: 0;
+  }
+
+  .brand-logo--big {
+    max-height: 52px;
+    max-width: 140px;
   }
 
   .brand-chip:hover .brand-logo {
