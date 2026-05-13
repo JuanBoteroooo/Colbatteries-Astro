@@ -321,7 +321,6 @@
     border: 1.5px solid rgba(242,169,0,0.2);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 0;
     pointer-events: none;
   }
@@ -482,19 +481,19 @@
   /* ── ENTRY ANIMATIONS ── */
   .fade-up {
     opacity: 0;
-    transform: translateY(22px);
-    animation: fadeUp 0.75s forwards;
+    transform: translateY(26px);
+    animation: fadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   .fade-in {
     opacity: 0;
-    animation: fadeIn 0.9s forwards;
+    animation: fadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   .delay-1 { animation-delay: 0.12s; }
-  .delay-2 { animation-delay: 0.28s; }
-  .delay-3 { animation-delay: 0.46s; }
-  .delay-4 { animation-delay: 0.64s; }
+  .delay-2 { animation-delay: 0.26s; }
+  .delay-3 { animation-delay: 0.42s; }
+  .delay-4 { animation-delay: 0.60s; }
 
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
@@ -502,6 +501,50 @@
 
   @keyframes fadeIn {
     to { opacity: 1; }
+  }
+
+  /* ── BACKGROUND ANIMATIONS ── */
+  .hero-dots {
+    animation: dotDrift 18s ease-in-out infinite alternate;
+  }
+
+  @keyframes dotDrift {
+    0%   { background-position: 0px 0px; }
+    100% { background-position: 28px 28px; }
+  }
+
+  .hero-glow {
+    animation: glowPulse 6s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { transform: scale(1);   opacity: 1; }
+    50%       { transform: scale(1.18); opacity: 0.7; }
+  }
+
+  /* ── DIAL RING ROTATION ── */
+  @keyframes dialSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .dial-ring {
+    animation: dialSpin 25s linear infinite;
+  }
+
+  /* ── IMAGE BREATHING ── */
+  .hero-img {
+    animation: breathe 7s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.025); }
+  }
+
+  /* disable breathe during hover parallax */
+  .hero-visual:hover .hero-img {
+    animation: none;
   }
 
   /* ── RESPONSIVE ── */
@@ -538,3 +581,21 @@
     .hero-stats { gap: 1.25rem; }
   }
 </style>
+
+<script>
+  const visual = document.querySelector('.hero-visual') as HTMLElement;
+  const frame  = visual?.querySelector('.image-frame') as HTMLElement;
+  if (visual && frame) {
+    visual.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = visual.getBoundingClientRect();
+      const cx = rect.left + rect.width  / 2;
+      const cy = rect.top  + rect.height / 2;
+      const dx = (e.clientX - cx) / rect.width;
+      const dy = (e.clientY - cy) / rect.height;
+      frame.style.transform = `translate(${dx * 10}px, ${dy * 8}px)`;
+    });
+    visual.addEventListener('mouseleave', () => {
+      frame.style.transform = '';
+    });
+  }
+</script>

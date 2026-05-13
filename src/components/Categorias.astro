@@ -254,7 +254,7 @@ const categories = [
     transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .bento-card:hover .bento-img { transform: scale(calc(var(--img-zoom, 1) * 1.06)); }
+  .bento-card:hover .bento-img { transform: scale(calc(var(--img-zoom, 1) * 1.07)); }
 
   .bento-overlay {
     position: absolute;
@@ -262,18 +262,18 @@ const categories = [
     background: linear-gradient(
       to top,
       rgba(2, 29, 80, 0.92) 0%,
-      rgba(2, 29, 80, 0.45) 45%,
-      rgba(0,0,0,0.06) 100%
+      rgba(2, 29, 80, 0.42) 42%,
+      rgba(0,0,0,0.04) 100%
     );
-    transition: background 0.35s ease;
+    transition: background 0.45s ease;
   }
 
   .bento-card:hover .bento-overlay {
     background: linear-gradient(
       to top,
-      rgba(2, 29, 80, 0.97) 0%,
-      rgba(2, 29, 80, 0.65) 50%,
-      rgba(0,0,0,0.12) 100%
+      rgba(2, 29, 80, 0.98) 0%,
+      rgba(2, 29, 80, 0.72) 52%,
+      rgba(242,169,0,0.06) 100%
     );
   }
 
@@ -305,7 +305,12 @@ const categories = [
   .bento-card:hover .bento-count {
     background: rgba(242, 169, 0, 0.2);
     border-color: rgba(242, 169, 0, 0.6);
-    box-shadow: 0 0 10px rgba(242, 169, 0, 0.25);
+    animation: badgeGlow 1.8s ease-in-out infinite;
+  }
+
+  @keyframes badgeGlow {
+    0%, 100% { box-shadow: 0 0 8px rgba(242,169,0,0.3); }
+    50%       { box-shadow: 0 0 18px rgba(242,169,0,0.6), 0 0 32px rgba(242,169,0,0.2); }
   }
 
   .bento-title {
