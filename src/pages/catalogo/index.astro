@@ -175,7 +175,47 @@ function waUrl(label) {
     background: var(--white);
     border-bottom: 1px solid var(--gray-200);
     text-align: center;
+    position: relative;
+    overflow: hidden;
   }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(2,29,80,0.065) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 350px;
+    background: radial-gradient(ellipse at center, rgba(242,169,0,0.11) 0%, transparent 68%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: heroFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+  .hero-title   { animation: heroFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.17s both; }
+  .hero-sub     { animation: heroFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.31s both; }
+  .hero-stats   { animation: heroFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.46s both; }
 
   .hero-eyebrow {
     font-size: 0.72rem;
@@ -348,12 +388,17 @@ function waUrl(label) {
     font-weight: 600;
     text-decoration: none;
     color: var(--gray-700);
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.2s;
     white-space: nowrap;
   }
 
   .gnav-pill:hover { background: var(--gray-100); color: var(--blue); }
-  .gnav-pill.active { background: var(--yellow); color: var(--gray-900); font-weight: 700; }
+  .gnav-pill.active {
+    background: var(--yellow);
+    color: var(--gray-900);
+    font-weight: 700;
+    box-shadow: 0 0 0 1.5px rgba(242,169,0,0.45), 0 2px 12px rgba(242,169,0,0.28);
+  }
 
   /* ── CATALOG SECTION ── */
   .catalog-section {
@@ -369,6 +414,14 @@ function waUrl(label) {
     padding: 5rem 0;
     border-bottom: 1px solid var(--gray-200);
     align-items: start;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+  }
+
+  .group-block.revealed {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .group-block.hidden { display: none; }
@@ -616,6 +669,18 @@ function waUrl(label) {
     doSearch('');
     input?.focus();
   });
+
+  // Group block scroll-reveal
+  const groupRevealObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        (entry.target as HTMLElement).classList.add('revealed');
+        groupRevealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06 });
+
+  blocks.forEach(b => groupRevealObs.observe(b));
 
   // Active pill
   const pills = document.querySelectorAll<HTMLElement>('.gnav-pill');
