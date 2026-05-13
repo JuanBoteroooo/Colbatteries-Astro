@@ -1,8 +1,8 @@
 ---
 const stats = [
-  { num: '+20', label: 'años en el mercado' },
-  { num: '+1,500', label: 'referencias en stock' },
-  { num: '2do', label: 'hub comercial del mundo' },
+  { num: '+20',    label: 'años en el mercado',      target: 20,   prefix: '+', suffix: '',   comma: false },
+  { num: '+1,500', label: 'referencias en stock',    target: 1500, prefix: '+', suffix: '',   comma: true  },
+  { num: '2do',   label: 'hub comercial del mundo',  target: 2,    prefix: '',  suffix: 'do', comma: false },
 ];
 ---
 
@@ -14,7 +14,7 @@ const stats = [
       <div class="stat-wall">
         {stats.map((s, i) => (
           <div class={`stat-block stat-${i} reveal delay-${i * 100}`}>
-            <span class="stat-num">{s.num}</span>
+            <span class="stat-num" data-target={s.target} data-prefix={s.prefix} data-suffix={s.suffix} data-comma={String(s.comma)}>{s.num}</span>
             <span class="stat-label">{s.label}</span>
           </div>
         ))}
@@ -60,7 +60,13 @@ const stats = [
         ))}
       </ul>
 
-      <a href="https://wa.me/50764156382" target="_blank" rel="noopener" class="btn-primary reveal delay-600">
+      <div class="brands-strip reveal delay-500">
+        {['Miyota', 'ETA', 'Ronda', 'Renata', 'GP', 'Maxell', 'Polemik'].map(b => (
+          <span class="brand-tag">{b}</span>
+        ))}
+      </div>
+
+      <a href="https://wa.me/50764156382" target="_blank" rel="noopener" class="btn-primary reveal delay-700">
         Contactar ahora
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -239,6 +245,34 @@ const stats = [
     flex-shrink: 0;
   }
 
+  /* ── BRANDS STRIP ── */
+  .brands-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .brand-tag {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(2,29,80,0.4);
+    border: 1.5px solid rgba(2,29,80,0.1);
+    border-radius: 100px;
+    padding: 0.28rem 0.7rem;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    cursor: default;
+  }
+
+  .brand-tag:hover {
+    color: var(--blue);
+    border-color: rgba(242,169,0,0.45);
+    background: rgba(242,169,0,0.05);
+  }
+
   @media (max-width: 900px) {
     .nosotros-grid {
       grid-template-columns: 1fr;
@@ -246,3 +280,45 @@ const stats = [
     }
   }
 </style>
+
+<script>
+  function easeOutCubic(t: number) { return 1 - Math.pow(1 - t, 3); }
+
+  function fmt(n: number, comma: boolean): string {
+    if (!comma) return String(n);
+    return n >= 1000
+      ? Math.floor(n / 1000) + ',' + String(n % 1000).padStart(3, '0')
+      : String(n);
+  }
+
+  function animateCount(el: HTMLElement) {
+    const target   = parseInt(el.dataset.target!);
+    const prefix   = el.dataset.prefix ?? '';
+    const suffix   = el.dataset.suffix ?? '';
+    const comma    = el.dataset.comma === 'true';
+    const duration = 1200;
+    const start    = performance.now();
+
+    function tick(now: number) {
+      const progress = Math.min((now - start) / duration, 1);
+      const value    = Math.round(easeOutCubic(progress) * target);
+      el.textContent = prefix + fmt(value, comma) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  const statNums = document.querySelectorAll<HTMLElement>('.stat-num[data-target]');
+
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target as HTMLElement);
+        countObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.55 });
+
+  statNums.forEach(el => countObs.observe(el));
+</script>
