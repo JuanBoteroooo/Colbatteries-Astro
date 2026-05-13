@@ -250,19 +250,37 @@ function waUrl(label) {
   .hero-stats {
     display: inline-flex;
     align-items: center;
-    gap: 2.5rem;
-    padding: 1.1rem 2.5rem;
-    background: var(--gray-50);
-    border: 1px solid var(--gray-200);
-    border-radius: 12px;
+    gap: 0.75rem;
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 
-  .hstat { text-align: center; }
+  .hstat-div { display: none; }
+
+  .hstat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem 1.6rem;
+    border: 1.5px solid rgba(242,169,0,0.38);
+    border-radius: 100px;
+    background: rgba(242,169,0,0.04);
+    text-align: center;
+    transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+    cursor: default;
+  }
+
+  .hstat:hover {
+    border-color: rgba(242,169,0,0.65);
+    background: rgba(242,169,0,0.08);
+    box-shadow: 0 0 0 1px rgba(242,169,0,0.25), 0 4px 18px rgba(242,169,0,0.18);
+  }
 
   .hstat strong {
     display: block;
     font-family: var(--font-heading);
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 900;
     color: var(--yellow);
     letter-spacing: -0.02em;
@@ -271,15 +289,13 @@ function waUrl(label) {
   }
 
   .hstat span {
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.63rem;
+    font-weight: 700;
     color: var(--blue);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
     opacity: 0.5;
   }
-
-  .hstat-div { width: 1px; height: 36px; background: var(--gray-200); }
 
   /* ── SEARCH ── */
   .search-wrap {
@@ -470,11 +486,13 @@ function waUrl(label) {
     list-style: none;
     border-top: 1px solid var(--gray-200);
     margin-bottom: 2rem;
+    counter-reset: cat-counter;
   }
 
   .cat-row {
     border-bottom: 1px solid var(--gray-200);
-    transition: background 0.15s;
+    transition: background 0.18s;
+    counter-increment: cat-counter;
   }
 
   .cat-row.hidden { display: none; }
@@ -482,34 +500,47 @@ function waUrl(label) {
   .cat-link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0.95rem 0.75rem 0.95rem 0;
     text-decoration: none;
     color: var(--blue);
     font-size: 0.97rem;
     font-weight: 600;
-    transition: padding-left 0.2s ease, color 0.15s;
-    gap: 1rem;
+    transition: padding-left 0.22s cubic-bezier(0.22,1,0.36,1), color 0.15s;
+    gap: 0.75rem;
+  }
+
+  .cat-link::before {
+    content: counter(cat-counter, decimal-leading-zero);
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: rgba(242,169,0,0.28);
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    min-width: 1.6rem;
+    transition: color 0.22s;
   }
 
   .cat-link-name { flex: 1; }
 
   .cat-arrow {
     flex-shrink: 0;
-    color: rgba(2,69,152,0.25);
-    transition: color 0.2s, transform 0.2s;
+    color: rgba(2,69,152,0.18);
+    transition: color 0.22s, transform 0.28s cubic-bezier(0.22,1,0.36,1);
   }
 
-  .cat-row:hover { background: rgba(242,169,0,0.04); }
+  .cat-row:hover { background: rgba(242,169,0,0.07); }
 
   .cat-row:hover .cat-link {
-    padding-left: 0.75rem;
+    padding-left: 1rem;
     color: var(--blue);
   }
 
+  .cat-row:hover .cat-link::before { color: var(--yellow); }
+
   .cat-row:hover .cat-arrow {
     color: var(--yellow);
-    transform: translateX(3px);
+    transform: translateX(6px);
   }
 
   /* WA button — outlined, clean */
@@ -539,6 +570,8 @@ function waUrl(label) {
 
   .group-img-wrap {
     background: transparent;
+    overflow: hidden;
+    border-radius: 4px;
   }
 
   .group-img {
@@ -669,6 +702,21 @@ function waUrl(label) {
     doSearch('');
     input?.focus();
   });
+
+  // Image parallax
+  const imgWraps = document.querySelectorAll<HTMLElement>('.group-img-wrap');
+
+  function parallax() {
+    const vh = window.innerHeight;
+    imgWraps.forEach(wrap => {
+      const rect = wrap.getBoundingClientRect();
+      const center = rect.top + rect.height / 2 - vh / 2;
+      wrap.style.transform = `translateY(${center * 0.055}px)`;
+    });
+  }
+
+  window.addEventListener('scroll', parallax, { passive: true });
+  parallax();
 
   // Group block scroll-reveal
   const groupRevealObs = new IntersectionObserver(entries => {
