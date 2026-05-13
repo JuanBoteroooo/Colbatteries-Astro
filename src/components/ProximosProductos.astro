@@ -1,0 +1,484 @@
+---
+const products = [
+  { img: '/images/proximos/polemik-gold-chrono.jpg',      name: 'Cronógrafo Dorado',    tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-sport-crono.jpg',      name: 'Sport Chronograph',    tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-dual-time-gold.jpg',   name: 'Dual Time Digital',    tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-tachymetre-negro.jpg', name: 'Tachymetre Sport',     tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-nautilus-negro.jpg',   name: 'Nautilus Black',       tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-silver-chrono.jpg',    name: 'Cronógrafo Plateado',  tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-tonneau-gold.jpg',     name: 'Tonneau WR30M',        tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-digital-gold.jpg',     name: 'Digital Dorado',       tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-digital-silver.jpg',   name: 'Digital Plateado',     tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-lady-ceramic.jpg',     name: 'Lady Cerámico',        tag: 'Nuevo' },
+  { img: '/images/proximos/polemik-wheel-sport.jpg',      name: 'Wheel Sport',          tag: 'Nuevo' },
+];
+---
+
+<section class="proximos-section" id="proximos">
+  <div class="proximos-bg-deco" aria-hidden="true"></div>
+
+  <div class="container proximos-header reveal">
+    <span class="proximos-tag">
+      <span class="tag-dot"></span>
+      Próximamente
+    </span>
+    <h2 class="proximos-title">Nueva colección <span class="title-accent">Polemik</span></h2>
+    <p class="proximos-sub">11 nuevos modelos en camino. Exclusivos para mayoristas.</p>
+  </div>
+
+  <div class="carousel-scene" id="carouselScene">
+    <div class="carousel-stage" id="carouselStage">
+      {products.map((p, i) => (
+        <div class="c-card" data-index={i}>
+          <div class="c-img-wrap">
+            <img src={p.img} alt={p.name} class="c-img" loading="lazy" />
+          </div>
+          <div class="c-info">
+            <span class="c-tag">{p.tag}</span>
+            <p class="c-brand">Polemik</p>
+            <h3 class="c-name">{p.name}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Arrows -->
+    <button class="c-arrow c-arrow--prev" id="prevBtn" aria-label="Anterior">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="c-arrow c-arrow--next" id="nextBtn" aria-label="Siguiente">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Dots -->
+  <div class="c-dots" id="cDots">
+    {products.map((_, i) => (
+      <button class="c-dot" data-dot={i} aria-label={`Producto ${i + 1}`}></button>
+    ))}
+  </div>
+
+  <div class="proximos-footer reveal">
+    <a href="https://wa.me/50764156382?text=${encodeURIComponent('Hola, me interesa saber más sobre la nueva colección Polemik que llega próximamente.')}" target="_blank" rel="noopener" class="proximos-wa">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Consultar disponibilidad
+    </a>
+  </div>
+</section>
+
+<style>
+  /* ── SECTION ── */
+  .proximos-section {
+    padding: 7rem 0 5rem;
+    background: var(--blue);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .proximos-bg-deco {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .proximos-bg-deco::after {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(ellipse at center, rgba(242,169,0,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* ── HEADER ── */
+  .proximos-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .proximos-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    background: rgba(242,169,0,0.1);
+    border: 1px solid rgba(242,169,0,0.3);
+    padding: 0.38rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.25rem;
+  }
+
+  .tag-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--yellow);
+    flex-shrink: 0;
+    animation: dotPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes dotPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(242,169,0,0.5); }
+    50%       { box-shadow: 0 0 0 5px rgba(242,169,0,0); }
+  }
+
+  .proximos-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .title-accent { color: var(--yellow); }
+
+  .proximos-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+  }
+
+  /* ── CAROUSEL SCENE ── */
+  .carousel-scene {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1400px;
+    z-index: 1;
+  }
+
+  .carousel-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ── CARDS ── */
+  .c-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition:
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s ease;
+
+    /* Default hidden state */
+    transform: translate(-50%, -50%) scale(0.5) translateZ(-200px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Active — center large */
+  .c-card.is-active {
+    transform: translate(-50%, -50%) scale(1) translateZ(0);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+    box-shadow:
+      0 0 0 1.5px rgba(242,169,0,0.25),
+      0 30px 80px rgba(0,0,0,0.5),
+      0 0 60px rgba(242,169,0,0.1);
+  }
+
+  /* Left side */
+  .c-card.is-prev {
+    transform: translate(calc(-50% - 280px), -50%) scale(0.78) rotateY(12deg) translateZ(-60px);
+    opacity: 0.65;
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  /* Right side */
+  .c-card.is-next {
+    transform: translate(calc(-50% + 280px), -50%) scale(0.78) rotateY(-12deg) translateZ(-60px);
+    opacity: 0.65;
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  /* Far sides — barely visible */
+  .c-card.is-prev2 {
+    transform: translate(calc(-50% - 440px), -50%) scale(0.58) rotateY(18deg) translateZ(-120px);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .c-card.is-next2 {
+    transform: translate(calc(-50% + 440px), -50%) scale(0.58) rotateY(-18deg) translateZ(-120px);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ── CARD INTERNALS ── */
+  .c-img-wrap {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    background: #fff;
+  }
+
+  .c-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    display: block;
+  }
+
+  .c-card.is-active:hover .c-img { transform: scale(1.05); }
+
+  .c-info {
+    padding: 1.1rem 1.4rem 1.4rem;
+    background: #fff;
+    border-top: 1px solid rgba(2,29,80,0.06);
+  }
+
+  .c-tag {
+    display: inline-block;
+    font-size: 0.56rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    background: rgba(242,169,0,0.1);
+    border: 1px solid rgba(242,169,0,0.3);
+    padding: 0.18rem 0.55rem;
+    border-radius: 100px;
+    margin-bottom: 0.5rem;
+  }
+
+  .c-brand {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(2,29,80,0.35);
+    margin-bottom: 0.2rem;
+  }
+
+  .c-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--blue);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  /* ── ARROWS ── */
+  .c-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+    backdrop-filter: blur(8px);
+  }
+
+  .c-arrow:hover {
+    background: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--blue);
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .c-arrow--prev { left: calc(50% - 230px); }
+  .c-arrow--next { right: calc(50% - 230px); }
+
+  /* ── DOTS ── */
+  .c-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .c-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s, width 0.25s;
+    padding: 0;
+  }
+
+  .c-dot.is-active {
+    background: var(--yellow);
+    width: 22px;
+    border-radius: 100px;
+    box-shadow: 0 0 8px rgba(242,169,0,0.5);
+  }
+
+  /* ── FOOTER CTA ── */
+  .proximos-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .proximos-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.75rem 1.75rem;
+    background: #25D366;
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+  }
+
+  .proximos-wa:hover {
+    background: #1fba58;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(37,211,102,0.45);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .carousel-scene { height: 460px; }
+
+    .c-card.is-prev {
+      transform: translate(calc(-50% - 200px), -50%) scale(0.72) rotateY(10deg) translateZ(-60px);
+    }
+    .c-card.is-next {
+      transform: translate(calc(-50% + 200px), -50%) scale(0.72) rotateY(-10deg) translateZ(-60px);
+    }
+    .c-card.is-prev2, .c-card.is-next2 { opacity: 0; }
+
+    .c-arrow--prev { left: 1rem; }
+    .c-arrow--next { right: 1rem; }
+  }
+
+  @media (max-width: 560px) {
+    .carousel-scene { height: 420px; }
+
+    .c-card { width: 250px; }
+    .c-img-wrap { height: 230px; }
+
+    .c-card.is-prev, .c-card.is-next {
+      opacity: 0.35;
+      transform: translate(calc(-50% ± 160px), -50%) scale(0.65) translateZ(-80px);
+    }
+    .c-card.is-prev {
+      transform: translate(calc(-50% - 155px), -50%) scale(0.65) translateZ(-80px);
+    }
+    .c-card.is-next {
+      transform: translate(calc(-50% + 155px), -50%) scale(0.65) translateZ(-80px);
+    }
+
+    .c-arrow--prev { left: 0.5rem; }
+    .c-arrow--next { right: 0.5rem; }
+  }
+</style>
+
+<script>
+  const TOTAL = 11;
+  const INTERVAL = 3800;
+
+  let current = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  const cards = document.querySelectorAll<HTMLElement>('.c-card');
+  const dots  = document.querySelectorAll<HTMLElement>('.c-dot');
+
+  function mod(n: number, m: number) { return ((n % m) + m) % m; }
+
+  function update() {
+    cards.forEach((card, i) => {
+      card.classList.remove('is-active', 'is-prev', 'is-next', 'is-prev2', 'is-next2');
+      const diff = mod(i - current, TOTAL);
+      if      (diff === 0)                    card.classList.add('is-active');
+      else if (diff === 1)                    card.classList.add('is-next');
+      else if (diff === TOTAL - 1)            card.classList.add('is-prev');
+      else if (diff === 2)                    card.classList.add('is-next2');
+      else if (diff === TOTAL - 2)            card.classList.add('is-prev2');
+    });
+
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+  }
+
+  function next() { current = mod(current + 1, TOTAL); update(); }
+  function prev() { current = mod(current - 1, TOTAL); update(); }
+
+  function startAuto() {
+    clearInterval(timer);
+    timer = setInterval(next, INTERVAL);
+  }
+
+  document.getElementById('nextBtn')?.addEventListener('click', () => { next(); startAuto(); });
+  document.getElementById('prevBtn')?.addEventListener('click', () => { prev(); startAuto(); });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      current = parseInt(dot.dataset.dot!);
+      update();
+      startAuto();
+    });
+  });
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const idx = parseInt(card.dataset.index!);
+      if (idx === mod(current + 1, TOTAL))      { next(); startAuto(); }
+      else if (idx === mod(current - 1, TOTAL)) { prev(); startAuto(); }
+    });
+  });
+
+  update();
+  startAuto();
+</script>
