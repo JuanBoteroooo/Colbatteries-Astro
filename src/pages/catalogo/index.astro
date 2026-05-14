@@ -696,6 +696,13 @@ function waUrl(label) {
     if (empty) empty.style.display = any ? 'none' : 'flex';
   }
 
+  // Pre-fill from URL ?q= param
+  const urlQ = new URLSearchParams(window.location.search).get('q');
+  if (urlQ && input) {
+    input.value = urlQ;
+    doSearch(urlQ);
+  }
+
   input?.addEventListener('input', () => doSearch(input.value));
   clearBtn?.addEventListener('click', () => {
     if (input) input.value = '';

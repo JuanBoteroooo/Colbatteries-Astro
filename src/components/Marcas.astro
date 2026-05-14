@@ -1,17 +1,17 @@
 ---
 const brands = [
-  { name: 'Miyota',  category: 'Movimientos', logo: '/images/marcas/miyota.svg'      },
-  { name: 'ETA',     category: 'Movimientos', logo: '/images/marcas/eta.png'         },
-  { name: 'Ronda',   category: 'Movimientos', logo: '/images/marcas/ronda.svg'       },
-  { name: 'ISA',     category: 'Movimientos', logo: '/images/marcas/isa-logo.png',     big: true },
-  { name: 'Epson',   category: 'Movimientos', logo: '/images/marcas/epson.svg'       },
-  { name: 'SII',     category: 'Movimientos', logo: '/images/marcas/sii.png',          big: true },
-  { name: 'Renata',  category: 'Baterías',    logo: '/images/marcas/renata.svg'      },
-  { name: 'GP',      category: 'Baterías',    logo: '/images/marcas/gp-logo.png',      big: true },
-  { name: 'Maxell',  category: 'Baterías',    logo: '/images/marcas/maxell.svg'      },
-  { name: 'Tianqiu', category: 'Baterías',    logo: '/images/marcas/tianqiu-logo.png', xl: true },
+  { name: 'Miyota',  category: 'Movimientos', logo: '/images/marcas/miyota.svg',       href: '/catalogo?q=miyota'   },
+  { name: 'ETA',     category: 'Movimientos', logo: '/images/marcas/eta.png',          href: '/catalogo?q=eta'      },
+  { name: 'Ronda',   category: 'Movimientos', logo: '/images/marcas/ronda.svg',        href: '/catalogo?q=ronda'    },
+  { name: 'ISA',     category: 'Movimientos', logo: '/images/marcas/isa-logo.png',     href: '/catalogo?q=isa',     big: true },
+  { name: 'Epson',   category: 'Movimientos', logo: '/images/marcas/epson.svg',        href: '/catalogo?q=epson'    },
+  { name: 'SII',     category: 'Movimientos', logo: '/images/marcas/sii.png',          href: '/catalogo?q=sii',     big: true },
+  { name: 'Renata',  category: 'Baterías',    logo: '/images/marcas/renata.svg',       href: '/catalogo'            },
+  { name: 'GP',      category: 'Baterías',    logo: '/images/marcas/gp-logo.png',      href: '/catalogo?q=gp',      big: true },
+  { name: 'Maxell',  category: 'Baterías',    logo: '/images/marcas/maxell.svg',       href: '/catalogo?q=maxell'   },
+  { name: 'Tianqiu', category: 'Baterías',    logo: '/images/marcas/tianqiu-logo.png', href: '/catalogo?q=tianqiu', xl: true },
   { name: 'Polemik', category: 'Relojes',     logo: '/images/marcas/polemik-logo.png', xl: true },
-  { name: 'Q&Q',     category: 'Relojes',     logo: '/images/marcas/qq.png',           xl: true },
+  { name: 'Q&Q',     category: 'Relojes',     logo: '/images/marcas/qq.png',           href: '/catalogo',           xl: true },
 ];
 ---
 
@@ -26,28 +26,25 @@ const brands = [
   <div class="carousel-wrapper">
     <div class="carousel-track" id="carouselTrack">
       {brands.map(b => (
-        <div class="brand-chip">
-          {b.logo
-            ? <img src={b.logo} alt={b.name} class={`brand-logo${b.xl ? ' brand-logo--xl' : b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
-            : (
-              <Fragment>
-                <span class="brand-name">{b.name}</span>
-                <span class="brand-cat">{b.category}</span>
-              </Fragment>
-            )
-          }
-        </div>
+        b.href
+          ? <a href={b.href} class="brand-chip">
+              {b.logo
+                ? <img src={b.logo} alt={b.name} class={`brand-logo${b.xl ? ' brand-logo--xl' : b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
+                : <Fragment><span class="brand-name">{b.name}</span><span class="brand-cat">{b.category}</span></Fragment>
+              }
+            </a>
+          : <div class="brand-chip">
+              {b.logo
+                ? <img src={b.logo} alt={b.name} class={`brand-logo${b.xl ? ' brand-logo--xl' : b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
+                : <Fragment><span class="brand-name">{b.name}</span><span class="brand-cat">{b.category}</span></Fragment>
+              }
+            </div>
       ))}
       {brands.map(b => (
         <div class="brand-chip" aria-hidden="true">
           {b.logo
             ? <img src={b.logo} alt="" class={`brand-logo${b.xl ? ' brand-logo--xl' : b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
-            : (
-              <Fragment>
-                <span class="brand-name">{b.name}</span>
-                <span class="brand-cat">{b.category}</span>
-              </Fragment>
-            )
+            : <Fragment><span class="brand-name">{b.name}</span><span class="brand-cat">{b.category}</span></Fragment>
           }
         </div>
       ))}
@@ -129,6 +126,7 @@ const brands = [
     border: 1.5px solid transparent;
     overflow: hidden;
     cursor: default;
+  text-decoration: none;
     transition:
       border-color 0.3s ease,
       background 0.3s ease,
@@ -156,6 +154,8 @@ const brands = [
   }
 
   .brand-chip:hover::before { left: 160%; }
+
+  a.brand-chip { cursor: pointer; }
 
   .brand-chip:hover {
     border-color: rgba(242,169,0,0.4);
