@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+
+# RAW photo originals — converted JPGs live in public/images/
+*.HEIC
+*.DNG
