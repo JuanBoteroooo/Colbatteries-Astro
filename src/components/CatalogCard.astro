@@ -31,6 +31,7 @@ interface Props {
   nombre?:            string;
   marca?:             string;
   especificacion?:    string;
+  fullTitle?:         boolean;
 }
 
 const {
@@ -38,6 +39,7 @@ const {
   tipo, fecha,
   isCorona = false, isWatch = false, isVidrios = false, isModulos = false, isInsumos = false, isHerramientas = false, isJoyeria = false, isGorras = false,
   rosca, medida, color, grosor, forma, nombre, marca, especificacion,
+  fullTitle = false,
 } = Astro.props;
 
 const BADGE_CLASS: Record<string, string> = {
@@ -171,7 +173,9 @@ const TIPO_LABEL: Record<string, string> = {
 const spaceIdx = titulo.indexOf(' ');
 const slashIdx = titulo.indexOf('/');
 const splitAtSlash = slashIdx > -1 && (spaceIdx === -1 || slashIdx < spaceIdx);
-const prefix   = isCorona
+const prefix   = fullTitle
+  ? ''
+  : isCorona
   ? (TIPO_LABEL[tipo ?? ''] ?? '')
   : isGorras
   ? (TIPO_LABEL[tipo ?? ''] ?? '')
@@ -180,7 +184,9 @@ const prefix   = isCorona
   : splitAtSlash
   ? titulo.slice(0, slashIdx)
   : (spaceIdx > -1 ? titulo.slice(0, spaceIdx) : '');
-const modelNum = isCorona || isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria || isGorras
+const modelNum = fullTitle
+  ? titulo
+  : isCorona || isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria || isGorras
   ? titulo
   : splitAtSlash
   ? titulo.slice(slashIdx + 1)
