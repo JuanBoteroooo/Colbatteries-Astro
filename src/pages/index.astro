@@ -20,118 +20,249 @@ import Footer from '../components/Footer.astro';
 
     <!-- Contact CTA strip -->
     <section class="contact-strip">
+      <div class="strip-bg-pattern" aria-hidden="true"></div>
+      <div class="strip-glow" aria-hidden="true"></div>
       <div class="container strip-inner">
-        <div class="strip-text reveal-left">
-          <h2 class="strip-title">¿Listo para hacer su pedido?</h2>
-          <p class="strip-sub">Atención personalizada · Cotización inmediata · Envíos a toda la región</p>
+
+        <div class="strip-left reveal-left">
+          <p class="strip-eyebrow">
+            <span class="strip-rule"></span>
+            Atención directa · Sin intermediarios
+          </p>
+          <h2 class="strip-title">
+            ¿Listo para hacer<br/>
+            <span class="strip-accent">su pedido?</span>
+          </h2>
+          <ul class="strip-trust">
+            <li>
+              <svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+              Cotización inmediata por WhatsApp
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+              Envíos a toda América Latina y el Caribe
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+              +1,500 referencias en stock disponible
+            </li>
+          </ul>
         </div>
-        <div class="strip-actions reveal-right">
-          <a href="https://wa.me/50764156382" target="_blank" rel="noopener" class="btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            WhatsApp
-          </a>
-          <a href="/contacto" class="btn-outline-yellow">Ver todas las opciones</a>
+
+        <div class="strip-right reveal-right">
+          <div class="strip-card">
+            <p class="strip-card-label">Contactar ahora</p>
+            <a href="https://wa.me/50764156382" target="_blank" rel="noopener" class="strip-wa-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+            <div class="strip-divider">
+              <span>o</span>
+            </div>
+            <a href="/contacto" class="strip-secondary-btn">
+              Ver todas las opciones de contacto
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
+
       </div>
     </section>
   </main>
 
   <Footer />
 
-  <!-- WhatsApp floating -->
-  <a href="https://wa.me/50764156382" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
 </Layout>
 
 <style>
+  /* ── CONTACT STRIP ── */
   .contact-strip {
-    background: var(--yellow);
-    padding: 4rem 0;
+    background: var(--blue);
+    padding: 5.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .strip-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        -55deg,
+        transparent,
+        transparent 60px,
+        rgba(242,169,0,0.035) 60px,
+        rgba(242,169,0,0.035) 61px
+      );
+    pointer-events: none;
+  }
+
+  .strip-glow {
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(242,169,0,0.1) 0%, transparent 65%);
+    pointer-events: none;
   }
 
   .strip-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  /* ── LEFT ── */
+  .strip-eyebrow {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 0.7rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(242,169,0,0.7);
+    margin-bottom: 1.25rem;
+  }
+
+  .strip-rule {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--yellow);
+    border-radius: 2px;
+    flex-shrink: 0;
+    opacity: 0.7;
   }
 
   .strip-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 900;
-    color: var(--blue);
-    margin-bottom: 0.3rem;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
   }
 
-  .strip-sub {
-    font-size: 0.9rem;
-    color: var(--blue-dark);
-    font-weight: 500;
-  }
-
-  .strip-actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .btn-outline-yellow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 2rem;
-    border: 2px solid var(--blue);
-    color: var(--blue);
-    font-weight: 700;
-    font-size: 0.95rem;
-    border-radius: 6px;
-    transition: background var(--transition), color var(--transition);
-  }
-
-  .btn-outline-yellow:hover {
-    background: var(--blue);
+  .strip-accent {
     color: var(--yellow);
+    position: relative;
   }
 
-  .wa-float {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 58px;
-    height: 58px;
-    background: #25D366;
-    color: white;
-    border-radius: 50%;
+  .strip-trust {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .strip-trust li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .strip-trust li svg { color: var(--yellow); flex-shrink: 0; }
+
+  /* ── RIGHT CARD ── */
+  .strip-card {
+    background: rgba(255,255,255,0.05);
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2.25rem 2rem;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    backdrop-filter: blur(4px);
+  }
+
+  .strip-card-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 0.15rem;
+  }
+
+  .strip-wa-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    transition: transform var(--transition), box-shadow var(--transition);
-    animation: waPulse 3s ease-in-out infinite;
+    gap: 0.65rem;
+    padding: 0.9rem 1.5rem;
+    background: #25D366;
+    color: var(--white);
+    font-weight: 800;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 6px 22px rgba(37,211,102,0.35);
   }
 
-  .wa-float:hover {
-    transform: scale(1.1);
-    animation: none;
+  .strip-wa-btn:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(37,211,102,0.45);
   }
 
-  @keyframes waPulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-    50% { box-shadow: 0 4px 32px rgba(37, 211, 102, 0.65); }
+  .strip-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255,255,255,0.2);
+    font-size: 0.75rem;
   }
 
-  @media (max-width: 700px) {
-    .strip-inner { flex-direction: column; text-align: center; }
-    .strip-actions { justify-content: center; }
+  .strip-divider::before,
+  .strip-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .strip-secondary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.65);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: border-color 0.25s, color 0.25s, background 0.25s;
+  }
+
+  .strip-secondary-btn:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+    background: rgba(242,169,0,0.05);
+  }
+
+  @media (max-width: 860px) {
+    .strip-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .strip-card  { min-width: 0; }
+  }
+
+  @media (max-width: 560px) {
+    .strip-title { font-size: 1.9rem; }
   }
 </style>
 
