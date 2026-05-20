@@ -983,10 +983,12 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
             const safe = (p.modelo as string)
               .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
               .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            const sizeMatches = [...new Set((p.modelo as string).match(/(?<!\d)(1[2-9]|2[0-9])(?!\d)/g) || [])];
+            const tipoResina = sizeMatches.length > 0 ? sizeMatches.map(s => `${s}mm`).join(' ') : (p.medida as string ?? '');
             return (
               <div
                 class="eta-card-wrapper"
-                data-tipo={p.medida}
+                data-tipo={tipoResina}
                 data-modelo={(p.modelo as string).toLowerCase()}
                 data-medida={p.medida}
               >
@@ -1070,10 +1072,12 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
             const safe = (p.modelo as string)
               .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
               .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            const sizeMatchesSi = [...new Set((p.modelo as string).match(/(?<!\d)(1[2-9]|2[0-9])(?!\d)/g) || [])];
+            const tipoSilicona = sizeMatchesSi.length > 0 ? sizeMatchesSi.map(s => `${s}mm`).join(' ') : (p.medida as string ?? '');
             return (
               <div
                 class="eta-card-wrapper"
-                data-tipo={p.medida}
+                data-tipo={tipoSilicona}
                 data-modelo={(p.modelo as string).toLowerCase()}
                 data-medida={p.medida}
               >
@@ -1580,10 +1584,12 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
             const safe = (p.modelo as string)
               .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
               .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            const sizeMatchesPv = [...new Set((p.modelo as string).match(/(?<!\d)(1[2-9]|2[0-9])(?!\d)/g) || [])];
+            const tipoPvc = sizeMatchesPv.length > 0 ? sizeMatchesPv.map(s => `${s}mm`).join(' ') : (p.medida as string ?? '');
             return (
               <div
                 class="eta-card-wrapper"
-                data-tipo={p.medida?.split(',')[0]?.trim()}
+                data-tipo={tipoPvc}
                 data-modelo={(p.modelo as string).toLowerCase()}
                 data-medida={p.medida}
               >
@@ -1756,10 +1762,12 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
             const safe = (p.modelo as string)
               .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
               .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            const sizeMatchesCu = [...new Set((p.modelo as string).match(/(?<!\d)(1[2-9]|2[0-9])(?!\d)/g) || [])];
+            const tipoCuero = sizeMatchesCu.length > 0 ? sizeMatchesCu.map(s => `${s}mm`).join(' ') : (p.medida as string ?? '');
             return (
               <div
                 class="eta-card-wrapper"
-                data-tipo={p.medida}
+                data-tipo={tipoCuero}
                 data-modelo={(p.modelo as string).toLowerCase()}
                 data-medida={p.medida}
               >
@@ -3122,7 +3130,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
         const medida = wrapper.dataset.medida ?? '';
         const color  = wrapper.dataset.color  ?? '';
         const show =
-          (!activeTipo || tipo === activeTipo) &&
+          (!activeTipo || tipo.split(' ').includes(activeTipo)) &&
           (!fechaOnly  || fecha) &&
           (!q          || modelo.includes(q) || tipo.toLowerCase().includes(q) || medida.includes(q) || color.includes(q));
         wrapper.hidden = !show;

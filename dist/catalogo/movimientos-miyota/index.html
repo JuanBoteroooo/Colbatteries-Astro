@@ -453,7 +453,7 @@ const catLabel = "Movimientos Miyota";
         const medida = wrapper.dataset.medida ?? '';
         const color  = wrapper.dataset.color  ?? '';
         const show =
-          (!activeTipo || tipo === activeTipo) &&
+          (!activeTipo || tipo.split(' ').includes(activeTipo)) &&
           (!fechaOnly  || fecha) &&
           (!q          || modelo.includes(q) || tipo.toLowerCase().includes(q) || medida.includes(q) || color.includes(q));
         wrapper.hidden = !show;

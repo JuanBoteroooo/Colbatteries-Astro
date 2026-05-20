@@ -166,17 +166,24 @@ const TIPO_LABEL: Record<string, string> = {
 };
 
 // Title split — for movements: "ETA 251.262" → prefix "ETA", model "251.262"
+// For pulsos: "PPUNG/2220-18/20/22/24 Y 26" → prefix "PPUNG", model "2220-18/20/22/24 Y 26"
 // For coronas/vidrios/modulos: titulo IS the ref, prefix is descriptive name
 const spaceIdx = titulo.indexOf(' ');
+const slashIdx = titulo.indexOf('/');
+const splitAtSlash = slashIdx > -1 && (spaceIdx === -1 || slashIdx < spaceIdx);
 const prefix   = isCorona
   ? (TIPO_LABEL[tipo ?? ''] ?? '')
   : isGorras
   ? (TIPO_LABEL[tipo ?? ''] ?? '')
   : (isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria)
   ? (nombre ?? '')
+  : splitAtSlash
+  ? titulo.slice(0, slashIdx)
   : (spaceIdx > -1 ? titulo.slice(0, spaceIdx) : '');
 const modelNum = isCorona || isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria || isGorras
   ? titulo
+  : splitAtSlash
+  ? titulo.slice(slashIdx + 1)
   : (spaceIdx > -1 ? titulo.slice(spaceIdx + 1) : titulo);
 
 type SpecItem = { k: string; v: string };
