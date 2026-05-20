@@ -35,8 +35,8 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="about-visual reveal-right">
           <img
-            src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=700&h=520&fit=crop&q=80"
-            alt="Relojería profesional"
+            src="/images/nosotros-tienda.jpg"
+            alt="Tienda Colbateries S.A. — Zona Libre de Colón"
           />
           <div class="about-badge">
             <span class="badge-num">ZLC</span>
@@ -45,6 +45,15 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
     </section>
+
+    <!-- Photo strip -->
+    <div class="photo-strip">
+      <img src="/images/baterias-detalle.jpg" alt="Detalle baterías Colbateries" class="strip-img" />
+      <div class="strip-overlay">
+        <span class="strip-label">Nuestro inventario</span>
+        <p class="strip-sub">Más de 1,500 referencias disponibles para despacho inmediato</p>
+      </div>
+    </div>
 
     <!-- Valores -->
     <section class="section-blue">
@@ -117,8 +126,8 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="reveal-right">
           <img
-            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&h=500&fit=crop&q=80"
-            alt="Zona Libre de Colón Panamá"
+            src="/images/baterias-stock.jpg"
+            alt="Stock de baterías Colbateries"
             class="location-img"
           />
         </div>
@@ -310,6 +319,49 @@ import Footer from '../components/Footer.astro';
   .pill.blue { background: var(--blue); }
 
   .location-img { width: 100%; height: 420px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow-lg); }
+
+  .photo-strip {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+  }
+
+  .strip-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .strip-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(2,29,80,0.72) 0%, rgba(2,29,80,0.35) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--container-pad, 5vw);
+    padding-left: max(5vw, calc((100% - 1200px) / 2 + 2rem));
+  }
+
+  .strip-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 0.6rem;
+  }
+
+  .strip-sub {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.5vw, 1.9rem);
+    font-weight: 900;
+    color: white;
+    max-width: 480px;
+    line-height: 1.25;
+  }
 
   .section-cta {
     background: var(--yellow);
