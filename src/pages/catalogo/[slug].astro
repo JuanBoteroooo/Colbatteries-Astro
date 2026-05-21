@@ -3022,7 +3022,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   .eta-modal-close:hover { border-color: #f2a900; color: #f2a900; }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isPolemik, isCoronas, isXinjia, isVidrios, isModulos, isInsumos, isHerramientas, isJoyeria, isGorrasP, isGorrasL, isPulsoResina, isPulsoSilicona, isPulsoCuero, isPulsoMetalico, isPulsoPvc, isBatMaxell, isPilasEcon, isCapacitores, isBatTianqiu, isBatGp, totalPages: cat.pages ?? 0, catLabel: cat.label }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isPolemik, isCoronas, isXinjia, isVidrios, isModulos, isInsumos, isExhibidores, isHerramientas, isJoyeria, isGorrasP, isGorrasL, isPulsoResina, isPulsoSilicona, isPulsoCuero, isPulsoMetalico, isPulsoPvc, isBatMaxell, isPilasEcon, isCapacitores, isBatTianqiu, isBatGp, totalPages: cat.pages ?? 0, catLabel: cat.label }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -3202,7 +3202,7 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
   // ════════════════════════════
   // ETA / RONDA / EPSON / SII / CORONAS STRUCTURED MODE
   // ════════════════════════════
-  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isCoronas || isXinjia || isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria || isGorrasP || isGorrasL || isPulsoResina || isPulsoSilicona || isPulsoCuero || isPulsoMetalico || isPulsoPvc || isBatMaxell || isPilasEcon || isCapacitores || isBatTianqiu || isBatGp) {
+  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isCoronas || isXinjia || isVidrios || isModulos || isInsumos || isExhibidores || isHerramientas || isJoyeria || isGorrasP || isGorrasL || isPulsoResina || isPulsoSilicona || isPulsoCuero || isPulsoMetalico || isPulsoPvc || isBatMaxell || isPilasEcon || isCapacitores || isBatTianqiu || isBatGp) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');
