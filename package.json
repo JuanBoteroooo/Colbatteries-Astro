@@ -9,6 +9,7 @@
     "parse:eta": "node scripts/parse-eta.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "astro": "^4.15.0",
