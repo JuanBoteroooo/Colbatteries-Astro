@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Página no encontrada — Colbateries S.A." description="La página que buscas no existe.">
+  <Navbar />
+
+  <section class="not-found">
+    <div class="container nf-inner">
+      <span class="nf-code">404</span>
+      <h1 class="nf-title">Página no encontrada</h1>
+      <p class="nf-desc">La página que buscas no existe o fue movida.</p>
+      <div class="nf-actions">
+        <a href="/" class="btn-primary">Ir al inicio</a>
+        <a href="/catalogo" class="btn-secondary">Ver catálogo</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .not-found {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1.5rem;
+    background: var(--white);
+  }
+
+  .nf-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .nf-code {
+    font-family: var(--font-heading);
+    font-size: clamp(6rem, 20vw, 12rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: var(--blue);
+    opacity: 0.08;
+    display: block;
+    margin-bottom: -1rem;
+  }
+
+  .nf-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--blue);
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+
+  .nf-desc {
+    font-size: 1rem;
+    color: rgba(2, 29, 80, 0.5);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .nf-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border: 2px solid rgba(2, 29, 80, 0.2);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--blue);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--yellow);
+    background: rgba(242, 169, 0, 0.06);
+  }
+</style>
