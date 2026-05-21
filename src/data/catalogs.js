@@ -68,7 +68,7 @@ export const groups = [
     ],
   },
   {
-    id: 'Gorras',
+    id: 'gorras',
     name: 'Gorras',
     image: '/images/categorias/gorra-categoria.png',
     catalogs: [
