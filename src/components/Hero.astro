@@ -29,7 +29,7 @@
       </h1>
 
       <p class="hero-desc fade-up delay-2">
-        Distribución exclusiva de las mejores marcas de relojería e insumos. Más de 1,500 referencias en stock para despacho inmediato a toda América.
+        Distribución exclusiva de las mejores marcas de relojería e insumos. Más de 10.000 referencias en stock para despacho inmediato a toda América.
       </p>
 
       <div class="hero-actions fade-up delay-3">
@@ -52,7 +52,7 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num">1,500</span>
+          <span class="stat-num">10.000</span>
           <span class="stat-label">Referencias en stock</span>
         </div>
         <div class="stat-divider"></div>
@@ -96,11 +96,11 @@
         <div class="float-card-body">
           <span class="float-card-tag">Distribuidor Oficial</span>
           <p class="float-card-brand">Baterías</p>
-        </div>
-        <div class="float-card-stars">
-          {Array.from({length: 5}).map(() => (
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--yellow)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          ))}
+          <div class="float-card-stars">
+            {Array.from({length: 5}).map(() => (
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--yellow)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -432,9 +432,7 @@
   .float-card-stars {
     display: flex;
     gap: 1px;
-    flex-shrink: 0;
-    align-self: flex-end;
-    padding-bottom: 2px;
+    margin-top: 0.3rem;
   }
 
   /* ── STOCK BADGE ── */

@@ -1,12 +1,12 @@
 [
   {
-    "modelo": "PUREF/HB-J01-20NG/CF/BC HUBLOT BIG BANG",
+    "modelo": "PUREF/HB-J01-20NG/CF/BC",
     "descripcion": "PULSO DE REPUESTO CON HEBILLA ESPECIAL DE 20MM COLORES DISPONIBLES NEGRO, CAFÉ Y BLANCO",
     "medida": "20mm",
     "img": "/catalogo-pages/pulso-resina/page-02.jpg"
   },
   {
-    "modelo": "PUREF/HB-J01-25NG/CF/BC HUBLOT BIG BANG",
+    "modelo": "PUREF/HB-J01-25NG/CF/BC",
     "descripcion": "PULSO DE REPUESTO CON HEBILLA ESPECIAL DE 25MM COLORES DISPONIBLES NEGRO, CAFÉ Y BLANCO",
     "medida": "25mm",
     "img": "/catalogo-pages/pulso-resina/page-03.jpg"
@@ -246,7 +246,7 @@
     "img": "/catalogo-pages/pulso-resina/page-42.jpg"
   },
   {
-    "modelo": "PULSO DE RESINA NEGRO, AZUL OSCURO, BLANCO, CAFÉ, ROJO",
+    "modelo": "PPUNG/3288-19",
     "descripcion": "3277-19MM PU TIPO HUBLOT/3277-19",
     "medida": "19mm",
     "img": "/catalogo-pages/pulso-resina/page-43.jpg"
@@ -258,8 +258,8 @@
     "img": "/catalogo-pages/pulso-resina/page-44.jpg"
   },
   {
-    "modelo": "PULSO DE RESINA NEGRO, AZUL , BLANCO, GRIS, TURQUEZA",
-    "descripcion": "3283-17MM PU TIPO SWATCH SKIN/3283-17",
+    "modelo": "PPUNG/3283-17",
+    "descripcion": "PULSO DE RESINA NEGRO, AZUL , BLANCO, GRIS, TURQUEZA 3283-17MM PU TIPO SWATCH SKIN/3283-17",
     "medida": "17mm",
     "img": "/catalogo-pages/pulso-resina/page-45.jpg"
   },
