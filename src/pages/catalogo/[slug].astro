@@ -30,6 +30,7 @@ import pilasEconData       from '../../data/pilas-economicas.json';
 import capacitoresData     from '../../data/capacitores.json';
 import batTianqiuData     from '../../data/baterias-tianqiu.json';
 import batGpData          from '../../data/baterias-gp.json';
+import exhibidoresData    from '../../data/exhibidores.json';
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -77,6 +78,7 @@ const isPilasEcon       = isStructured && slug === 'pilas-economicas';
 const isCapacitores     = isStructured && slug === 'capacitores';
 const isBatTianqiu      = isStructured && slug === 'baterias-tianqiu';
 const isBatGp           = isStructured && slug === 'baterias-gp';
+const isExhibidores     = isStructured && slug === 'exhibidores';
 
 const fourColumnSlugs = [
     'pulso-resina', 'pulso-silicona', 'pulso-cuero', 'pulso-metalico', 'pulso-pvc',
@@ -85,7 +87,7 @@ const fourColumnSlugs = [
 const isFourColumn = fourColumnSlugs.includes(slug);
 
 const isWatch   = isPolemik || isXinjia;
-const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
+const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isExhibidores ? exhibidoresData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
 const pdfSlug   = isSII ? 'movimientos-epson' : slug;
 
 // For cover fallback (PDF mode only)
@@ -539,6 +541,97 @@ const pageNums = isGallery ? Array.from({ length: cat.pages }, (_, i) => i + 1) 
                   tipo={p.tipo}
                   nombre={p.nombre}
                   marca={p.marca}
+                  especificacion={p.especificacion}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todos</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
+         EXHIBIDORES STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isExhibidores && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por referencia o descripción..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todos</button>
+            <button class="eta-tipo-pill" data-tipo="EXHIBIDOR">Exhibidores</button>
+            <button class="eta-tipo-pill" data-tipo="CAJA RELOJES">Cajas relojes</button>
+            <button class="eta-tipo-pill" data-tipo="ESTUCHE">Estuches</button>
+            <button class="eta-tipo-pill" data-tipo="EXHIBIDOR ACRÍLICO">Exhib. acrílico</button>
+            <button class="eta-tipo-pill" data-tipo="CAJA FOTO">Caja fotográfica</button>
+            <button class="eta-tipo-pill" data-tipo="EMPAQUE">Empaques</button>
+            <button class="eta-tipo-pill" data-tipo="ORGANIZADOR">Organizadores</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.tipo}
+                data-modelo={(p.modelo as string).toLowerCase()}
+                data-medida={(p.especificacion as string)?.toLowerCase() ?? ''}
+              >
+                <CatalogCard
+                  imagenSrc={p.img as string}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  isInsumos={true}
+                  tipo={p.tipo}
+                  nombre={p.nombre}
+                  marca=""
                   especificacion={p.especificacion}
                 />
               </div>

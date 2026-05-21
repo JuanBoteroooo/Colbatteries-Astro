@@ -1,0 +1,345 @@
+[
+  {
+    "modelo": "EXBIPUL",
+    "nombre": "Exhibidor para pulsos",
+    "tipo": "EXHIBIDOR",
+    "especificacion": "Ø36 cms ancho x 64 cms alto. Material color madera y acetato con cerraduras.",
+    "img": "/catalogo-pages/exhibidores/page-02.jpg"
+  },
+  {
+    "modelo": "TC-17120",
+    "nombre": "Torre exhibidora 120 relojes",
+    "tipo": "EXHIBIDOR",
+    "especificacion": "48x48x180 cm. Material acrílico con luz y bases para reloj.",
+    "img": "/catalogo-pages/exhibidores/page-04.jpg"
+  },
+  {
+    "modelo": "TC-17132",
+    "nombre": "Torre exhibidora 132 relojes",
+    "tipo": "EXHIBIDOR",
+    "especificacion": "Ø40.5x178 cm. Material acrílico con luz, bases para reloj y llaves.",
+    "img": "/catalogo-pages/exhibidores/page-05.jpg"
+  },
+  {
+    "modelo": "TC-4-48",
+    "nombre": "Exhibidor 48 relojes",
+    "tipo": "EXHIBIDOR",
+    "especificacion": "20x31x48 cm. Material acrílico y bases para reloj con llaves.",
+    "img": "/catalogo-pages/exhibidores/page-06.jpg"
+  },
+  {
+    "modelo": "TC-5-60",
+    "nombre": "Exhibidor 60 relojes",
+    "tipo": "EXHIBIDOR",
+    "especificacion": "31x20x59 cm. Material acrílico y bases para reloj con llaves.",
+    "img": "/catalogo-pages/exhibidores/page-07.jpg"
+  },
+  {
+    "modelo": "TC-7004S",
+    "nombre": "Exhibidor circular 40 relojes",
+    "tipo": "EXHIBIDOR",
+    "especificacion": "Ø29x62 cm. Material acrílico y bases para reloj con llaves.",
+    "img": "/catalogo-pages/exhibidores/page-08.jpg"
+  },
+  {
+    "modelo": "TC-7540",
+    "nombre": "Exhibidor 40 relojes",
+    "tipo": "EXHIBIDOR",
+    "especificacion": "40x35x75 cm. Material acrílico y bases para reloj con llaves.",
+    "img": "/catalogo-pages/exhibidores/page-09.jpg"
+  },
+  {
+    "modelo": "K40",
+    "nombre": "Caja estudio fotográfico 40 cm",
+    "tipo": "CAJA FOTO",
+    "especificacion": "40 cm de ancho. Material liviano y resistente con buena iluminación.",
+    "img": "/catalogo-pages/exhibidores/page-10.jpg"
+  },
+  {
+    "modelo": "K60",
+    "nombre": "Caja estudio fotográfico 60 cm",
+    "tipo": "CAJA FOTO",
+    "especificacion": "60 cm de ancho. Material liviano y resistente con buena iluminación.",
+    "img": "/catalogo-pages/exhibidores/page-11.jpg"
+  },
+  {
+    "modelo": "BOX-J4133",
+    "nombre": "Caja plástica 15 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Ext: 41x33.5x14.5 cm. Unidad: 7.2x6.5x5.5 cm. Material plástico con almohadilla de espuma.",
+    "img": "/catalogo-pages/exhibidores/page-12.jpg"
+  },
+  {
+    "modelo": "BOX-J4136",
+    "nombre": "Caja plástica 15 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Ext: 45x36x11.2 cm. Unidad: 7.2x6.5x5.5 cm. Material plástico con almohadilla de espuma.",
+    "img": "/catalogo-pages/exhibidores/page-13.jpg"
+  },
+  {
+    "modelo": "BOX-5",
+    "nombre": "Caja 5 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina con hilo rojo y acetato.",
+    "img": "/catalogo-pages/exhibidores/page-14.jpg"
+  },
+  {
+    "modelo": "TC-PU06",
+    "nombre": "Caja 6 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina.",
+    "img": "/catalogo-pages/exhibidores/page-15.jpg"
+  },
+  {
+    "modelo": "BOX-6-1",
+    "nombre": "Caja 6 relojes con llave",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina con acetato y llave.",
+    "img": "/catalogo-pages/exhibidores/page-16.jpg"
+  },
+  {
+    "modelo": "BOX-6-3",
+    "nombre": "Caja 6 relojes y 3 gafas",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina con hilo rojo y acetato.",
+    "img": "/catalogo-pages/exhibidores/page-17.jpg"
+  },
+  {
+    "modelo": "BOX-8",
+    "nombre": "Caja 8 relojes, anillos y joyas",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina con llave y acetato.",
+    "img": "/catalogo-pages/exhibidores/page-18.jpg"
+  },
+  {
+    "modelo": "TC-HT10",
+    "nombre": "Caja 10 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina con hilo rojo y acetato.",
+    "img": "/catalogo-pages/exhibidores/page-19.jpg"
+  },
+  {
+    "modelo": "TC-HT12",
+    "nombre": "Caja 12 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina con hilo rojo y acetato.",
+    "img": "/catalogo-pages/exhibidores/page-20.jpg"
+  },
+  {
+    "modelo": "TC-PU12",
+    "nombre": "Caja 12 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina y acetato.",
+    "img": "/catalogo-pages/exhibidores/page-21.jpg"
+  },
+  {
+    "modelo": "TC-PU24",
+    "nombre": "Caja 24 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material cuerina fina y acetato.",
+    "img": "/catalogo-pages/exhibidores/page-22.jpg"
+  },
+  {
+    "modelo": "BOX-M6",
+    "nombre": "Caja metálica 6 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material metal.",
+    "img": "/catalogo-pages/exhibidores/page-23.jpg"
+  },
+  {
+    "modelo": "BOX-M6-1",
+    "nombre": "Caja metálica negra 6 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material metal color negro.",
+    "img": "/catalogo-pages/exhibidores/page-24.jpg"
+  },
+  {
+    "modelo": "BOX-M10",
+    "nombre": "Caja metálica 10 relojes",
+    "tipo": "CAJA RELOJES",
+    "especificacion": "Material metal.",
+    "img": "/catalogo-pages/exhibidores/page-25.jpg"
+  },
+  {
+    "modelo": "ESTUCHE-POLEMIK",
+    "nombre": "Estuche Polemik con exhibidor acrílico",
+    "tipo": "ESTUCHE",
+    "especificacion": "Para 1 reloj. Material cartón y acrílico.",
+    "img": "/catalogo-pages/exhibidores/page-26.jpg"
+  },
+  {
+    "modelo": "H-12PK / H-12XJ",
+    "nombre": "Caja acrílica 1 reloj",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material acrílico.",
+    "img": "/catalogo-pages/exhibidores/page-27.jpg"
+  },
+  {
+    "modelo": "ESTUCHE-EB-01 / EB-02",
+    "nombre": "Estuche 1 reloj",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material cartón.",
+    "img": "/catalogo-pages/exhibidores/page-28.jpg"
+  },
+  {
+    "modelo": "ESTUCHE-EB-03 / EB-04",
+    "nombre": "Estuche 1 reloj",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material cartón.",
+    "img": "/catalogo-pages/exhibidores/page-29.jpg"
+  },
+  {
+    "modelo": "EST/TC-7167",
+    "nombre": "Estuche cuadrado 1 reloj",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material plástico, 2 colores.",
+    "img": "/catalogo-pages/exhibidores/page-30.jpg"
+  },
+  {
+    "modelo": "EST/TC-7179",
+    "nombre": "Estuche cuadrado 2 relojes",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material gamusa, 4 colores.",
+    "img": "/catalogo-pages/exhibidores/page-31.jpg"
+  },
+  {
+    "modelo": "EST/A620",
+    "nombre": "Estuche cuadrado 1 reloj",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material cuerina.",
+    "img": "/catalogo-pages/exhibidores/page-32.jpg"
+  },
+  {
+    "modelo": "EST/TC-3112",
+    "nombre": "Estuche metálico 1 reloj",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material metálico.",
+    "img": "/catalogo-pages/exhibidores/page-33.jpg"
+  },
+  {
+    "modelo": "EST/TC-9227",
+    "nombre": "Estuche acrílico 1 reloj",
+    "tipo": "ESTUCHE",
+    "especificacion": "Material acrílico con colores.",
+    "img": "/catalogo-pages/exhibidores/page-34.jpg"
+  },
+  {
+    "modelo": "EXH/TC-888",
+    "nombre": "Exhibidor acrílico tipo C",
+    "tipo": "EXHIBIDOR ACRÍLICO",
+    "especificacion": "Base tipo \"C\" para reloj.",
+    "img": "/catalogo-pages/exhibidores/page-36.jpg"
+  },
+  {
+    "modelo": "EXH/TC-228",
+    "nombre": "Exhibidor acrílico tipo L corto",
+    "tipo": "EXHIBIDOR ACRÍLICO",
+    "especificacion": "Base tipo \"L\" corto para reloj.",
+    "img": "/catalogo-pages/exhibidores/page-37.jpg"
+  },
+  {
+    "modelo": "EXH/TC-137",
+    "nombre": "Exhibidor acrílico tipo L largo",
+    "tipo": "EXHIBIDOR ACRÍLICO",
+    "especificacion": "Base tipo \"L\" largo para reloj.",
+    "img": "/catalogo-pages/exhibidores/page-38.jpg"
+  },
+  {
+    "modelo": "EXH/TC-139",
+    "nombre": "Exhibidor acrílico tipo hoja largo",
+    "tipo": "EXHIBIDOR ACRÍLICO",
+    "especificacion": "Base tipo hoja largo para reloj.",
+    "img": "/catalogo-pages/exhibidores/page-39.jpg"
+  },
+  {
+    "modelo": "CAJA-PULSO",
+    "nombre": "Caja para pulso",
+    "tipo": "EMPAQUE",
+    "especificacion": "17.7x5x1.8 cms.",
+    "img": "/catalogo-pages/exhibidores/page-40.jpg"
+  },
+  {
+    "modelo": "EMPAQUE-PUL",
+    "nombre": "Empaque plástico para pulso",
+    "tipo": "EMPAQUE",
+    "especificacion": "13.5x7x1.8 cms.",
+    "img": "/catalogo-pages/exhibidores/page-41.jpg"
+  },
+  {
+    "modelo": "CAJA-R-247",
+    "nombre": "Caja acrílica con tapa",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "9.5x6.5x2.3 cms.",
+    "img": "/catalogo-pages/exhibidores/page-43.jpg"
+  },
+  {
+    "modelo": "CAJA-MAQGDE/PEQ",
+    "nombre": "Caja acrílica para movimiento",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "Grande 33mm y pequeña 27mm. Con tapa.",
+    "img": "/catalogo-pages/exhibidores/page-44.jpg"
+  },
+  {
+    "modelo": "CAJA-10ESP",
+    "nombre": "Caja acrílica 10 espacios con tapa",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "8.6x6.5x1.6 cms.",
+    "img": "/catalogo-pages/exhibidores/page-45.jpg"
+  },
+  {
+    "modelo": "CALI-772-3",
+    "nombre": "Caja lineal 7 espacios / pastillero",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "7 compartimentos lineales.",
+    "img": "/catalogo-pages/exhibidores/page-46.jpg"
+  },
+  {
+    "modelo": "BAMAX12",
+    "nombre": "Bandeja organizadora 12 espacios",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "Para partes pequeñas.",
+    "img": "/catalogo-pages/exhibidores/page-47.jpg"
+  },
+  {
+    "modelo": "BAMAX24",
+    "nombre": "Bandeja organizadora 24 espacios",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "Para partes pequeñas.",
+    "img": "/catalogo-pages/exhibidores/page-48.jpg"
+  },
+  {
+    "modelo": "#893",
+    "nombre": "Vaso plástico con perilla",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "Para almacenar alcohol mientras se trabaja.",
+    "img": "/catalogo-pages/exhibidores/page-49.jpg"
+  },
+  {
+    "modelo": "#026",
+    "nombre": "Caja plástica 8 compartimentos",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "3\"x2\"x½\". Compartimento: 22x18x10 mm.",
+    "img": "/catalogo-pages/exhibidores/page-50.jpg"
+  },
+  {
+    "modelo": "#874",
+    "nombre": "Caja plástica 11 compartimentos",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "Compartimentos de diferentes tamaños. Fácil de colocar en banco de trabajo.",
+    "img": "/catalogo-pages/exhibidores/page-51.jpg"
+  },
+  {
+    "modelo": "#036",
+    "nombre": "Cajas de aluminio rectangular x24",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "24 cajas de aluminio de 25x18 mm.",
+    "img": "/catalogo-pages/exhibidores/page-52.jpg"
+  },
+  {
+    "modelo": "#037",
+    "nombre": "Cajas de aluminio rectangular x12",
+    "tipo": "ORGANIZADOR",
+    "especificacion": "12 cajas de aluminio de 35x20 mm.",
+    "img": "/catalogo-pages/exhibidores/page-53.jpg"
+  }
+]

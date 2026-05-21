@@ -55,7 +55,7 @@ export const groups = [
       { slug: 'vidrios',           label: 'Vidrios',              structured: true },
       { slug: 'modulos',           label: 'Módulos',              structured: true },
       { slug: 'insumos-relojeria', label: 'Insumos de Relojería', structured: true },
-      { slug: 'exhibidores',       label: 'Exhibidores y Más' },
+      { slug: 'exhibidores',       label: 'Exhibidores y Más',  structured: true },
     ],
   },
   {
