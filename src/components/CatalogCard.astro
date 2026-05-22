@@ -167,6 +167,24 @@ const TIPO_LABEL: Record<string, string> = {
   'CUERINA':          'Cuerina',
 };
 
+const BATTERY_CODE: Record<string, string> = {
+  '315': 'SR716SW',
+  '317': 'SR516SW',
+  '321': 'SR616SW',
+  '335': 'SR512SW',
+  '337': 'SR416SW',
+  '362': 'SR721W',
+  '364': 'SR621SW',
+  '371': 'SR920SW',
+  '373': 'SR916SW',
+  '377': 'SR626SW',
+  '379': 'SR521SW',
+  '394': 'SR936SW',
+  '395': 'SR927SW',
+  '397': 'SR726SW',
+  '399': 'SR927W',
+};
+
 // Title split — for movements: "ETA 251.262" → prefix "ETA", model "251.262"
 // For pulsos: "PPUNG/2220-18/20/22/24 Y 26" → prefix "PPUNG", model "2220-18/20/22/24 Y 26"
 // For coronas/vidrios/modulos: titulo IS the ref, prefix is descriptive name
@@ -207,7 +225,7 @@ const specs: SpecItem[] = isCorona
     ].filter((s): s is SpecItem => s !== null)
   : isModulos
   ? [
-      detalles.bateria     ? { k: 'Batería',    v: `Pila ${detalles.bateria}` } : null,
+      detalles.bateria     ? { k: 'Batería',    v: BATTERY_CODE[detalles.bateria] ?? detalles.bateria } : null,
       detalles.dimensiones ? { k: 'Eje',        v: detalles.dimensiones }       : null,
       tipo                 ? { k: 'Tipo',       v: TIPO_LABEL[tipo] ?? tipo }    : null,
     ].filter((s): s is SpecItem => s !== null)
@@ -235,7 +253,7 @@ const specs: SpecItem[] = isCorona
       detalles.dimensiones      ? { k: 'Dimensiones', v: detalles.dimensiones }      : null,
       detalles.altura           ? { k: 'Altura',      v: `${detalles.altura}mm` }    : null,
       detalles.joyas != null    ? { k: 'Joyas',       v: String(detalles.joyas) }    : null,
-      detalles.bateria          ? { k: 'Batería',     v: `SR ${detalles.bateria}` }  : null,
+      detalles.bateria          ? { k: 'Batería',     v: BATTERY_CODE[detalles.bateria] ?? detalles.bateria }  : null,
     ].filter((s): s is SpecItem => s !== null).slice(0, 4);
 
 const SWATCH: Record<string, string> = {
