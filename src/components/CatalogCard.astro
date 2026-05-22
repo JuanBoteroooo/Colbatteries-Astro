@@ -235,7 +235,7 @@ const specs: SpecItem[] = isCorona
       detalles.dimensiones      ? { k: 'Dimensiones', v: detalles.dimensiones }      : null,
       detalles.altura           ? { k: 'Altura',      v: `${detalles.altura}mm` }    : null,
       detalles.joyas != null    ? { k: 'Joyas',       v: String(detalles.joyas) }    : null,
-      detalles.bateria          ? { k: 'Batería',     v: `CR ${detalles.bateria}` }  : null,
+      detalles.bateria          ? { k: 'Batería',     v: `SR ${detalles.bateria}` }  : null,
     ].filter((s): s is SpecItem => s !== null).slice(0, 4);
 
 const SWATCH: Record<string, string> = {
