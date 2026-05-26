@@ -553,8 +553,6 @@
 </style>
 
 <script>
-  const FORMSPREE_ID = 'YOUR_FORM_ID'; // Reemplazar con tu ID de Formspree
-
   const form = document.getElementById('contactForm') as HTMLFormElement;
   const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
   const successMsg = document.getElementById('formSuccess') as HTMLDivElement;
@@ -570,27 +568,24 @@
     submitBtn.classList.add('loading');
     submitBtn.querySelector('.btn-text')!.textContent = 'Enviando…';
 
-    let emailSent = false;
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '51d87787-e90e-4487-ac5b-6d8c64a645c2',
+          nombre, empresa, email, mensaje,
+          subject: 'Nueva cotización - Colbateries S.A.',
+        }),
+      });
+    } catch (_) {}
 
-    // 1. Enviar por email via Formspree
-    if (FORMSPREE_ID !== 'YOUR_FORM_ID') {
-      try {
-        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nombre, empresa, email, mensaje }),
-        });
-        emailSent = res.ok;
-      } catch (_) {}
-    }
-
-    // 2. Abrir WhatsApp con el mensaje
+    // Abrir WhatsApp con el mensaje
     const waText = encodeURIComponent(
       `Hola Colbateries, soy ${nombre}${empresa ? ` de ${empresa}` : ''}.\n\nMi correo: ${email}\n\n${mensaje}`
     );
     window.open(`https://wa.me/50764156382?text=${waText}`, '_blank');
 
-    // 3. Mostrar confirmación
     submitBtn.style.display = 'none';
     successMsg.classList.add('visible');
     form.reset();
