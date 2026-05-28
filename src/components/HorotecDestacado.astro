@@ -1,106 +1,118 @@
 ---
 const productos = [
-  { img: '/catalogo-pages/horotec/page-02.jpg',  ref: 'MSA00.025-2.5', nombre: 'Lupa Plástico 5.0×' },
-  { img: '/catalogo-pages/horotec/page-03.jpg',  ref: 'MSA00.033-2.5', nombre: 'Lupa Aluminio 4.0×' },
-  { img: '/catalogo-pages/horotec/page-06.jpg',  ref: 'MSA01.020-C',   nombre: 'Set 10 Destornilladores' },
-  { img: '/catalogo-pages/horotec/page-14.jpg',  ref: 'MSA01.080',     nombre: 'Destornillador Suizo' },
-  { img: '/catalogo-pages/horotec/page-22.jpg',  ref: 'MSA02.010',     nombre: 'Pinzas de Precisión' },
-  { img: '/catalogo-pages/horotec/page-38.jpg',  ref: 'MSA05.020',     nombre: 'Herramienta Destapa' },
+  { img: '/images/horotec-float/page-02.png', ref: 'MSA00.025', nombre: 'Lupa Ocular 5.0×', cat: 'LUPAS' },
+  { img: '/images/horotec-float/page-03.png', ref: 'MSA00.033', nombre: 'Lupa Aluminio 4.0×', cat: 'LUPAS' },
+  { img: '/images/horotec-float/page-06.png', ref: 'MSA01.020', nombre: 'Set 10 Destornilladores', cat: 'DESTORNILLADORES' },
+  { img: '/images/horotec-float/page-14.png', ref: 'MSA01.080', nombre: 'Puntas de Repuesto', cat: 'DESTORNILLADORES' },
+  { img: '/images/horotec-float/page-22.png', ref: 'MSAQE.130', nombre: 'Prensa de Precisión', cat: 'MÁQUINAS' },
+  { img: '/images/horotec-float/page-38.png', ref: 'MSA05.XXX', nombre: 'Tapadoras Suizas', cat: 'TAPADORAS' },
 ];
 ---
 
-<section class="horotec-section" id="horotec-nueva-marca">
+<section class="hs" id="horotec-nueva-marca">
 
-  <!-- BG layers -->
-  <div class="horo-bg-grid" aria-hidden="true"></div>
-  <div class="horo-bg-glow" aria-hidden="true"></div>
-  <div class="horo-wordmark-bg" aria-hidden="true">HOROTEC</div>
+  <!-- Swiss red accent bar -->
+  <div class="hs-red-bar" aria-hidden="true"></div>
 
-  <div class="container horo-inner">
+  <!-- Grid overlay -->
+  <div class="hs-grid" aria-hidden="true"></div>
 
-    <!-- LEFT: brand identity -->
-    <div class="horo-identity reveal-left">
+  <!-- Large bg label -->
+  <div class="hs-bg-label" aria-hidden="true">SWISS</div>
 
-      <div class="horo-badges">
-        <span class="badge-new">
-          <span class="badge-dot"></span>
-          Nueva Marca
-        </span>
-        <span class="badge-swiss">
-          <svg width="10" height="10" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M8 0h4v8h8v4h-8v8H8v-8H0V8h8z"/>
-          </svg>
-          Suiza
-        </span>
+  <div class="container hs-inner">
+
+    <!-- ─── LEFT COLUMN ─── -->
+    <div class="hs-left">
+
+      <!-- New-brand badge -->
+      <div class="hs-neue">
+        <span class="hs-neue-dot"></span>
+        <span>Nueva Marca</span>
       </div>
 
-      <h2 class="horo-brand-name">
-        <span class="horo-name-line">HORO</span><span class="horo-name-accent">TEC</span>
-      </h2>
+      <!-- Logo -->
+      <div class="hs-logo-wrap">
+        <img
+          src="/images/horotec-logo.png"
+          alt="Horotec Swiss"
+          class="hs-logo"
+          loading="lazy"
+        />
+      </div>
 
-      <p class="horo-tagline">Herramientas Profesionales<br/>de Relojería Suiza</p>
-
-      <div class="horo-divider">
-        <span class="horo-div-line"></span>
-        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" class="horo-cross">
+      <!-- Rule -->
+      <div class="hs-rule">
+        <span class="hs-rule-line"></span>
+        <svg class="hs-cross-icon" width="12" height="12" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path d="M8 0h4v8h8v4h-8v8H8v-8H0V8h8z"/>
         </svg>
-        <span class="horo-div-line"></span>
+        <span class="hs-rule-line"></span>
       </div>
 
-      <p class="horo-desc">
-        Instrumentos de precisión fabricados en Suiza para el relojero profesional.
-        Lupas, destornilladores, pinzas y herramientas especializadas de la más alta calidad.
+      <!-- Tagline -->
+      <p class="hs-tagline">
+        Herramientas de precisión<br/>fabricadas en Suiza
       </p>
 
-      <div class="horo-stats">
-        <div class="horo-stat">
-          <strong>86+</strong>
-          <span>Referencias</span>
+      <!-- Stats grid -->
+      <div class="hs-stats">
+        <div class="hs-stat">
+          <strong>86<sup>+</sup></strong>
+          <em>Referencias</em>
         </div>
-        <div class="horo-stat-div"></div>
-        <div class="horo-stat">
+        <div class="hs-stat">
           <strong>CHE</strong>
-          <span>Swiss Made</span>
+          <em>Swiss Made</em>
         </div>
-        <div class="horo-stat-div"></div>
-        <div class="horo-stat">
+        <div class="hs-stat">
           <strong>PRO</strong>
-          <span>Uso profesional</span>
+          <em>Profesional</em>
         </div>
       </div>
 
-      <a href="/catalogo/horotec" class="horo-cta">
-        Ver catálogo completo
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <!-- CTA -->
+      <a href="/catalogo/horotec" class="hs-cta">
+        <span>Ver catálogo</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
 
     </div>
 
-    <!-- RIGHT: product showcase -->
-    <div class="horo-showcase reveal-right">
-      <div class="horo-cards-track" id="horoTrack">
+    <!-- ─── RIGHT: product float grid ─── -->
+    <div class="hs-right">
+      <div class="hs-products" id="hsProducts">
         {productos.map((p, i) => (
-          <a href="/catalogo/horotec" class="horo-card" style={`animation-delay: ${i * 0.08}s`}>
-            <div class="horo-card-img-wrap">
-              <img src={p.img} alt={p.nombre} class="horo-card-img" loading="lazy" />
-              <div class="horo-card-shine"></div>
+          <a
+            href="/catalogo/horotec"
+            class="hs-prod"
+            data-index={i}
+            title={p.nombre}
+          >
+            <div class="hs-prod-img-wrap">
+              <img
+                src={p.img}
+                alt={p.nombre}
+                class="hs-prod-img"
+                loading="lazy"
+              />
+              <div class="hs-prod-glow"></div>
             </div>
-            <div class="horo-card-info">
-              <p class="horo-card-ref">{p.ref}</p>
-              <p class="horo-card-name">{p.nombre}</p>
+            <div class="hs-prod-meta">
+              <span class="hs-prod-cat">{p.cat}</span>
+              <span class="hs-prod-ref">{p.ref}</span>
+              <span class="hs-prod-name">{p.nombre}</span>
             </div>
           </a>
         ))}
       </div>
 
-      <!-- Scroll hint -->
-      <div class="horo-scroll-hint">
-        <span>Desliza</span>
-        <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
-          <path d="M0 5h18M14 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <div class="hs-scroll-cue" aria-hidden="true">
+        <span>deslizar</span>
+        <svg width="22" height="8" viewBox="0 0 22 8" fill="none">
+          <path d="M0 4h20M16 1l4 3-4 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
@@ -110,394 +122,417 @@ const productos = [
 </section>
 
 <style>
-  .horotec-section {
+  /* ── SECTION ── */
+  .hs {
     position: relative;
-    background: #060d1c;
-    padding: 7rem 0 6rem;
+    background: #0c0c0c;
+    padding: 0;
     overflow: hidden;
   }
 
-  /* ── BG LAYERS ── */
-  .horo-bg-grid {
+  /* Top red bar — pure Swiss punctuation */
+  .hs-red-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #D42B2B;
+    z-index: 2;
+  }
+
+  /* Subtle grid */
+  .hs-grid {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(2,69,152,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(2,69,152,0.06) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
     pointer-events: none;
   }
 
-  .horo-bg-glow {
+  /* Ghost "SWISS" watermark */
+  .hs-bg-label {
     position: absolute;
-    top: -120px;
-    left: -100px;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(ellipse, rgba(2,69,152,0.18) 0%, transparent 65%);
-    pointer-events: none;
-  }
-
-  .horo-wordmark-bg {
-    position: absolute;
-    bottom: -0.1em;
-    right: -0.04em;
+    bottom: -0.12em;
+    left: -0.02em;
     font-family: var(--font-heading);
-    font-size: clamp(7rem, 16vw, 18rem);
+    font-size: clamp(9rem, 22vw, 22rem);
     font-weight: 900;
     letter-spacing: -0.04em;
     line-height: 1;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255,0.04);
-    pointer-events: none;
+    -webkit-text-stroke: 1px rgba(212,43,43,0.07);
     user-select: none;
+    pointer-events: none;
     white-space: nowrap;
   }
 
   /* ── LAYOUT ── */
-  .horo-inner {
+  .hs-inner {
     display: grid;
-    grid-template-columns: 420px 1fr;
-    gap: 5rem;
-    align-items: center;
+    grid-template-columns: 380px 1fr;
+    min-height: 640px;
     position: relative;
     z-index: 1;
   }
 
-  /* ── IDENTITY ── */
-  .horo-badges {
+  /* ── LEFT ── */
+  .hs-left {
     display: flex;
-    gap: 0.6rem;
-    margin-bottom: 1.75rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 3rem 6rem 0;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    position: relative;
   }
 
-  .badge-new {
+  .hs-left::before {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #D42B2B 50%, transparent);
+    opacity: 0.5;
+  }
+
+  /* Badge */
+  .hs-neue {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.35rem 0.85rem;
-    background: rgba(230,65,50,0.15);
-    border: 1px solid rgba(230,65,50,0.4);
-    border-radius: 100px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #ff6b5b;
-  }
-
-  .badge-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #ff6b5b;
-    animation: pulse-dot 1.8s ease-in-out infinite;
-  }
-
-  @keyframes pulse-dot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%       { opacity: 0.5; transform: scale(0.7); }
-  }
-
-  .badge-swiss {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.35rem 0.85rem;
-    background: rgba(242,169,0,0.1);
-    border: 1px solid rgba(242,169,0,0.3);
-    border-radius: 100px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #f2a900;
-  }
-
-  /* Brand name */
-  .horo-brand-name {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
     font-family: var(--font-heading);
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    line-height: 1;
-    margin-bottom: 1rem;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #D42B2B;
+  }
+
+  .hs-neue-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #D42B2B;
+    animation: blink 1.6s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  /* Logo */
+  .hs-logo-wrap {
+    margin-bottom: 2.25rem;
+  }
+
+  .hs-logo {
+    width: 220px;
+    height: auto;
     display: block;
   }
 
-  .horo-name-line { color: #ffffff; }
-  .horo-name-accent { color: #f2a900; }
-
-  .horo-tagline {
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
-    line-height: 1.6;
-    margin-bottom: 1.75rem;
-  }
-
-  /* Divider */
-  .horo-divider {
+  /* Rule */
+  .hs-rule {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.7rem;
     margin-bottom: 1.5rem;
   }
 
-  .horo-div-line {
+  .hs-rule-line {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, rgba(242,169,0,0.4), transparent);
-  }
-
-  .horo-div-line:last-child {
-    background: linear-gradient(270deg, rgba(242,169,0,0.4), transparent);
-  }
-
-  .horo-cross { color: rgba(242,169,0,0.6); }
-
-  /* Description */
-  .horo-desc {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    max-width: 360px;
-  }
-
-  /* Stats */
-  .horo-stats {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 2.5rem;
-    padding: 1.1rem 1.5rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 12px;
-    width: fit-content;
-  }
-
-  .horo-stat {
-    text-align: center;
-  }
-
-  .horo-stat strong {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #f2a900;
-    letter-spacing: 0.04em;
-    line-height: 1;
-    margin-bottom: 0.2rem;
-  }
-
-  .horo-stat span {
-    font-size: 0.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.3);
-  }
-
-  .horo-stat-div {
-    width: 1px;
-    height: 28px;
     background: rgba(255,255,255,0.1);
   }
 
+  .hs-cross-icon {
+    color: rgba(212,43,43,0.5);
+    flex-shrink: 0;
+  }
+
+  /* Tagline */
+  .hs-tagline {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.38);
+    line-height: 1.9;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Stats */
+  .hs-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+  }
+
+  .hs-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+
+  .hs-stat:last-child { border-right: none; }
+
+  .hs-stat strong {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .hs-stat strong sup {
+    font-size: 0.55em;
+    vertical-align: super;
+    color: #D42B2B;
+  }
+
+  .hs-stat em {
+    font-style: normal;
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.28);
+  }
+
   /* CTA */
-  .horo-cta {
+  .hs-cta {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    padding: 0.85rem 2rem;
-    background: #f2a900;
-    color: #060d1c;
+    gap: 0.65rem;
+    padding: 0.8rem 1.75rem;
+    background: #D42B2B;
+    color: #ffffff;
     font-family: var(--font-heading);
-    font-size: 0.82rem;
+    font-size: 0.75rem;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 2px;
+    width: fit-content;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   }
 
-  .horo-cta:hover {
-    background: #ffbe0b;
+  .hs-cta:hover {
+    background: #b82020;
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(242,169,0,0.35);
+    box-shadow: 0 10px 30px rgba(212,43,43,0.4);
   }
 
-  /* ── SHOWCASE ── */
-  .horo-showcase {
+  /* ── RIGHT: product showcase ── */
+  .hs-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 0 4rem 3rem;
     overflow: hidden;
     position: relative;
   }
 
-  .horo-showcase::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    background: linear-gradient(90deg, #060d1c, transparent);
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .horo-showcase::after {
+  .hs-right::after {
     content: '';
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     width: 80px;
-    background: linear-gradient(270deg, #060d1c, transparent);
-    z-index: 2;
+    background: linear-gradient(270deg, #0c0c0c, transparent);
     pointer-events: none;
+    z-index: 2;
   }
 
-  .horo-cards-track {
+  /* Horizontal scroll track */
+  .hs-products {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     overflow-x: auto;
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 2rem 2rem 2.5rem 0;
     scrollbar-width: none;
     cursor: grab;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .horo-cards-track:active { cursor: grabbing; }
-  .horo-cards-track::-webkit-scrollbar { display: none; }
+  .hs-products:active { cursor: grabbing; }
+  .hs-products::-webkit-scrollbar { display: none; }
 
-  /* Product card */
-  .horo-card {
+  /* ─ Product card ─ */
+  .hs-prod {
     flex-shrink: 0;
-    width: 200px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    overflow: hidden;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.25s, box-shadow 0.3s;
+    scroll-snap-align: start;
     opacity: 0;
-    animation: cardFadeUp 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+    transform: translateY(24px);
+    transition:
+      opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+      transform 0.55s cubic-bezier(0.22,1,0.36,1);
   }
 
-  @keyframes cardFadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+  .hs-prod.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  .horo-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(242,169,0,0.4);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(242,169,0,0.2);
-  }
-
-  .horo-card-img-wrap {
+  /* Floating image area — no card bg, just the PNG on dark */
+  .hs-prod-img-wrap {
     position: relative;
-    aspect-ratio: 1 / 1;
-    background: rgba(255,255,255,0.06);
-    overflow: hidden;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
   }
 
-  .horo-card-img {
-    width: 100%;
-    height: 100%;
+  .hs-prod-img {
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    padding: 1rem;
-    transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), filter 0.5s;
+    filter: drop-shadow(0 12px 28px rgba(0,0,0,0.55));
   }
 
-  .horo-card:hover .horo-card-img { transform: scale(1.07); }
+  .hs-prod:hover .hs-prod-img {
+    transform: translateY(-8px) scale(1.04);
+    filter: drop-shadow(0 24px 40px rgba(0,0,0,0.7)) drop-shadow(0 0 20px rgba(212,43,43,0.2));
+  }
 
-  .horo-card-shine {
+  /* Subtle red glow under each product on hover */
+  .hs-prod-glow {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 30px;
+    background: radial-gradient(ellipse, rgba(212,43,43,0.25), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
     pointer-events: none;
   }
 
-  .horo-card-info {
-    padding: 0.85rem 1rem;
-    border-top: 1px solid rgba(255,255,255,0.06);
+  .hs-prod:hover .hs-prod-glow { opacity: 1; }
+
+  /* Meta row */
+  .hs-prod-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0 0.25rem;
+    border-left: 2px solid rgba(212,43,43,0.4);
+    padding-left: 0.7rem;
+    transition: border-color 0.25s;
   }
 
-  .horo-card-ref {
+  .hs-prod:hover .hs-prod-meta { border-color: #D42B2B; }
+
+  .hs-prod-cat {
+    font-family: var(--font-heading);
+    font-size: 0.52rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D42B2B;
+  }
+
+  .hs-prod-ref {
     font-family: 'Courier New', monospace;
     font-size: 0.65rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
-    color: #f2a900;
-    margin-bottom: 0.2rem;
-    opacity: 0.8;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
   }
 
-  .horo-card-name {
-    font-size: 0.75rem;
+  .hs-prod-name {
+    font-size: 0.8rem;
     font-weight: 600;
     color: rgba(255,255,255,0.75);
     line-height: 1.3;
   }
 
-  /* Scroll hint */
-  .horo-scroll-hint {
+  /* Scroll cue */
+  .hs-scroll-cue {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 0.4rem;
-    padding: 0 1.5rem;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    gap: 0.5rem;
+    padding: 0 0.25rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.2);
-    margin-top: 0.25rem;
+    color: rgba(255,255,255,0.16);
+    margin-top: 0.5rem;
   }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 1100px) {
-    .horo-inner {
-      grid-template-columns: 360px 1fr;
-      gap: 3rem;
-    }
+  @media (max-width: 1080px) {
+    .hs-inner { grid-template-columns: 320px 1fr; }
+    .hs-logo  { width: 180px; }
   }
 
-  @media (max-width: 860px) {
-    .horo-inner {
+  @media (max-width: 820px) {
+    .hs-inner {
       grid-template-columns: 1fr;
-      gap: 3.5rem;
+      min-height: auto;
     }
 
-    .horo-brand-name { font-size: clamp(3rem, 12vw, 5rem); }
-    .horo-showcase::before { display: none; }
+    .hs-left {
+      padding: 5rem 0 3rem;
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .hs-left::before { display: none; }
+
+    .hs-right {
+      padding: 3rem 0 4rem;
+    }
   }
 
   @media (max-width: 480px) {
-    .horo-stats { flex-direction: column; gap: 0.75rem; }
-    .horo-stat-div { width: 40px; height: 1px; }
-    .horo-card { width: 170px; }
+    .hs-prod { width: 200px; }
+    .hs-prod-img-wrap { height: 180px; }
   }
 </style>
 
 <script>
   // Drag scroll
-  const track = document.getElementById('horoTrack') as HTMLElement | null;
+  const track = document.getElementById('hsProducts') as HTMLElement | null;
   if (track) {
     let isDown = false, startX = 0, scrollLeft = 0;
     track.addEventListener('mousedown', e => {
       isDown = true;
       startX = e.pageX - track.offsetLeft;
       scrollLeft = track.scrollLeft;
+      track.style.cursor = 'grabbing';
     });
-    document.addEventListener('mouseup', () => { isDown = false; });
+    document.addEventListener('mouseup', () => {
+      isDown = false;
+      track.style.cursor = 'grab';
+    });
     track.addEventListener('mousemove', e => {
       if (!isDown) return;
       e.preventDefault();
@@ -505,24 +540,20 @@ const productos = [
     });
   }
 
-  // Trigger card animations on scroll-into-view
+  // Staggered reveal on scroll
   const section = document.getElementById('horotec-nueva-marca');
   if (section) {
+    const cards = section.querySelectorAll<HTMLElement>('.hs-prod');
     const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          section.querySelectorAll<HTMLElement>('.horo-card').forEach(c => {
-            c.style.animationPlayState = 'running';
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          cards.forEach((card, i) => {
+            setTimeout(() => card.classList.add('visible'), i * 90);
           });
           obs.disconnect();
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1 });
     obs.observe(section);
-
-    // Pause animations until visible
-    section.querySelectorAll<HTMLElement>('.horo-card').forEach(c => {
-      c.style.animationPlayState = 'paused';
-    });
   }
 </script>
