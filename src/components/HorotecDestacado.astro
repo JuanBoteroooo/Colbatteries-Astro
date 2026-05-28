@@ -519,7 +519,7 @@ const productos = [
 </style>
 
 <script>
-  // Drag scroll
+  // Drag scroll + wheel-to-horizontal-scroll
   const track = document.getElementById('hsProducts') as HTMLElement | null;
   if (track) {
     let isDown = false, startX = 0, scrollLeft = 0;
@@ -538,6 +538,13 @@ const productos = [
       e.preventDefault();
       track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX);
     });
+
+    // Convert vertical wheel to horizontal scroll
+    track.addEventListener('wheel', e => {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      track.scrollLeft += e.deltaY * 1.5;
+    }, { passive: false });
   }
 
   // Staggered reveal on scroll
