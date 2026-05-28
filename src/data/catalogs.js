@@ -21,6 +21,7 @@ export const groups = [
       { slug: 'baterias-maxell',   label: 'Baterías Maxell',   structured: true },
       { slug: 'pilas-economicas',  label: 'Pilas Económicas',  structured: true },
       { slug: 'capacitores',       label: 'Capacitores',       structured: true },
+      { slug: 'pilas-renata',      label: 'Pilas Renata',      structured: true },
     ],
   },
   {
