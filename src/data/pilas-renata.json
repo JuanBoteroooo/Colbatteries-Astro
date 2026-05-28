@@ -3,270 +3,315 @@
     "modelo": "R-SR1116SW",
     "descripcion": "Pila Renata SR1116SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-03.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-03.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-03.jpg"
   },
   {
     "modelo": "R-SR1120W",
     "descripcion": "Pila Renata SR1120W",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-04.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-04.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-04.jpg"
   },
   {
     "modelo": "R-SR1130SW",
     "descripcion": "Pila Renata SR1130SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-05.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-05.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-05.jpg"
   },
   {
     "modelo": "R-SR41W",
     "descripcion": "Pila Renata SR41W",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-06.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-06.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-06.jpg"
   },
   {
     "modelo": "R-SR48W",
     "descripcion": "Pila Renata SR48W",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-07.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-07.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-07.jpg"
   },
   {
     "modelo": "R-SR416SW",
     "descripcion": "Pila Renata SR416SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-08.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-08.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-08.jpg"
   },
   {
     "modelo": "R-SR512SW",
     "descripcion": "Pila Renata SR512SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-09.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-09.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-09.jpg"
   },
   {
     "modelo": "R-SR516SW",
     "descripcion": "Pila Renata SR516SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-10.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-10.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-10.jpg"
   },
   {
     "modelo": "R-SR521SW",
     "descripcion": "Pila Renata SR521SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-11.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-11.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-11.jpg"
   },
   {
     "modelo": "R-SR527SW",
     "descripcion": "Pila Renata SR527SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-12.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-12.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-12.jpg"
   },
   {
     "modelo": "R-SR616SW",
     "descripcion": "Pila Renata SR616SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-13.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-13.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-13.jpg"
   },
   {
     "modelo": "R-SR621SW",
     "descripcion": "Pila Renata SR621SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-14.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-14.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-14.jpg"
   },
   {
     "modelo": "R-SR626SW",
     "descripcion": "Pila Renata SR626SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-15.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-15.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-15.jpg"
   },
   {
     "modelo": "R-SR712SW",
     "descripcion": "Pila Renata SR712SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-16.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-16.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-16.jpg"
   },
   {
     "modelo": "R-SR714SW",
     "descripcion": "Pila Renata SR714SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-17.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-17.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-17.jpg"
   },
   {
     "modelo": "R-SR716SW",
     "descripcion": "Pila Renata SR716SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-18.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-18.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-18.jpg"
   },
   {
     "modelo": "R-SR721SW",
     "descripcion": "Pila Renata SR721SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-19.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-19.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-19.jpg"
   },
   {
     "modelo": "R-SR726W",
     "descripcion": "Pila Renata SR726W",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-20.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-20.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-20.jpg"
   },
   {
     "modelo": "R-SR754W",
     "descripcion": "Pila Renata SR754W",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-21.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-21.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-21.jpg"
   },
   {
     "modelo": "R-SR916SW",
     "descripcion": "Pila Renata SR916SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-22.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-22.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-22.jpg"
   },
   {
     "modelo": "R-SR920SW",
     "descripcion": "Pila Renata SR920SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-23.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-23.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-23.jpg"
   },
   {
     "modelo": "R-SR927SW",
     "descripcion": "Pila Renata SR927SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-24.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-24.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-24.jpg"
   },
   {
     "modelo": "R-SR936SW",
     "descripcion": "Pila Renata SR936SW",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-25.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-25.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-25.jpg"
   },
   {
     "modelo": "R-CR1025",
     "descripcion": "Pila Renata CR1025",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-29.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-29.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-29.jpg"
   },
   {
     "modelo": "R-CR1216",
     "descripcion": "Pila Renata CR1216",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-30.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-30.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-30.jpg"
   },
   {
     "modelo": "R-CR1220",
     "descripcion": "Pila Renata CR1220",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-31.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-31.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-31.jpg"
   },
   {
     "modelo": "R-CR1225",
     "descripcion": "Pila Renata CR1225",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-32.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-32.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-32.jpg"
   },
   {
     "modelo": "R-CR1616",
     "descripcion": "Pila Renata CR1616",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-33.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-33.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-33.jpg"
   },
   {
     "modelo": "R-CR1620",
     "descripcion": "Pila Renata CR1620",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-34.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-34.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-34.jpg"
   },
   {
     "modelo": "R-CR1632",
     "descripcion": "Pila Renata CR1632",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-35.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-35.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-35.jpg"
   },
   {
     "modelo": "R-CR2016",
     "descripcion": "Pila Renata CR2016",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-36.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-36.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-36.jpg"
   },
   {
     "modelo": "R-CR2025",
     "descripcion": "Pila Renata CR2025",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-37.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-37.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-37.jpg"
   },
   {
     "modelo": "R-CR2032",
     "descripcion": "Pila Renata CR2032",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-38.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-38.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-38.jpg"
   },
   {
     "modelo": "R-CR2320",
     "descripcion": "Pila Renata CR2320",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-39.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-39.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-39.jpg"
   },
   {
     "modelo": "R-CR2325",
     "descripcion": "Pila Renata CR2325",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-40.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-40.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-40.jpg"
   },
   {
     "modelo": "R-CR2430",
     "descripcion": "Pila Renata CR2430",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-41.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-41.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-41.jpg"
   },
   {
     "modelo": "R-CR2450",
     "descripcion": "Pila Renata CR2450",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-42.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-42.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-42.jpg"
   },
   {
     "modelo": "R-CR2450",
     "descripcion": "Pila Renata CR2450",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-43.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-43.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-43.jpg"
   },
   {
     "modelo": "R-CR2016X5",
     "descripcion": "Pila Renata CR2016X5",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-45.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-45.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-45.jpg"
   },
   {
     "modelo": "R-CR2025X5",
     "descripcion": "Pila Renata CR2025X5",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-46.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-46.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-46.jpg"
   },
   {
     "modelo": "R-CR2032X5",
     "descripcion": "Pila Renata CR2032X5",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-47.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-47.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-47.jpg"
   },
   {
     "modelo": "R-ZA10 PILA AUDITIVA",
     "descripcion": "Pila Renata ZA10 PILA AUDITIVA",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-49.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-49.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-49.jpg"
   },
   {
     "modelo": "R-ZA13 PILA AUDITIVA",
     "descripcion": "Pila Renata ZA13 PILA AUDITIVA",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-50.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-50.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-50.jpg"
   },
   {
     "modelo": "R-ZA312 PILA AUDITIVA",
     "descripcion": "Pila Renata ZA312 PILA AUDITIVA",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-51.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-51.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-51.jpg"
   },
   {
     "modelo": "R-ZA675 PILA AUDITIVA",
     "descripcion": "Pila Renata ZA675 PILA AUDITIVA",
     "tipo": "RENATA",
-    "img": "/catalogo-pages/pilas-renata/page-52.jpg"
+    "img": "/catalogo-pages/pilas-renata/page-52.jpg",
+    "imgFull": "/catalogo-pages/pilas-renata-full/page-52.jpg"
   }
 ]

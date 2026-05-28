@@ -3,516 +3,602 @@
     "modelo": "MSA00.025-2.5",
     "descripcion": "Lente plástico negro 5.0x",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/horotec/page-02.jpg"
+    "img": "/catalogo-pages/horotec/page-02.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-02.jpg"
   },
   {
     "modelo": "MSA00.033-2.5",
     "descripcion": "Lente aluminio rojo 4.0x",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/horotec/page-03.jpg"
+    "img": "/catalogo-pages/horotec/page-03.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-03.jpg"
   },
   {
     "modelo": "MSA00.038",
     "descripcion": "Lupa manual aluminio 3x",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/horotec/page-04.jpg"
+    "img": "/catalogo-pages/horotec/page-04.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-04.jpg"
   },
   {
     "modelo": "MSA00.100D-2.5 Ojo Derecho / MSA00.100G-2.5 Ojo Izquierdo",
     "descripcion": "Lupas ARY para gafas estándar",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/horotec/page-05.jpg"
+    "img": "/catalogo-pages/horotec/page-05.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-05.jpg"
   },
   {
     "modelo": "MSA01.020-C",
     "descripcion": "Conjunto de 10 destornilladores de relojero sobre zócalo giratorio",
     "tipo": "DESTORNILLADOR",
-    "img": "/catalogo-pages/horotec/page-06.jpg"
+    "img": "/catalogo-pages/horotec/page-06.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-06.jpg"
   },
   {
     "modelo": "MSA01.215-050, MSA01.215-060, 070, 080, 090, 100, 120, 140, 150, 160, 180, 200, 250, 300",
     "descripcion": "Cuchilla destornillador acero inoxidable Ø0.50 mm, 0.60MM, 0.70MM, 0.80MM, 0.90MM, 1.00MM, 1.20MM, 1.40MM, 1.50MM,",
     "tipo": "DESTORNILLADOR",
-    "img": "/catalogo-pages/horotec/page-07.jpg"
+    "img": "/catalogo-pages/horotec/page-07.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-07.jpg"
   },
   {
     "modelo": "MSA01.218-C",
     "descripcion": "Surtido de destornilladores de relojero con zócalo giratorio",
     "tipo": "DESTORNILLADOR",
-    "img": "/catalogo-pages/horotec/page-08.jpg"
+    "img": "/catalogo-pages/horotec/page-08.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-08.jpg"
   },
   {
     "modelo": "MSA01.218-E",
     "descripcion": "Características principales:",
     "tipo": "DESTORNILLADOR",
-    "img": "/catalogo-pages/horotec/page-09.jpg"
+    "img": "/catalogo-pages/horotec/page-09.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-09.jpg"
   },
   {
     "modelo": "MSA01.418",
     "descripcion": "Juego destornilladores Phillips (5 piezas)",
     "tipo": "DESTORNILLADOR",
-    "img": "/catalogo-pages/horotec/page-10.jpg"
+    "img": "/catalogo-pages/horotec/page-10.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-10.jpg"
   },
   {
     "modelo": "MSA02.024",
     "descripcion": "Broca acero con mango",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-11.jpg"
+    "img": "/catalogo-pages/horotec/page-11.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-11.jpg"
   },
   {
     "modelo": "MSA03.416",
     "descripcion": "Calibrador precisión",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-12.jpg"
+    "img": "/catalogo-pages/horotec/page-12.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-12.jpg"
   },
   {
     "modelo": "MSA03.657",
     "descripcion": "Prensa para montar/desmontar pulsadores y tubos de corona",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-13.jpg"
+    "img": "/catalogo-pages/horotec/page-13.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-13.jpg"
   },
   {
     "modelo": "MSA05.007",
     "descripcion": "Par de palancas para agujas 2.5 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-14.jpg"
+    "img": "/catalogo-pages/horotec/page-14.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-14.jpg"
   },
   {
     "modelo": "MSA05.008",
     "descripcion": "Par de palancas para agujas 4 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-15.jpg"
+    "img": "/catalogo-pages/horotec/page-15.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-15.jpg"
   },
   {
     "modelo": "MSA05.010",
     "descripcion": "Herramienta para montar agujas Ø0.50 / Ø1.00 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-16.jpg"
+    "img": "/catalogo-pages/horotec/page-16.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-16.jpg"
   },
   {
     "modelo": "MSA05.011",
     "descripcion": "Herramienta para montar agujas Ø0.80 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-17.jpg"
+    "img": "/catalogo-pages/horotec/page-17.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-17.jpg"
   },
   {
     "modelo": "MSA05.012",
     "descripcion": "Herramienta para montar agujas Ø1.50 / Ø2.00 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-18.jpg"
+    "img": "/catalogo-pages/horotec/page-18.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-18.jpg"
   },
   {
     "modelo": "MSA05.020",
     "descripcion": "Juego herramientas para montar agujas (4 piezas)",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-19.jpg"
+    "img": "/catalogo-pages/horotec/page-19.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-19.jpg"
   },
   {
     "modelo": "MSA05.021",
     "descripcion": "Prensa para montar agujas con base grande",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-20.jpg"
+    "img": "/catalogo-pages/horotec/page-20.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-20.jpg"
   },
   {
     "modelo": "MSA05.022",
     "descripcion": "Prensa para montar agujas con base grande (3 brocas)",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-21.jpg"
+    "img": "/catalogo-pages/horotec/page-21.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-21.jpg"
   },
   {
     "modelo": "MSA05.129",
     "descripcion": "Prensa para retirar agujas sin tocar esfera",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-22.jpg"
+    "img": "/catalogo-pages/horotec/page-22.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-22.jpg"
   },
   {
     "modelo": "MSA06.136",
     "descripcion": "Prensa de precisión para tapas/cristales/bisel",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-23.jpg"
+    "img": "/catalogo-pages/horotec/page-23.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-23.jpg"
   },
   {
     "modelo": "MSA06.505",
     "descripcion": "Juego matrices reversibles para biseles",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-24.jpg"
+    "img": "/catalogo-pages/horotec/page-24.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-24.jpg"
   },
   {
     "modelo": "MSA06.510",
     "descripcion": "Juego matrices para cristales minerales planos",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-25.jpg"
+    "img": "/catalogo-pages/horotec/page-25.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-25.jpg"
   },
   {
     "modelo": "MSA06.520",
     "descripcion": "Matrices roscadas para cristales",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/horotec/page-26.jpg"
+    "img": "/catalogo-pages/horotec/page-26.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-26.jpg"
   },
   {
     "modelo": "MSA06.521",
     "descripcion": "Matrices roscadas para biseles",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-27.jpg"
+    "img": "/catalogo-pages/horotec/page-27.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-27.jpg"
   },
   {
     "modelo": "MSA06.522",
     "descripcion": "Matrices para cristales con anillo tensión",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-28.jpg"
+    "img": "/catalogo-pages/horotec/page-28.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-28.jpg"
   },
   {
     "modelo": "MSA06.523",
     "descripcion": "Matrices grandes para cristales",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-29.jpg"
+    "img": "/catalogo-pages/horotec/page-29.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-29.jpg"
   },
   {
     "modelo": "MSA06.524",
     "descripcion": "Matrices para cristales grandes planos",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-30.jpg"
+    "img": "/catalogo-pages/horotec/page-30.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-30.jpg"
   },
   {
     "modelo": "MSA06.525",
     "descripcion": "Matrices para biseles grandes",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-31.jpg"
+    "img": "/catalogo-pages/horotec/page-31.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-31.jpg"
   },
   {
     "modelo": "MSA06.526",
     "descripcion": "Matrices para cristales abombados",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-32.jpg"
+    "img": "/catalogo-pages/horotec/page-32.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-32.jpg"
   },
   {
     "modelo": "MSA07.004",
     "descripcion": "Matrices para cristales abombados",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-33.jpg"
+    "img": "/catalogo-pages/horotec/page-33.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-33.jpg"
   },
   {
     "modelo": "MSA07.013",
     "descripcion": "Abridor de cajas roscadas 65 mm",
     "tipo": "TAPADORA",
-    "img": "/catalogo-pages/horotec/page-34.jpg"
+    "img": "/catalogo-pages/horotec/page-34.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-34.jpg"
   },
   {
     "modelo": "MSA07.014",
     "descripcion": "Abridor de cajas roscadas 57 mm",
     "tipo": "TAPADORA",
-    "img": "/catalogo-pages/horotec/page-35.jpg"
+    "img": "/catalogo-pages/horotec/page-35.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-35.jpg"
   },
   {
     "modelo": "MSA07.026",
     "descripcion": "Abridor con mango aluminio",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/horotec/page-36.jpg"
+    "img": "/catalogo-pages/horotec/page-36.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-36.jpg"
   },
   {
     "modelo": "MSA07.106",
     "descripcion": "Matrices para cerrar cajas a presión",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-37.jpg"
+    "img": "/catalogo-pages/horotec/page-37.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-37.jpg"
   },
   {
     "modelo": "MSA07.107",
     "descripcion": "Matrices para cerrar cajas presión grandes",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-38.jpg"
+    "img": "/catalogo-pages/horotec/page-38.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-38.jpg"
   },
   {
     "modelo": "MSA07.108",
     "descripcion": "Matrices grandes para cajas presión",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-39.jpg"
+    "img": "/catalogo-pages/horotec/page-39.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-39.jpg"
   },
   {
     "modelo": "MSA07.110",
     "descripcion": "Prensa para cerrar cajas presión",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-40.jpg"
+    "img": "/catalogo-pages/horotec/page-40.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-40.jpg"
   },
   {
     "modelo": "MSA07.112",
     "descripcion": "Matrices para cristales planos",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-41.jpg"
+    "img": "/catalogo-pages/horotec/page-41.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-41.jpg"
   },
   {
     "modelo": "MSA07.115",
     "descripcion": "Herramienta abrir cajas presión",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-42.jpg"
+    "img": "/catalogo-pages/horotec/page-42.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-42.jpg"
   },
   {
     "modelo": "MSA07.117",
     "descripcion": "Extractor de biseles",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-43.jpg"
+    "img": "/catalogo-pages/horotec/page-43.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-43.jpg"
   },
   {
     "modelo": "MSA07.131",
     "descripcion": "Prensa cerrar cajas con matrices",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-44.jpg"
+    "img": "/catalogo-pages/horotec/page-44.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-44.jpg"
   },
   {
     "modelo": "MSA07.320",
     "descripcion": "Mini prensa abrir/cerrar cajas",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-45.jpg"
+    "img": "/catalogo-pages/horotec/page-45.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-45.jpg"
   },
   {
     "modelo": "MSA07.368",
     "descripcion": "Prensa profesional abrir/cerrar cajas",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-46.jpg"
+    "img": "/catalogo-pages/horotec/page-46.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-46.jpg"
   },
   {
     "modelo": "MSA09.003",
     "descripcion": "Soporte movimiento reloj calibre pequeño",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-47.jpg"
+    "img": "/catalogo-pages/horotec/page-47.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-47.jpg"
   },
   {
     "modelo": "MSA09.004",
     "descripcion": "Soporte movimiento reloj calibre grande",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-48.jpg"
+    "img": "/catalogo-pages/horotec/page-48.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-48.jpg"
   },
   {
     "modelo": "MSA09.305",
     "descripcion": "Soporte goma con tapa antipolvo",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-49.jpg"
+    "img": "/catalogo-pages/horotec/page-49.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-49.jpg"
   },
   {
     "modelo": "MSA09.310",
     "descripcion": "Placa remachado esferas",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-50.jpg"
+    "img": "/catalogo-pages/horotec/page-50.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-50.jpg"
   },
   {
     "modelo": "MSA09.311-01",
     "descripcion": "Soporte reloj negro cuero",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-51.jpg"
+    "img": "/catalogo-pages/horotec/page-51.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-51.jpg"
   },
   {
     "modelo": "MSA09.311-02",
     "descripcion": "Soporte reloj rojo/blanco",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-52.jpg"
+    "img": "/catalogo-pages/horotec/page-52.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-52.jpg"
   },
   {
     "modelo": "MSA09.311-03",
     "descripcion": "Soporte reloj marrón/beige",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-53.jpg"
+    "img": "/catalogo-pages/horotec/page-53.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-53.jpg"
   },
   {
     "modelo": "MSA09.311-04",
     "descripcion": "Soporte reloj gris",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/horotec/page-54.jpg"
+    "img": "/catalogo-pages/horotec/page-54.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-54.jpg"
   },
   {
     "modelo": "MSA10.305-R",
     "descripcion": "Herramienta pasadores resorte",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-55.jpg"
+    "img": "/catalogo-pages/horotec/page-55.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-55.jpg"
   },
   {
     "modelo": "MSA10.500",
     "descripcion": "Prensa para pasadores de brazalete",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-56.jpg"
+    "img": "/catalogo-pages/horotec/page-56.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-56.jpg"
   },
   {
     "modelo": "MSA10.503-0.60, 0.70,0.80,0.90, 1.00",
     "descripcion": "Punzón Ø0.60 mm, 0.70 mm, 0.80mm, 0.90 mm, 1.00 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-57.jpg"
+    "img": "/catalogo-pages/horotec/page-57.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-57.jpg"
   },
   {
     "modelo": "MSA10.510",
     "descripcion": "Herramienta punzones con base madera",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-58.jpg"
+    "img": "/catalogo-pages/horotec/page-58.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-58.jpg"
   },
   {
     "modelo": "MSA10.519",
     "descripcion": "Prensa sujeción brazaletes",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-59.jpg"
+    "img": "/catalogo-pages/horotec/page-59.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-59.jpg"
   },
   {
     "modelo": "MSA10.520",
     "descripcion": "Herramienta tornillos brazalete",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-60.jpg"
+    "img": "/catalogo-pages/horotec/page-60.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-60.jpg"
   },
   {
     "modelo": "MSA10.533",
     "descripcion": "Juego punzones completo",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-61.jpg"
+    "img": "/catalogo-pages/horotec/page-61.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-61.jpg"
   },
   {
     "modelo": "MSA12.302-1",
     "descripcion": "Pinza fuerte acero antimagnético",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-62.jpg"
+    "img": "/catalogo-pages/horotec/page-62.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-62.jpg"
   },
   {
     "modelo": "MSA12.302-2",
     "descripcion": "Pinza fina acero antimagnético",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-63.jpg"
+    "img": "/catalogo-pages/horotec/page-63.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-63.jpg"
   },
   {
     "modelo": "MSA12.302-3",
     "descripcion": "Pinza fina espiral",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-64.jpg"
+    "img": "/catalogo-pages/horotec/page-64.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-64.jpg"
   },
   {
     "modelo": "MSA12.302-5",
     "descripcion": "Pinza extra fina",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-65.jpg"
+    "img": "/catalogo-pages/horotec/page-65.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-65.jpg"
   },
   {
     "modelo": "MSA12.302-F",
     "descripcion": "Pinza plana para agujas",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-66.jpg"
+    "img": "/catalogo-pages/horotec/page-66.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-66.jpg"
   },
   {
     "modelo": "MSA12.303-B5",
     "descripcion": "Pinza punta acero",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-67.jpg"
+    "img": "/catalogo-pages/horotec/page-67.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-67.jpg"
   },
   {
     "modelo": "MSA12.714",
     "descripcion": "Pinza fibra carbono",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-68.jpg"
+    "img": "/catalogo-pages/horotec/page-68.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-68.jpg"
   },
   {
     "modelo": "MSA12.763",
     "descripcion": "Pinza puntas PEEK fina",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-69.jpg"
+    "img": "/catalogo-pages/horotec/page-69.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-69.jpg"
   },
   {
     "modelo": "MSA12.764",
     "descripcion": "Pinza puntas PEEK extra fina",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/horotec/page-70.jpg"
+    "img": "/catalogo-pages/horotec/page-70.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-70.jpg"
   },
   {
     "modelo": "MSA17.014",
     "descripcion": "Cubierta antipolvo vidrio",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-71.jpg"
+    "img": "/catalogo-pages/horotec/page-71.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-71.jpg"
   },
   {
     "modelo": "MSA17.104",
     "descripcion": "Set aceiteros aluminio completo",
     "tipo": "INSUMO",
-    "img": "/catalogo-pages/horotec/page-72.jpg"
+    "img": "/catalogo-pages/horotec/page-72.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-72.jpg"
   },
   {
     "modelo": "MSA17.106",
     "descripcion": "Set aceiteros aluminio colores",
     "tipo": "INSUMO",
-    "img": "/catalogo-pages/horotec/page-73.jpg"
+    "img": "/catalogo-pages/horotec/page-73.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-73.jpg"
   },
   {
     "modelo": "MSA17.583-35",
     "descripcion": "Caja plástica esfera Ø35 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-74.jpg"
+    "img": "/catalogo-pages/horotec/page-74.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-74.jpg"
   },
   {
     "modelo": "MSA17.583-45",
     "descripcion": "Caja plástica esfera Ø35 mm",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-75.jpg"
+    "img": "/catalogo-pages/horotec/page-75.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-75.jpg"
   },
   {
     "modelo": "MSA17.584-40",
     "descripcion": "Caja plástica 40x40 mm",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-76.jpg"
+    "img": "/catalogo-pages/horotec/page-76.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-76.jpg"
   },
   {
     "modelo": "MSA17.585-35",
     "descripcion": "Caja repuestos 10 compartimentos",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-77.jpg"
+    "img": "/catalogo-pages/horotec/page-77.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-77.jpg"
   },
   {
     "modelo": "MSA19.106",
     "descripcion": "Tester electrónico cuarzo",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-78.jpg"
+    "img": "/catalogo-pages/horotec/page-78.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-78.jpg"
   },
   {
     "modelo": "MSA19.107",
     "descripcion": "Tester mecánico cuarzo",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-79.jpg"
+    "img": "/catalogo-pages/horotec/page-79.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-79.jpg"
   },
   {
     "modelo": "HOR-080",
     "descripcion": "El HOROTEC® FLASHTEST es un aparato electrónico portátil",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-80.jpg"
+    "img": "/catalogo-pages/horotec/page-80.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-80.jpg"
   },
   {
     "modelo": "HOR-081",
     "descripcion": "Una herramienta esencial para la detección y gestión del magnetismo en",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-81.jpg"
+    "img": "/catalogo-pages/horotec/page-81.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-81.jpg"
   },
   {
     "modelo": "MSA24.208",
     "descripcion": "Alfombrilla de escritorio HOROTEC verde",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-82.jpg"
+    "img": "/catalogo-pages/horotec/page-82.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-82.jpg"
   },
   {
     "modelo": "MSA26.008-KIT",
     "descripcion": "Herramienta multiuso con accesorios",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/horotec/page-83.jpg"
+    "img": "/catalogo-pages/horotec/page-83.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-83.jpg"
   },
   {
     "modelo": "MSA26.184",
     "descripcion": "Dispositivo pulido trípode",
     "tipo": "BASE",
-    "img": "/catalogo-pages/horotec/page-84.jpg"
+    "img": "/catalogo-pages/horotec/page-84.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-84.jpg"
   },
   {
     "modelo": "MSA26.255-2.5",
     "descripcion": "Palillo madera limpieza Ø2.5 mm",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/horotec/page-85.jpg"
+    "img": "/catalogo-pages/horotec/page-85.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-85.jpg"
   },
   {
     "modelo": "MSA26.255-3.0",
     "descripcion": "Palillo madera limpieza Ø2.5 mm",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/horotec/page-86.jpg"
+    "img": "/catalogo-pages/horotec/page-86.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-86.jpg"
   },
   {
     "modelo": "MSA98.020",
     "descripcion": "Kit herramientas maleta plástica",
     "tipo": "ESTUCHE",
-    "img": "/catalogo-pages/horotec/page-87.jpg"
+    "img": "/catalogo-pages/horotec/page-87.jpg",
+    "imgFull": "/catalogo-pages/horotec-full/page-87.jpg"
   }
 ]
