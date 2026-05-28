@@ -4,11 +4,11 @@ export const groups = [
     name: 'Pulsos & Correas',
     image: '/images/categorias/cuero-categoria.png',
     catalogs: [
-      { slug: 'pulso-resina',    label: 'Pulso Resina',    structured: true },
-      { slug: 'pulso-silicona',  label: 'Pulso Silicona',  structured: true },
-      { slug: 'pulso-cuero',     label: 'Pulso de Cuero',  structured: true },
-      { slug: 'pulso-metalico',  label: 'Pulso Metálico',  structured: true },
-      { slug: 'pulso-pvc',       label: 'Pulso PVC',       structured: true },
+      { slug: 'pulso-resina', label: 'Pulso Resina', structured: true },
+      { slug: 'pulso-silicona', label: 'Pulso Silicona', structured: true },
+      { slug: 'pulso-cuero', label: 'Pulso de Cuero', structured: true },
+      { slug: 'pulso-metalico', label: 'Pulso Metálico', structured: true },
+      { slug: 'pulso-pvc', label: 'Pulso PVC', structured: true },
     ],
   },
   {
@@ -16,12 +16,12 @@ export const groups = [
     name: 'Baterías & Pilas',
     image: '/images/categorias/bateria-categoria.png',
     catalogs: [
-      { slug: 'baterias-gp',       label: 'Baterías GP',       structured: true },
-      { slug: 'baterias-tianqiu',  label: 'Baterías Tianqiu',  structured: true },
-      { slug: 'baterias-maxell',   label: 'Baterías Maxell',   structured: true },
-      { slug: 'pilas-economicas',  label: 'Pilas Económicas',  structured: true },
-      { slug: 'capacitores',       label: 'Capacitores',       structured: true },
-      { slug: 'pilas-renata',      label: 'Pilas Renata',      structured: true },
+      { slug: 'baterias-maxell', label: 'Baterías Maxell', structured: true },
+      { slug: 'baterias-renata', label: 'Baterías Renata', structured: true },
+      { slug: 'baterias-gp', label: 'Baterías GP', structured: true },
+      { slug: 'baterias-tianqiu', label: 'Baterías Tianqiu', structured: true },
+      { slug: 'baterias-economicas', label: 'Baterías Económicas', structured: true },
+      { slug: 'capacitores', label: 'Capacitores', structured: true }
     ],
   },
   {
@@ -29,13 +29,13 @@ export const groups = [
     name: 'Movimientos',
     image: '/images/categorias/movimiento-categoria.png',
     catalogs: [
-      { slug: 'movimientos-epson',  label: 'Movimientos EPSON',         structured: true },
-      { slug: 'movimientos-sii',    label: 'Movimientos SII',           structured: true },
-      { slug: 'movimientos-eta',    label: 'Movimientos ETA',          structured: true },
-      { slug: 'movimientos-isa',    label: 'Movimientos ISA',          structured: true },
-      { slug: 'movimientos-chinos', label: 'Movimientos Chinos',       structured: true },
-      { slug: 'movimientos-miyota', label: 'Movimientos Miyota',       structured: true },
-      { slug: 'movimientos-ronda',  label: 'Movimientos Ronda',        structured: true },
+      { slug: 'movimientos-epson', label: 'Movimientos EPSON', structured: true },
+      { slug: 'movimientos-sii', label: 'Movimientos SII', structured: true },
+      { slug: 'movimientos-eta', label: 'Movimientos ETA', structured: true },
+      { slug: 'movimientos-isa', label: 'Movimientos ISA', structured: true },
+      { slug: 'movimientos-chinos', label: 'Movimientos Chinos', structured: true },
+      { slug: 'movimientos-miyota', label: 'Movimientos Miyota', structured: true },
+      { slug: 'movimientos-ronda', label: 'Movimientos Ronda', structured: true },
     ],
   },
   {
@@ -43,8 +43,8 @@ export const groups = [
     name: 'Relojes',
     image: '/images/categorias/reloj-categoria.png',
     catalogs: [
-      { slug: 'relojes-polemik',  label: 'Reloj Polemik',    structured: true },
-      { slug: 'relojes-xinjia',   label: 'Relojes Xinjia',   structured: true },
+      { slug: 'relojes-polemik', label: 'Reloj Polemik', structured: true },
+      { slug: 'relojes-xinjia', label: 'Relojes Xinjia', structured: true },
     ],
   },
   {
@@ -52,11 +52,11 @@ export const groups = [
     name: 'Accesorios',
     image: '/images/categorias/accesorio-categoria.png',
     catalogs: [
-      { slug: 'coronas',           label: 'Coronas',              structured: true },
-      { slug: 'vidrios',           label: 'Vidrios',              structured: true },
-      { slug: 'modulos',           label: 'Módulos',              structured: true },
+      { slug: 'coronas', label: 'Coronas', structured: true },
+      { slug: 'vidrios', label: 'Vidrios', structured: true },
+      { slug: 'modulos', label: 'Módulos', structured: true },
       { slug: 'insumos-relojeria', label: 'Insumos de Relojería', structured: true },
-      { slug: 'exhibidores',       label: 'Exhibidores y Más',  structured: true },
+      { slug: 'exhibidores', label: 'Exhibidores y Más', structured: true },
     ],
   },
   {
@@ -64,9 +64,9 @@ export const groups = [
     name: 'Herramientas',
     image: '/images/categorias/herramienta-categoria.png',
     catalogs: [
-      { slug: 'herramientas',         label: 'Herramientas de Relojería', structured: true },
-      { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas',    structured: true },
-      { slug: 'horotec',              label: 'Horotec',                   structured: true },
+      { slug: 'herramientas', label: 'Herramientas de Relojería', structured: true },
+      { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas', structured: true },
+      { slug: 'horotec', label: 'Horotec', structured: true },
     ],
   },
   {
@@ -75,7 +75,7 @@ export const groups = [
     image: '/images/categorias/gorra-categoria.png',
     catalogs: [
       { slug: 'gorras-polemik', label: 'Gorras Polemik', structured: true },
-      { slug: 'gorras-lisas',   label: 'Gorras Lisas',   structured: true },
+      { slug: 'gorras-lisas', label: 'Gorras Lisas', structured: true },
     ],
   },
 ];
