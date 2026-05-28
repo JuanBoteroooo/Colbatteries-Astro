@@ -65,6 +65,7 @@ export const groups = [
     catalogs: [
       { slug: 'herramientas',         label: 'Herramientas de Relojería', structured: true },
       { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas',    structured: true },
+      { slug: 'horotec',              label: 'Horotec' },
     ],
   },
   {

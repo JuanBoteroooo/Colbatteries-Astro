@@ -88,7 +88,7 @@ const isFourColumn = fourColumnSlugs.includes(slug);
 
 const isWatch   = isPolemik || isXinjia;
 const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isExhibidores ? exhibidoresData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
-const pdfSlug   = isSII ? 'movimientos-epson' : slug;
+const pdfSlug   = isSII ? 'movimientos-epson' : slug === 'horotec' ? 'HOROTEC' : slug;
 
 // For cover fallback (PDF mode only)
 const labelUpper = cat.label.toUpperCase();
