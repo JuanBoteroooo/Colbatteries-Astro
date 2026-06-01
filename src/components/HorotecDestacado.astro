@@ -109,11 +109,17 @@ const productos = [
         ))}
       </div>
 
-      <div class="hs-scroll-cue" aria-hidden="true">
-        <span>deslizar</span>
-        <svg width="22" height="8" viewBox="0 0 22 8" fill="none">
-          <path d="M0 4h20M16 1l4 3-4 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
+      <div class="hs-nav">
+        <button class="hs-arrow" id="hsArrowPrev" aria-label="Anterior">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button class="hs-arrow" id="hsArrowNext" aria-label="Siguiente">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -473,18 +479,38 @@ const productos = [
     line-height: 1.3;
   }
 
-  /* Scroll cue */
-  .hs-scroll-cue {
+  /* Nav arrows */
+  .hs-nav {
     display: flex;
-    align-items: center;
     gap: 0.5rem;
     padding: 0 0.25rem;
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.16);
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hs-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 2px;
+    color: rgba(255,255,255,0.55);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .hs-arrow:hover {
+    background: #D42B2B;
+    border-color: #D42B2B;
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .hs-arrow:disabled {
+    opacity: 0.2;
+    pointer-events: none;
   }
 
   /* ── RESPONSIVE ── */
@@ -545,6 +571,27 @@ const productos = [
       e.preventDefault();
       track.scrollLeft += e.deltaY * 1.5;
     }, { passive: false });
+
+    // Arrow buttons
+    const STEP = 260;
+    const prev = document.getElementById('hsArrowPrev') as HTMLButtonElement | null;
+    const next = document.getElementById('hsArrowNext') as HTMLButtonElement | null;
+
+    function updateArrows() {
+      if (!prev || !next) return;
+      prev.disabled = track.scrollLeft <= 0;
+      next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    }
+
+    prev?.addEventListener('click', () => {
+      track.scrollBy({ left: -STEP, behavior: 'smooth' });
+    });
+    next?.addEventListener('click', () => {
+      track.scrollBy({ left: STEP, behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    updateArrows();
   }
 
   // Staggered reveal on scroll
