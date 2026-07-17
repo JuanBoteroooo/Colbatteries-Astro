@@ -21,6 +21,7 @@ export const groups = [
       { slug: 'baterias-gp', label: 'Baterías GP', structured: true },
       { slug: 'baterias-tianqiu', label: 'Baterías Tianqiu', structured: true },
       { slug: 'baterias-economicas', label: 'Baterías Económicas', structured: true },
+      { slug: 'baterias-recargables', label: 'Recargables y Cargadores Económicos', structured: true },
       { slug: 'capacitores', label: 'Capacitores', structured: true }
     ],
   },

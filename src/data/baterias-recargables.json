@@ -1,0 +1,112 @@
+[
+  {
+    "modelo": "JB-622",
+    "marca": "JIABAO",
+    "tipo": "Cargador",
+    "tamano": "AA/AAA/9V",
+    "voltaje": "",
+    "capacidad": "",
+    "descripcion": "Cargador de batería estándar para pilas recargables AA, AAA y 9 Voltios",
+    "img": "/catalogo-pages/baterias-recargables/page-02.jpg"
+  },
+  {
+    "modelo": "C804HV1",
+    "marca": "BTY",
+    "tipo": "Cargador",
+    "tamano": "AA/AAA/9V",
+    "voltaje": "",
+    "capacidad": "",
+    "descripcion": "Cargador de batería estándar para pilas recargables AA, AAA y 9 Voltios",
+    "img": "/catalogo-pages/baterias-recargables/page-03.jpg"
+  },
+  {
+    "modelo": "BST-USB-D",
+    "marca": "BST",
+    "tipo": "Litio",
+    "tamano": "D",
+    "voltaje": "1.5V",
+    "capacidad": "9500mWh",
+    "descripcion": "Paquete de 2 baterías recargables tipo D con carga USB-C",
+    "img": "/catalogo-pages/baterias-recargables/page-04.jpg"
+  },
+  {
+    "modelo": "BST-USB-9V",
+    "marca": "BST",
+    "tipo": "Litio",
+    "tamano": "9V",
+    "voltaje": "9V",
+    "capacidad": "4500mWh",
+    "descripcion": "Batería de litio recargable de 9V con carga USB-C",
+    "img": "/catalogo-pages/baterias-recargables/page-05.jpg"
+  },
+  {
+    "modelo": "BST-USB-AA",
+    "marca": "BST",
+    "tipo": "Litio",
+    "tamano": "AA",
+    "voltaje": "1.5V",
+    "capacidad": "3500mWh",
+    "descripcion": "Baterías AA recargables de litio, paquete de 2 con cargador rápido USB-C",
+    "img": "/catalogo-pages/baterias-recargables/page-06.jpg"
+  },
+  {
+    "modelo": "BST-USB-AAA",
+    "marca": "BST",
+    "tipo": "Litio",
+    "tamano": "AAA",
+    "voltaje": "1.5V",
+    "capacidad": "800mWh",
+    "descripcion": "Baterías AAA recargables de litio, paquete de 2 con cargador rápido USB-C",
+    "img": "/catalogo-pages/baterias-recargables/page-07.jpg"
+  },
+  {
+    "modelo": "REC-AA/3000",
+    "marca": "E-DURFOR",
+    "tipo": "Ni-MH",
+    "tamano": "AA",
+    "voltaje": "1.2V",
+    "capacidad": "3000mAh",
+    "descripcion": "Baterías recargables AA Ni-MH de larga duración y baja autodescarga",
+    "img": "/catalogo-pages/baterias-recargables/page-08.jpg"
+  },
+  {
+    "modelo": "REC-AAA/1600",
+    "marca": "E-DURFOR",
+    "tipo": "Ni-MH",
+    "tamano": "AAA",
+    "voltaje": "1.2V",
+    "capacidad": "1600mAh",
+    "descripcion": "Baterías recargables AAA Ni-MH de larga duración y baja autodescarga",
+    "img": "/catalogo-pages/baterias-recargables/page-09.jpg"
+  },
+  {
+    "modelo": "BTS-18650",
+    "marca": "BST",
+    "tipo": "Litio",
+    "tamano": "18650",
+    "voltaje": "3.7V",
+    "capacidad": "8800mAh",
+    "descripcion": "Batería recargable de litio 18650 de alta capacidad y múltiples protecciones",
+    "img": "/catalogo-pages/baterias-recargables/page-10.jpg"
+  },
+  {
+    "modelo": "BST-18650P",
+    "marca": "BST",
+    "tipo": "Litio",
+    "tamano": "18650",
+    "voltaje": "3.7V",
+    "capacidad": "8800mAh",
+    "descripcion": "Batería recargable de litio 18650 con botón superior",
+    "img": "/catalogo-pages/baterias-recargables/page-11.jpg"
+  },
+  {
+    "modelo": "TQ/18650",
+    "marca": "Tianqiu",
+    "tipo": "Litio",
+    "tamano": "18650",
+    "voltaje": "3.7V",
+    "capacidad": "1200mAh",
+    "descripcion": "Batería recargable de litio 18650 Tianqiu",
+    "img": "/catalogo-pages/baterias-recargables/page-12.jpg"
+  }
+]

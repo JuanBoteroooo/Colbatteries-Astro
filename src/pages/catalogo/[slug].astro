@@ -27,6 +27,7 @@ import pulsoMetalicosData  from '../../data/pulsos-metalicos.json';
 import pulsoPvcData        from '../../data/pulsos-pvc.json';
 import bateriasMaxellData  from '../../data/baterias-maxell.json';
 import pilasEconData       from '../../data/pilas-economicas.json';
+import bateriasRecargablesData from '../../data/baterias-recargables.json';
 import capacitoresData     from '../../data/capacitores.json';
 import batTianqiuData     from '../../data/baterias-tianqiu.json';
 import batGpData          from '../../data/baterias-gp.json';
@@ -77,6 +78,7 @@ const isPulsoMetalico   = isStructured && slug === 'pulso-metalico';
 const isPulsoPvc        = isStructured && slug === 'pulso-pvc';
 const isBatMaxell       = isStructured && slug === 'baterias-maxell';
 const isPilasEcon       = isStructured && slug === 'baterias-economicas';
+const isBatRecargables  = isStructured && slug === 'baterias-recargables';
 const isCapacitores     = isStructured && slug === 'capacitores';
 const isBatTianqiu      = isStructured && slug === 'baterias-tianqiu';
 const isBatGp           = isStructured && slug === 'baterias-gp';
@@ -86,12 +88,12 @@ const isPilasRenata     = isStructured && slug === 'baterias-renata';
 
 const fourColumnSlugs = [
     'pulso-resina', 'pulso-silicona', 'pulso-cuero', 'pulso-metalico', 'pulso-pvc',
-    'baterias-maxell', 'baterias-economicas', 'capacitores', 'baterias-tianqiu', 'baterias-gp',
+    'baterias-maxell', 'baterias-economicas', 'baterias-recargables', 'capacitores', 'baterias-tianqiu', 'baterias-gp',
 ];
 const isFourColumn = fourColumnSlugs.includes(slug);
 
 const isWatch   = isPolemik || isXinjia;
-const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isExhibidores ? exhibidoresData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isHorotec ? horotecData : isPilasRenata ? pilasRenataData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
+const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isExhibidores ? exhibidoresData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isHorotec ? horotecData : isPilasRenata ? pilasRenataData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isBatRecargables ? bateriasRecargablesData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
 const pdfSlug   = isSII ? 'movimientos-epson' : slug === 'horotec' ? 'HOROTEC' : slug;
 
 // For cover fallback (PDF mode only)
@@ -119,6 +121,7 @@ const seoMap: Record<string, { title: string; description: string }> = {
   'baterias-tianqiu':    { title: 'Baterías Tianqiu al por mayor — Pilas de reloj | Colbateries Panamá',               description: 'Baterías Tianqiu de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Precios competitivos para distribuidores y comercios.' },
   'baterias-maxell':     { title: 'Baterías Maxell al por mayor — Distribución mayorista | Colbateries Panamá',        description: 'Baterías Maxell de reloj y botón al por mayor. Distribuidor en Zona Libre de Colón, Panamá. Stock permanente, envíos a toda la región.' },
   'baterias-economicas': { title: 'Pilas económicas al por mayor — Baterías de reloj | Colbateries Panamá',            description: 'Pilas económicas y baterías de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Ideal para comercios y relojerías.' },
+  'baterias-recargables':{ title: 'Baterías recargables y cargadores económicos al por mayor | Colbateries Panamá',     description: 'Baterías recargables AA, AAA, D, 9V y 18650, y cargadores económicos al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
   'capacitores':         { title: 'Capacitores de reloj al por mayor — Repuestos relojería | Colbateries',             description: 'Capacitores y acumuladores de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Stock disponible para técnicos y distribuidores.' },
   'pulso-resina':        { title: 'Pulsos de resina al por mayor — Correas de reloj | Colbateries Panamá',             description: 'Pulsos y correas de resina para reloj al por mayor. Surtido de medidas y colores. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
   'pulso-silicona':      { title: 'Pulsos de silicona al por mayor — Correas de reloj | Colbateries Panamá',           description: 'Correas y pulsos de silicona para reloj al por mayor. Gran variedad de medidas y colores. Distribuidor mayorista Zona Libre de Colón, Panamá.' },
@@ -1842,6 +1845,91 @@ const seo = seoMap[slug] ?? {
     )}
 
     <!-- ══════════════════════════════════════════
+         BATERIAS RECARGABLES STRUCTURED MODE
+    ══════════════════════════════════════════ -->
+    {isBatRecargables && (
+      <div class="eta-viewer" id="etaViewer">
+
+        <!-- Sticky controls -->
+        <div class="eta-controls">
+          <div class="eta-search-wrap">
+            <svg class="eta-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="etaSearch" placeholder="Buscar por modelo, marca o tamaño..." autocomplete="off" class="eta-search-input" />
+          </div>
+          <div class="eta-tipo-bar" id="etaTipoBar">
+            <button class="eta-tipo-pill active" data-tipo="">Todos</button>
+            <button class="eta-tipo-pill" data-tipo="Cargador">Cargadores</button>
+            <button class="eta-tipo-pill" data-tipo="Litio">Litio</button>
+            <button class="eta-tipo-pill" data-tipo="Ni-MH">Ni-MH</button>
+          </div>
+          <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
+        </div>
+
+        <!-- Grid -->
+        <div class="eta-grid eta-grid--4col" id="etaGrid">
+          {(products as any[]).map((p) => {
+            const safe = (p.modelo as string)
+              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
+              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            return (
+              <div
+                class="eta-card-wrapper"
+                data-tipo={p.tipo}
+                data-modelo={((p.modelo as string) + ' ' + (p.marca as string ?? '') + ' ' + (p.tamano as string ?? '')).toLowerCase()}
+              >
+                <CatalogCard
+                  imagenSrc={`/images/productos/baterias-recargables/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
+                  titulo={p.modelo as string}
+                  detalles={{}}
+                  tipo={p.tipo}
+                  medida={p.voltaje}
+                  nombre={p.marca}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        <div class="eta-empty" id="etaEmpty" style="display:none">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:#444">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p style="color:#555;font-size:0.9rem;font-weight:600;">Sin resultados</p>
+          <button id="etaReset" class="eta-reset-btn">Ver todos</button>
+        </div>
+
+      </div>
+
+      <!-- Image modal -->
+      <div class="eta-modal" id="etaModal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <div class="eta-modal-inner" id="etaModalInner">
+          <div class="eta-modal-img-wrap">
+            <button class="eta-modal-arrow eta-modal-prev" id="etaModalPrev" aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <img class="eta-modal-img" id="etaModalImg" src="" alt="" />
+            <button class="eta-modal-arrow eta-modal-next" id="etaModalNext" aria-label="Siguiente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="eta-modal-footer">
+            <p class="eta-modal-title" id="etaModalTitle"></p>
+            <button class="eta-modal-close" id="etaModalClose">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ══════════════════════════════════════════
          PULSO PVC STRUCTURED MODE
     ══════════════════════════════════════════ -->
     {isPulsoPvc && (
@@ -3218,7 +3306,7 @@ const seo = seoMap[slug] ?? {
   .eta-modal-close:hover { border-color: #f2a900; color: #f2a900; }
 </style>
 
-<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isPolemik, isCoronas, isXinjia, isVidrios, isModulos, isInsumos, isExhibidores, isHerramientas, isJoyeria, isHorotec, isPilasRenata, isGorrasP, isGorrasL, isPulsoResina, isPulsoSilicona, isPulsoCuero, isPulsoMetalico, isPulsoPvc, isBatMaxell, isPilasEcon, isCapacitores, isBatTianqiu, isBatGp, totalPages: cat.pages ?? 0, catLabel: cat.label }}>
+<script define:vars={{ slug, isGallery, isStructured, isETA, isRonda, isEpson, isSII, isMiyota, isISA, isChinos, isPolemik, isCoronas, isXinjia, isVidrios, isModulos, isInsumos, isExhibidores, isHerramientas, isJoyeria, isHorotec, isPilasRenata, isGorrasP, isGorrasL, isPulsoResina, isPulsoSilicona, isPulsoCuero, isPulsoMetalico, isPulsoPvc, isBatMaxell, isPilasEcon, isBatRecargables, isCapacitores, isBatTianqiu, isBatGp, totalPages: cat.pages ?? 0, catLabel: cat.label }}>
 
   // ── LOADING OVERLAY (shared) ──
   const overlay = document.getElementById('loadingOverlay');
@@ -3398,7 +3486,7 @@ const seo = seoMap[slug] ?? {
   // ════════════════════════════
   // ETA / RONDA / EPSON / SII / CORONAS STRUCTURED MODE
   // ════════════════════════════
-  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isCoronas || isXinjia || isVidrios || isModulos || isInsumos || isExhibidores || isHerramientas || isJoyeria || isHorotec || isPilasRenata || isGorrasP || isGorrasL || isPulsoResina || isPulsoSilicona || isPulsoCuero || isPulsoMetalico || isPulsoPvc || isBatMaxell || isPilasEcon || isCapacitores || isBatTianqiu || isBatGp) {
+  if (isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isCoronas || isXinjia || isVidrios || isModulos || isInsumos || isExhibidores || isHerramientas || isJoyeria || isHorotec || isPilasRenata || isGorrasP || isGorrasL || isPulsoResina || isPulsoSilicona || isPulsoCuero || isPulsoMetalico || isPulsoPvc || isBatMaxell || isPilasEcon || isBatRecargables || isCapacitores || isBatTianqiu || isBatGp) {
     const countEl  = document.getElementById('etaCount');
     const emptyEl  = document.getElementById('etaEmpty');
     const searchEl = document.getElementById('etaSearch');
