@@ -64,12 +64,36 @@
     "img": "/catalogo-pages/insumos-relojeria/page-09.jpg"
   },
   {
+    "modelo": "TOR-TECH",
+    "nombre": "TORNILLOS PARA RELOJES TECHNOMARINE 50 UNIDADES",
+    "marca": "Technomarine",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-10.jpg"
+  },
+  {
+    "modelo": "TOR-RICH",
+    "nombre": "TORNILLOS PARA RELOJES RICHARD MILLE 20 UNIDADES",
+    "marca": "Richard Mille",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-11.jpg"
+  },
+  {
+    "modelo": "TOR-RICH4",
+    "nombre": "TORNILLOS PARA RELOJES RICHARD MILLE 20 UNIDADES",
+    "marca": "Richard Mille",
+    "tipo": "TORNILLOS",
+    "especificacion": "",
+    "img": "/catalogo-pages/insumos-relojeria/page-12.jpg"
+  },
+  {
     "modelo": "N4031",
     "nombre": "EMPAQUES PARA CORONA SURTIDOS",
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-10.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-13.jpg"
   },
   {
     "modelo": "N4032",
@@ -77,7 +101,7 @@
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-11.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-14.jpg"
   },
   {
     "modelo": "N4033",
@@ -85,15 +109,15 @@
     "marca": "",
     "tipo": "CORONAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-12.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-15.jpg"
   },
   {
-    "modelo": "N4042",
-    "nombre": "CAJA DE SEGUROS PARA PULSADORES SURTIDA",
+    "modelo": "N1010",
+    "nombre": "CAJA DE PINES DE POSTURA FACIL",
     "marca": "",
-    "tipo": "OTROS",
-    "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-13.jpg"
+    "tipo": "PINS",
+    "especificacion": "Acero inoxidable 316L, diseño de doble hombro, todos los tamaños estándar",
+    "img": "/catalogo-pages/insumos-relojeria/page-16.jpg"
   },
   {
     "modelo": "N4008",
@@ -101,7 +125,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-14.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-17.jpg"
   },
   {
     "modelo": "N4006",
@@ -109,7 +133,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-15.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-18.jpg"
   },
   {
     "modelo": "N4006-1.78MM",
@@ -117,7 +141,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-16.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-19.jpg"
   },
   {
     "modelo": "CH-4010",
@@ -125,7 +149,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-17.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-20.jpg"
   },
   {
     "modelo": "611A",
@@ -133,7 +157,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "Paquete surtido de 100 piezas en caja de plástico",
-    "img": "/catalogo-pages/insumos-relojeria/page-18.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-21.jpg"
   },
   {
     "modelo": "1196",
@@ -141,7 +165,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "Tamaño: 29 mm, 30 mm, 31 mm, 33 mm, 34 mm (Paquete de 100 piezas)",
-    "img": "/catalogo-pages/insumos-relojeria/page-19.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-22.jpg"
   },
   {
     "modelo": "N1028",
@@ -149,7 +173,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "10MM A 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-20.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-23.jpg"
   },
   {
     "modelo": "N4043",
@@ -157,7 +181,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "1.3MM 12MM A 21MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-21.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-24.jpg"
   },
   {
     "modelo": "N8027",
@@ -165,15 +189,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "8MM A 27MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-22.jpg"
-  },
-  {
-    "modelo": "1687",
-    "nombre": "280 Coronas surtidas en acero para relojes",
-    "marca": "",
-    "tipo": "CORONAS",
-    "especificacion": "28 tamaños x 10 piezas cada una",
-    "img": "/catalogo-pages/insumos-relojeria/page-23.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-25.jpg"
   },
   {
     "modelo": "CH-4013-20A",
@@ -181,7 +197,7 @@
     "marca": "",
     "tipo": "CORONAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-24.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-26.jpg"
   },
   {
     "modelo": "N4013",
@@ -189,7 +205,7 @@
     "marca": "",
     "tipo": "CORONAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-25.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-27.jpg"
   },
   {
     "modelo": "CH-4013-10A",
@@ -197,7 +213,7 @@
     "marca": "",
     "tipo": "CORONAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-26.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-28.jpg"
   },
   {
     "modelo": "CH-4016",
@@ -205,7 +221,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-27.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-29.jpg"
   },
   {
     "modelo": "CH-4016A",
@@ -213,7 +229,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-28.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-30.jpg"
   },
   {
     "modelo": "CH-4016B",
@@ -221,7 +237,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "20 AL 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-29.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-31.jpg"
   },
   {
     "modelo": "CH-4016C",
@@ -229,7 +245,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "20 AL 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-30.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-32.jpg"
   },
   {
     "modelo": "CH-4016D",
@@ -237,7 +253,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "20 AL 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-31.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-33.jpg"
   },
   {
     "modelo": "CH-4016E",
@@ -245,7 +261,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-32.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-34.jpg"
   },
   {
     "modelo": "CH-4016F",
@@ -253,7 +269,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "20 AL 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-33.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-35.jpg"
   },
   {
     "modelo": "CH-4016G",
@@ -261,7 +277,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "PABONADO 20 AL 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-34.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-36.jpg"
   },
   {
     "modelo": "CH-4016H",
@@ -269,7 +285,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "20 AL 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-35.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-37.jpg"
   },
   {
     "modelo": "CH-4016I",
@@ -277,7 +293,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "20 AL 28MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-36.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-38.jpg"
   },
   {
     "modelo": "N4012-0.8MM",
@@ -285,7 +301,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "6MM A 23MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-37.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-39.jpg"
   },
   {
     "modelo": "N4012-0.9MM",
@@ -293,7 +309,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "6MM A 23MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-38.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-40.jpg"
   },
   {
     "modelo": "N4012-1.0MM",
@@ -301,7 +317,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "8MM A 25MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-39.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-41.jpg"
   },
   {
     "modelo": "PINDEL CDF-1.30MM",
@@ -309,7 +325,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "MEDIDAS DEL 12MM AL 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-40.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-42.jpg"
   },
   {
     "modelo": "PIN CDF-1.50MM",
@@ -317,7 +333,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "MEDIDAS DEL 8MM AL 36MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-41.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-43.jpg"
   },
   {
     "modelo": "PIN CSB-1.50MM (CHAPETA)",
@@ -325,7 +341,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "MEDIDAS DEL 8MM AL 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-42.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-44.jpg"
   },
   {
     "modelo": "PINGRU CDF-1.78MM",
@@ -333,7 +349,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "MEDIDAS DEL 8MM AL 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-43.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-45.jpg"
   },
   {
     "modelo": "PINAC SDF-1.50MM (ACERO FINO)",
@@ -341,7 +357,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "MEDIDAS DEL 8MM AL 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-44.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-46.jpg"
   },
   {
     "modelo": "N4021",
@@ -349,7 +365,7 @@
     "marca": "",
     "tipo": "OTROS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-45.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-47.jpg"
   },
   {
     "modelo": "R-001",
@@ -357,7 +373,7 @@
     "marca": "",
     "tipo": "OTROS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-46.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-48.jpg"
   },
   {
     "modelo": "RODICO-6033-1",
@@ -365,7 +381,7 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-47.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-49.jpg"
   },
   {
     "modelo": "8000-4",
@@ -373,7 +389,7 @@
     "marca": "Moebius",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-48.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-50.jpg"
   },
   {
     "modelo": "SILIMPE-12038",
@@ -381,7 +397,7 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-49.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-51.jpg"
   },
   {
     "modelo": "207",
@@ -389,7 +405,7 @@
     "marca": "Anchor",
     "tipo": "QUIMICOS",
     "especificacion": "grasa para impermeabilizar cajas de relojes",
-    "img": "/catalogo-pages/insumos-relojeria/page-50.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-52.jpg"
   },
   {
     "modelo": "421",
@@ -397,7 +413,7 @@
     "marca": "Anchor",
     "tipo": "QUIMICOS",
     "especificacion": "15 Gramos",
-    "img": "/catalogo-pages/insumos-relojeria/page-51.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-53.jpg"
   },
   {
     "modelo": "423",
@@ -405,7 +421,7 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-52.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-54.jpg"
   },
   {
     "modelo": "497",
@@ -413,7 +429,7 @@
     "marca": "",
     "tipo": "OTROS",
     "especificacion": "Dedales plásticos para no dejar huella o marcas, paquete de 100 unidades",
-    "img": "/catalogo-pages/insumos-relojeria/page-53.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-55.jpg"
   },
   {
     "modelo": "CH-12045",
@@ -421,7 +437,7 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-54.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-56.jpg"
   },
   {
     "modelo": "CH-12052",
@@ -429,7 +445,7 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-55.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-57.jpg"
   },
   {
     "modelo": "ZLD-312UV",
@@ -437,15 +453,15 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-56.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-58.jpg"
   },
   {
-    "modelo": "415A",
-    "nombre": "Solución Adhesiva Multipropósito BONFIX",
-    "marca": "Bonfix",
-    "tipo": "QUIMICOS",
-    "especificacion": "Pegante de 30 ml.",
-    "img": "/catalogo-pages/insumos-relojeria/page-57.jpg"
+    "modelo": "EMTEVI",
+    "nombre": "EMPAQUE DE TEFLON BLANCO PARA VIDRIO DE RELOJ",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "50 unidades surtidas 28,5mm al 38,5mm (2und x 17 medidas) + (28,5/33,5/34/34,5=4und)",
+    "img": "/catalogo-pages/insumos-relojeria/page-59.jpg"
   },
   {
     "modelo": "EMTEFLON",
@@ -453,7 +469,15 @@
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "29MM AL 38,5MM (2UND X MEDIDA + 33,5 Y 34,5=7UND)",
-    "img": "/catalogo-pages/insumos-relojeria/page-58.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-60.jpg"
+  },
+  {
+    "modelo": "CH-4040-45/50MM",
+    "nombre": "EMPAQUE PARA TAPAS DE RELOJ 0.8MM PAQ X 50 UNIDADES",
+    "marca": "",
+    "tipo": "EMPAQUES",
+    "especificacion": "Una medida del 45mm al 50mm",
+    "img": "/catalogo-pages/insumos-relojeria/page-61.jpg"
   },
   {
     "modelo": "CH-4040-XL",
@@ -461,7 +485,7 @@
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "MEDIDAS DEL 41MM AL 44MM 0.8 MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-59.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-62.jpg"
   },
   {
     "modelo": "CH-4040-A",
@@ -469,7 +493,7 @@
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "MEDIDAS DEL 31MM AL 40MM 0.8 MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-60.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-63.jpg"
   },
   {
     "modelo": "CH-4040-B",
@@ -477,7 +501,7 @@
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "MEDIDAS DEL 31MM AL 40MM 0.7 MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-61.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-64.jpg"
   },
   {
     "modelo": "CH-4040-C",
@@ -485,7 +509,7 @@
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "MEDIDAS DEL 16MM AL 30MM 0.7 MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-62.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-65.jpg"
   },
   {
     "modelo": "CH-4040-E",
@@ -493,7 +517,7 @@
     "marca": "",
     "tipo": "EMPAQUES",
     "especificacion": "MEDIDAS DEL 12MM AL 30MM 0.5 MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-63.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-66.jpg"
   },
   {
     "modelo": "CH-2035",
@@ -501,7 +525,15 @@
     "marca": "Miyota",
     "tipo": "TIJAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-65.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-68.jpg"
+  },
+  {
+    "modelo": "CH-0.90 SUIZA",
+    "nombre": "ALARGA TIJA SUIZA EN ACERO 0.90MM",
+    "marca": "",
+    "tipo": "TIJAS",
+    "especificacion": "Paquete de 10 unidades. Acero inoxidable, rosca hembra y macho de 0.90mm",
+    "img": "/catalogo-pages/insumos-relojeria/page-69.jpg"
   },
   {
     "modelo": "CH-0909",
@@ -509,7 +541,7 @@
     "marca": "",
     "tipo": "TIJAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-66.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-70.jpg"
   },
   {
     "modelo": "CH-0709",
@@ -517,15 +549,15 @@
     "marca": "",
     "tipo": "TIJAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-67.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-71.jpg"
   },
   {
-    "modelo": "LINGUETE-7900,7S26C Y 46943",
-    "nombre": "LINGUETE PARA SEIKO 7900 o 7S26C Y ORIENT 46943",
-    "marca": "Seiko",
+    "modelo": "HORQUILLA 7009/7S26/46941/3",
+    "nombre": "HORQUILLA, TIJERA O LINGUETE PARA RELOJ AUTOMATICO",
+    "marca": "",
     "tipo": "TIJAS",
-    "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-68.jpg"
+    "especificacion": "Paquete con 100 unidades",
+    "img": "/catalogo-pages/insumos-relojeria/page-72.jpg"
   },
   {
     "modelo": "CH-5072-A",
@@ -533,7 +565,15 @@
     "marca": "",
     "tipo": "REPUESTOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-69.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-73.jpg"
+  },
+  {
+    "modelo": "CH-5072-0.7/CH-5072-0.8",
+    "nombre": "HERRAMIENTA DE ELIMINACION DE ESLABONES PARA RELOJES",
+    "marca": "",
+    "tipo": "REPUESTOS",
+    "especificacion": "Paquete de 100 unidades por medida",
+    "img": "/catalogo-pages/insumos-relojeria/page-74.jpg"
   },
   {
     "modelo": "CH-5072-AX10",
@@ -541,7 +581,7 @@
     "marca": "",
     "tipo": "REPUESTOS",
     "especificacion": "X 10 UNIDADES",
-    "img": "/catalogo-pages/insumos-relojeria/page-70.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-75.jpg"
   },
   {
     "modelo": "CH-5071",
@@ -549,7 +589,7 @@
     "marca": "",
     "tipo": "REPUESTOS",
     "especificacion": "CH-5071-XL REPUESTOS PARA RECORTADORAS METALICAS DE PULSOS",
-    "img": "/catalogo-pages/insumos-relojeria/page-71.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-76.jpg"
   },
   {
     "modelo": "CH-6014",
@@ -557,7 +597,7 @@
     "marca": "",
     "tipo": "REPUESTOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-72.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-77.jpg"
   },
   {
     "modelo": "CH-9065",
@@ -565,7 +605,7 @@
     "marca": "",
     "tipo": "REPUESTOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-73.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-78.jpg"
   },
   {
     "modelo": "900.01",
@@ -573,7 +613,7 @@
     "marca": "",
     "tipo": "PINS",
     "especificacion": "Juego de 3 pasadores de repuestos",
-    "img": "/catalogo-pages/insumos-relojeria/page-74.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-79.jpg"
   },
   {
     "modelo": "CHABOLAEN 18,20,22 Y 24MM",
@@ -581,7 +621,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "MEDIDAS 18, 20,22 Y 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-75.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-80.jpg"
   },
   {
     "modelo": "CHAC3PA 12,16,18,20,22 Y 24MM",
@@ -589,7 +629,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "MEDIDAS 12,16,18,20,22 Y 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-76.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-81.jpg"
   },
   {
     "modelo": "CHADOSE 18,20,22 Y 24MM",
@@ -597,7 +637,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "MEDIDAS 18, 20,22 Y 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-77.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-82.jpg"
   },
   {
     "modelo": "CHAMON 16,18,20,22 Y 24MM",
@@ -605,7 +645,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "MEDIDAS 16, 18,20,22 Y 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-78.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-83.jpg"
   },
   {
     "modelo": "CHADOBOLI 18,20,22 Y 24MM",
@@ -613,7 +653,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "MEDIDAS 18,20,22 Y 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-79.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-84.jpg"
   },
   {
     "modelo": "CHADOBOEN 18,20,22 Y 24MM",
@@ -621,7 +661,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "MEDIDAS 18, 20,22 Y 24MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-80.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-85.jpg"
   },
   {
     "modelo": "CHACDO3PA 12 AL 24MM",
@@ -629,7 +669,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-81.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-86.jpg"
   },
   {
     "modelo": "CHAMONDO 18MM AL 24MM",
@@ -637,7 +677,7 @@
     "marca": "",
     "tipo": "CHAPETAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-82.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-87.jpg"
   },
   {
     "modelo": "EXDO-12/24 EXAC-12/24",
@@ -645,7 +685,7 @@
     "marca": "",
     "tipo": "TERMINALES",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-83.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-88.jpg"
   },
   {
     "modelo": "1323",
@@ -653,7 +693,7 @@
     "marca": "",
     "tipo": "HEBILLAS",
     "especificacion": "18 piezas de hebillas plateadas, 3 piezas cada una de 10 mm - 12 mm - 14 mm - 16 mm -18 mm - 20",
-    "img": "/catalogo-pages/insumos-relojeria/page-84.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-89.jpg"
   },
   {
     "modelo": "HEBILLA-16/18/20/22/24",
@@ -661,7 +701,7 @@
     "marca": "",
     "tipo": "HEBILLAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-85.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-90.jpg"
   },
   {
     "modelo": "HBP(HBD)-8-10-12-14-16/18/20/22/24",
@@ -669,7 +709,7 @@
     "marca": "",
     "tipo": "HEBILLAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-86.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-91.jpg"
   },
   {
     "modelo": "HEBILLA2-16/18/20/22/24",
@@ -677,7 +717,7 @@
     "marca": "",
     "tipo": "HEBILLAS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-87.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-92.jpg"
   },
   {
     "modelo": "TSW-38/42P-D-N",
@@ -685,7 +725,7 @@
     "marca": "",
     "tipo": "TERMINALES",
     "especificacion": "MEDIDAS 38MM AL 42MM, ENTRADA DE PULSO 22MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-88.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-93.jpg"
   },
   {
     "modelo": "TSW-44/49P-D-N",
@@ -693,7 +733,7 @@
     "marca": "",
     "tipo": "TERMINALES",
     "especificacion": "MEDIDAS 44MM AL 49MM, ENTRADA DE PULSO 22MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-89.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-94.jpg"
   },
   {
     "modelo": "TSW-38 Y 42",
@@ -701,7 +741,7 @@
     "marca": "",
     "tipo": "TERMINALES",
     "especificacion": "MEDIDAS 38MM Y 42MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-90.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-95.jpg"
   },
   {
     "modelo": "HEBIN-4MM/5MM y 6MM",
@@ -709,7 +749,7 @@
     "marca": "",
     "tipo": "HEBILLAS",
     "especificacion": "4MM, 5MM Y 6MM 6MM",
-    "img": "/catalogo-pages/insumos-relojeria/page-91.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-96.jpg"
   },
   {
     "modelo": "HEBINBO",
@@ -717,7 +757,7 @@
     "marca": "",
     "tipo": "HEBILLAS",
     "especificacion": "17X5 19X6 21X6 23X6 25X6 HEBILLA O CIERRE TIPO MARIPOSA CON DOBLE BOTON EN 6 MEDIDAS",
-    "img": "/catalogo-pages/insumos-relojeria/page-92.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-97.jpg"
   },
   {
     "modelo": "CARRITO-12MM AL 22MM",
@@ -725,7 +765,7 @@
     "marca": "",
     "tipo": "TERMINALES",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-93.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-98.jpg"
   },
   {
     "modelo": "EXTEPULACE",
@@ -733,7 +773,7 @@
     "marca": "",
     "tipo": "TERMINALES",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-94.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-99.jpg"
   },
   {
     "modelo": "414",
@@ -741,7 +781,7 @@
     "marca": "Mercury",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-95.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-100.jpg"
   },
   {
     "modelo": "637A",
@@ -749,7 +789,7 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-96.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-101.jpg"
   },
   {
     "modelo": "637",
@@ -757,7 +797,7 @@
     "marca": "Anchor",
     "tipo": "QUIMICOS",
     "especificacion": "15ML",
-    "img": "/catalogo-pages/insumos-relojeria/page-97.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-102.jpg"
   },
   {
     "modelo": "1589",
@@ -765,15 +805,7 @@
     "marca": "Anchor",
     "tipo": "QUIMICOS",
     "especificacion": "Sella las grietas, 10ML",
-    "img": "/catalogo-pages/insumos-relojeria/page-98.jpg"
-  },
-  {
-    "modelo": "278",
-    "nombre": "Aceites Marca ANCHOR",
-    "marca": "Anchor",
-    "tipo": "QUIMICOS",
-    "especificacion": "Aceite Extrafino para alarma y reloj de pared, 20ML",
-    "img": "/catalogo-pages/insumos-relojeria/page-99.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-103.jpg"
   },
   {
     "modelo": "1986",
@@ -781,6 +813,14 @@
     "marca": "",
     "tipo": "QUIMICOS",
     "especificacion": "",
-    "img": "/catalogo-pages/insumos-relojeria/page-100.jpg"
+    "img": "/catalogo-pages/insumos-relojeria/page-104.jpg"
+  },
+  {
+    "modelo": "415A",
+    "nombre": "Solución Adhesiva Multipropósito BONFIX",
+    "marca": "Bonfix",
+    "tipo": "QUIMICOS",
+    "especificacion": "Pegante de 30 ml.",
+    "img": "/catalogo-pages/insumos-relojeria/page-105.jpg"
   }
 ]
