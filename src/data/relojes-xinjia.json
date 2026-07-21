@@ -1,7 +1,7 @@
 [
   {
-    "modelo": "CF-420",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-S01",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-02.jpg",
     "dimensiones": "",
     "altura": "",
@@ -11,8 +11,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-428",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-S02",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-03.jpg",
     "dimensiones": "",
     "altura": "",
@@ -22,8 +22,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-440",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-S06",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-04.jpg",
     "dimensiones": "",
     "altura": "",
@@ -33,8 +33,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-443",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-S07",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-05.jpg",
     "dimensiones": "",
     "altura": "",
@@ -44,7 +44,7 @@
     "fecha": false
   },
   {
-    "modelo": "CF-445",
+    "modelo": "CF-420",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-06.jpg",
     "dimensiones": "",
@@ -55,8 +55,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-446D",
-    "tipo": "DAMA",
+    "modelo": "CF-423",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-07.jpg",
     "dimensiones": "",
     "altura": "",
@@ -66,7 +66,7 @@
     "fecha": false
   },
   {
-    "modelo": "CF-448",
+    "modelo": "CF-428",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-08.jpg",
     "dimensiones": "",
@@ -77,7 +77,7 @@
     "fecha": false
   },
   {
-    "modelo": "CF-449",
+    "modelo": "CF-432",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-09.jpg",
     "dimensiones": "",
@@ -88,7 +88,7 @@
     "fecha": false
   },
   {
-    "modelo": "CF-451",
+    "modelo": "CF-435",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-10.jpg",
     "dimensiones": "",
@@ -99,8 +99,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-452D",
-    "tipo": "DAMA",
+    "modelo": "CF-437",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-11.jpg",
     "dimensiones": "",
     "altura": "",
@@ -110,8 +110,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-453D",
-    "tipo": "DAMA",
+    "modelo": "CF-440",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-12.jpg",
     "dimensiones": "",
     "altura": "",
@@ -121,8 +121,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-455D",
-    "tipo": "DAMA",
+    "modelo": "CF-443",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-13.jpg",
     "dimensiones": "",
     "altura": "",
@@ -132,8 +132,8 @@
     "fecha": false
   },
   {
-    "modelo": "CF-456D",
-    "tipo": "DAMA",
+    "modelo": "CF-445",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-14.jpg",
     "dimensiones": "",
     "altura": "",
@@ -143,7 +143,7 @@
     "fecha": false
   },
   {
-    "modelo": "CF-457D",
+    "modelo": "CF-446D",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-15.jpg",
     "dimensiones": "",
@@ -154,9 +154,97 @@
     "fecha": false
   },
   {
+    "modelo": "CF-448",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-16.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CF-449",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-17.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CF-451",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-18.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CF-452",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-19.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CF-453",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-20.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CF-455D",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-21.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CF-456D",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-22.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CF-457D",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-23.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
     "modelo": "CF-458D",
     "tipo": "DAMA",
-    "img": "/catalogo-pages/relojes-xinjia/page-16.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-24.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -167,7 +255,7 @@
   {
     "modelo": "CF-459D",
     "tipo": "DAMA",
-    "img": "/catalogo-pages/relojes-xinjia/page-17.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-25.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -178,18 +266,7 @@
   {
     "modelo": "CF-460D",
     "tipo": "DAMA",
-    "img": "/catalogo-pages/relojes-xinjia/page-18.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "CF-461D",
-    "tipo": "DAMA",
-    "img": "/catalogo-pages/relojes-xinjia/page-19.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-26.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -200,83 +277,6 @@
   {
     "modelo": "CF-462D",
     "tipo": "DAMA",
-    "img": "/catalogo-pages/relojes-xinjia/page-20.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "XJ-647",
-    "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-21.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "XJ-659",
-    "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-22.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "XJ-662S",
-    "tipo": "DIGITAL",
-    "img": "/catalogo-pages/relojes-xinjia/page-23.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "XJ-672",
-    "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-24.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "XJ-685",
-    "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-25.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "XJ-693",
-    "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-26.jpg",
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "fecha": false
-  },
-  {
-    "modelo": "XJ-707",
-    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-27.jpg",
     "dimensiones": "",
     "altura": "",
@@ -286,7 +286,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-715",
+    "modelo": "CF-463D",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-28.jpg",
     "dimensiones": "",
@@ -297,8 +297,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-716E",
-    "tipo": "DIGITAL",
+    "modelo": "XJ-647",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-29.jpg",
     "dimensiones": "",
     "altura": "",
@@ -308,8 +308,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-716S",
-    "tipo": "DIGITAL",
+    "modelo": "XJ-659",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-30.jpg",
     "dimensiones": "",
     "altura": "",
@@ -319,8 +319,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-720",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-662S",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-31.jpg",
     "dimensiones": "",
     "altura": "",
@@ -330,7 +330,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-726",
+    "modelo": "XJ-672",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-32.jpg",
     "dimensiones": "",
@@ -341,7 +341,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-729",
+    "modelo": "XJ-685",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-33.jpg",
     "dimensiones": "",
@@ -352,7 +352,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-729M",
+    "modelo": "XJ-707",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-34.jpg",
     "dimensiones": "",
@@ -363,7 +363,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-730",
+    "modelo": "XJ-715",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-35.jpg",
     "dimensiones": "",
@@ -374,8 +374,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-737",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-716E",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-36.jpg",
     "dimensiones": "",
     "altura": "",
@@ -385,8 +385,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-749",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-716S",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-37.jpg",
     "dimensiones": "",
     "altura": "",
@@ -396,7 +396,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-755",
+    "modelo": "XJ-720",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-38.jpg",
     "dimensiones": "",
@@ -407,7 +407,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-782",
+    "modelo": "XJ-726",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-39.jpg",
     "dimensiones": "",
@@ -418,7 +418,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-782C",
+    "modelo": "XJ-729",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-40.jpg",
     "dimensiones": "",
@@ -429,7 +429,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-801",
+    "modelo": "XJ-729M",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-41.jpg",
     "dimensiones": "",
@@ -440,7 +440,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-802",
+    "modelo": "XJ-730",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-42.jpg",
     "dimensiones": "",
@@ -451,7 +451,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-802NG",
+    "modelo": "XJ-737",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-43.jpg",
     "dimensiones": "",
@@ -462,7 +462,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-810",
+    "modelo": "XJ-749",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-44.jpg",
     "dimensiones": "",
@@ -473,7 +473,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-812",
+    "modelo": "XJ-755",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-45.jpg",
     "dimensiones": "",
@@ -484,7 +484,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-812B",
+    "modelo": "XJ-782",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-46.jpg",
     "dimensiones": "",
@@ -495,7 +495,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-816",
+    "modelo": "XJ-782C",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-47.jpg",
     "dimensiones": "",
@@ -506,7 +506,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-817",
+    "modelo": "XJ-801",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-48.jpg",
     "dimensiones": "",
@@ -517,7 +517,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-821",
+    "modelo": "XJ-802",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-49.jpg",
     "dimensiones": "",
@@ -528,7 +528,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-822",
+    "modelo": "XJ-802NG",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-50.jpg",
     "dimensiones": "",
@@ -539,7 +539,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-825",
+    "modelo": "XJ-810",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-51.jpg",
     "dimensiones": "",
@@ -550,7 +550,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-826",
+    "modelo": "XJ-812",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-52.jpg",
     "dimensiones": "",
@@ -561,7 +561,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-827",
+    "modelo": "XJ-812B",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-53.jpg",
     "dimensiones": "",
@@ -572,7 +572,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-828",
+    "modelo": "XJ-816",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-54.jpg",
     "dimensiones": "",
@@ -583,7 +583,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-832",
+    "modelo": "XJ-817",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-55.jpg",
     "dimensiones": "",
@@ -594,7 +594,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-836",
+    "modelo": "XJ-821",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-56.jpg",
     "dimensiones": "",
@@ -605,7 +605,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-838",
+    "modelo": "XJ-822",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-57.jpg",
     "dimensiones": "",
@@ -616,7 +616,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-840",
+    "modelo": "XJ-825",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-58.jpg",
     "dimensiones": "",
@@ -627,7 +627,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-841",
+    "modelo": "XJ-826",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-59.jpg",
     "dimensiones": "",
@@ -638,7 +638,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-847",
+    "modelo": "XJ-827",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-60.jpg",
     "dimensiones": "",
@@ -649,7 +649,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-849",
+    "modelo": "XJ-828",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-61.jpg",
     "dimensiones": "",
@@ -660,7 +660,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-850",
+    "modelo": "XJ-832",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-62.jpg",
     "dimensiones": "",
@@ -671,7 +671,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-851",
+    "modelo": "XJ-836",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-63.jpg",
     "dimensiones": "",
@@ -682,7 +682,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-852",
+    "modelo": "XJ-838",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-64.jpg",
     "dimensiones": "",
@@ -693,7 +693,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-855",
+    "modelo": "XJ-839",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-65.jpg",
     "dimensiones": "",
@@ -704,7 +704,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-856",
+    "modelo": "XJ-840",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-66.jpg",
     "dimensiones": "",
@@ -715,7 +715,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-857",
+    "modelo": "XJ-841",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-67.jpg",
     "dimensiones": "",
@@ -726,7 +726,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-860",
+    "modelo": "XJ-847",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-68.jpg",
     "dimensiones": "",
@@ -737,7 +737,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-860B",
+    "modelo": "XJ-849",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-69.jpg",
     "dimensiones": "",
@@ -748,7 +748,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-861",
+    "modelo": "XJ-850",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-70.jpg",
     "dimensiones": "",
@@ -759,7 +759,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-867",
+    "modelo": "XJ-851",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-71.jpg",
     "dimensiones": "",
@@ -770,8 +770,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-868D",
-    "tipo": "DAMA",
+    "modelo": "XJ-852",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-72.jpg",
     "dimensiones": "",
     "altura": "",
@@ -781,8 +781,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-868DM",
-    "tipo": "DAMA",
+    "modelo": "XJ-855",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-73.jpg",
     "dimensiones": "",
     "altura": "",
@@ -792,7 +792,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-869",
+    "modelo": "XJ-856",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-74.jpg",
     "dimensiones": "",
@@ -803,8 +803,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-875D",
-    "tipo": "DAMA",
+    "modelo": "XJ-857",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-75.jpg",
     "dimensiones": "",
     "altura": "",
@@ -814,8 +814,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-875DM",
-    "tipo": "DAMA",
+    "modelo": "XJ-860",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-76.jpg",
     "dimensiones": "",
     "altura": "",
@@ -825,8 +825,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-877TS",
-    "tipo": "DIGITAL",
+    "modelo": "XJ-860B",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-77.jpg",
     "dimensiones": "",
     "altura": "",
@@ -836,7 +836,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-879",
+    "modelo": "XJ-861",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-78.jpg",
     "dimensiones": "",
@@ -847,7 +847,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-881",
+    "modelo": "XJ-867",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-79.jpg",
     "dimensiones": "",
@@ -858,7 +858,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-883D",
+    "modelo": "XJ-868D",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-80.jpg",
     "dimensiones": "",
@@ -869,7 +869,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-883DM",
+    "modelo": "XJ-868DM",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-81.jpg",
     "dimensiones": "",
@@ -880,7 +880,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-887D",
+    "modelo": "XJ-875D",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-82.jpg",
     "dimensiones": "",
@@ -891,7 +891,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-891D",
+    "modelo": "XJ-875DM",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-83.jpg",
     "dimensiones": "",
@@ -902,8 +902,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-891DM",
-    "tipo": "DAMA",
+    "modelo": "XJ-877TS",
+    "tipo": "DIGITAL",
     "img": "/catalogo-pages/relojes-xinjia/page-84.jpg",
     "dimensiones": "",
     "altura": "",
@@ -913,7 +913,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-892",
+    "modelo": "XJ-879",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-85.jpg",
     "dimensiones": "",
@@ -924,8 +924,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-892M",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-883D",
+    "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-86.jpg",
     "dimensiones": "",
     "altura": "",
@@ -935,8 +935,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-893",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-883DM",
+    "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-87.jpg",
     "dimensiones": "",
     "altura": "",
@@ -946,7 +946,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-895D",
+    "modelo": "XJ-887D",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-88.jpg",
     "dimensiones": "",
@@ -957,7 +957,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-895DM",
+    "modelo": "XJ-891D",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-89.jpg",
     "dimensiones": "",
@@ -968,8 +968,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-896",
-    "tipo": "CABALLERO",
+    "modelo": "XJ-891DM",
+    "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-90.jpg",
     "dimensiones": "",
     "altura": "",
@@ -979,7 +979,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-897",
+    "modelo": "XJ-892",
     "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-91.jpg",
     "dimensiones": "",
@@ -990,8 +990,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-898D",
-    "tipo": "DAMA",
+    "modelo": "XJ-892M",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-92.jpg",
     "dimensiones": "",
     "altura": "",
@@ -1001,8 +1001,8 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-898DM",
-    "tipo": "DAMA",
+    "modelo": "XJ-893",
+    "tipo": "CABALLERO",
     "img": "/catalogo-pages/relojes-xinjia/page-93.jpg",
     "dimensiones": "",
     "altura": "",
@@ -1012,7 +1012,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-900D",
+    "modelo": "XJ-895D",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-94.jpg",
     "dimensiones": "",
@@ -1023,7 +1023,7 @@
     "fecha": false
   },
   {
-    "modelo": "XJ-900DM",
+    "modelo": "XJ-895DM",
     "tipo": "DAMA",
     "img": "/catalogo-pages/relojes-xinjia/page-95.jpg",
     "dimensiones": "",
@@ -1034,9 +1034,64 @@
     "fecha": false
   },
   {
+    "modelo": "XJ-896",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-96.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-897",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-97.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-898D",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-98.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-898DM",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-99.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-900D",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-100.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
     "modelo": "XJ-901TE",
     "tipo": "DIGITAL",
-    "img": "/catalogo-pages/relojes-xinjia/page-96.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-101.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1047,7 +1102,7 @@
   {
     "modelo": "XJ-901TS",
     "tipo": "DIGITAL",
-    "img": "/catalogo-pages/relojes-xinjia/page-97.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-102.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1058,7 +1113,7 @@
   {
     "modelo": "XJ-903",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-98.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-103.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1069,7 +1124,7 @@
   {
     "modelo": "XJ-916",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-99.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-104.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1080,7 +1135,7 @@
   {
     "modelo": "XJ-916M",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-100.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-105.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1091,7 +1146,7 @@
   {
     "modelo": "XJ-917",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-101.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-106.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1102,7 +1157,7 @@
   {
     "modelo": "XJ-918",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-102.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-107.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1113,7 +1168,7 @@
   {
     "modelo": "XJ-919",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-103.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-108.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1124,7 +1179,18 @@
   {
     "modelo": "XJ-920",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-104.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-109.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-920D",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-110.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1135,7 +1201,7 @@
   {
     "modelo": "XJ-921",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-105.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-111.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1146,7 +1212,18 @@
   {
     "modelo": "XJ-922",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-106.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-112.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-922D",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-113.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1157,7 +1234,29 @@
   {
     "modelo": "XJ-923",
     "tipo": "CABALLERO",
-    "img": "/catalogo-pages/relojes-xinjia/page-107.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-114.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-928D",
+    "tipo": "DAMA",
+    "img": "/catalogo-pages/relojes-xinjia/page-115.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "XJ-931D",
+    "tipo": "CABALLERO",
+    "img": "/catalogo-pages/relojes-xinjia/page-116.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
@@ -1168,7 +1267,18 @@
   {
     "modelo": "H-12XJ",
     "tipo": "ACCESORIO",
-    "img": "/catalogo-pages/relojes-xinjia/page-108.jpg",
+    "img": "/catalogo-pages/relojes-xinjia/page-117.jpg",
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "fecha": false
+  },
+  {
+    "modelo": "CAJAS-H01-H05",
+    "tipo": "ACCESORIO",
+    "img": "/catalogo-pages/relojes-xinjia/page-118.jpg",
     "dimensiones": "",
     "altura": "",
     "joyas": null,
