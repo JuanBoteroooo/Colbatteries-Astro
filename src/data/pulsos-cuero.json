@@ -161,164 +161,248 @@
     "img": "/catalogo-pages/pulso-cuero/page-24.jpg"
   },
   {
-    "modelo": "PUCUHT-12MM AL 26MM NG/CF/MIEL",
-    "descripcion": "PULSO CUERO 12MM AL 26MM",
-    "medida": "12mm",
-    "color": "Miel",
+    "modelo": "PUCUHTE-18MM AL 24MM NG/CF/MIEL",
+    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ Y MIEL HEBILLA PAVONADA Y PIN DE POSTURA FACIL",
+    "medida": "18mm",
+    "color": "Negro",
     "img": "/catalogo-pages/pulso-cuero/page-25.jpg"
   },
   {
-    "modelo": "PUCUHTP-18 AL 26/NG/CF/MIEL",
-    "descripcion": "PULSO PLANO CON ESTUCHE 18MM AL 26MM",
+    "modelo": "PUCUHTN-18MM AL 24MM NG/CF/MIEL",
+    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ Y MIEL HEBILLA PAVONADA Y PIN DE POSTURA FACIL",
     "medida": "18mm",
-    "color": "Miel",
+    "color": "Negro",
     "img": "/catalogo-pages/pulso-cuero/page-26.jpg"
   },
   {
-    "modelo": "PUCUHTG-18 AL 24/NG/CF/MIEL",
-    "descripcion": "PULSO CUERO GRABADO CON ESTUCHE 18MM AL 24MM",
+    "modelo": "PUCUHTA-18MM AL 24MM NG/CF",
+    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO Y CAFÉ",
     "medida": "18mm",
-    "color": "Miel",
+    "color": "Negro",
     "img": "/catalogo-pages/pulso-cuero/page-27.jpg"
+  },
+  {
+    "modelo": "PUCUHTF-20MM AL 26MM NG/CF",
+    "descripcion": "PULSO CUERO 20MM AL 26MM NEGRO Y CAFÉ",
+    "medida": "20mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-28.jpg"
+  },
+  {
+    "modelo": "PUCUHTBL-20MM AL 24MM NG/CF",
+    "descripcion": "PULSO CUERO 20MM AL 24MM NEGRO, CAFÉ Y MIEL",
+    "medida": "20mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-29.jpg"
+  },
+  {
+    "modelo": "PUCUHTBG-18MM AL 24MM NG/CF/MIEL",
+    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ Y MIEL",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-30.jpg"
+  },
+  {
+    "modelo": "PUCUHT-12MM AL 26MM NG/CF/MIEL/AZ/BC/RJ",
+    "descripcion": "PULSO CUERO 12MM AL 26MM NEGRO, CAFÉ, MIEL, AZUL, BLANCO, ROJO",
+    "medida": "12mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-31.jpg"
+  },
+  {
+    "modelo": "PUCUHTP-18MM AL 26MM NG/CF/MIEL",
+    "descripcion": "PULSO CUERO 18MM AL 26MM NEGRO, CAFÉ, MIEL",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-32.jpg"
+  },
+  {
+    "modelo": "PUCUHTG-16MM AL 26MM NG/CF/MIEL",
+    "descripcion": "PULSO CUERO 16MM AL 26MM NEGRO, CAFÉ, MIEL",
+    "medida": "16mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-33.jpg"
   },
   {
     "modelo": "PUCUTI-20MM AL 26MM NG/CF/MIEL",
     "descripcion": "PULSO CUERO 20MM AL 26MM",
     "medida": "20mm",
     "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-28.jpg"
-  },
-  {
-    "modelo": "PUCUHTSW-17/19 NG/CF",
-    "descripcion": "PULSO CUERO PARA SWATCH EN ESTUCHE 17 Y 19MM",
-    "medida": "19mm",
-    "color": "",
-    "img": "/catalogo-pages/pulso-cuero/page-29.jpg"
-  },
-  {
-    "modelo": "PIPUCU-18MM AL 24MM NG/CF Y MIEL",
-    "descripcion": "PISA PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ Y MIEL",
-    "medida": "18mm",
-    "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-30.jpg"
-  },
-  {
-    "modelo": "PUNY-18/20/22/24",
-    "descripcion": "PULSO DE NAYLON NEGRO, AZUL Y VERDE 18MM,20MM,22MM Y 24MM",
-    "medida": "18mm",
-    "color": "Negro",
-    "img": "/catalogo-pages/pulso-cuero/page-31.jpg"
-  },
-  {
-    "modelo": "PUCU-12MM AL 28MM NG/CF",
-    "descripcion": "PULSO CUERO 12MM AL 28MM NEGRO, CAFÉ, MIEL, AZUL, BLANCO, ROSA, GRIS Y VINO",
-    "medida": "12mm",
-    "color": "Negro",
-    "img": "/catalogo-pages/pulso-cuero/page-32.jpg"
-  },
-  {
-    "modelo": "PUCUCO-8MM AL 28MM",
-    "descripcion": "PULSO CUERO 8MM al 28MM NEGRO, CAFÉ, MIEL, BLANCO, MOSTAZA,BEIGE, ROSA, ROJO, AZUL,GRIS,VINOTINTO",
-    "medida": "28mm",
-    "color": "Negro",
-    "img": "/catalogo-pages/pulso-cuero/page-33.jpg"
-  },
-  {
-    "modelo": "PUCUCOP-18MM AL 24MM",
-    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ, MIEL",
-    "medida": "18mm",
-    "color": "Negro",
     "img": "/catalogo-pages/pulso-cuero/page-34.jpg"
   },
   {
-    "modelo": "PUCUCOG-16 AL 24 NG/CF/MIEL",
-    "descripcion": "PULSO CUERO ECONOMICO GRABADO ABULTADO",
-    "medida": "",
-    "color": "Miel",
+    "modelo": "PUCUHTSW-17MM Y 19MM NG/CF",
+    "descripcion": "PULSO CUERO 17MM AL 19MM NEGRO Y CAFÉ",
+    "medida": "17mm",
+    "color": "Negro",
     "img": "/catalogo-pages/pulso-cuero/page-35.jpg"
   },
   {
-    "modelo": "PUCUCOL-12MM AL 26MM NG/CF/MIEL/BC/AZ/GRIS/RJ",
-    "descripcion": "PULSO CUERO ECONOMICO LISO ABULTADO 12MM AL 26MM",
-    "medida": "12mm",
-    "color": "Miel",
+    "modelo": "PUCUHTSW-23MM NG/CF",
+    "descripcion": "PULSO CUERO 23MM NEGRO Y CAFÉ",
+    "medida": "23mm",
+    "color": "Negro",
     "img": "/catalogo-pages/pulso-cuero/page-36.jpg"
+  },
+  {
+    "modelo": "PUCUHTPG-22CF",
+    "descripcion": "PULSO CUERO 22MM CAFÉ",
+    "medida": "22mm",
+    "color": "Café",
+    "img": "/catalogo-pages/pulso-cuero/page-37.jpg"
+  },
+  {
+    "modelo": "PUCUGC-18MM AL 24MM NG/CF Y MIEL",
+    "descripcion": "PULSO CUERO EN EMPAQUE, 18MM AL 24MM NEGRO, CAFÉ Y MIEL",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-38.jpg"
+  },
+  {
+    "modelo": "PUCUHC-18MM AL 24MM NG/CF Y MIEL",
+    "descripcion": "(HEBILLA ESPECIAL)PULSO CUERO EN EMPAQUE 18MM AL 24MM NEGRO, CAFÉ Y MIEL",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-39.jpg"
+  },
+  {
+    "modelo": "PUCUP-18MM AL 24MM NG/CF Y MIEL",
+    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ Y MIEL",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-40.jpg"
+  },
+  {
+    "modelo": "PUCUG-18MM AL 24MM NG/CF Y MIEL",
+    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ Y MIEL",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-41.jpg"
   },
   {
     "modelo": "PUCUA-18 AL 24MM",
     "descripcion": "PULSO CUERO MIEL 18MM AL 24MM",
     "medida": "24mm",
     "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-37.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-42.jpg"
   },
   {
     "modelo": "PUCUAL-18 AL 24MM",
     "descripcion": "PULSO CUERO NEGRO, CAFÉ Y MIEL 18MM AL 24MM",
     "medida": "24mm",
     "color": "Negro",
-    "img": "/catalogo-pages/pulso-cuero/page-38.jpg"
-  },
-  {
-    "modelo": "PUCUCH-12MM AL 22MM NG/CF/MIEL",
-    "descripcion": "PULSO CUERO 12MM AL 22MM NEGRO, CAFÉ, MIEL",
-    "medida": "12mm",
-    "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-39.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-43.jpg"
   },
   {
     "modelo": "PUCUBL-12MM AL 24MM NG/CF/MIEL",
     "descripcion": "PULSO CUERO LISO NEGRO, CAFÉ, MIEL",
     "medida": "12mm",
     "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-40.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-44.jpg"
   },
   {
     "modelo": "PUCUBG-18MM AL 24MM NG/CF/MIEL",
     "descripcion": "PULSO CUERO GRABADO NEGRO, CAFÉ, MIEL",
     "medida": "18mm",
     "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-41.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-45.jpg"
+  },
+  {
+    "modelo": "PUCUCH-12MM AL 22MM NG/CF/MIEL",
+    "descripcion": "PULSO CUERO 12MM AL 22MM NEGRO, CAFÉ, MIEL",
+    "medida": "12mm",
+    "color": "Miel",
+    "img": "/catalogo-pages/pulso-cuero/page-46.jpg"
   },
   {
     "modelo": "PUSINTE-18-20-22-24NG/CF/MIEL",
     "descripcion": "PULSO SINTETICO 18MM AL 24MM",
     "medida": "18mm",
     "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-42.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-47.jpg"
   },
   {
-    "modelo": "PUCUQ-18 AL 28MM NG/CF/MIEL",
-    "descripcion": "PULSO CUERO GENUINO NEGRO, CAFÉ Y MIEL 18MM, 20MM 22MM, 24MM, 26MM Y 28MM",
+    "modelo": "PUCU-12MM AL 28MM NG/CF",
+    "descripcion": "PULSO CUERO 12MM AL 28MM NEGRO, CAFÉ, MIEL, AZUL, BLANCO, ROSA, GRIS Y VINO",
+    "medida": "12mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-48.jpg"
+  },
+  {
+    "modelo": "PUNY-18/20/22/24",
+    "descripcion": "PULSO DE NAYLON NEGRO, AZUL Y VERDE 18MM,20MM,22MM Y 24MM",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-49.jpg"
+  },
+  {
+    "modelo": "PUCUCO-8MM AL 28MM",
+    "descripcion": "PULSO CUERO 8MM al 28MM NEGRO, CAFÉ, MIEL, BLANCO, MOSTAZA,BEIGE, ROSA, ROJO, AZUL,GRIS,VINOTINTO",
     "medida": "28mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-50.jpg"
+  },
+  {
+    "modelo": "PUCUCOP-18MM AL 24MM",
+    "descripcion": "PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ, MIEL",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-51.jpg"
+  },
+  {
+    "modelo": "PUCUCOG-16 AL 24 NG/CF/MIEL",
+    "descripcion": "PULSO CUERO ECONOMICO GRABADO ABULTADO",
+    "medida": "",
     "color": "Miel",
-    "img": "/catalogo-pages/pulso-cuero/page-43.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-52.jpg"
+  },
+  {
+    "modelo": "PUCUCOL-12MM AL 26MM NG/CF/MIEL/BC/AZ/GRIS/RJ",
+    "descripcion": "PULSO CUERO ECONOMICO LISO ABULTADO 12MM AL 26MM",
+    "medida": "12mm",
+    "color": "Miel",
+    "img": "/catalogo-pages/pulso-cuero/page-53.jpg"
+  },
+  {
+    "modelo": "PUCUQ-18MIEL, 22NEGRO, 26 CF Y MIEL AL 28NG",
+    "descripcion": "PULSO CUERO GENUINO 18MM MIEL, 22MM NEGRO, 26MM CAFÉ Y MIEL, AL 28MM NEGRO",
+    "medida": "18mm",
+    "color": "Negro",
+    "img": "/catalogo-pages/pulso-cuero/page-54.jpg"
   },
   {
     "modelo": "PUSINTECO-8MM AL 28MM",
     "descripcion": "PULSO SINTETICO COLORES SURTIDOS PAQUETE X 50 UNIDADES",
     "medida": "28mm",
     "color": "",
-    "img": "/catalogo-pages/pulso-cuero/page-44.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-55.jpg"
   },
   {
     "modelo": "MANILLAS O PULSO ARTESANAL",
     "descripcion": "",
     "medida": "",
     "color": "",
-    "img": "/catalogo-pages/pulso-cuero/page-45.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-56.jpg"
+  },
+  {
+    "modelo": "PIPUCU-18MM AL 24MM NG/CF Y MIEL",
+    "descripcion": "PISA PULSO CUERO 18MM AL 24MM NEGRO, CAFÉ Y MIEL",
+    "medida": "18mm",
+    "color": "Miel",
+    "img": "/catalogo-pages/pulso-cuero/page-57.jpg"
   },
   {
     "modelo": "CAJA PARA PULSO",
     "descripcion": "(MEDIDAS 17.7X5X1.8 CMS)",
     "medida": "",
     "color": "",
-    "img": "/catalogo-pages/pulso-cuero/page-46.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-58.jpg"
   },
   {
     "modelo": "EMPAQUE PLASTICO",
     "descripcion": "(MEDIDAS 13.5X7X1.8 CMS)",
     "medida": "",
     "color": "",
-    "img": "/catalogo-pages/pulso-cuero/page-47.jpg"
+    "img": "/catalogo-pages/pulso-cuero/page-59.jpg"
   }
 ]
