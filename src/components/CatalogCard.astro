@@ -185,6 +185,9 @@ const BATTERY_CODE: Record<string, string> = {
   '399': 'SR927W',
 };
 
+const toSentence = (s?: string) =>
+  s ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase() : s;
+
 // Title split — for movements: "ETA 251.262" → prefix "ETA", model "251.262"
 // For pulsos: "PPUNG/2220-18/20/22/24 Y 26" → prefix "PPUNG", model "2220-18/20/22/24 Y 26"
 // For coronas/vidrios/modulos: titulo IS the ref, prefix is descriptive name
@@ -194,11 +197,11 @@ const splitAtSlash = slashIdx > -1 && (spaceIdx === -1 || slashIdx < spaceIdx);
 const prefix   = fullTitle
   ? ''
   : isCorona
-  ? (TIPO_LABEL[tipo ?? ''] ?? '')
+  ? ''
   : isGorras
-  ? (TIPO_LABEL[tipo ?? ''] ?? '')
+  ? ''
   : (isVidrios || isModulos || isInsumos || isHerramientas || isJoyeria)
-  ? (nombre ?? '')
+  ? toSentence(nombre) ?? ''
   : splitAtSlash
   ? titulo.slice(0, slashIdx)
   : (spaceIdx > -1 ? titulo.slice(0, spaceIdx) : '');
@@ -221,34 +224,25 @@ const specs: SpecItem[] = isCorona
   ? [
       medida ? { k: 'Medida', v: medida } : null,
       grosor ? { k: 'Grosor', v: grosor } : null,
-      forma  ? { k: 'Tipo',   v: forma.charAt(0) + forma.slice(1).toLowerCase() } : null,
     ].filter((s): s is SpecItem => s !== null)
   : isModulos
   ? [
       detalles.bateria     ? { k: 'Batería',    v: BATTERY_CODE[detalles.bateria] ?? detalles.bateria } : null,
       detalles.dimensiones ? { k: 'Eje',        v: detalles.dimensiones }       : null,
-      tipo                 ? { k: 'Tipo',       v: TIPO_LABEL[tipo] ?? tipo }    : null,
     ].filter((s): s is SpecItem => s !== null)
   : isInsumos
   ? [
       marca         ? { k: 'Marca',  v: marca }                          : null,
       especificacion ? { k: 'Espec.', v: especificacion.slice(0, 40) }   : null,
-      tipo           ? { k: 'Cat.',   v: TIPO_LABEL[tipo] ?? tipo }       : null,
     ].filter((s): s is SpecItem => s !== null)
   : isHerramientas
-  ? [
-      tipo ? { k: 'Tipo', v: TIPO_LABEL[tipo] ?? tipo } : null,
-    ].filter((s): s is SpecItem => s !== null)
+  ? []
   : isJoyeria
-  ? [
-      tipo ? { k: 'Tipo', v: TIPO_LABEL[tipo] ?? tipo } : null,
-    ].filter((s): s is SpecItem => s !== null)
+  ? []
   : isGorras
   ? []
   : isWatch
-  ? [
-      tipo ? { k: 'Tipo', v: TIPO_LABEL[tipo] ?? tipo } : null,
-    ].filter((s): s is SpecItem => s !== null)
+  ? []
   : [
       detalles.dimensiones      ? { k: 'Dimensiones', v: detalles.dimensiones }      : null,
       detalles.altura           ? { k: 'Altura',      v: `${detalles.altura}mm` }    : null,
@@ -292,23 +286,23 @@ const coronaColors = isCorona && color
       Cotizar
     </a>
 
-    <!-- Badges -->
-    <div class="cc-badge-strip">
-      {isVidrios && forma ? (
-        <span class={`cc-badge ${BADGE_CLASS[forma] ?? 'badge-acc'}`}>
-          {forma.charAt(0) + forma.slice(1).toLowerCase()}
-        </span>
-      ) : tipo ? (
-        <span class={`cc-badge ${BADGE_CLASS[tipo] ?? 'badge-cab'}`}>
-          {TIPO_LABEL[tipo] ?? tipo}
-        </span>
-      ) : null}
-      {!isCorona && !isVidrios && fecha && <span class="cc-badge badge-fecha">+ Fecha</span>}
-    </div>
   </div>
 
   <!-- Info zone -->
   <div class="cc-body">
+    <div class="cc-eyebrow-row">
+      {isVidrios && forma ? (
+        <span class={`cc-dot ${BADGE_CLASS[forma] ?? 'badge-acc'}`}></span>
+      ) : tipo ? (
+        <span class={`cc-dot ${BADGE_CLASS[tipo] ?? 'badge-cab'}`}></span>
+      ) : null}
+      <span class="cc-eyebrow">
+        {isVidrios && forma
+          ? forma.charAt(0) + forma.slice(1).toLowerCase()
+          : tipo ? (TIPO_LABEL[tipo] ?? tipo) : ''}
+      </span>
+      {!isCorona && !isVidrios && fecha && <span class="cc-fecha-tag">+ Fecha</span>}
+    </div>
     <div class="cc-header">
       {prefix && <span class="cc-prefix">{prefix}</span>}
       <h3 class="cc-modelo">{modelNum}</h3>
@@ -351,9 +345,9 @@ const coronaColors = isCorona && color
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid #dce4f0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(2, 69, 152, 0.06);
+    border: 1px solid #e4e9f1;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(2, 69, 152, 0.04);
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     height: 100%;
   }
@@ -376,24 +370,22 @@ const coronaColors = isCorona && color
   .cc:hover {
     border-color: #f2a900;
     box-shadow:
-      0 0 0 1.5px rgba(242,169,0,0.35),
-      0 8px 28px rgba(242,169,0,0.14),
-      0 2px 10px rgba(2,69,152,0.1);
-    transform: translateY(-4px);
+      0 0 0 1px rgba(242,169,0,0.3),
+      0 6px 20px rgba(2,69,152,0.08);
+    transform: translateY(-2px);
     outline: none;
   }
 
   /* ── Image zone ── */
   .cc-img-zone {
     position: relative;
-    background: #f5f7fb;
+    background: #fafbfd;
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #eef2f8;
     flex-shrink: 0;
   }
 
@@ -402,12 +394,12 @@ const coronaColors = isCorona && color
     height: 100%;
     object-fit: contain;
     display: block;
-    padding: 1rem;
-    transition: transform 0.35s ease;
+    padding: 1.4rem;
+    transition: transform 0.4s ease;
   }
 
   .cc:hover .cc-img {
-    transform: scale(1.06);
+    transform: scale(1.04);
   }
 
   /* ── WA cotizar button ── */
@@ -440,17 +432,36 @@ const coronaColors = isCorona && color
     box-shadow: 0 2px 10px rgba(37,211,102,0.45);
   }
 
-  /* ── Badge strip ── */
-  .cc-badge-strip {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  /* ── Eyebrow row (quiet tipo indicator, replaces overlay chip) ── */
+  .cc-eyebrow-row {
     display: flex;
-    gap: 0.3rem;
-    padding: 0.45rem 0.6rem;
-    background: linear-gradient(to top, rgba(245, 247, 251, 0.95), transparent);
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cc-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .cc-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #7b8aa0;
+  }
+
+  .cc-fecha-tag {
+    margin-left: auto;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #024598;
   }
 
   .cc-badge {
@@ -468,11 +479,6 @@ const coronaColors = isCorona && color
   .badge-crono { background: #f2a900; color: #111; }
   .badge-cab   { background: #024598; color: #fff; }
   .badge-dama  { background: #c8245a; color: #fff; }
-  .badge-fecha {
-    background: rgba(2, 69, 152, 0.08);
-    color: #024598;
-    border: 1px solid rgba(2, 69, 152, 0.18);
-  }
   /* Corona badges */
   .badge-rosca    { background: #f2a900; color: #111; }
   .badge-tubo     { background: #024598; color: #fff; }
@@ -544,7 +550,7 @@ const coronaColors = isCorona && color
 
   /* ── Body ── */
   .cc-body {
-    padding: 1rem 1.1rem 1rem;
+    padding: 1.15rem 1.25rem 1.25rem;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -554,27 +560,26 @@ const coronaColors = isCorona && color
   .cc-header {
     display: flex;
     flex-direction: column;
-    gap: 0.05rem;
-    margin-bottom: 0.55rem;
+    gap: 0.18rem;
+    margin-bottom: 0.6rem;
   }
 
   .cc-prefix {
     font-family: var(--font-body);
-    font-size: 0.6rem;
-    font-weight: 600;
-    color: #9aabbf;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    line-height: 1;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: #8b98a8;
+    letter-spacing: 0;
+    line-height: 1.3;
   }
 
   .cc-modelo {
     font-family: var(--font-heading);
-    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    font-size: clamp(1.05rem, 2.2vw, 1.2rem);
     font-weight: 800;
     color: #024598;
     letter-spacing: -0.01em;
-    line-height: 1.1;
+    line-height: 1.15;
     margin: 0;
   }
 

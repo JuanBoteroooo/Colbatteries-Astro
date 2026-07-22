@@ -3080,13 +3080,17 @@ const seo = seoMap[slug] ?? {
 
   /* ── Controls ── */
   .eta-controls {
-    background: #fff;
-    border-bottom: 1px solid #dce4f0;
-    padding: 0.9rem 1.5rem;
+    background: rgba(255,255,255,0.86);
+    backdrop-filter: blur(12px) saturate(1.4);
+    -webkit-backdrop-filter: blur(12px) saturate(1.4);
+    border: 1px solid rgba(220,228,240,0.9);
+    border-radius: 16px;
+    padding: 0.85rem 1.1rem;
+    margin: 1.1rem 1.5rem;
     display: flex; align-items: center; gap: 0.75rem;
     flex-wrap: wrap;
-    position: sticky; top: 90px; z-index: 50;
-    box-shadow: 0 2px 8px rgba(2,69,152,0.06);
+    position: sticky; top: 100px; z-index: 50;
+    box-shadow: 0 10px 30px rgba(2,69,152,0.1), 0 1px 2px rgba(2,69,152,0.04);
   }
 
   .eta-search-wrap {
@@ -3124,6 +3128,9 @@ const seo = seoMap[slug] ?? {
   .eta-tipo-pill:hover { border-color: var(--blue); color: var(--blue); background: #eef2fa; }
   .eta-tipo-pill.active { background: var(--yellow); border-color: var(--yellow); color: #111; }
 
+  .pill-count { opacity: 0.6; font-weight: 600; margin-left: 1px; }
+  .eta-tipo-pill.active .pill-count { opacity: 0.7; }
+
   .eta-fecha-toggle {
     display: inline-flex; align-items: center; gap: 0.4rem;
     padding: 0.4rem 0.85rem; border-radius: 50px;
@@ -3149,15 +3156,40 @@ const seo = seoMap[slug] ?? {
   .eta-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    padding: 1.5rem;
+    gap: 1.75rem 1.5rem;
+    padding: 2rem;
     width: 100%;
     box-sizing: border-box;
   }
 
   /* ── Card wrapper (grid item) ── */
-  .eta-card-wrapper { display: block; min-width: 0; }
+  .eta-card-wrapper {
+    display: block; min-width: 0;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    animation: eta-card-in 0.5s cubic-bezier(0.16,1,0.3,1) backwards;
+  }
   .eta-card-wrapper[hidden] { display: none !important; }
+  .eta-card-wrapper.is-leaving,
+  .eta-card-wrapper.is-entering { opacity: 0; transform: scale(0.94); }
+
+  @keyframes eta-card-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Stagger the first screenful on initial load only */
+  .eta-card-wrapper:nth-child(1)  { animation-delay: 0ms; }
+  .eta-card-wrapper:nth-child(2)  { animation-delay: 25ms; }
+  .eta-card-wrapper:nth-child(3)  { animation-delay: 50ms; }
+  .eta-card-wrapper:nth-child(4)  { animation-delay: 75ms; }
+  .eta-card-wrapper:nth-child(5)  { animation-delay: 100ms; }
+  .eta-card-wrapper:nth-child(6)  { animation-delay: 125ms; }
+  .eta-card-wrapper:nth-child(7)  { animation-delay: 150ms; }
+  .eta-card-wrapper:nth-child(8)  { animation-delay: 175ms; }
+  .eta-card-wrapper:nth-child(9)  { animation-delay: 200ms; }
+  .eta-card-wrapper:nth-child(10) { animation-delay: 225ms; }
+  .eta-card-wrapper:nth-child(11) { animation-delay: 250ms; }
+  .eta-card-wrapper:nth-child(12) { animation-delay: 275ms; }
 
   /* Empty */
   .eta-empty {
@@ -3178,7 +3210,11 @@ const seo = seoMap[slug] ?? {
   .eta-grid--4col { grid-template-columns: repeat(4, 1fr); }
   @media (max-width: 1100px) { .eta-grid--4col { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 900px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { padding: 0.75rem 1rem; } .eta-fecha-toggle span { display: none; } }
+  @media (max-width: 560px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { padding: 0.7rem 0.85rem; margin: 0.75rem; border-radius: 12px; } .eta-fecha-toggle span { display: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .eta-card-wrapper, .eta-img, .cc, .cc-img { animation: none !important; transition: none !important; }
+  }
 
   /* ── Image modal ── */
   .eta-modal {
@@ -3335,12 +3371,18 @@ const seo = seoMap[slug] ?? {
   requestAnimationFrame(tickP);
   setTimeout(hideOverlay, 3000);
 
-  function hideOverlay() {
+  function hideOverlay(fast) {
     setP(100);
     if (pctEl) pctEl.textContent = '100%';
+    const holdMs = fast ? 0   : 250;
+    const fadeMs = fast ? 180 : 450;
     setTimeout(() => {
-      if (overlay) { overlay.style.opacity = '0'; setTimeout(() => overlay.style.display = 'none', 450); }
-    }, 250);
+      if (overlay) {
+        overlay.style.transition = `opacity ${fadeMs}ms ease`;
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.style.display = 'none', fadeMs);
+      }
+    }, holdMs);
   }
 
   // ════════════════════════════
@@ -3498,6 +3540,23 @@ const seo = seoMap[slug] ?? {
     let fechaOnly  = false;
     let searchQ    = '';
 
+    // Pill values that exist as a catalog's own filter options. A wrapper's tipo only
+    // falls back to word-token matching (for space-joined multi-value tipos, e.g. pulso
+    // sizes "18mm 20mm 22mm") when it isn't itself one of these exact, atomic values —
+    // otherwise a generic pill like "EXHIBIDOR" would also swallow "EXHIBIDOR ACRÍLICO".
+    const knownTipoValues = new Set(
+      Array.from(tipoBar?.querySelectorAll('.eta-tipo-pill') ?? [])
+        .map(b => b.dataset.tipo)
+        .filter(Boolean)
+    );
+
+    function tipoMatches(tipo, active) {
+      if (!active) return true;
+      if (tipo === active) return true;
+      if (knownTipoValues.has(tipo)) return false; // atomic value — exact match only
+      return tipo.split(' ').includes(active);
+    }
+
     function applyETAFilters() {
       const q = searchQ.toLowerCase().trim();
       let count = 0;
@@ -3508,17 +3567,38 @@ const seo = seoMap[slug] ?? {
         const medida = wrapper.dataset.medida ?? '';
         const color  = wrapper.dataset.color  ?? '';
         const show =
-          (!activeTipo || tipo.split(' ').includes(activeTipo)) &&
+          tipoMatches(tipo, activeTipo) &&
           (!fechaOnly  || fecha) &&
           (!q          || modelo.includes(q) || tipo.toLowerCase().includes(q) || medida.includes(q) || color.includes(q));
-        wrapper.hidden = !show;
-        if (show) count++;
+
+        if (show) {
+          count++;
+          if (wrapper.hidden) {
+            wrapper.hidden = false;
+            wrapper.classList.add('is-entering');
+            requestAnimationFrame(() => requestAnimationFrame(() => wrapper.classList.remove('is-entering')));
+          }
+        } else if (!wrapper.hidden) {
+          wrapper.classList.add('is-leaving');
+          setTimeout(() => { wrapper.hidden = true; wrapper.classList.remove('is-leaving'); }, 160);
+        }
       });
       if (countEl) countEl.textContent = count;
       if (emptyEl) emptyEl.style.display = count === 0 ? 'flex' : 'none';
     }
 
-    hideOverlay();
+    // Products are already server-rendered — no real asset wait, skip the theatrical fade.
+    hideOverlay(true);
+
+    // ── Tipo pill counts (computed once from the full, unfiltered set) ──
+    const allWrappers = document.querySelectorAll('.eta-card-wrapper');
+    tipoBar?.querySelectorAll('.eta-tipo-pill').forEach(btn => {
+      const t = btn.dataset.tipo ?? '';
+      const label = btn.textContent.trim();
+      let n = 0;
+      allWrappers.forEach(w => { if (tipoMatches(w.dataset.tipo ?? '', t)) n++; });
+      btn.innerHTML = `${label} <span class="pill-count">(${n})</span>`;
+    });
 
     // ── Image modal ──
     const modal      = document.getElementById('etaModal');
