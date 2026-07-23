@@ -3210,7 +3210,7 @@ const seo = seoMap[slug] ?? {
   .eta-grid--4col { grid-template-columns: repeat(4, 1fr); }
   @media (max-width: 1100px) { .eta-grid--4col { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 900px)  { .eta-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { padding: 0.7rem 0.85rem; margin: 0.75rem; border-radius: 12px; } .eta-fecha-toggle span { display: none; } }
+  @media (max-width: 560px)  { .eta-grid { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.75rem; } .eta-controls { position: static; top: auto; padding: 0.7rem 0.85rem; margin: 0.75rem; border-radius: 12px; } .eta-fecha-toggle span { display: none; } }
 
   @media (prefers-reduced-motion: reduce) {
     .eta-card-wrapper, .eta-img, .cc, .cc-img { animation: none !important; transition: none !important; }
@@ -3292,6 +3292,11 @@ const seo = seoMap[slug] ?? {
     background: #f2a900;
     color: #111;
     transform: translateY(-50%) scale(1.08);
+  }
+
+  /* Touch devices navigate the modal by swiping — arrows just get in the way */
+  @media (max-width: 640px), (hover: none) and (pointer: coarse) {
+    .eta-modal-arrow { display: none; }
   }
 
   .eta-modal-img {
@@ -3651,6 +3656,15 @@ const seo = seoMap[slug] ?? {
 
     document.getElementById('etaModalPrev')?.addEventListener('click', () => navigate(-1));
     document.getElementById('etaModalNext')?.addEventListener('click', () => navigate(+1));
+
+    // Swipe left/right to navigate on touch devices (arrows are hidden there)
+    let modalTouchX = 0;
+    const modalImgWrap = document.querySelector('.eta-modal-img-wrap');
+    modalImgWrap?.addEventListener('touchstart', e => { modalTouchX = e.touches[0].clientX; }, { passive: true });
+    modalImgWrap?.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - modalTouchX;
+      if (Math.abs(dx) > 50) navigate(dx < 0 ? +1 : -1);
+    }, { passive: true });
 
     modalClose?.addEventListener('click', closeModal);
     // Close on backdrop click — guard against clicks inside the inner panel
