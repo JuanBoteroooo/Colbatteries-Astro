@@ -265,10 +265,15 @@
     font-size: 0.95rem;
     border-radius: 8px;
     text-decoration: none;
-    transition: background 0.25s, color 0.25s;
+    transition: background 0.25s, color 0.25s, transform 0.25s, box-shadow 0.25s;
   }
 
-  .btn-outline-blue:hover { background: var(--blue); color: var(--white); }
+  .btn-outline-blue:hover {
+    background: var(--blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(2,69,152,0.22);
+  }
 
   /* ── STATS ── */
   .hero-stats {
