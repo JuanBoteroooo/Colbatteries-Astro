@@ -1,0 +1,86 @@
+[
+  {
+    "modelo": "DPT0501",
+    "descripcion": "Antitarnish Pro — pasivador profesional de plata, protección invisible y duradera contra el deslustre",
+    "tipo": "ANTITARNISH",
+    "img": "/catalogo-pages/quimicos-joyeria/page-02.jpg"
+  },
+  {
+    "modelo": "DPSG01BR80F",
+    "descripcion": "Solución de baño de oro 14K para inmersión, libre de cianuro, acabado brillante y uniforme",
+    "tipo": "BAÑO DE ORO",
+    "img": "/catalogo-pages/quimicos-joyeria/page-03.jpg"
+  },
+  {
+    "modelo": "DPSG02BR80F",
+    "descripcion": "Solución de baño de oro 18K para inmersión, libre de cianuro, acabado brillante y uniforme",
+    "tipo": "BAÑO DE ORO",
+    "img": "/catalogo-pages/quimicos-joyeria/page-04.jpg"
+  },
+  {
+    "modelo": "DPSG03BR80F",
+    "descripcion": "Solución de baño de oro Pink Gold para inmersión, libre de cianuro, acabado brillante y uniforme",
+    "tipo": "BAÑO DE ORO",
+    "img": "/catalogo-pages/quimicos-joyeria/page-05.jpg"
+  },
+  {
+    "modelo": "DPSG04BR80F",
+    "descripcion": "Solución de baño de oro 24K para inmersión, libre de cianuro, acabado brillante y uniforme",
+    "tipo": "BAÑO DE ORO",
+    "img": "/catalogo-pages/quimicos-joyeria/page-15.jpg"
+  },
+  {
+    "modelo": "DPSG01PRF0",
+    "descripcion": "Solución de baño de oro 14K para lápiz, libre de cianuro, aplicación fina y precisa",
+    "tipo": "BAÑO DE ORO LÁPIZ",
+    "img": "/catalogo-pages/quimicos-joyeria/page-14.jpg"
+  },
+  {
+    "modelo": "DPSG02PRF0",
+    "descripcion": "Solución de baño de oro 18K para lápiz, libre de cianuro, aplicación fina y precisa",
+    "tipo": "BAÑO DE ORO LÁPIZ",
+    "img": "/catalogo-pages/quimicos-joyeria/page-06.jpg"
+  },
+  {
+    "modelo": "DPSG03PRF0",
+    "descripcion": "Solución de baño de oro Pink Gold para lápiz, libre de cianuro, aplicación fina y precisa",
+    "tipo": "BAÑO DE ORO LÁPIZ",
+    "img": "/catalogo-pages/quimicos-joyeria/page-08.jpg"
+  },
+  {
+    "modelo": "DPSG04PRF0",
+    "descripcion": "Solución de baño de oro 24K para lápiz, libre de cianuro, aplicación fina y precisa",
+    "tipo": "BAÑO DE ORO LÁPIZ",
+    "img": "/catalogo-pages/quimicos-joyeria/page-07.jpg"
+  },
+  {
+    "modelo": "DPSN01BRQT",
+    "descripcion": "Solución de niquelado electro-plating, base brillante y uniforme antes del baño final de metales preciosos",
+    "tipo": "NIQUEL",
+    "img": "/catalogo-pages/quimicos-joyeria/page-09.jpg"
+  },
+  {
+    "modelo": "DPSS01BRQT",
+    "descripcion": "Solución de baño de plata para inmersión, libre de cianuro, acabado blanco-plata brillante",
+    "tipo": "BAÑO DE PLATA",
+    "img": "/catalogo-pages/quimicos-joyeria/page-10.jpg"
+  },
+  {
+    "modelo": "DPT03P1K",
+    "descripcion": "Activator Dip — activador de superficies para máxima adherencia en baños electroquímicos",
+    "tipo": "ACTIVADOR",
+    "img": "/catalogo-pages/quimicos-joyeria/page-11.jpg"
+  },
+  {
+    "modelo": "DPT02RQT",
+    "descripcion": "Electrocleaning Solution — desengrasante listo para usar, remueve residuos de pulido antes del baño",
+    "tipo": "LIMPIEZA",
+    "img": "/catalogo-pages/quimicos-joyeria/page-12.jpg"
+  },
+  {
+    "modelo": "DPT01C500",
+    "descripcion": "V-Sonics Jewelry Soap Concentrate — jabón concentrado para limpieza ultrasónica de joyas",
+    "tipo": "LIMPIEZA",
+    "img": "/catalogo-pages/quimicos-joyeria/page-13.jpg"
+  }
+]

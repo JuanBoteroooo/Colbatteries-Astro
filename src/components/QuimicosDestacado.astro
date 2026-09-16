@@ -1,0 +1,308 @@
+---
+// Floating cluster — real cutout product photos (transparent bg), each positioned/sized/tinted below.
+// Positions are data-driven (not literal Tailwind classes) so they're applied via inline style;
+// everything else uses Tailwind utilities.
+const floaters = [
+  {
+    img: '/images/productos/quimicos-joyeria/cutouts/DPT0501.png',
+    tag: 'ANTITARNISH',
+    tone: 'cool',
+    h: 300, left: 4, top: 2, z: 5, dur: 6.4, delay: 0, amp: -18,
+  },
+  {
+    img: '/images/productos/quimicos-joyeria/cutouts/DPSG01BR80F.png',
+    tag: '14K GOLD',
+    tone: 'warm',
+    h: 230, left: 42, top: 0, z: 4, dur: 7.2, delay: 0.4, amp: -13,
+  },
+  {
+    img: '/images/productos/quimicos-joyeria/cutouts/DPSS01BRQT.png',
+    tag: 'SILVER BATH',
+    tone: 'cool',
+    h: 230, left: 72, top: 30, z: 4, dur: 6.8, delay: 0.9, amp: -15,
+  },
+  {
+    img: '/images/productos/quimicos-joyeria/cutouts/DPSG02PRF0.png',
+    tag: '18K PEN',
+    tone: 'warm',
+    h: 165, left: 0, top: 68, z: 2, dur: 5.6, delay: 0.2, amp: -10,
+  },
+  {
+    img: '/images/productos/quimicos-joyeria/cutouts/DPT03P1K.png',
+    tag: 'ACTIVATOR',
+    tone: 'cool',
+    h: 138, left: 84, top: 2, z: 3, dur: 6, delay: 1.2, amp: -11,
+  },
+  {
+    img: '/images/productos/quimicos-joyeria/cutouts/DPSN01BRQT.png',
+    tag: 'NICKEL',
+    tone: 'cool',
+    h: 205, left: 24, top: 70, z: 3, dur: 6.6, delay: 0.6, amp: -14,
+  },
+];
+
+const glow = {
+  warm: 'bg-[radial-gradient(circle,rgba(242,169,0,0.5),transparent_70%)]',
+  cool: 'bg-[radial-gradient(circle,rgba(79,209,255,0.42),transparent_70%)]',
+};
+
+const specs = [
+  { cat: 'ANTITARNISH', spec: 'Inmersión 30–60s · Temp. ambiente' },
+  { cat: 'BAÑO DE ORO', spec: '50°C (120°F) · 30–45s' },
+  { cat: 'BAÑO DE PLATA', spec: '1–1.5V · 20–25s' },
+  { cat: 'NÍQUEL', spec: '50°C (120°F) · 6V · 1 min' },
+];
+
+const lineas = [
+  { name: 'Antitarnish', count: 1 },
+  { name: 'Baño de Oro', count: 4 },
+  { name: 'Baño de Oro Lápiz', count: 4 },
+  { name: 'Baño de Plata', count: 1 },
+  { name: 'Níquel', count: 1 },
+  { name: 'Activador', count: 1 },
+  { name: 'Limpieza', count: 2 },
+];
+---
+
+<section
+  id="quimicos-nueva-linea"
+  class="relative isolate overflow-hidden bg-[linear-gradient(150deg,#02316e_0%,#021c46_42%,#04091c_100%)] py-24 sm:py-28"
+>
+  <!-- Diagonal brand-yellow texture, same language as the WhatsApp contact strip -->
+  <div
+    class="pointer-events-none absolute inset-0 -z-10 bg-[repeating-linear-gradient(-55deg,transparent,transparent_60px,rgba(242,169,0,0.04)_60px,rgba(242,169,0,0.04)_61px)]"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute -right-40 -top-56 -z-10 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(242,169,0,0.16)_0%,transparent_68%)]"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute right-[8%] -bottom-44 -z-10 h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(79,209,255,0.1)_0%,transparent_70%)]"
+    aria-hidden="true"
+  ></div>
+
+  <div class="container grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.95fr_1.15fr]">
+
+    <!-- ─── LEFT: copy ─── -->
+    <div class="reveal-left">
+      <div class="mb-6 inline-flex items-center gap-2 font-heading text-[0.68rem] font-extrabold uppercase tracking-[0.2em] text-brand-yellow">
+        <span class="h-1.5 w-1.5 animate-pulseDot rounded-full bg-brand-yellow"></span>
+        <span>Nueva línea</span>
+      </div>
+
+      <h2 class="mb-5 font-heading text-[clamp(2.2rem,3.6vw,3.2rem)] font-black leading-[1.06] tracking-tight text-white">
+        Químicos<br />
+        <span class="bg-[linear-gradient(100deg,#ffd76a_0%,#f2a900_55%,#ffb914_100%)] bg-clip-text text-transparent">
+          para Joyería
+        </span>
+      </h2>
+
+      <p class="mb-8 max-w-[420px] text-base leading-[1.7] text-white/70">
+        Antitarnish, baños de oro y plata, activadores y limpiadores ultrasónicos.
+        Fórmulas profesionales LAHZIO y DAZZ Solutions, libres de cianuro.
+      </p>
+
+      <div class="mb-9 flex flex-wrap gap-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm">
+          <strong class="block font-heading text-2xl font-black leading-none text-white">14</strong>
+          <em class="text-[0.62rem] font-bold uppercase tracking-wider text-white/40 not-italic">Referencias</em>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm">
+          <strong class="block font-heading text-2xl font-black leading-none text-white">7</strong>
+          <em class="text-[0.62rem] font-bold uppercase tracking-wider text-white/40 not-italic">Líneas</em>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm">
+          <strong class="block font-heading text-2xl font-black leading-none text-white">0%</strong>
+          <em class="text-[0.62rem] font-bold uppercase tracking-wider text-white/40 not-italic">Cianuro</em>
+        </div>
+      </div>
+
+      <a
+        href="/catalogo/quimicos-joyeria"
+        class="mb-10 inline-flex items-center gap-2.5 rounded-lg bg-brand-yellow px-8 py-3.5 font-bold text-gray-900 no-underline shadow-[0_10px_28px_rgba(242,169,0,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ffb914] hover:shadow-[0_14px_34px_rgba(242,169,0,0.32)]"
+      >
+        <span>Ver catálogo</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+
+      <!-- Líneas shelf -->
+      <div class="flex flex-wrap gap-2" id="qdShelf">
+        {lineas.map((l) => (
+          <a
+            href="/catalogo/quimicos-joyeria"
+            class="qd-chip inline-flex translate-y-2.5 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-[0.76rem] font-semibold text-white/80 no-underline opacity-0 backdrop-blur-sm transition-colors duration-200 hover:border-brand-yellow/40 hover:bg-brand-yellow/15 hover:-translate-y-0.5"
+          >
+            <span>{l.name}</span>
+            <span class="flex h-4 min-w-[16px] items-center justify-center rounded-full bg-brand-yellow/20 px-1 text-[0.64rem] font-extrabold text-brand-yellow">
+              {l.count}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- ─── RIGHT: floating product cluster (signature) ─── -->
+    <div class="reveal-right">
+      <div class="relative h-[560px] sm:h-[620px] lg:h-[620px]" id="qdStage">
+
+        {floaters.map((p) => (
+          <div
+            class="qd-float absolute translate-y-4 cursor-pointer opacity-0"
+            style={{
+              left: `${p.left}%`,
+              top: `${p.top}%`,
+              zIndex: p.z,
+              ['--float-amp' as string]: `${p.amp}px`,
+              animationDuration: `${p.dur}s`,
+              animationDelay: `${p.delay}s`,
+            }}
+          >
+            <div class="qd-float-inner animate-float flex flex-col items-center transition-transform duration-300 ease-out hover:scale-[1.07] hover:-translate-y-1">
+              <div class="relative flex items-end justify-center" style={{ height: `${p.h}px` }}>
+                <div
+                  class:list={['pointer-events-none absolute left-1/2 top-1/2 h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl', glow[p.tone]]}
+                  aria-hidden="true"
+                ></div>
+                <img
+                  src={p.img}
+                  alt={p.tag}
+                  loading="lazy"
+                  class="relative h-full w-auto object-contain [filter:drop-shadow(0_18px_22px_rgba(0,0,0,0.45))]"
+                />
+              </div>
+              <span class="relative mt-2.5 whitespace-nowrap rounded-full border border-white/15 bg-[#040a1c]/60 px-3 py-1 font-heading text-[0.56rem] font-extrabold tracking-[0.1em] text-white/85 backdrop-blur-sm">
+                {p.tag}
+              </span>
+            </div>
+          </div>
+        ))}
+
+        <!-- Floating spec readout — its own glass chip among the products -->
+        <div
+          class="qd-float absolute translate-y-4 opacity-0"
+          style={{ left: '46%', top: '84%', zIndex: 6, ['--float-amp' as string]: '-9px', animationDuration: '7.6s', animationDelay: '1.6s' }}
+        >
+          <div class="qd-float-inner animate-float flex items-center gap-2.5 whitespace-nowrap rounded-full border border-white/15 bg-[#040a1c]/60 px-4.5 py-2.5 shadow-[0_10px_24px_rgba(0,0,0,0.3)] backdrop-blur-md">
+            <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#4fd1ff] shadow-[0_0_8px_1px_rgba(79,209,255,0.7)]"></span>
+            <span id="qdHudCat" class="font-heading text-[0.6rem] font-extrabold tracking-[0.1em] text-brand-yellow transition-opacity duration-200">{specs[0].cat}</span>
+            <span id="qdHudSpec" class="font-mono text-[0.7rem] text-white/85 transition-opacity duration-200">{specs[0].spec}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+  /* Tailwind's JIT can't see data-driven class strings, so the constellation's
+     entrance reveal + reduced-motion guard live here instead of as utilities. */
+  .qd-float.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  @media (max-width: 760px) {
+    #qdStage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem 0.75rem;
+      height: auto !important;
+      padding: 0.5rem 0;
+    }
+    .qd-float {
+      position: static !important;
+    }
+    .qd-float-inner {
+      animation-duration: 4.5s !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .qd-float-inner { animation: none !important; }
+  }
+</style>
+
+<script>
+  // Reveal floaters + shelf chips on scroll (staggered)
+  const section = document.getElementById('quimicos-nueva-linea');
+  if (section) {
+    const floats = section.querySelectorAll<HTMLElement>('.qd-float');
+    const chips  = section.querySelectorAll<HTMLElement>('.qd-chip');
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          floats.forEach((f, i) => {
+            setTimeout(() => f.classList.add('visible'), i * 110);
+          });
+          chips.forEach((c, i) => {
+            setTimeout(() => c.classList.add('visible'), i * 70);
+          });
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    obs.observe(section);
+  }
+
+  // Shelf chip reveal needs its own visible-state class (Tailwind can't express
+  // the JS-driven opacity/translate toggle as a static utility)
+  const style = document.createElement('style');
+  style.textContent = `.qd-chip.visible { opacity: 1 !important; transform: translateY(0) !important; }`;
+  document.head.appendChild(style);
+
+  // Spec HUD cycle
+  const hudCat  = document.getElementById('qdHudCat');
+  const hudSpec = document.getElementById('qdHudSpec');
+  const specs = [
+    { cat: 'ANTITARNISH',    spec: 'Inmersión 30–60s · Temp. ambiente' },
+    { cat: 'BAÑO DE ORO',    spec: '50°C (120°F) · 30–45s' },
+    { cat: 'BAÑO DE PLATA',  spec: '1–1.5V · 20–25s' },
+    { cat: 'NÍQUEL',         spec: '50°C (120°F) · 6V · 1 min' },
+  ];
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (hudCat && hudSpec && !reduceMotion) {
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % specs.length;
+      hudCat.style.opacity = '0';
+      hudSpec.style.opacity = '0';
+      setTimeout(() => {
+        hudCat.textContent = specs[i].cat;
+        hudSpec.textContent = specs[i].spec;
+        hudCat.style.opacity = '1';
+        hudSpec.style.opacity = '1';
+      }, 250);
+    }, 3200);
+  }
+
+  // Subtle mouse parallax on the whole cluster (desktop, fine pointer, motion allowed)
+  const stage = document.getElementById('qdStage');
+  if (stage && window.matchMedia('(pointer: fine)').matches && !reduceMotion) {
+    let raf = 0;
+    stage.addEventListener('mousemove', (e) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const rect = stage.getBoundingClientRect();
+        const mx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        const my = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        stage.querySelectorAll<HTMLElement>('.qd-float').forEach((f, i) => {
+          const depth = (i % 3 === 0) ? 6 : (i % 3 === 1) ? 10 : 14;
+          const inner = f.querySelector<HTMLElement>('.qd-float-inner');
+          // Standalone `translate` composes with the keyframe-driven `transform`
+          // (float bob + hover scale) instead of fighting it for the same property.
+          if (inner) inner.style.translate = `${(mx * depth).toFixed(1)}px ${(my * depth).toFixed(1)}px`;
+        });
+        raf = 0;
+      });
+    });
+  }
+</script>

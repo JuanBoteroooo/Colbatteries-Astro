@@ -79,6 +79,14 @@ export const groups = [
       { slug: 'gorras-lisas', label: 'Gorras Lisas', structured: true },
     ],
   },
+  {
+    id: 'quimicos',
+    name: 'Químicos',
+    image: '/images/categorias/quimicos-categoria.png',
+    catalogs: [
+      { slug: 'quimicos-joyeria', label: 'Químicos para Joyería', structured: true },
+    ],
+  },
 ];
 
 export const allCatalogs = groups.flatMap(g =>
