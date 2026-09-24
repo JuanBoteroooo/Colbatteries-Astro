@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "parse:eta": "node scripts/parse-eta.mjs"
+    "parse:eta": "node scripts/parse-eta.mjs",
+    "generate:polemik-catalog": "node scripts/generate-polemik-catalog.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
