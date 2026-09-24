@@ -4,3 +4,4 @@ node_modules/
 # RAW photo originals — converted JPGs live in public/images/
 *.HEIC
 *.DNG
+.worktrees/
