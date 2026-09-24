@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { readFileSync, existsSync, writeFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -49,7 +50,7 @@ function coverSheet() {
 function dividerSheet(cat, count) {
   return `
   <section class="sheet divider">
-    <img class="divider-logo" src="file://${logoPath}" />
+    <div class="divider-logo-card"><img class="divider-logo" src="file://${logoPath}" /></div>
     <div class="divider-title">${esc(cat.toUpperCase())}</div>
     <div class="divider-count">${count} modelo${count === 1 ? '' : 's'} disponible${count === 1 ? '' : 's'}</div>
   </section>`;
@@ -149,7 +150,9 @@ const CSS = `
   .cover-note { color: #9ca3af; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
 
   .divider { background: #024598; color: #fff; }
-  .divider-logo { width: 100px; filter: brightness(0) invert(1); }
+  .divider-logo-card { background: #fff; border-radius: 16px; padding: 1.1rem 1.5rem;
+    display: inline-flex; align-items: center; justify-content: center; }
+  .divider-logo { width: 100px; display: block; }
   .divider-title { font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; font-size: 3rem; }
   .divider-count { color: #f2a900; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; font-size: 1rem; }
 
@@ -185,6 +188,12 @@ const html = `<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap"
+  rel="stylesheet"
+/>
 <style>${CSS}</style>
 </head>
 <body>${sheets}</body>
@@ -196,16 +205,17 @@ const html = `<!doctype html>
 // <img> broken. Writing the HTML to a real file and navigating to it via
 // file:// gives the document a file:// origin, so the file:// image/logo
 // sources load normally.
-const tmpHtmlPath = path.join(root, 'scripts', `.polemik-catalog-${process.pid}.html`);
+const tmpHtmlPath = path.join(os.tmpdir(), `polemik-catalog-${process.pid}.html`);
 writeFileSync(tmpHtmlPath, html, 'utf-8');
 
-const browser = await chromium.launch();
-const page = await browser.newPage();
+let browser;
 try {
+  browser = await chromium.launch();
+  const page = await browser.newPage();
   await page.goto(`file://${tmpHtmlPath}`, { waitUntil: 'networkidle' });
   await page.pdf({ path: outPath, printBackground: true, preferCSSPageSize: true });
 } finally {
-  await browser.close();
+  if (browser) await browser.close();
   rmSync(tmpHtmlPath, { force: true });
 }
 
