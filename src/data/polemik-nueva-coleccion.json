@@ -1,0 +1,442 @@
+[
+  {
+    "id": "polemik-01",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Taquímetro Blanco",
+    "tipo": ["Cronógrafo", "Taquímetro"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-01.jpg"
+  },
+  {
+    "id": "polemik-02",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Octagonal Dorado",
+    "tipo": ["Cronógrafo"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-02.jpg"
+  },
+  {
+    "id": "polemik-03",
+    "categoria": "Caballero",
+    "nombre": "Clásico Dorado Día y Fecha",
+    "tipo": ["Clásico", "Día y Fecha"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-03.jpg"
+  },
+  {
+    "id": "polemik-04",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Digital Dorado y Negro",
+    "tipo": ["Cronógrafo", "Digital", "Alarma"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Negro y dorado" },
+    "correa": { "material": "Silicona", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-04.jpg"
+  },
+  {
+    "id": "polemik-05",
+    "categoria": "Caballero",
+    "nombre": "Clásico Negro Bisel Romano",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-05.jpg"
+  },
+  {
+    "id": "polemik-06",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Taquímetro Negro",
+    "tipo": ["Cronógrafo", "Taquímetro"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado y negro" },
+    "correa": { "material": "Caucho", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-06.jpg"
+  },
+  {
+    "id": "polemik-07",
+    "categoria": "Caballero",
+    "nombre": "Clásico Dorado Numerales Romanos",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-07.jpg"
+  },
+  {
+    "id": "polemik-08",
+    "categoria": "Caballero",
+    "nombre": "Clásico Plateado Bisel Estriado",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-08.jpg"
+  },
+  {
+    "id": "polemik-09",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Taquímetro Plateado",
+    "tipo": ["Cronógrafo", "Taquímetro"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-09.jpg"
+  },
+  {
+    "id": "polemik-10",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Bicolor Blanco",
+    "tipo": ["Cronógrafo", "Taquímetro"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-10.jpg"
+  },
+  {
+    "id": "polemik-11",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Bicolor Negro",
+    "tipo": ["Cronógrafo", "Taquímetro"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-11.jpg"
+  },
+  {
+    "id": "polemik-12",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Deportivo Dorado y Negro",
+    "tipo": ["Cronógrafo", "Taquímetro"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Caucho", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-12.jpg"
+  },
+  {
+    "id": "polemik-13",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Octagonal Plateado",
+    "tipo": ["Cronógrafo"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-13.jpg"
+  },
+  {
+    "id": "polemik-14",
+    "categoria": "Caballero",
+    "nombre": "Dual Time Deportivo Dorado",
+    "tipo": ["Cronógrafo", "Dual Time", "Digital"],
+    "resistenciaAgua": "5 BAR",
+    "caja": { "material": "Acero inoxidable", "color": "Dorado y negro" },
+    "correa": { "material": "Caucho", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-14.jpg"
+  },
+  {
+    "id": "polemik-15",
+    "categoria": "Caballero",
+    "nombre": "Clásico Dorado Bisel Estriado",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-15.jpg"
+  },
+  {
+    "id": "polemik-16",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Tonel Negro y Dorado",
+    "tipo": ["Cronógrafo"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Negro y dorado" },
+    "correa": { "material": "Caucho", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-16.jpg"
+  },
+  {
+    "id": "polemik-17",
+    "categoria": "Dama",
+    "nombre": "Clásico Plateado con Cristales Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-17.jpg"
+  },
+  {
+    "id": "polemik-18",
+    "categoria": "Dama",
+    "nombre": "Clásico Dorado con Cristales Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-18.jpg"
+  },
+  {
+    "id": "polemik-19",
+    "categoria": "Dama",
+    "nombre": "Clásico Bicolor con Cristales Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-19.jpg"
+  },
+  {
+    "id": "polemik-20",
+    "categoria": "Caballero",
+    "nombre": "Cronógrafo Tonel Blanco",
+    "tipo": ["Cronógrafo"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Caucho", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-20.jpg"
+  },
+  {
+    "id": "polemik-21",
+    "categoria": "Caballero",
+    "nombre": "Dual Time Deportivo Dorado Rosado",
+    "tipo": ["Cronógrafo", "Dual Time", "Digital"],
+    "resistenciaAgua": "5 BAR",
+    "caja": { "material": "Acero inoxidable", "color": "Dorado rosado y negro" },
+    "correa": { "material": "Caucho", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-21.jpg"
+  },
+  {
+    "id": "polemik-22",
+    "categoria": "Dama",
+    "nombre": "Clásico Plateado Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado y blanco" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado y blanco" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-22.jpg"
+  },
+  {
+    "id": "polemik-23",
+    "categoria": "Dama",
+    "nombre": "Clásico Dorado y Negro Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado y negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado y negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-23.jpg"
+  },
+  {
+    "id": "polemik-24",
+    "categoria": "Caballero",
+    "nombre": "Edición Especial Rin Negro Deportivo",
+    "tipo": ["Clásico", "Edición Especial"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-24.jpg"
+  },
+  {
+    "id": "polemik-25",
+    "categoria": "Caballero",
+    "nombre": "Clásico Dorado con Cristales",
+    "tipo": ["Clásico", "Día y Fecha"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-25.jpg"
+  },
+  {
+    "id": "polemik-26",
+    "categoria": "Caballero",
+    "nombre": "Clásico Negro Textura Horizontal",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-26.jpg"
+  },
+  {
+    "id": "polemik-27",
+    "categoria": "Caballero",
+    "nombre": "Clásico Plateado Bisel Negro",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado y negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-27.jpg"
+  },
+  {
+    "id": "polemik-28",
+    "categoria": "Caballero",
+    "nombre": "Clásico Plateado Water Resist",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": "30 M",
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-28.jpg"
+  },
+  {
+    "id": "polemik-29",
+    "categoria": "Caballero",
+    "nombre": "Clásico Dorado Water Resist",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": "30 M",
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-29.jpg"
+  },
+  {
+    "id": "polemik-30",
+    "categoria": "Dama",
+    "nombre": "Clásico Plateado Dama Sencillo",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-30.jpg"
+  },
+  {
+    "id": "polemik-31",
+    "categoria": "Caballero",
+    "nombre": "Edición Especial Rin Deportivo",
+    "tipo": ["Clásico", "Edición Especial"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-31.jpg"
+  },
+  {
+    "id": "polemik-32",
+    "categoria": "Dama",
+    "nombre": "Elegante Plateado con Cristales Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-32.jpg"
+  },
+  {
+    "id": "polemik-33",
+    "categoria": "Dama",
+    "nombre": "Elegante Dorado con Cristales Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-33.jpg"
+  },
+  {
+    "id": "polemik-34",
+    "categoria": "Caballero",
+    "nombre": "Clásico Azul Bisel Rojo y Azul",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-34.jpg"
+  },
+  {
+    "id": "polemik-35",
+    "categoria": "Dama",
+    "nombre": "Clásico Bicolor Día y Fecha Dama",
+    "tipo": ["Clásico", "Día y Fecha"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-35.jpg"
+  },
+  {
+    "id": "polemik-36",
+    "categoria": "Dama",
+    "nombre": "Clásico Dorado Dama",
+    "tipo": ["Clásico"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-36.jpg"
+  },
+  {
+    "id": "polemik-37",
+    "categoria": "Dama",
+    "nombre": "Clásico Dorado Bicolor Día y Fecha Dama",
+    "tipo": ["Clásico", "Día y Fecha"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Bicolor dorado y plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-37.jpg"
+  },
+  {
+    "id": "polemik-38",
+    "categoria": "Caballero",
+    "nombre": "Edición Especial Rin Negro Araña",
+    "tipo": ["Clásico", "Edición Especial"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-38.jpg"
+  },
+  {
+    "id": "polemik-39",
+    "categoria": "Caballero",
+    "nombre": "Edición Especial Rin Negro Flor",
+    "tipo": ["Clásico", "Edición Especial"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Negro" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-39.jpg"
+  },
+  {
+    "id": "polemik-40",
+    "categoria": "Unisex",
+    "nombre": "Digital Dual Time Dorado y Negro",
+    "tipo": ["Digital", "Dual Time", "Alarma", "Cronógrafo", "Countdown"],
+    "resistenciaAgua": "50 M",
+    "caja": { "material": "Acero inoxidable", "color": "Dorado y negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-40.jpg"
+  },
+  {
+    "id": "polemik-41",
+    "categoria": "Caballero",
+    "nombre": "Clásico Dorado Textura Panal",
+    "tipo": ["Clásico", "Día y Fecha"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-41.jpg"
+  },
+  {
+    "id": "polemik-42",
+    "categoria": "Unisex",
+    "nombre": "Digital Dual Time Plateado y Negro",
+    "tipo": ["Digital", "Dual Time", "Alarma", "Cronógrafo", "Countdown"],
+    "resistenciaAgua": "50 M",
+    "caja": { "material": "Acero inoxidable", "color": "Plateado y negro" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-42.jpg"
+  },
+  {
+    "id": "polemik-43",
+    "categoria": "Unisex",
+    "nombre": "Digital Retro Plateado",
+    "tipo": ["Digital", "Dual Time", "Countdown"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Plateado" },
+    "correa": { "material": "Acero inoxidable", "color": "Plateado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-43.jpg"
+  },
+  {
+    "id": "polemik-44",
+    "categoria": "Unisex",
+    "nombre": "Digital Retro Dorado",
+    "tipo": ["Digital", "Dual Time", "Countdown"],
+    "resistenciaAgua": null,
+    "caja": { "material": "Acero inoxidable", "color": "Dorado" },
+    "correa": { "material": "Acero inoxidable", "color": "Dorado" },
+    "img": "/images/productos/polemik-nueva-coleccion/polemik-44.jpg"
+  }
+]
