@@ -272,7 +272,7 @@
   {
     "id": "polemik-28",
     "categoria": "Caballero",
-    "nombre": "Clásico Plateado Water Resist",
+    "nombre": "Clásico Plateado Resistente al Agua",
     "tipo": ["Clásico"],
     "resistenciaAgua": "30 M",
     "caja": { "material": "Acero inoxidable", "color": "Plateado" },
@@ -282,7 +282,7 @@
   {
     "id": "polemik-29",
     "categoria": "Caballero",
-    "nombre": "Clásico Dorado Water Resist",
+    "nombre": "Clásico Dorado Resistente al Agua",
     "tipo": ["Clásico"],
     "resistenciaAgua": "30 M",
     "caja": { "material": "Acero inoxidable", "color": "Dorado" },

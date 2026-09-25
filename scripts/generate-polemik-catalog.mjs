@@ -26,6 +26,14 @@ const byCategory = Object.fromEntries(
   CATEGORY_ORDER.map((c) => [c, records.filter((r) => r.categoria === c)])
 );
 
+const categorizedCount = CATEGORY_ORDER.reduce((sum, c) => sum + byCategory[c].length, 0);
+if (categorizedCount !== records.length) {
+  const known = new Set(CATEGORY_ORDER);
+  const bad = records.filter((r) => !known.has(r.categoria)).map((r) => `${r.id} (categoria: ${JSON.stringify(r.categoria)})`);
+  console.error(`Unrecognized categoria on ${bad.length} record(s): ${bad.join(', ')}`);
+  process.exit(1);
+}
+
 function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
@@ -93,9 +101,13 @@ function productSheet(cat, r) {
     <div class="product-body">
       <div class="product-photo-card"><img src="${imgSrc(r)}" /></div>
       <div class="product-info">
-        <div class="product-tags">
+        ${
+          (r.tipo ?? []).length > 0
+            ? `<div class="product-tags">
           ${r.tipo.map((t) => `<span>${esc(t)}</span>`).join('')}
-        </div>
+        </div>`
+            : ''
+        }
         <div class="spec-section">
           <h4>Caja</h4>
           <div class="spec-row">
@@ -168,20 +180,20 @@ const CSS = `
   .grid-item img { width: 100%; height: 32mm; object-fit: contain; }
   .grid-item span { display: block; font-size: 0.6rem; font-weight: 600; color: #374151; margin-top: 0.3rem; }
 
-  .product-body { display: flex; gap: 2rem; flex: 1; }
-  .product-photo-card { flex: 0 0 45%; background: #f3f4f6; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
+  .product-body { display: flex; align-items: flex-start; gap: 2.5rem; margin: auto 0; }
+  .product-photo-card { flex: 0 0 45%; height: 150mm; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; padding: 2rem; }
   .product-photo-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
-  .product-info { flex: 1; display: flex; flex-direction: column; gap: 1.2rem; }
-  .product-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .product-tags span { background: #eef2fa; color: #024598; font-size: 0.68rem; font-weight: 700;
-    padding: 0.35rem 0.7rem; border-radius: 100px; }
-  .spec-section h4 { display: flex; align-items: center; gap: 0.45rem; font-size: 0.72rem; font-weight: 800;
-    text-transform: uppercase; letter-spacing: 0.08em; color: #111827; margin-bottom: 0.5rem; }
+  .product-info { flex: 1; display: flex; flex-direction: column; gap: 2rem; padding-top: 0.5rem; }
+  .product-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .product-tags span { background: #eef2fa; color: #024598; font-size: 0.8rem; font-weight: 700;
+    padding: 0.5rem 1rem; border-radius: 100px; }
+  .spec-section h4 { display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.08em; color: #111827; margin-bottom: 0.9rem; }
   .spec-section h4::before { content: ''; width: 8px; height: 8px; background: #f2a900; display: inline-block; }
-  .spec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; }
-  .spec-field label { display: block; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
-  .spec-field strong { display: block; font-size: 0.85rem; color: #111827; font-weight: 700; }
+  .spec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem 1.5rem; }
+  .spec-field label { display: block; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+  .spec-field strong { display: block; font-size: 1rem; color: #111827; font-weight: 700; }
 `;
 
 const html = `<!doctype html>
