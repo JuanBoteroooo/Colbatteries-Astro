@@ -108,5 +108,85 @@
     "capacidad": "1200mAh",
     "descripcion": "Batería recargable de litio 18650 Tianqiu",
     "img": "/catalogo-pages/baterias-recargables/page-12.jpg"
+  },
+  {
+    "modelo": "ESTACION-500W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "500W",
+    "voltaje": "110V",
+    "capacidad": "384WH 12.8V 30AH/80000mah",
+    "descripcion": "Estación de energía portátil 500W con carga solar o de corriente 110V. Incluye panel solar de 40W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-14.jpg"
+  },
+  {
+    "modelo": "ESTACION-600W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "600W",
+    "voltaje": "110V",
+    "capacidad": "384WH 12.8V 30AH/120000mah",
+    "descripcion": "Estación de energía portátil 600W con carga solar o de corriente 110V. Incluye panel solar de 60W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-15.jpg"
+  },
+  {
+    "modelo": "ESTACION-800W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "800W",
+    "voltaje": "110V",
+    "capacidad": "512WH 12.8V 40AH/160000mah",
+    "descripcion": "Estación de energía portátil 800W con carga solar o de corriente 110V. Incluye panel solar de 100W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-16.jpg"
+  },
+  {
+    "modelo": "ESTACION-1000W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "1000W",
+    "voltaje": "110V",
+    "capacidad": "768WH 12.8V 60AH/240000mah",
+    "descripcion": "Estación de energía portátil 1000W con carga solar o de corriente 110V. Incluye panel solar de 150W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-17.jpg"
+  },
+  {
+    "modelo": "ESTACION-1200W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "1200W",
+    "voltaje": "110V",
+    "capacidad": "768WH 12.8V 60AH/240000mah",
+    "descripcion": "Estación de energía portátil 1200W con carga solar o de corriente 110V. Incluye panel solar de 150W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-18.jpg"
+  },
+  {
+    "modelo": "ESTACION-1500W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "1500W",
+    "voltaje": "110V",
+    "capacidad": "1160WH 25.6V 45AH/400000mah",
+    "descripcion": "Estación de energía portátil 1500W con carga solar o de corriente 110V. Incluye panel solar de 200W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-19.jpg"
+  },
+  {
+    "modelo": "ESTACION-2000W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "2000W",
+    "voltaje": "110V",
+    "capacidad": "1536WH 25.6V 60AH/480000mah",
+    "descripcion": "Estación de energía portátil 2000W con carga solar o de corriente 110V. Incluye panel solar de 200W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-20.jpg"
+  },
+  {
+    "modelo": "ESTACION-3000W",
+    "marca": "",
+    "tipo": "Estación",
+    "tamano": "3000W",
+    "voltaje": "110V",
+    "capacidad": "2560WH 25.6V 100AH/800000mah",
+    "descripcion": "Estación de energía portátil 3000W con carga solar o de corriente 110V. Incluye panel solar de 350W y conector de 5 metros",
+    "img": "/catalogo-pages/baterias-recargables/page-21.jpg"
   }
 ]
