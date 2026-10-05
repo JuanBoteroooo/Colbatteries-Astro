@@ -20,7 +20,7 @@
 - Kept products reuse their existing thumbnail file untouched (never regenerate). Removed products' thumbnails are deleted. Only added products get new thumbnails.
 - Site PDF: copy the upload to `public/catalogos/<slug>.pdf` using the exact slug names `quimicos-joyeria`, `baterias-recargables`, `pulso-silicona`, `gorras-polemik`, `relojes-polemik-superior`.
 - No invented specs: fill product fields only from what the PDF page states; leave a field as `""` (or `null` where this plan says so) when the page does not state it.
-- `src/pages/catalogo/[slug].astro` may be edited only in Task 3 (one pill) and Task 7 (Superior wiring). `src/components/CatalogCard.astro` may be edited only in Task 7, only additively (new optional props / new map entries), with zero visual change for existing catalogs.
+- `src/pages/catalogo/[slug].astro` may be edited only in Task 3 (one pill), Task 7 (Superior wiring) and Task 9 (the Superior block's `data-modelo` expression and two `seoMap` entries). `src/components/CatalogCard.astro` may be edited only in Task 7, only additively (new optional props / new map entries), with zero visual change for existing catalogs.
 - `dist/` is tracked in this repository: never build into it. Builds use `npx astro build --outDir "$SCR/dist"`. Never `git add -A` or `git add .` at the repo root; stage explicit paths (or `git add -A -- <directory>` scoped to a catalog's own directory so deletions are staged too).
 - Scratch files go in `SCR=.superpowers/sdd/2026-10-05-catalog-update-october/tmp` (git-ignored, relative to the repo root). Do not use `/tmp`.
 - Commits are local only (no push). Commit messages end with the line `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>`.
@@ -1188,11 +1188,90 @@ git status --short | grep -v '^??'
 git status --short | grep '^??'
 git log --oneline -8
 ```
-Expected: the first status listing is empty (everything is committed), the untracked listing shows only the five upload PDFs under `public/catalogos/` (and git-ignored scratch is not listed), and the log shows the seven task commits.
+Expected: the first status listing is empty (everything is committed), the untracked listing shows only the five upload PDFs under `public/catalogos/` (and git-ignored scratch is not listed), and the log shows the task commits (Tasks 1–7 and 9).
 
 - [ ] **Step 5: Commit any fix made during this task** (skip if nothing changed)
 
 ```bash
 git add <the explicit files you changed>
 git commit -m "Fix issues found in end-to-end catalog verification" -m "Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
+```
+
+---
+
+### Task 9: Polish found in the Task 6 and Task 7 reviews (execute BEFORE Task 8)
+
+This task was added after the Task 6/7 reviews; it runs before Task 8 so the end-to-end check covers what ships.
+
+**Files:**
+- Modify: `src/pages/catalogo/[slug].astro` — (a) the `data-modelo` expression inside the `{isPolemikSuperior && (` block, (b) two entries of the `seoMap` object (around lines 114–145).
+- Modify: `src/data/relojes-polemik-superior.json` — 6 records get one extra `tipo` tag and 3 `nombre` values lose a deck typo.
+
+**Interfaces:**
+- Consumes: Task 6's JSON (`{modelo, nombre, categoria, tipo[], caja|null, correa|null, img}`) and Task 7's block.
+- Produces: nothing later tasks depend on; Task 8 verifies the result.
+
+- [ ] **Step 1: Accent-insensitive search in the Superior block**
+
+Search is accent-sensitive today: typing `cronografo` finds nothing although 32 cards say "Cronógrafo". In the `{isPolemikSuperior && (` block's `.map` callback, keep the current searchable text (lower-cased modelo, nombre, tags, caja/correa material and colour) and make `data-modelo` hold it followed by an accent-folded copy, so both `cronógrafo` and `cronografo` match:
+
+```astro
+const searchText = [p.modelo, p.nombre, ...(p.tipo ?? []), p.caja?.material, p.caja?.color, p.correa?.material, p.correa?.color].filter(Boolean).join(' ').toLowerCase();
+...
+data-modelo={`${searchText} ${searchText.normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`}
+```
+Adapt the variable name/placement to the block's current code (read it first); do not touch the shared script, other blocks, or the pills. Invoke the `frontend-design` skill before editing (project rule; this is a one-expression change).
+
+- [ ] **Step 2: Two `seoMap` entries**
+
+Insert this entry immediately after the `'relojes-polemik'` entry:
+
+```ts
+  'relojes-polemik-superior': { title: 'Relojes Polemik Superior al por mayor — Acero inoxidable | Colbateries Panamá', description: 'Relojes Polemik Superior al por mayor: cronógrafos, clásicos y digitales en acero inoxidable para caballero, dama y unisex. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
+```
+and replace the existing `'baterias-recargables'` entry (its description does not mention the new stations) with:
+
+```ts
+  'baterias-recargables':{ title: 'Baterías recargables, cargadores y estaciones de energía al por mayor | Colbateries Panamá', description: 'Baterías recargables AA, AAA, D, 9V y 18650, cargadores económicos y estaciones de energía portátil al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
+```
+Keep one entry per line like the others. No other `seoMap` change.
+
+- [ ] **Step 3: Data polish through the parser (not by hand)**
+
+The parser used in Task 6 (already fixed for two-row tags) is in the git-ignored scratch dir: `.superpowers/sdd/2026-10-05-catalog-update-october/tmp/superior_build.py` (usage: `python3 "$SCR/superior_build.py" "$SCR/p-text" "$SCR/superior-new.json"`; the text dir `$SCR/p-text` exists from Task 6, otherwise recreate it with `python3 scripts/catalog-tools.py text "public/catalogos/POLEMIK RELOJES NUEVA COLECCION.pdf" "$SCR/p-text"`). Edit that script so that:
+1. `FIXES` also contains `('Bicel', 'Bisel')` and `('Nacar', 'Nácar')`.
+2. When a page has a `RESISTENCIA AL AGUA` header line, the next non-empty line is its value; append one tag to that record's `tipo` (at the end): value `30 M` → `WR 30M`, `50 M` → `WR 50M`, `5 BAR` → `WR 5 BAR` (rule: prefix `WR `, drop the space before a trailing `M`, keep the space before `BAR`).
+
+Re-run it, then compare its output with the committed `src/data/relojes-polemik-superior.json` by modelo and key. The only differences must be exactly these nine:
+- `tipo` gains `WR 30M` for `1654D` and `1654`; `WR 5 BAR` for `2402` and `2243`; `WR 50M` for `1335D` and `1335`.
+- `nombre` becomes `Con Fecha y Bisel` for `1779`, and `Con Fecha y Nácar` for `2175D-NG` and `2175-BC`.
+If anything else differs, stop and report. Then copy the output over `src/data/relojes-polemik-superior.json` (same formatting: 2-space indent, UTF-8 without escapes, no trailing newline).
+
+- [ ] **Step 4: Verify with a static build and an offline browser check**
+
+```bash
+SCR=.superpowers/sdd/2026-10-05-catalog-update-october/tmp
+mv "$SCR/dist" "$SCR/dist-before"
+npx astro build --outDir "$SCR/dist" 2>&1 | tail -8
+```
+(600000 ms timeout; never build into the tracked `dist/`; do not use `preview_start` or `npm run dev`.) Then check:
+1. `$SCR/dist/catalogo/relojes-polemik-superior/index.html` has `<title>` equal to the new Superior title and the new meta description; `$SCR/dist/catalogo/baterias-recargables/index.html` has the new recargables title/description.
+2. In the Superior page, a Caballero card's `data-modelo` contains both `cronógrafo` and `cronografo`.
+3. `diff -rq` between `$SCR/dist-before` and `$SCR/dist` restricted to `*.html` shows differences only in `catalogo/relojes-polemik-superior/index.html`, `catalogo/baterias-recargables/index.html` and the sitemap/other files that embed asset hashes only if they differ for hash reasons — list every differing HTML file and explain each (expected: just the two pages, plus none other).
+4. Offline Chromium check of the built Superior page (serve `$SCR/dist` with `python3 -m http.server` on a free port, or load the file with route stubbing; Google Fonts being unreachable is fine): searching `cronografo` shows the same number of cards as `cronógrafo` (32 at the time of writing), `taquimetro` > 0, `wr 5 bar` shows 2, `wr 50m` shows 2; the four pills still read 67/54/9/4; no console errors. Stop any server you started.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add "src/pages/catalogo/[slug].astro" src/data/relojes-polemik-superior.json
+git commit -m "$(cat <<'EOF'
+Polish Polemik Superior: accent-insensitive search, SEO copy, data fixes
+
+Search matches without accents; seoMap entries for Superior and the
+updated Recargables; six water-resistance ratings as tags and two deck
+typos fixed in the Superior data.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+EOF
+)"
 ```
