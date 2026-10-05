@@ -6,7 +6,7 @@
 
 **Architecture:** One small shared tool (`scripts/catalog-tools.py`) renders PDF pages at the site's 1334×750 convention, extracts page text and embedded photos, crops thumbnails and computes the thumbnail filename each viewer block expects. Each catalog is then updated by diffing the new PDF against its current JSON by model code (kept / added / removed), rebuilding the JSON in new-PDF page order, replacing the page renders and the site PDF, and creating thumbnails only for added products. The new Superior catalog adds one JSON file, its image assets and one new block in the existing viewer page that reuses the existing grid/search/pill/modal machinery.
 
-**Tech Stack:** Python 3 + Pillow + numpy, Poppler (`pdftoppm`, `pdftotext`, `pdfimages`, `pdfinfo` in `/opt/homebrew/bin`), `pypdf` in a scratch venv (one-off PDF page extraction), Astro 4 (`.astro` viewer page), Playwright (already a devDependency) for the final browser check.
+**Tech Stack:** Python 3 + Pillow, Poppler (`pdftoppm`, `pdftotext`, `pdfimages`, `pdfinfo` in `/opt/homebrew/bin`), `pypdf` in a scratch venv (one-off PDF page extraction), Astro 4 (`.astro` viewer page), Playwright (already a devDependency) for the final browser check.
 
 **Spec:** `docs/superpowers/specs/2026-10-05-catalog-update-october-design.md`
 
@@ -39,7 +39,6 @@
   - `python3 scripts/catalog-tools.py text PDF OUTDIR` — writes `OUTDIR/p-NNN.txt` (3 digits) per page via `pdftotext -layout`.
   - `python3 scripts/catalog-tools.py photos PDF FIRST LAST OUTDIR [--pick largest|first] [--square N]` — writes one embedded image per page to `OUTDIR/page-NNN.jpg`.
   - `python3 scripts/catalog-tools.py crop PDF PAGE X0,Y0,X1,Y1 OUT [--square N]` — crops a box (pixel coordinates of the 2000×1125 render) from one page.
-  - `python3 scripts/catalog-tools.py autocrop IMG OUT` — crops the photo block out of a 1334×750 page render.
   - `python3 scripts/catalog-tools.py safe SLUG MODELO` — prints the thumbnail filename stem for a model code.
 
 - [ ] **Step 1: Create `scripts/catalog-tools.py` with exactly this content**
@@ -64,14 +63,10 @@ Subcommands:
       Render PAGE at 150 dpi (a 960x540pt slide becomes 2000x1125 px), crop the box given in
       those pixel coordinates and save it to OUT (JPEG). With --square N fit it onto a white
       NxN canvas.
-  autocrop IMG OUT
-      Crop the product photo out of a 1334x750 page render (photo block on top, text below):
-      keep the first block of non-white rows (stopping at a gap of 8+ white rows) and trim
-      white margins left and right. Saves OUT as JPEG.
   safe SLUG MODELO
       Print the thumbnail filename stem the SLUG's viewer block computes for MODELO.
 
-Requires Pillow and numpy and the Poppler tools in /opt/homebrew/bin.
+Requires Pillow and the Poppler tools in /opt/homebrew/bin.
 """
 import argparse
 import glob
@@ -81,7 +76,6 @@ import subprocess
 import sys
 import tempfile
 
-import numpy as np
 from PIL import Image
 
 POPPLER = '/opt/homebrew/bin'
@@ -111,21 +105,6 @@ def to_square(im, n):
     canvas = Image.new('RGB', (n, n), 'white')
     canvas.paste(im, ((n - im.size[0]) // 2, (n - im.size[1]) // 2))
     return canvas
-
-
-def crop_photo(im, white=245, gap=8):
-    im = im.convert('RGB')
-    gray = np.asarray(im.convert('L'))
-    rows = np.where((gray < white).any(axis=1))[0]
-    if len(rows) == 0:
-        return im
-    start = end = rows[0]
-    for r in rows[1:]:
-        if r - end > gap:
-            break
-        end = r
-    cols = np.where((gray[start:end + 1] < white).any(axis=0))[0]
-    return im.crop((int(cols[0]), int(start), int(cols[-1]) + 1, int(end) + 1))
 
 
 def run(cmd):
@@ -210,13 +189,6 @@ def cmd_crop(args):
     print(f'saved {args.out} ({im.size[0]}x{im.size[1]})')
 
 
-def cmd_autocrop(args):
-    im = crop_photo(Image.open(args.img))
-    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
-    im.save(args.out, quality=90)
-    print(f'saved {args.out} ({im.size[0]}x{im.size[1]})')
-
-
 def cmd_safe(args):
     print(safe_name(args.slug, args.modelo))
 
@@ -250,10 +222,6 @@ def main():
     c.add_argument('out')
     c.add_argument('--square', type=int)
     c.set_defaults(fn=cmd_crop)
-    a = sub.add_parser('autocrop')
-    a.add_argument('img')
-    a.add_argument('out')
-    a.set_defaults(fn=cmd_autocrop)
     s = sub.add_parser('safe')
     s.add_argument('slug')
     s.add_argument('modelo')
@@ -680,7 +648,7 @@ EOF
 - Source: `public/catalogos/GORRAS SURTIDAS.pdf` (220 pages: cover, 13 section-divider pages, 206 product pages whose text is only the model code)
 
 **Interfaces:**
-- Consumes: `python3 scripts/catalog-tools.py render|text|autocrop|safe` (Task 1).
+- Consumes: `python3 scripts/catalog-tools.py render|text|photos|safe` (Task 1).
 - Produces: nothing later tasks depend on.
 
 Verified when this plan was written: 195 current models are still present, 8 are new, 7 are gone; `P-501` appears on 4 pages in both the old and new PDF and the current JSON already has 4 `P-501` records (keep 4 records, one per page; they share the thumbnail `P-501.jpg` — pre-existing behaviour, do not change it). Estilo rules: a kept model keeps its current `estilo`; an added model takes the estilo of the section whose divider precedes its page; pages 2–15 precede the first divider and are BORDADA in the current data. Section → estilo: CAMIONERAS AAA→CAMIONERA, CAMIONERAS ECONOMICA→ECONOMICA, CERRADA FLEX AAA→FLEX, HEBILLA→HEBILLA, CIERRE MAGICO IMPERMEABLE→IMPERMEABLE, BORDADAS CON HEBILLA→BORDADA, PLANAS AAA→PLANA, CUERINA→CUERINA, DAMA→DAMA, GOLEANAS→GOLEANA, BOINAS→BOINA, HEBILLA NIÑO→NINO, HEBILLA NIÑA→NINA.
@@ -764,20 +732,29 @@ Expected: `rendered pages 1-220 of 220 …` and `220`.
 
 - [ ] **Step 3: Thumbnails — create the 8 new ones, delete the 7 obsolete ones**
 
-The new pages have the same layout as the existing ones (photo block on top, model code below), so use `autocrop` on the freshly rendered page (existing thumbnails are about 1300×600):
+In the new PDF every product page embeds ONE clean photo composite (2000×1019, caps on white, no text — the model code is separate PDF text drawn on top), so extract that image and scale it to the 1334 px width of the existing thumbnails. (Cropping the page render does not work here: the code text sits inside the photo area.)
 
 ```bash
+SCR=.superpowers/sdd/2026-10-05-catalog-update-october/tmp; mkdir -p "$SCR/g-photos"
 for pair in "15:P-92" "31:P-86" "32:P-87" "33:P-88" "34:P-89" "35:P-95" "154:P-90" "162:P-91"; do
   page="${pair%%:*}"; modelo="${pair#*:}"
   stem=$(python3 scripts/catalog-tools.py safe gorras-polemik "$modelo")
-  python3 scripts/catalog-tools.py autocrop "public/catalogo-pages/gorras-polemik/page-$(printf %02d "$page").jpg" "public/images/productos/gorras-polemik/$stem.jpg"
+  python3 scripts/catalog-tools.py photos "public/catalogos/GORRAS SURTIDAS.pdf" "$page" "$page" "$SCR/g-photos"
+  python3 - "$page" "$stem" <<'PYEOF'
+import sys
+from PIL import Image
+page, stem = int(sys.argv[1]), sys.argv[2]
+im = Image.open(f'.superpowers/sdd/2026-10-05-catalog-update-october/tmp/g-photos/page-{page:03d}.jpg').convert('RGB')
+im = im.resize((1334, round(im.size[1] * 1334 / im.size[0])), Image.LANCZOS)
+im.save(f'public/images/productos/gorras-polemik/{stem}.jpg', quality=90)
+PYEOF
 done
 for modelo in G-07 G-1020 P-24 P-606 P-610 P-620 P-631; do
   stem=$(python3 scripts/catalog-tools.py safe gorras-polemik "$modelo")
   rm -f "public/images/productos/gorras-polemik/$stem.jpg"
 done
 ```
-View all 8 new thumbnails: each must show the cap photo(s) only, no code text and no large white band; compare with an existing one such as `P-45.jpg`. If a crop is off, re-crop that page with `crop` using an explicit box.
+Expected: each `photos` call prints `<page>  2000x1019`, and the 8 new files are 1334 px wide (about 680 px tall). View all 8: each must show the caps only (no model code text, no cut-off caps). They are slightly taller than the old thumbnails (about 1334×606); that is accepted.
 
 - [ ] **Step 4: Install the rebuilt JSON**
 
