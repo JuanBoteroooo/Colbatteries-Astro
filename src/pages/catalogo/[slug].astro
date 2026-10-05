@@ -120,12 +120,13 @@ const seoMap: Record<string, { title: string; description: string }> = {
   'movimientos-isa':     { title: 'Movimientos ISA al por mayor — Mayorista relojería | Colbateries Panamá',            description: 'Movimientos ISA para relojería al por mayor. Distribuidor en Zona Libre de Colón, Panamá. Amplio stock y precios competitivos para distribuidores.' },
   'movimientos-chinos':  { title: 'Movimientos de reloj chinos al por mayor — Distribuidor | Colbateries Panamá',       description: 'Movimientos de reloj chinos económicos al por mayor. Distribuidor mayorista Zona Libre de Colón, Panamá. Ideal para fabricantes y distribuidores.' },
   'relojes-polemik':     { title: 'Relojes Polemik al por mayor — Distribución oficial | Colbateries Panamá',          description: 'Relojes Polemik al por mayor. Distribución oficial desde Zona Libre de Colón, Panamá. Catálogo completo con precios mayoristas para distribuidores.' },
+  'relojes-polemik-superior': { title: 'Relojes Polemik Superior al por mayor — Acero inoxidable | Colbateries Panamá', description: 'Relojes Polemik Superior al por mayor: cronógrafos, clásicos y digitales en acero inoxidable para caballero, dama y unisex. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
   'relojes-xinjia':      { title: 'Relojes Xinjia al por mayor — Distribución mayorista | Colbateries Panamá',         description: 'Relojes Xinjia al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Envíos internacionales a toda Latinoamérica.' },
   'baterias-gp':         { title: 'Baterías GP al por mayor — Pilas de reloj mayorista | Colbateries Panamá',          description: 'Baterías GP de botón y de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Stock disponible para distribuidores y comercios.' },
   'baterias-tianqiu':    { title: 'Baterías Tianqiu al por mayor — Pilas de reloj | Colbateries Panamá',               description: 'Baterías Tianqiu de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Precios competitivos para distribuidores y comercios.' },
   'baterias-maxell':     { title: 'Baterías Maxell al por mayor — Distribución mayorista | Colbateries Panamá',        description: 'Baterías Maxell de reloj y botón al por mayor. Distribuidor en Zona Libre de Colón, Panamá. Stock permanente, envíos a toda la región.' },
   'baterias-economicas': { title: 'Pilas económicas al por mayor — Baterías de reloj | Colbateries Panamá',            description: 'Pilas económicas y baterías de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Ideal para comercios y relojerías.' },
-  'baterias-recargables':{ title: 'Baterías recargables y cargadores económicos al por mayor | Colbateries Panamá',     description: 'Baterías recargables AA, AAA, D, 9V y 18650, y cargadores económicos al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
+  'baterias-recargables':{ title: 'Baterías recargables, cargadores y estaciones de energía al por mayor | Colbateries Panamá', description: 'Baterías recargables AA, AAA, D, 9V y 18650, cargadores económicos y estaciones de energía portátil al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
   'capacitores':         { title: 'Capacitores de reloj al por mayor — Repuestos relojería | Colbateries',             description: 'Capacitores y acumuladores de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Stock disponible para técnicos y distribuidores.' },
   'pulso-resina':        { title: 'Pulsos de resina al por mayor — Correas de reloj | Colbateries Panamá',             description: 'Pulsos y correas de resina para reloj al por mayor. Surtido de medidas y colores. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
   'pulso-silicona':      { title: 'Pulsos de silicona al por mayor — Correas de reloj | Colbateries Panamá',           description: 'Correas y pulsos de silicona para reloj al por mayor. Gran variedad de medidas y colores. Distribuidor mayorista Zona Libre de Colón, Panamá.' },
@@ -2055,11 +2056,12 @@ const seo = seoMap[slug] ?? {
             const safe = (p.modelo as string)
               .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
               .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+            const searchText = [p.modelo, p.nombre, ...(p.tipo ?? []), p.caja?.material, p.caja?.color, p.correa?.material, p.correa?.color].filter(Boolean).join(' ').toLowerCase();
             return (
               <div
                 class="eta-card-wrapper"
                 data-tipo={p.categoria}
-                data-modelo={[p.modelo, p.nombre, ...(p.tipo ?? []), p.caja?.material, p.caja?.color, p.correa?.material, p.correa?.color].filter(Boolean).join(' ').toLowerCase()}
+                data-modelo={`${searchText} ${searchText.normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`}
               >
                 <CatalogCard
                   imagenSrc={`/images/productos/relojes-polemik-superior/${safe}.jpg`}

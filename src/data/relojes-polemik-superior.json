@@ -214,7 +214,8 @@
     "nombre": "Con Fecha",
     "categoria": "CABALLERO",
     "tipo": [
-      "Clásico"
+      "Clásico",
+      "WR 30M"
     ],
     "caja": {
       "material": "Acero inoxidable",
@@ -231,7 +232,8 @@
     "nombre": "Con Fecha",
     "categoria": "CABALLERO",
     "tipo": [
-      "Clásico"
+      "Clásico",
+      "WR 30M"
     ],
     "caja": {
       "material": "Acero inoxidable",
@@ -245,7 +247,7 @@
   },
   {
     "modelo": "1779",
-    "nombre": "Con Fecha y Bicel",
+    "nombre": "Con Fecha y Bisel",
     "categoria": "CABALLERO",
     "tipo": [
       "Clásico"
@@ -374,7 +376,8 @@
     "tipo": [
       "Cronógrafo",
       "Dual Time",
-      "Digital"
+      "Digital",
+      "WR 5 BAR"
     ],
     "caja": {
       "material": "Acero inoxidable",
@@ -393,7 +396,8 @@
     "tipo": [
       "Cronógrafo",
       "Dual Time",
-      "Digital"
+      "Digital",
+      "WR 5 BAR"
     ],
     "caja": {
       "material": "Acero inoxidable",
@@ -929,7 +933,7 @@
   },
   {
     "modelo": "2175D-NG",
-    "nombre": "Con Fecha y Nacar",
+    "nombre": "Con Fecha y Nácar",
     "categoria": "DAMA",
     "tipo": [
       "Clásico"
@@ -946,7 +950,7 @@
   },
   {
     "modelo": "2175-BC",
-    "nombre": "Con Fecha y Nacar",
+    "nombre": "Con Fecha y Nácar",
     "categoria": "DAMA",
     "tipo": [
       "Clásico"
@@ -970,7 +974,8 @@
       "Dual Time",
       "Alarma",
       "Cronógrafo",
-      "Countdown"
+      "Countdown",
+      "WR 50M"
     ],
     "caja": {
       "material": "Acero inoxidable",
@@ -991,7 +996,8 @@
       "Dual Time",
       "Alarma",
       "Cronógrafo",
-      "Countdown"
+      "Countdown",
+      "WR 50M"
     ],
     "caja": {
       "material": "Acero inoxidable",
