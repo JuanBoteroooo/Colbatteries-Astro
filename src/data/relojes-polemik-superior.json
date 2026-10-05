@@ -1,0 +1,1044 @@
+[
+  {
+    "modelo": "2503D-BC",
+    "nombre": "Doble Hora",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-03.jpg"
+  },
+  {
+    "modelo": "2503D-NG",
+    "nombre": "Doble Hora",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-04.jpg"
+  },
+  {
+    "modelo": "9335",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-05.jpg"
+  },
+  {
+    "modelo": "9333",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-06.jpg"
+  },
+  {
+    "modelo": "9259",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-07.jpg"
+  },
+  {
+    "modelo": "9296D",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-08.jpg"
+  },
+  {
+    "modelo": "2452",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-09.jpg"
+  },
+  {
+    "modelo": "9288D",
+    "nombre": "Doble Calendario",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico",
+      "Día y Fecha"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-10.jpg"
+  },
+  {
+    "modelo": "2291D",
+    "nombre": "Doble Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico",
+      "Día y Fecha"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-11.jpg"
+  },
+  {
+    "modelo": "9069D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-12.jpg"
+  },
+  {
+    "modelo": "2656D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-13.jpg"
+  },
+  {
+    "modelo": "2656",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-14.jpg"
+  },
+  {
+    "modelo": "1654D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-15.jpg"
+  },
+  {
+    "modelo": "1654",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-16.jpg"
+  },
+  {
+    "modelo": "1779",
+    "nombre": "Con Fecha y Bicel",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado y negro"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-17.jpg"
+  },
+  {
+    "modelo": "9257",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-18.jpg"
+  },
+  {
+    "modelo": "1990N-B",
+    "nombre": "TIPO RIN GIRATORIO PAVONADO",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico",
+      "Edición Especial"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Negro"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-19.jpg"
+  },
+  {
+    "modelo": "1990N-D",
+    "nombre": "TIPO RIN GIRATORIO PAVONADO",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico",
+      "Edición Especial"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Negro"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-20.jpg"
+  },
+  {
+    "modelo": "1794N",
+    "nombre": "Clásico Negro Textura Horizontal",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Negro"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-21.jpg"
+  },
+  {
+    "modelo": "2588D",
+    "nombre": "Doble Hora",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Silicona",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-22.jpg"
+  },
+  {
+    "modelo": "2401",
+    "nombre": "Doble Hora Dorado y Negro",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Digital",
+      "Alarma"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Negro y dorado"
+    },
+    "correa": {
+      "material": "Silicona",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-23.jpg"
+  },
+  {
+    "modelo": "2402",
+    "nombre": "Doble Hora Dorado y Negro",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Dual Time",
+      "Digital"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado y negro"
+    },
+    "correa": {
+      "material": "Silicona",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-24.jpg"
+  },
+  {
+    "modelo": "2243",
+    "nombre": "Doble Hora",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Dual Time",
+      "Digital"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Oro Rosa y negro"
+    },
+    "correa": {
+      "material": "Silicona",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-25.jpg"
+  },
+  {
+    "modelo": "9253",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado y negro"
+    },
+    "correa": {
+      "material": "Silicona",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-26.jpg"
+  },
+  {
+    "modelo": "2363N",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Negro"
+    },
+    "correa": {
+      "material": "Silicona",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-27.jpg"
+  },
+  {
+    "modelo": "2363",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Silicona",
+      "color": "Negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-28.jpg"
+  },
+  {
+    "modelo": "303D",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Hora mundial",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-29.jpg"
+  },
+  {
+    "modelo": "303N",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Hora mundial",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-30.jpg"
+  },
+  {
+    "modelo": "600D",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Solar",
+      "Cronógrafo",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-31.jpg"
+  },
+  {
+    "modelo": "600N",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Solar",
+      "Cronógrafo",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-32.jpg"
+  },
+  {
+    "modelo": "940D",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Solar",
+      "Cronógrafo",
+      "WR 100M"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-33.jpg"
+  },
+  {
+    "modelo": "940B",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Solar",
+      "Cronógrafo",
+      "WR 100M"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-34.jpg"
+  },
+  {
+    "modelo": "555D",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-35.jpg"
+  },
+  {
+    "modelo": "555",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-36.jpg"
+  },
+  {
+    "modelo": "666D",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-37.jpg"
+  },
+  {
+    "modelo": "666",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-38.jpg"
+  },
+  {
+    "modelo": "777D",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "24 horas",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-39.jpg"
+  },
+  {
+    "modelo": "777N",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "24 horas",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-40.jpg"
+  },
+  {
+    "modelo": "777",
+    "nombre": "Cronógrafo y Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "24 horas",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-41.jpg"
+  },
+  {
+    "modelo": "888D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-42.jpg"
+  },
+  {
+    "modelo": "888",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Automático visible",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-43.jpg"
+  },
+  {
+    "modelo": "999D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Quartz",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-44.jpg"
+  },
+  {
+    "modelo": "999",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Quartz",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-45.jpg"
+  },
+  {
+    "modelo": "649",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Bisel giratorio",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-46.jpg"
+  },
+  {
+    "modelo": "649D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Bisel giratorio",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-47.jpg"
+  },
+  {
+    "modelo": "650",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "WR 100M",
+      "Bisel giratorio",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-48.jpg"
+  },
+  {
+    "modelo": "650D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "WR 100M",
+      "Bisel giratorio",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-49.jpg"
+  },
+  {
+    "modelo": "651",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Bisel giratorio",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-50.jpg"
+  },
+  {
+    "modelo": "651D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Bisel giratorio",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-51.jpg"
+  },
+  {
+    "modelo": "652",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Bisel 24 horas",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-52.jpg"
+  },
+  {
+    "modelo": "652D",
+    "nombre": "Con Fecha",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Bisel 24 horas",
+      "Fecha"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-53.jpg"
+  },
+  {
+    "modelo": "2657",
+    "nombre": "Cronógrafo y Fecha Titan Negro Dorado y Bicolor Silicona Negro",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro",
+      "Correa silicona"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-54.jpg"
+  },
+  {
+    "modelo": "2498D",
+    "nombre": "Cronógrafo y Fecha Titan Negro Dorado Silicona Negro",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro",
+      "Correa silicona"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-55.jpg"
+  },
+  {
+    "modelo": "2498",
+    "nombre": "Cronógrafo y Fecha Titan Dorado Bicolor Silicona Negro",
+    "categoria": "CABALLERO",
+    "tipo": [
+      "Cronógrafo",
+      "Taquímetro",
+      "Correa silicona"
+    ],
+    "caja": null,
+    "correa": null,
+    "img": "/catalogo-pages/relojes-polemik-superior/page-56.jpg"
+  },
+  {
+    "modelo": "2342D",
+    "nombre": "Con Fecha",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-59.jpg"
+  },
+  {
+    "modelo": "2342",
+    "nombre": "Con Fecha",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-60.jpg"
+  },
+  {
+    "modelo": "2342B",
+    "nombre": "Con Fecha",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Bicolor dorado y plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Bicolor dorado y plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-61.jpg"
+  },
+  {
+    "modelo": "1534D",
+    "nombre": "Clásico",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-62.jpg"
+  },
+  {
+    "modelo": "1534",
+    "nombre": "Clásico",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-63.jpg"
+  },
+  {
+    "modelo": "1620",
+    "nombre": "Clásico",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-64.jpg"
+  },
+  {
+    "modelo": "1620D",
+    "nombre": "Clásico",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-65.jpg"
+  },
+  {
+    "modelo": "2175D-NG",
+    "nombre": "Con Fecha y Nacar",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado y negro"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado y negro"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-66.jpg"
+  },
+  {
+    "modelo": "2175-BC",
+    "nombre": "Con Fecha y Nacar",
+    "categoria": "DAMA",
+    "tipo": [
+      "Clásico"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado y blanco"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado y blanco"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-67.jpg"
+  },
+  {
+    "modelo": "1335D",
+    "nombre": "Digital",
+    "categoria": "UNISEX",
+    "tipo": [
+      "Digital",
+      "Dual Time",
+      "Alarma",
+      "Cronógrafo",
+      "Countdown"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado y negro"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-70.jpg"
+  },
+  {
+    "modelo": "1335",
+    "nombre": "Digital",
+    "categoria": "UNISEX",
+    "tipo": [
+      "Digital",
+      "Dual Time",
+      "Alarma",
+      "Cronógrafo",
+      "Countdown"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado y negro"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-71.jpg"
+  },
+  {
+    "modelo": "2465D",
+    "nombre": "Digital Retro Dorado",
+    "categoria": "UNISEX",
+    "tipo": [
+      "Digital",
+      "Dual Time",
+      "Countdown"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Dorado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-72.jpg"
+  },
+  {
+    "modelo": "2465",
+    "nombre": "Digital Retro Plateado",
+    "categoria": "UNISEX",
+    "tipo": [
+      "Digital",
+      "Dual Time",
+      "Countdown"
+    ],
+    "caja": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "correa": {
+      "material": "Acero inoxidable",
+      "color": "Plateado"
+    },
+    "img": "/catalogo-pages/relojes-polemik-superior/page-73.jpg"
+  }
+]
