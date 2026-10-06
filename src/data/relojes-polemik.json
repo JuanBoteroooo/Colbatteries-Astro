@@ -852,6 +852,18 @@
     "img": "/catalogo-pages/relojes-polemik/page-63.jpg"
   },
   {
+    "modelo": "P-9048",
+    "brand": "POLEMIK",
+    "tipo": "CABALLERO",
+    "fecha": false,
+    "dimensiones": "",
+    "altura": "",
+    "joyas": null,
+    "bateria": "",
+    "intercambios": "",
+    "img": "/catalogo-pages/relojes-polemik/page-64.jpg"
+  },
+  {
     "modelo": "P-9060",
     "brand": "POLEMIK",
     "tipo": "DIGITAL",
@@ -910,18 +922,6 @@
     "bateria": "",
     "intercambios": "",
     "img": "/catalogo-pages/relojes-polemik/nueva-148.jpg"
-  },
-  {
-    "modelo": "P-9048",
-    "brand": "POLEMIK",
-    "tipo": "CABALLERO",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-64.jpg"
   },
   {
     "modelo": "ESTUCHE-EB-01/EB-02",

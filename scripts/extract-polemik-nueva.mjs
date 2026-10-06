@@ -31,7 +31,9 @@
  *     variants are laid out again in a clean grid. Empty frames are dropped
  *     (PCF-422M has two), so only real photos reach the thumbnail.
  *
- * Needs `sharp` and PyMuPDF (python3 -m pip install pymupdf).
+ * Requirements: the master PDF `public/catalogos/POLEMIK RELOJES NUEVA COLECCION.pdf` is an
+ * untracked upload that is not in the repository; it must be placed there to run this script.
+ * Also needs `sharp` and PyMuPDF (python3 -m pip install pymupdf).
  *
  * Usage (from the repo root):  node scripts/extract-polemik-nueva.mjs
  */

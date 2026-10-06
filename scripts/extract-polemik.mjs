@@ -1,6 +1,7 @@
 /**
  * extract-polemik.mjs
  * Extracts product images from relojes-polemik.pdf (pages 19-67).
+ * NOTE (Oct 2026): public/catalogos/relojes-polemik.pdf was replaced by a 95-page file in the order of the new Polemik deck; this script's page range (19–67) no longer matches it — do not re-run it; the old PDF is in git history (commit before 11505b7a).
  *
  * Standard pipeline per raw image:
  *   1. Flatten alpha → white
