@@ -3,19 +3,21 @@ import superior from '../data/relojes-polemik-superior.json';
 
 // Home band: the new Polemik collection has arrived. Polemik's own palette (black + red);
 // the red ticker is the one loud element, the watches drift on white cards below it.
-const products = [
-  { img: '/images/proximos/polemik-gold-chrono.jpg',      name: 'Cronógrafo Dorado',    sub: 'Colección Premium' },
-  { img: '/images/proximos/polemik-sport-crono.jpg',      name: 'Sport Chronograph',    sub: 'Colección Sport'   },
-  { img: '/images/proximos/polemik-dual-time-gold.jpg',   name: 'Dual Time Digital',    sub: 'Colección Digital' },
-  { img: '/images/proximos/polemik-tachymetre-negro.jpg', name: 'Tachymetre Sport',     sub: 'Colección Sport'   },
-  { img: '/images/proximos/polemik-nautilus-negro.jpg',   name: 'Nautilus Black',       sub: 'Colección Clásica' },
-  { img: '/images/proximos/polemik-silver-chrono.jpg',    name: 'Cronógrafo Plateado',  sub: 'Colección Premium' },
-  { img: '/images/proximos/polemik-tonneau-gold.jpg',     name: 'Tonneau WR30M',        sub: 'Colección Sport'   },
-  { img: '/images/proximos/polemik-digital-gold.jpg',     name: 'Digital Dorado',       sub: 'Colección Digital' },
-  { img: '/images/proximos/polemik-digital-silver.jpg',   name: 'Digital Plateado',     sub: 'Colección Digital' },
-  { img: '/images/proximos/polemik-lady-ceramic.jpg',     name: 'Lady Cerámico',        sub: 'Colección Dama'    },
-  { img: '/images/proximos/polemik-wheel-sport.jpg',      name: 'Wheel Sport',          sub: 'Edición Especial'  },
+// Real models from the Superior catalog (same references and photos as /catalogo/relojes-polemik/)
+const featuredRefs = [
+  '2503D-BC', '9335', '9259', '9296D', '1990N-B', '2588D', '2402', '2243',
+  '2363', '303D', '649', '2657', '2342D', '2342', '1335D',
 ];
+const safeName = (m: string) =>
+  m.replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num').replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+const products = featuredRefs
+  .map((ref) => (superior as any[]).find((r) => r.modelo === ref))
+  .filter(Boolean)
+  .map((r: any) => ({
+    img: `/images/productos/relojes-polemik-superior/${safeName(r.modelo)}.jpg`,
+    ref: r.modelo as string,
+    name: r.nombre as string,
+  }));
 const totalModels = superior.length; // new Polemik Superior models, straight from the catalog data
 const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', 'Disponible para mayoristas'];
 ---
@@ -50,11 +52,11 @@ const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', '
         <li class="pl-item" aria-hidden={copy === 1 ? 'true' : undefined}>
           <div class="pl-card">
             <div class="pl-watch">
-              <img src={p.img} alt={copy === 0 ? `Polemik ${p.name}` : ''} width="240" height="240" loading="lazy" decoding="async" />
+              <img src={p.img} alt={copy === 0 ? `Polemik ${p.ref} ${p.name}` : ''} width="240" height="240" loading="lazy" decoding="async" />
             </div>
             <div class="pl-meta">
-              <p class="pl-collection">{p.sub}</p>
-              <h3 class="pl-name">{p.name}</h3>
+              <p class="pl-collection">{p.name}</p>
+              <h3 class="pl-name">Ref. {p.ref}</h3>
             </div>
           </div>
         </li>
