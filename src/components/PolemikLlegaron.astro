@@ -1,6 +1,6 @@
 ---
-// Home band: the new Polemik collection has arrived. Watches drift past on white
-// (the product photos are on pure white, so they float without frames).
+// Home band: the new Polemik collection has arrived. Polemik's own palette (black + red);
+// the red ticker is the one loud element, the watches drift on white cards below it.
 const products = [
   { img: '/images/proximos/polemik-gold-chrono.jpg',      name: 'Cronógrafo Dorado',    sub: 'Colección Premium' },
   { img: '/images/proximos/polemik-sport-crono.jpg',      name: 'Sport Chronograph',    sub: 'Colección Sport'   },
@@ -14,28 +14,45 @@ const products = [
   { img: '/images/proximos/polemik-lady-ceramic.jpg',     name: 'Lady Cerámico',        sub: 'Colección Dama'    },
   { img: '/images/proximos/polemik-wheel-sport.jpg',      name: 'Wheel Sport',          sub: 'Edición Especial'  },
 ];
+const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', 'Disponible para mayoristas'];
 ---
 
 <section class="pl" id="polemik-ya-llegaron" aria-labelledby="plTitle">
 
+  <!-- Decorative ticker: the same message is real text in the heading and subtitle -->
+  <div class="pl-ticker" aria-hidden="true">
+    <div class="pl-ticker-track">
+      {[0, 1].map(() => (
+        <div class="pl-ticker-set">
+          {[0, 1, 2].map(() => tickerWords.map((w) => (
+            <span>{w}<i></i></span>
+          )))}
+        </div>
+      ))}
+    </div>
+  </div>
+
   <div class="container pl-head reveal">
-    <div class="pl-brand">
+    <div class="pl-logo-plate">
       <img src="/images/marcas/polemik-logo.png" alt="Polemik" class="pl-logo" width="300" height="200" loading="lazy" />
-      <span class="pl-stamp"><span class="pl-stamp-dot" aria-hidden="true"></span>Ya llegaron</span>
     </div>
     <h2 class="pl-title" id="plTitle">Nueva colección <span>Polemik</span></h2>
-    <p class="pl-sub">Los 11 modelos de la nueva colección ya están disponibles para mayoristas.</p>
+    <p class="pl-sub"><strong>Ya llegaron</strong> los 11 modelos de la nueva colección. Disponibles para mayoristas.</p>
   </div>
 
   <div class="pl-band" aria-label="Modelos de la nueva colección Polemik">
     <ul class="pl-track">
       {[0, 1].map((copy) => products.map((p) => (
         <li class="pl-item" aria-hidden={copy === 1 ? 'true' : undefined}>
-          <div class="pl-watch">
-            <img src={p.img} alt={copy === 0 ? `Polemik ${p.name}` : ''} width="260" height="260" loading="lazy" decoding="async" />
+          <div class="pl-card">
+            <div class="pl-watch">
+              <img src={p.img} alt={copy === 0 ? `Polemik ${p.name}` : ''} width="240" height="240" loading="lazy" decoding="async" />
+            </div>
+            <div class="pl-meta">
+              <p class="pl-collection">{p.sub}</p>
+              <h3 class="pl-name">{p.name}</h3>
+            </div>
           </div>
-          <p class="pl-sub-name">{p.sub}</p>
-          <h3 class="pl-name">{p.name}</h3>
         </li>
       )))}
     </ul>
@@ -54,129 +71,163 @@ const products = [
 
 <style>
   .pl {
-    background: #fff;
-    border-top: 1px solid var(--gray-200);
-    padding: 5.5rem 0 4.5rem;
+    --pl-black: #0b0b0c;
+    --pl-red: #e3262e;
+    position: relative;
+    background:
+      radial-gradient(60% 50% at 0% 100%, rgba(227, 38, 46, 0.16), transparent 70%),
+      var(--pl-black);
+    color: #fff;
+    padding: 0 0 4.5rem;
     overflow: hidden;
   }
 
-  /* ── HEAD ── */
-  .pl-head { text-align: center; }
+  /* ── TICKER (signature) ── */
+  .pl-ticker {
+    background: var(--pl-red);
+    color: #0b0b0c;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 3px solid #0b0b0c;
+  }
 
-  .pl-brand {
+  .pl-ticker-track {
+    display: flex;
+    width: max-content;
+    animation: plTicker 38s linear infinite;
+  }
+
+  .pl-ticker-set { display: flex; flex: 0 0 auto; }
+
+  .pl-ticker-set span {
     display: inline-flex;
     align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+    padding: 0.7rem 0 0.7rem 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .pl-ticker-set i {
+    width: 9px;
+    height: 9px;
+    background: #0b0b0c;
+    transform: rotate(45deg);
+    display: inline-block;
+  }
+
+  /* ── HEAD ── */
+  .pl-head {
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  .pl-logo-plate {
+    display: inline-block;
+    background: #fff;
+    padding: 0.55rem 1.4rem;
+    border-radius: 4px;
+    border-bottom: 4px solid var(--pl-red);
+    margin-bottom: 1.6rem;
   }
 
   .pl-logo {
-    height: 84px;
+    height: 70px;
     width: auto;
     display: block;
   }
 
-  /* Rubber-stamp badge, in Polemik's own red */
-  .pl-stamp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.45rem 0.95rem 0.45rem 0.8rem;
-    border: 2px solid var(--red);
-    border-radius: 6px;
-    color: var(--red);
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    font-weight: 900;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    transform: rotate(-3deg);
-  }
-
-  .pl-stamp-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--red);
-    animation: plPulse 2.2s ease-in-out infinite;
-  }
-
   .pl-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4.6vw, 3.4rem);
+    font-size: clamp(2rem, 4.8vw, 3.5rem);
     font-weight: 900;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: #021d50;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #fff;
   }
 
-  .pl-title span { color: var(--yellow); }
+  .pl-title span { color: var(--pl-red); }
 
   .pl-sub {
-    margin: 0.9rem auto 0;
+    margin: 1rem auto 0;
     max-width: 34rem;
-    color: var(--gray-700);
+    color: rgba(255, 255, 255, 0.72);
     font-size: 1.02rem;
     line-height: 1.55;
   }
+
+  .pl-sub strong { color: #fff; }
 
   /* ── BAND ── */
   .pl-band {
     margin-top: 2.75rem;
     overflow: hidden;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
-            mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
 
   .pl-track {
     display: flex;
     width: max-content;
-    gap: 2.5rem;
+    gap: 1.5rem;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem 0;
     list-style: none;
-    animation: plDrift 55s linear infinite;
+    animation: plDrift 60s linear infinite;
   }
 
   .pl-band:hover .pl-track,
-  .pl-band:focus-within .pl-track { animation-play-state: paused; }
+  .pl-band:focus-within .pl-track,
+  .pl-ticker:hover .pl-ticker-track { animation-play-state: paused; }
 
-  .pl-item {
-    flex: 0 0 auto;
-    width: 260px;
-    text-align: center;
+  .pl-item { flex: 0 0 auto; width: 240px; }
+
+  .pl-card {
+    background: #fff;
+    border-radius: 4px;
+    border-top: 4px solid var(--pl-red);
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s;
   }
 
-  .pl-watch {
-    width: 260px;
-    height: 260px;
+  .pl-item:hover .pl-card {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(227, 38, 46, 0.35);
   }
+
+  .pl-watch { width: 240px; height: 240px; }
 
   .pl-watch img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
-    transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 
-  .pl-item:hover .pl-watch img { transform: translateY(-6px) scale(1.04); }
+  .pl-meta {
+    padding: 0.7rem 1rem 1rem;
+    border-top: 1px solid #ececec;
+    text-align: left;
+  }
 
-  .pl-sub-name {
-    margin: 0.4rem 0 0.15rem;
-    font-size: 0.68rem;
-    font-weight: 700;
+  .pl-collection {
+    font-size: 0.64rem;
+    font-weight: 800;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--gray-700);
-    opacity: 0.7;
+    color: var(--pl-red);
   }
 
   .pl-name {
+    margin-top: 0.15rem;
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 0.98rem;
     font-weight: 800;
-    color: #021d50;
+    color: #0b0b0c;
   }
 
   /* ── ACTIONS ── */
@@ -193,44 +244,50 @@ const products = [
     align-items: center;
     gap: 0.5rem;
     padding: 0.85rem 1.6rem;
-    border-radius: 100px;
-    font-size: 0.92rem;
-    font-weight: 700;
+    border-radius: 4px;
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     text-decoration: none;
-    transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+    transition: transform var(--transition), background var(--transition), border-color var(--transition);
   }
 
-  .pl-btn--solid { background: #021d50; color: #fff; border: 2px solid #021d50; }
-  .pl-btn--solid:hover { transform: translateY(-2px); box-shadow: var(--shadow-yellow); }
-  .pl-btn--line { background: transparent; color: #021d50; border: 2px solid var(--gray-200); }
-  .pl-btn--line:hover { border-color: #021d50; }
-  .pl-btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+  .pl-btn--solid { background: var(--pl-red); color: #fff; border: 2px solid var(--pl-red); }
+  .pl-btn--solid:hover { transform: translateY(-2px); background: #c91f27; border-color: #c91f27; }
+  .pl-btn--line { background: transparent; color: #fff; border: 2px solid rgba(255, 255, 255, 0.35); }
+  .pl-btn--line:hover { border-color: #fff; }
+  .pl-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
   /* ── MOTION ── */
   @keyframes plDrift {
     from { transform: translateX(0); }
-    to   { transform: translateX(calc(-50% - 1.25rem)); } /* half the track + half a gap */
+    to   { transform: translateX(calc(-50% - 0.75rem)); } /* half the track + half a gap */
   }
 
-  @keyframes plPulse {
-    0%, 100% { opacity: 1; }
-    50%      { opacity: 0.35; }
+  @keyframes plTicker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .pl-track { animation: none; }
+    .pl-track, .pl-ticker-track { animation: none; }
+    .pl-ticker { overflow-x: auto; }
     .pl-band { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
     .pl-item[aria-hidden='true'] { display: none; }
-    .pl-stamp-dot { animation: none; }
   }
 
   /* ── MOBILE ── */
   @media (max-width: 640px) {
-    .pl { padding: 4rem 0 3.5rem; }
-    .pl-brand { flex-direction: column; gap: 0.9rem; }
-    .pl-logo { height: 66px; }
-    .pl-item, .pl-watch { width: 200px; }
-    .pl-watch { height: 200px; }
-    .pl-track { gap: 1.5rem; animation-duration: 45s; }
+    .pl-head { padding-top: 3rem; }
+    .pl-logo { height: 56px; }
+    .pl-item, .pl-watch { width: 190px; }
+    .pl-watch { height: 190px; }
+    .pl-track { gap: 1rem; animation-duration: 50s; }
+    .pl-ticker-set span { font-size: 0.72rem; }
+    @keyframes plDrift {
+      from { transform: translateX(0); }
+      to   { transform: translateX(calc(-50% - 0.5rem)); }
+    }
   }
 </style>
