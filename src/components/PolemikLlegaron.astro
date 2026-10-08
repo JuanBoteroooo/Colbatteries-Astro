@@ -17,7 +17,8 @@ const products = [
 const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', 'Disponible para mayoristas'];
 ---
 
-<section class="pl" id="polemik-ya-llegaron" aria-labelledby="plTitle">
+<section class="pl-outer" id="polemik-ya-llegaron" aria-labelledby="plTitle">
+<div class="pl">
 
   <!-- Decorative ticker: the same message is real text in the heading and subtitle -->
   <div class="pl-ticker" aria-hidden="true">
@@ -67,10 +68,20 @@ const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', '
       Consultar disponibilidad
     </a>
   </div>
+</div>
 </section>
 
 <style>
+  /* White frame so the black panel never touches the neighbouring sections */
+  .pl-outer {
+    background: #fff;
+    padding: 3.5rem 1.25rem;
+  }
+
   .pl {
+    max-width: 1240px;
+    margin: 0 auto;
+    border-radius: 22px;
     --pl-black: #0b0b0c;
     --pl-red: #e3262e;
     position: relative;
@@ -279,6 +290,8 @@ const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', '
 
   /* ── MOBILE ── */
   @media (max-width: 640px) {
+    .pl-outer { padding: 2.25rem 0.75rem; }
+    .pl { border-radius: 16px; }
     .pl-head { padding-top: 3rem; }
     .pl-logo { height: 56px; }
     .pl-item, .pl-watch { width: 190px; }
