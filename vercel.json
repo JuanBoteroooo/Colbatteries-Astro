@@ -2,8 +2,28 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "colbateries.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "colbateries.com"
+        }
+      ],
       "destination": "https://www.colbateries.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/catalogo/relojes-polemik-superior",
+      "destination": "/catalogo/relojes-polemik",
+      "permanent": true
+    },
+    {
+      "source": "/catalogo/relojes-polemik-superior/",
+      "destination": "/catalogo/relojes-polemik/",
+      "permanent": true
+    },
+    {
+      "source": "/catalogos/relojes-polemik-superior.pdf",
+      "destination": "/catalogos/relojes-polemik.pdf",
       "permanent": true
     }
   ]

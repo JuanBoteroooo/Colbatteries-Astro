@@ -36,6 +36,8 @@ import horotecData        from '../../data/horotec.json';
 import pilasRenataData    from '../../data/pilas-renata.json';
 import quimicosData       from '../../data/quimicos-joyeria.json';
 import polemikSuperiorData from '../../data/relojes-polemik-superior.json';
+// Polemik = Superior (deck order, first) + normal line, one catalog
+const polemikAll: any[] = [...polemikSuperiorData, ...polemikData];
 
 export function getStaticPaths() {
   const catalogs = groups.flatMap(g =>
@@ -88,7 +90,7 @@ const isExhibidores     = isStructured && slug === 'exhibidores';
 const isHorotec         = isStructured && slug === 'horotec';
 const isPilasRenata     = isStructured && slug === 'baterias-renata';
 const isQuimicos        = isStructured && slug === 'quimicos-joyeria';
-const isPolemikSuperior = isStructured && slug === 'relojes-polemik-superior';
+const isPolemikSuperior = isPolemik; // merged viewer block
 
 const fourColumnSlugs = [
     'pulso-resina', 'pulso-silicona', 'pulso-cuero', 'pulso-metalico', 'pulso-pvc',
@@ -97,7 +99,7 @@ const fourColumnSlugs = [
 const isFourColumn = fourColumnSlugs.includes(slug);
 
 const isWatch   = isPolemik || isXinjia;
-const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isExhibidores ? exhibidoresData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isQuimicos ? quimicosData : isHorotec ? horotecData : isPilasRenata ? pilasRenataData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isBatRecargables ? bateriasRecargablesData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemikSuperior ? polemikSuperiorData : isPolemik ? polemikData : isXinjia ? xinjiaData : [];
+const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isExhibidores ? exhibidoresData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isQuimicos ? quimicosData : isHorotec ? horotecData : isPilasRenata ? pilasRenataData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isBatRecargables ? bateriasRecargablesData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikAll : isXinjia ? xinjiaData : [];
 const pdfSlug   = isSII ? 'movimientos-epson' : slug === 'horotec' ? 'HOROTEC' : slug;
 
 // For cover fallback (PDF mode only)
@@ -119,8 +121,7 @@ const seoMap: Record<string, { title: string; description: string }> = {
   'movimientos-sii':     { title: 'Movimientos SII al por mayor — Distribuidor relojería | Colbateries Panamá',         description: 'Movimientos SII para relojería al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Despacho inmediato a toda la región.' },
   'movimientos-isa':     { title: 'Movimientos ISA al por mayor — Mayorista relojería | Colbateries Panamá',            description: 'Movimientos ISA para relojería al por mayor. Distribuidor en Zona Libre de Colón, Panamá. Amplio stock y precios competitivos para distribuidores.' },
   'movimientos-chinos':  { title: 'Movimientos de reloj chinos al por mayor — Distribuidor | Colbateries Panamá',       description: 'Movimientos de reloj chinos económicos al por mayor. Distribuidor mayorista Zona Libre de Colón, Panamá. Ideal para fabricantes y distribuidores.' },
-  'relojes-polemik':     { title: 'Relojes Polemik al por mayor — Distribución oficial | Colbateries Panamá',          description: 'Relojes Polemik al por mayor. Distribución oficial desde Zona Libre de Colón, Panamá. Catálogo completo con precios mayoristas para distribuidores.' },
-  'relojes-polemik-superior': { title: 'Relojes Polemik Superior al por mayor — Acero inoxidable | Colbateries Panamá', description: 'Relojes Polemik Superior al por mayor: cronógrafos, clásicos y digitales en acero inoxidable para caballero, dama y unisex. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
+  'relojes-polemik':     { title: 'Relojes Polemik al por mayor — Distribución oficial | Colbateries Panamá',          description: 'Relojes Polemik al por mayor: línea Superior en acero inoxidable (cronógrafos, clásicos, digitales) y línea análoga, digital y estuches. Distribución oficial desde Zona Libre de Colón, Panamá.' },
   'relojes-xinjia':      { title: 'Relojes Xinjia al por mayor — Distribución mayorista | Colbateries Panamá',         description: 'Relojes Xinjia al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Envíos internacionales a toda Latinoamérica.' },
   'baterias-gp':         { title: 'Baterías GP al por mayor — Pilas de reloj mayorista | Colbateries Panamá',          description: 'Baterías GP de botón y de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Stock disponible para distribuidores y comercios.' },
   'baterias-tianqiu':    { title: 'Baterías Tianqiu al por mayor — Pilas de reloj | Colbateries Panamá',               description: 'Baterías Tianqiu de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Precios competitivos para distribuidores y comercios.' },
@@ -2046,6 +2047,8 @@ const seo = seoMap[slug] ?? {
             <button class="eta-tipo-pill" data-tipo="CABALLERO">Caballero</button>
             <button class="eta-tipo-pill" data-tipo="DAMA">Dama</button>
             <button class="eta-tipo-pill" data-tipo="UNISEX">Unisex</button>
+            <button class="eta-tipo-pill" data-tipo="DIGITAL">Digital</button>
+            <button class="eta-tipo-pill" data-tipo="ACCESORIO">Accesorio</button>
           </div>
           <span class="eta-results-label"><span id="etaCount">{products.length}</span> MODELOS</span>
         </div>
@@ -2053,24 +2056,28 @@ const seo = seoMap[slug] ?? {
         <!-- Grid -->
         <div class="eta-grid" id="etaGrid">
           {(products as any[]).map((p) => {
-            const safe = (p.modelo as string)
-              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
-              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
-            const searchText = [p.modelo, p.nombre, ...(p.tipo ?? []), p.caja?.material, p.caja?.color, p.correa?.material, p.correa?.color].filter(Boolean).join(' ').toLowerCase();
+            const sup = !!p.categoria;
+            const safe = sup
+              ? (p.modelo as string).replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num').replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80)
+              : (p.modelo as string).replace(/\//g, '_').replace(/ /g, '-');
+            const searchText = sup
+              ? [p.modelo, p.nombre, ...(p.tipo ?? []), p.caja?.material, p.caja?.color, p.correa?.material, p.correa?.color].filter(Boolean).join(' ').toLowerCase()
+              : `${p.modelo} ${p.tipo}`.toLowerCase();
+            const tipoAttr = sup ? ((p.tipo ?? []).includes('Digital') ? `${p.categoria} DIGITAL` : p.categoria) : p.tipo;
             return (
               <div
                 class="eta-card-wrapper"
-                data-tipo={p.categoria}
+                data-tipo={tipoAttr}
                 data-modelo={`${searchText} ${searchText.normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`}
               >
                 <CatalogCard
-                  imagenSrc={`/images/productos/relojes-polemik-superior/${safe}.jpg`}
+                  imagenSrc={sup ? `/images/productos/relojes-polemik-superior/${safe}.jpg` : `/images/productos/relojes-polemik/${safe}.png`}
                   imagenCatalogoSrc={p.img as string}
                   titulo={`Polemik ${p.modelo}`}
                   detalles={{}}
-                  tipo={p.categoria}
-                  subtitulo={p.nombre}
-                  chips={p.tipo}
+                  tipo={sup ? p.categoria : p.tipo}
+                  subtitulo={sup ? p.nombre : undefined}
+                  chips={sup ? p.tipo : undefined}
                 />
               </div>
             );
@@ -2384,7 +2391,7 @@ const seo = seoMap[slug] ?? {
     <!-- ══════════════════════════════════════════
          ETA / RONDA STRUCTURED MODE
     ══════════════════════════════════════════ -->
-    {(isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isPolemik || isXinjia) && (
+    {(isETA || isRonda || isEpson || isSII || isMiyota || isISA || isChinos || isXinjia) && (
       <div class="eta-viewer" id="etaViewer">
 
         <!-- Sticky controls -->

@@ -45,7 +45,6 @@ export const groups = [
     image: '/images/categorias/reloj-categoria.png',
     catalogs: [
       { slug: 'relojes-polemik', label: 'Reloj Polemik', structured: true },
-      { slug: 'relojes-polemik-superior', label: 'Reloj Polemik Superior', structured: true },
       { slug: 'relojes-xinjia', label: 'Relojes Xinjia', structured: true },
     ],
   },
