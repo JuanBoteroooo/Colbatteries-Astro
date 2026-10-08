@@ -36,6 +36,8 @@ interface Props {
   chips?:             string[];
 }
 
+import { groups } from '../data/catalogs.js';
+
 const {
   imagenSrc, imagenCatalogoSrc, titulo, detalles,
   tipo, fecha,
@@ -44,6 +46,10 @@ const {
   fullTitle = false,
   subtitulo, chips,
 } = Astro.props;
+
+const catalogSlug = Astro.url.pathname.split('/').filter(Boolean)[1];
+const catalogLabel = groups.flatMap((g: any) => g.catalogs).find((x: any) => x.slug === catalogSlug)?.label ?? '';
+const altText = [titulo, subtitulo, catalogLabel].filter(Boolean).join(' – ');
 
 const BADGE_CLASS: Record<string, string> = {
   'CRONÓGRAFO':       'badge-crono',
@@ -272,7 +278,7 @@ const coronaColors = isCorona && color
   <div class="cc-img-zone">
     <img
       src={imagenSrc}
-      alt=""
+      alt={altText}
       class="cc-img"
       loading="lazy"
       decoding="async"

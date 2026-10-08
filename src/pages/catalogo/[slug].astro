@@ -121,7 +121,7 @@ const seoMap: Record<string, { title: string; description: string }> = {
   'movimientos-sii':     { title: 'Movimientos SII al por mayor — Distribuidor relojería | Colbateries Panamá',         description: 'Movimientos SII para relojería al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Despacho inmediato a toda la región.' },
   'movimientos-isa':     { title: 'Movimientos ISA al por mayor — Mayorista relojería | Colbateries Panamá',            description: 'Movimientos ISA para relojería al por mayor. Distribuidor en Zona Libre de Colón, Panamá. Amplio stock y precios competitivos para distribuidores.' },
   'movimientos-chinos':  { title: 'Movimientos de reloj chinos al por mayor — Distribuidor | Colbateries Panamá',       description: 'Movimientos de reloj chinos económicos al por mayor. Distribuidor mayorista Zona Libre de Colón, Panamá. Ideal para fabricantes y distribuidores.' },
-  'relojes-polemik':     { title: 'Relojes Polemik al por mayor — Distribución oficial | Colbateries Panamá',          description: 'Relojes Polemik al por mayor: línea Superior en acero inoxidable (cronógrafos, clásicos, digitales) y línea análoga, digital y estuches. Distribución oficial desde Zona Libre de Colón, Panamá.' },
+  'relojes-polemik':     { title: 'Relojes Polemik al por mayor — Distribución oficial | Colbateries Panamá',          description: 'Relojes Polemik al por mayor: línea Superior en acero, análogos, digitales y estuches. Distribución desde Zona Libre de Colón, Panamá.' },
   'relojes-xinjia':      { title: 'Relojes Xinjia al por mayor — Distribución mayorista | Colbateries Panamá',         description: 'Relojes Xinjia al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Envíos internacionales a toda Latinoamérica.' },
   'baterias-gp':         { title: 'Baterías GP al por mayor — Pilas de reloj mayorista | Colbateries Panamá',          description: 'Baterías GP de botón y de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Stock disponible para distribuidores y comercios.' },
   'baterias-tianqiu':    { title: 'Baterías Tianqiu al por mayor — Pilas de reloj | Colbateries Panamá',               description: 'Baterías Tianqiu de reloj al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Precios competitivos para distribuidores y comercios.' },
@@ -146,14 +146,57 @@ const seoMap: Record<string, { title: string; description: string }> = {
   'quimicos-joyeria':    { title: 'Químicos para joyería al por mayor — Antitarnish, baño de oro | Colbateries',       description: 'Químicos profesionales para joyería al por mayor: antitarnish, soluciones de baño de oro y plata sin cianuro. Distribuidor mayorista en Zona Libre de Colón, Panamá.' },
 };
 
-const seo = seoMap[slug] ?? {
+const seoRaw = seoMap[slug] ?? {
   title: `${cat.label} al por mayor — Distribución mayorista | Colbateries Panamá`,
   description: `${cat.label} al por mayor. Distribuidor mayorista en Zona Libre de Colón, Panamá. Stock disponible, envíos a toda Latinoamérica.`,
+};
+// Keep titles <= ~61 chars and descriptions <= 155 so Google does not truncate them
+const titleOverrides: Record<string, string> = { 'baterias-recargables': 'Baterías recargables y cargadores' };
+const titleBase = titleOverrides[slug] ?? seoRaw.title.split(' — ')[0].split(' | ')[0];
+const trimDesc = (d: string, max = 155) => {
+  if (d.length <= max) return d;
+  const cut = d.slice(0, max);
+  const dot = cut.lastIndexOf('. ');
+  return dot > 80 ? cut.slice(0, dot + 1) : cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:]$/, '') + '…';
+};
+const seo = {
+  title: `${titleBase.length <= 40 ? titleBase : `${cat.label} al por mayor`} | Colbateries Panamá`,
+  description: trimDesc(seoRaw.description),
+};
+const itemNames: string[] = isStructured
+  ? (products as any[]).map((p) => String(p.modelo ?? p.nombre ?? p.titulo ?? '')).filter(Boolean)
+  : [];
+const catalogJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.colbateries.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Catálogos', item: 'https://www.colbateries.com/catalogo/' },
+        { '@type': 'ListItem', position: 3, name: cat.label, item: `https://www.colbateries.com/catalogo/${slug}/` },
+      ],
+    },
+    {
+      '@type': 'CollectionPage',
+      name: cat.label,
+      url: `https://www.colbateries.com/catalogo/${slug}/`,
+      description: seo.description,
+      ...(itemNames.length ? {
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: itemNames.length,
+          itemListElement: itemNames.slice(0, 200).map((name, i) => ({ '@type': 'ListItem', position: i + 1, name })),
+        },
+      } : {}),
+    },
+  ],
 };
 ---
 
 <Layout title={seo.title} description={seo.description}>
   <Navbar />
+  <script type="application/ld+json" set:html={JSON.stringify(catalogJsonLd)} />
 
   <div class={`viewer-page${isStructured ? ' viewer-structured' : ''}`}>
 
@@ -175,7 +218,7 @@ const seo = seoMap[slug] ?? {
           Catálogos
         </a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">{cat.label}</span>
+        <h1 class="breadcrumb-current">{cat.label}</h1>
       </div>
 
       <div class="bar-nav">
@@ -2573,6 +2616,21 @@ const seo = seoMap[slug] ?? {
       </div>
     </div>
 
+
+    {isStructured && (
+      <section class="seo-about">
+        <h2>Sobre este catálogo</h2>
+        <p>{seoRaw.description} Este catálogo reúne {itemNames.length} referencias disponibles al por mayor; solicite precios y existencias por WhatsApp.</p>
+        {groupCats.length > 1 && (
+          <p class="seo-about-links">
+            Más de {group?.name}:{' '}
+            {groupCats.filter(c => c.slug !== slug).map((c, i, arr) => (
+              <><a href={`/catalogo/${c.slug}/`}>{c.label}</a>{i < arr.length - 1 ? ' · ' : ''}</>
+            ))}
+          </p>
+        )}
+      </section>
+    )}
   </div>
 </Layout>
 
@@ -3052,6 +3110,15 @@ const seo = seoMap[slug] ?? {
   /* ══════════════════════════════
      STRUCTURED PRODUCT MODE
   ══════════════════════════════ */
+
+
+  .seo-about {
+    max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 3.5rem;
+    color: #5b6b85; font-size: 0.88rem; line-height: 1.65;
+  }
+  .seo-about h2 { font-size: 0.95rem; font-weight: 700; color: #1f2d4d; margin-bottom: 0.5rem; }
+  .seo-about p + p { margin-top: 0.6rem; }
+  .seo-about a { color: #0b3a8f; text-decoration: underline; text-underline-offset: 2px; }
 
   .viewer-structured {
     height: auto;

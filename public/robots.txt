@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://colbateries.com/sitemap-index.xml
+Sitemap: https://www.colbateries.com/sitemap-index.xml
