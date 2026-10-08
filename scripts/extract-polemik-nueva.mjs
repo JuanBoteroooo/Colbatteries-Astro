@@ -1,3 +1,4 @@
+// NOTE: this script writes PNG thumbnails; the site serves them as .webp (converted at 1000px, q90). Convert after re-running.
 /**
  * extract-polemik-nueva.mjs
  * Builds the catalog thumbnails of the products added to "Polemik normal"
