@@ -1,4 +1,6 @@
 ---
+import superior from '../data/relojes-polemik-superior.json';
+
 // Home band: the new Polemik collection has arrived. Polemik's own palette (black + red);
 // the red ticker is the one loud element, the watches drift on white cards below it.
 const products = [
@@ -14,6 +16,7 @@ const products = [
   { img: '/images/proximos/polemik-lady-ceramic.jpg',     name: 'Lady Cerámico',        sub: 'Colección Dama'    },
   { img: '/images/proximos/polemik-wheel-sport.jpg',      name: 'Wheel Sport',          sub: 'Edición Especial'  },
 ];
+const totalModels = superior.length; // new Polemik Superior models, straight from the catalog data
 const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', 'Disponible para mayoristas'];
 ---
 
@@ -38,7 +41,7 @@ const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', '
       <img src="/images/marcas/polemik-logo.png" alt="Polemik" class="pl-logo" width="300" height="200" loading="lazy" />
     </div>
     <h2 class="pl-title" id="plTitle">Nueva colección <span>Polemik</span></h2>
-    <p class="pl-sub"><strong>Ya llegaron</strong> los 11 modelos de la nueva colección. Disponibles para mayoristas.</p>
+    <p class="pl-sub"><strong>Ya llegaron</strong> los {totalModels} modelos de la nueva colección. Disponibles para mayoristas.</p>
   </div>
 
   <div class="pl-band" aria-label="Modelos de la nueva colección Polemik">
