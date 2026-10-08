@@ -1,0 +1,236 @@
+---
+// Home band: the new Polemik collection has arrived. Watches drift past on white
+// (the product photos are on pure white, so they float without frames).
+const products = [
+  { img: '/images/proximos/polemik-gold-chrono.jpg',      name: 'Cronógrafo Dorado',    sub: 'Colección Premium' },
+  { img: '/images/proximos/polemik-sport-crono.jpg',      name: 'Sport Chronograph',    sub: 'Colección Sport'   },
+  { img: '/images/proximos/polemik-dual-time-gold.jpg',   name: 'Dual Time Digital',    sub: 'Colección Digital' },
+  { img: '/images/proximos/polemik-tachymetre-negro.jpg', name: 'Tachymetre Sport',     sub: 'Colección Sport'   },
+  { img: '/images/proximos/polemik-nautilus-negro.jpg',   name: 'Nautilus Black',       sub: 'Colección Clásica' },
+  { img: '/images/proximos/polemik-silver-chrono.jpg',    name: 'Cronógrafo Plateado',  sub: 'Colección Premium' },
+  { img: '/images/proximos/polemik-tonneau-gold.jpg',     name: 'Tonneau WR30M',        sub: 'Colección Sport'   },
+  { img: '/images/proximos/polemik-digital-gold.jpg',     name: 'Digital Dorado',       sub: 'Colección Digital' },
+  { img: '/images/proximos/polemik-digital-silver.jpg',   name: 'Digital Plateado',     sub: 'Colección Digital' },
+  { img: '/images/proximos/polemik-lady-ceramic.jpg',     name: 'Lady Cerámico',        sub: 'Colección Dama'    },
+  { img: '/images/proximos/polemik-wheel-sport.jpg',      name: 'Wheel Sport',          sub: 'Edición Especial'  },
+];
+---
+
+<section class="pl" id="polemik-ya-llegaron" aria-labelledby="plTitle">
+
+  <div class="container pl-head reveal">
+    <div class="pl-brand">
+      <img src="/images/marcas/polemik-logo.png" alt="Polemik" class="pl-logo" width="300" height="200" loading="lazy" />
+      <span class="pl-stamp"><span class="pl-stamp-dot" aria-hidden="true"></span>Ya llegaron</span>
+    </div>
+    <h2 class="pl-title" id="plTitle">Nueva colección <span>Polemik</span></h2>
+    <p class="pl-sub">Los 11 modelos de la nueva colección ya están disponibles para mayoristas.</p>
+  </div>
+
+  <div class="pl-band" aria-label="Modelos de la nueva colección Polemik">
+    <ul class="pl-track">
+      {[0, 1].map((copy) => products.map((p) => (
+        <li class="pl-item" aria-hidden={copy === 1 ? 'true' : undefined}>
+          <div class="pl-watch">
+            <img src={p.img} alt={copy === 0 ? `Polemik ${p.name}` : ''} width="260" height="260" loading="lazy" decoding="async" />
+          </div>
+          <p class="pl-sub-name">{p.sub}</p>
+          <h3 class="pl-name">{p.name}</h3>
+        </li>
+      )))}
+    </ul>
+  </div>
+
+  <div class="container pl-actions reveal">
+    <a href="/catalogo/relojes-polemik/" class="pl-btn pl-btn--solid">
+      Ver catálogo Polemik
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <a href="https://wa.me/50764156382?text=Hola%2C%20quisiera%20cotizar%20la%20nueva%20colecci%C3%B3n%20Polemik" target="_blank" rel="noopener" class="pl-btn pl-btn--line">
+      Consultar disponibilidad
+    </a>
+  </div>
+</section>
+
+<style>
+  .pl {
+    background: #fff;
+    border-top: 1px solid var(--gray-200);
+    padding: 5.5rem 0 4.5rem;
+    overflow: hidden;
+  }
+
+  /* ── HEAD ── */
+  .pl-head { text-align: center; }
+
+  .pl-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pl-logo {
+    height: 84px;
+    width: auto;
+    display: block;
+  }
+
+  /* Rubber-stamp badge, in Polemik's own red */
+  .pl-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.95rem 0.45rem 0.8rem;
+    border: 2px solid var(--red);
+    border-radius: 6px;
+    color: var(--red);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+  }
+
+  .pl-stamp-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+    animation: plPulse 2.2s ease-in-out infinite;
+  }
+
+  .pl-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4.6vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #021d50;
+  }
+
+  .pl-title span { color: var(--yellow); }
+
+  .pl-sub {
+    margin: 0.9rem auto 0;
+    max-width: 34rem;
+    color: var(--gray-700);
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  /* ── BAND ── */
+  .pl-band {
+    margin-top: 2.75rem;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  }
+
+  .pl-track {
+    display: flex;
+    width: max-content;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation: plDrift 55s linear infinite;
+  }
+
+  .pl-band:hover .pl-track,
+  .pl-band:focus-within .pl-track { animation-play-state: paused; }
+
+  .pl-item {
+    flex: 0 0 auto;
+    width: 260px;
+    text-align: center;
+  }
+
+  .pl-watch {
+    width: 260px;
+    height: 260px;
+  }
+
+  .pl-watch img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .pl-item:hover .pl-watch img { transform: translateY(-6px) scale(1.04); }
+
+  .pl-sub-name {
+    margin: 0.4rem 0 0.15rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gray-700);
+    opacity: 0.7;
+  }
+
+  .pl-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+    color: #021d50;
+  }
+
+  /* ── ACTIONS ── */
+  .pl-actions {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+  }
+
+  .pl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 100px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+  }
+
+  .pl-btn--solid { background: #021d50; color: #fff; border: 2px solid #021d50; }
+  .pl-btn--solid:hover { transform: translateY(-2px); box-shadow: var(--shadow-yellow); }
+  .pl-btn--line { background: transparent; color: #021d50; border: 2px solid var(--gray-200); }
+  .pl-btn--line:hover { border-color: #021d50; }
+  .pl-btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+  /* ── MOTION ── */
+  @keyframes plDrift {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-50% - 1.25rem)); } /* half the track + half a gap */
+  }
+
+  @keyframes plPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.35; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pl-track { animation: none; }
+    .pl-band { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+    .pl-item[aria-hidden='true'] { display: none; }
+    .pl-stamp-dot { animation: none; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    .pl { padding: 4rem 0 3.5rem; }
+    .pl-brand { flex-direction: column; gap: 0.9rem; }
+    .pl-logo { height: 66px; }
+    .pl-item, .pl-watch { width: 200px; }
+    .pl-watch { height: 200px; }
+    .pl-track { gap: 1.5rem; animation-duration: 45s; }
+  }
+</style>
