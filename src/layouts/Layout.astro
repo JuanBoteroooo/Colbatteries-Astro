@@ -6,12 +6,14 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'Colbateries S.A. — Distribución y Comercialización',
   description = 'Distribuidor líder de relojería, baterías, y accesorios en la Zona Libre de Colón, Panamá.',
   ogImage = '/og-image.jpg',
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, 'https://www.colbateries.com');
@@ -25,7 +27,7 @@ const ogImageURL = new URL(ogImage, 'https://www.colbateries.com');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
     <link rel="alternate" type="text/plain" href="/llms.txt" title="Resumen para asistentes de IA" />
 
     <!-- Open Graph -->
@@ -56,6 +58,13 @@ const ogImageURL = new URL(ogImage, 'https://www.colbateries.com');
       "email": "colbateriespanamazl@hotmail.com",
       "image": "https://www.colbateries.com/og-image.jpg",
       "logo": "https://www.colbateries.com/logo.jpeg",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "ventas",
+        "telephone": "+507-6415-6382",
+        "availableLanguage": "Spanish",
+        "areaServed": "Latinoamérica"
+      }],
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Transferencia bancaria, cheque",
@@ -86,6 +95,21 @@ const ogImageURL = new URL(ogImage, 'https://www.colbateries.com');
       ],
       "sameAs": ["https://www.facebook.com/ColbatteriesPanama", "https://www.instagram.com/colbatteries_sa"]
     })} />
+
+    {Astro.url.pathname === '/' && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Colbateries S.A.",
+        "url": "https://www.colbateries.com/",
+        "inLanguage": "es",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.colbateries.com/catalogo/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      })} />
+    )}
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />

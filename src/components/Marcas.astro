@@ -42,7 +42,7 @@ const brands = [
       {brands.map(b => (
         <div class="brand-chip" aria-hidden="true">
           {b.logo
-            ? <img src={b.logo} alt="" class={`brand-logo${b.xl ? ' brand-logo--xl' : b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
+            ? <img src={b.logo} alt={`Logo de ${b.name}`} class={`brand-logo${b.xl ? ' brand-logo--xl' : b.big ? ' brand-logo--big' : ''}`} loading="lazy" />
             : <Fragment><span class="brand-name">{b.name}</span><span class="brand-cat">{b.category}</span></Fragment>
           }
         </div>

@@ -166,6 +166,17 @@ const seo = {
 const itemNames: string[] = isStructured
   ? (products as any[]).map((p) => String(p.modelo ?? p.nombre ?? p.titulo ?? '')).filter(Boolean)
   : [];
+const tipoCounts: Record<string, number> = {};
+if (isStructured) {
+  for (const p of products as any[]) {
+    const k = typeof p.tipo === 'string' ? p.tipo : (typeof p.categoria === 'string' ? p.categoria : '');
+    if (k) tipoCounts[k] = (tipoCounts[k] ?? 0) + 1;
+  }
+}
+const tipoSummary = Object.entries(tipoCounts)
+  .sort((a, b) => b[1] - a[1]).slice(0, 8)
+  .map(([k, v]) => `${k.charAt(0)}${k.slice(1).toLowerCase()} (${v})`).join(', ');
+const sampleRefs = [...new Set(itemNames)].slice(0, 14).join(', ');
 const catalogJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -2621,6 +2632,8 @@ const catalogJsonLd = {
       <section class="seo-about">
         <h2>Sobre este catálogo</h2>
         <p>{seoRaw.description} Este catálogo reúne {itemNames.length} referencias disponibles al por mayor; solicite precios y existencias por WhatsApp.</p>
+        {tipoSummary && <p>Tipos disponibles: {tipoSummary}.</p>}
+        {sampleRefs && <p>Algunas referencias: {sampleRefs}.</p>}
         {groupCats.length > 1 && (
           <p class="seo-about-links">
             Más de {group?.name}:{' '}
