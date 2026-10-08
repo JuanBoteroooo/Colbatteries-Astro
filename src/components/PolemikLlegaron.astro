@@ -10,13 +10,15 @@ const featuredRefs = [
 ];
 const safeName = (m: string) =>
   m.replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num').replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
+// Some catalog names are long; the card shows a short label so every card keeps the same height
+const shortNames: Record<string, string> = { '1990N-B': 'Rin giratorio pavonado', '2657': 'Cronógrafo y fecha' };
 const products = featuredRefs
   .map((ref) => (superior as any[]).find((r) => r.modelo === ref))
   .filter(Boolean)
   .map((r: any) => ({
     img: `/images/productos/relojes-polemik-superior/${safeName(r.modelo)}.jpg`,
     ref: r.modelo as string,
-    name: r.nombre as string,
+    name: shortNames[r.modelo] ?? (r.nombre as string),
   }));
 const totalModels = superior.length; // new Polemik Superior models, straight from the catalog data
 const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', 'Disponible para mayoristas'];
@@ -231,6 +233,9 @@ const tickerWords = ['Ya llegaron', 'Nueva colección Polemik', 'Ya llegaron', '
   }
 
   .pl-collection {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 0.64rem;
     font-weight: 800;
     letter-spacing: 0.16em;
