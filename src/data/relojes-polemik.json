@@ -9,7 +9,7 @@
     "joyas": null,
     "bateria": "",
     "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-03.jpg"
+    "img": "/catalogo-pages/relojes-polemik/repome-p-a.jpg"
   },
   {
     "modelo": "REPOME-P-B",
@@ -21,7 +21,7 @@
     "joyas": null,
     "bateria": "",
     "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-04.jpg"
+    "img": "/catalogo-pages/relojes-polemik/repome-p-b.jpg"
   },
   {
     "modelo": "REPOME-P-C",
@@ -33,7 +33,7 @@
     "joyas": null,
     "bateria": "",
     "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-05.jpg"
+    "img": "/catalogo-pages/relojes-polemik/repome-p-c.jpg"
   },
   {
     "modelo": "REPOME-D-A",
@@ -45,7 +45,7 @@
     "joyas": null,
     "bateria": "",
     "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-06.jpg"
+    "img": "/catalogo-pages/relojes-polemik/repome-d-a.jpg"
   },
   {
     "modelo": "REPOME-D-B",
@@ -57,7 +57,7 @@
     "joyas": null,
     "bateria": "",
     "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-07.jpg"
+    "img": "/catalogo-pages/relojes-polemik/repome-d-b.jpg"
   },
   {
     "modelo": "REPOME-D-C",
@@ -69,7 +69,7 @@
     "joyas": null,
     "bateria": "",
     "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-08.jpg"
+    "img": "/catalogo-pages/relojes-polemik/repome-d-c.jpg"
   },
   {
     "modelo": "PCF-421",
@@ -144,30 +144,6 @@
     "img": "/catalogo-pages/relojes-polemik/nueva-094.jpg"
   },
   {
-    "modelo": "PCF-437",
-    "brand": "POLEMIK",
-    "tipo": "DIGITAL",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-20.jpg"
-  },
-  {
-    "modelo": "P-147",
-    "brand": "POLEMIK",
-    "tipo": "CABALLERO",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-21.jpg"
-  },
-  {
     "modelo": "P-148",
     "brand": "POLEMIK",
     "tipo": "CABALLERO",
@@ -204,30 +180,6 @@
     "img": "/catalogo-pages/relojes-polemik/nueva-097.jpg"
   },
   {
-    "modelo": "P-640B",
-    "brand": "POLEMIK",
-    "tipo": "DIGITAL",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-25.jpg"
-  },
-  {
-    "modelo": "P-644C",
-    "brand": "POLEMIK",
-    "tipo": "DIGITAL",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-26.jpg"
-  },
-  {
     "modelo": "P-645B",
     "brand": "POLEMIK",
     "tipo": "DIGITAL",
@@ -240,18 +192,6 @@
     "img": "/catalogo-pages/relojes-polemik/nueva-098.jpg"
   },
   {
-    "modelo": "P-647B",
-    "brand": "POLEMIK",
-    "tipo": "DIGITAL",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-28.jpg"
-  },
-  {
     "modelo": "P-651",
     "brand": "POLEMIK",
     "tipo": "DAMA",
@@ -262,18 +202,6 @@
     "bateria": "",
     "intercambios": "",
     "img": "/catalogo-pages/relojes-polemik/nueva-099.jpg"
-  },
-  {
-    "modelo": "P-653",
-    "brand": "POLEMIK",
-    "tipo": "DIGITAL",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-30.jpg"
   },
   {
     "modelo": "P-656",
@@ -348,18 +276,6 @@
     "img": "/catalogo-pages/relojes-polemik/nueva-105.jpg"
   },
   {
-    "modelo": "P-688G",
-    "brand": "POLEMIK",
-    "tipo": "DIGITAL",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-37.jpg"
-  },
-  {
     "modelo": "P-905",
     "brand": "POLEMIK",
     "tipo": "CABALLERO",
@@ -406,18 +322,6 @@
     "bateria": "",
     "intercambios": "",
     "img": "/catalogo-pages/relojes-polemik/nueva-109.jpg"
-  },
-  {
-    "modelo": "P-1617",
-    "brand": "POLEMIK",
-    "tipo": "CABALLERO",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-41.jpg"
   },
   {
     "modelo": "P-1650",
@@ -492,18 +396,6 @@
     "img": "/catalogo-pages/relojes-polemik/nueva-115.jpg"
   },
   {
-    "modelo": "P-1933",
-    "brand": "POLEMIK",
-    "tipo": "CABALLERO",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-47.jpg"
-  },
-  {
     "modelo": "P-1936",
     "brand": "POLEMIK",
     "tipo": "DIGITAL",
@@ -574,18 +466,6 @@
     "bateria": "",
     "intercambios": "",
     "img": "/catalogo-pages/relojes-polemik/nueva-121.jpg"
-  },
-  {
-    "modelo": "P-6869",
-    "brand": "POLEMIK",
-    "tipo": "CABALLERO",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-51.jpg"
   },
   {
     "modelo": "P-6875",
@@ -850,18 +730,6 @@
     "bateria": "",
     "intercambios": "",
     "img": "/catalogo-pages/relojes-polemik/nueva-143.jpg"
-  },
-  {
-    "modelo": "P-9048",
-    "brand": "POLEMIK",
-    "tipo": "CABALLERO",
-    "fecha": false,
-    "dimensiones": "",
-    "altura": "",
-    "joyas": null,
-    "bateria": "",
-    "intercambios": "",
-    "img": "/catalogo-pages/relojes-polemik/page-64.jpg"
   },
   {
     "modelo": "P-9060",
