@@ -2,7 +2,7 @@ export const groups = [
   {
     id: 'correas',
     name: 'Pulsos & Correas',
-    image: '/images/categorias/cuero-categoria.png',
+    image: '/images/categorias/cuero-categoria.webp',
     catalogs: [
       { slug: 'pulso-resina', label: 'Pulso Resina', structured: true },
       { slug: 'pulso-silicona', label: 'Pulso Silicona', structured: true },
@@ -14,7 +14,7 @@ export const groups = [
   {
     id: 'baterias',
     name: 'Baterías & Pilas',
-    image: '/images/categorias/bateria-categoria.png',
+    image: '/images/categorias/bateria-categoria.webp',
     catalogs: [
       { slug: 'baterias-maxell', label: 'Baterías Maxell', structured: true },
       { slug: 'baterias-renata', label: 'Baterías Renata', structured: true },
@@ -28,7 +28,7 @@ export const groups = [
   {
     id: 'movimientos',
     name: 'Movimientos',
-    image: '/images/categorias/movimiento-categoria.png',
+    image: '/images/categorias/movimiento-categoria.webp',
     catalogs: [
       { slug: 'movimientos-epson', label: 'Movimientos EPSON', structured: true },
       { slug: 'movimientos-sii', label: 'Movimientos SII', structured: true },
@@ -42,7 +42,7 @@ export const groups = [
   {
     id: 'relojes',
     name: 'Relojes',
-    image: '/images/categorias/reloj-categoria.png',
+    image: '/images/categorias/reloj-categoria.webp',
     catalogs: [
       { slug: 'relojes-polemik', label: 'Reloj Polemik', structured: true },
       { slug: 'relojes-xinjia', label: 'Relojes Xinjia', structured: true },
@@ -51,7 +51,7 @@ export const groups = [
   {
     id: 'accesorios',
     name: 'Accesorios',
-    image: '/images/categorias/accesorio-categoria.png',
+    image: '/images/categorias/accesorio-categoria.webp',
     catalogs: [
       { slug: 'coronas', label: 'Coronas', structured: true },
       { slug: 'vidrios', label: 'Vidrios', structured: true },
@@ -63,7 +63,7 @@ export const groups = [
   {
     id: 'herramientas',
     name: 'Herramientas',
-    image: '/images/categorias/herramienta-categoria.png',
+    image: '/images/categorias/herramienta-categoria.webp',
     catalogs: [
       { slug: 'herramientas', label: 'Herramientas de Relojería', structured: true },
       { slug: 'joyeria-herramientas', label: 'Joyería & Herramientas', structured: true },
@@ -73,7 +73,7 @@ export const groups = [
   {
     id: 'gorras',
     name: 'Gorras',
-    image: '/images/categorias/gorra-categoria.png',
+    image: '/images/categorias/gorra-categoria.webp',
     catalogs: [
       { slug: 'gorras-polemik', label: 'Gorras Polemik', structured: true },
       { slug: 'gorras-lisas', label: 'Gorras Lisas', structured: true },
@@ -82,7 +82,7 @@ export const groups = [
   {
     id: 'quimicos',
     name: 'Químicos',
-    image: '/images/categorias/quimicos-categoria.png',
+    image: '/images/categorias/quimicos-categoria.webp',
     catalogs: [
       { slug: 'quimicos-joyeria', label: 'Químicos para Joyería', structured: true },
     ],
