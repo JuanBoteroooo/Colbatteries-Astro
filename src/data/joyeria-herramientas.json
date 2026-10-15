@@ -6,795 +6,801 @@
     "img": "/catalogo-pages/joyeria-herramientas/page-02.jpg"
   },
   {
+    "modelo": "BASE-LASER",
+    "descripcion": "Base para sujetar piezas para grabado láser, tamaño de base 165x148 mm",
+    "tipo": "MAQUINA",
+    "img": "/catalogo-pages/joyeria-herramientas/page-03.jpg"
+  },
+  {
     "modelo": "LENTE-F163",
     "descripcion": "Lente de reemplazo para láser de fibra, lente de escaneo, tamaño de marcado 110x110mm",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-03.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-04.jpg"
   },
   {
     "modelo": "KT-185",
     "descripcion": "Pulidora magnética de vaso",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-04.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-05.jpg"
   },
   {
     "modelo": "1940",
     "descripcion": "Pulidora magnética para usar pines magnéticos",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-05.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-06.jpg"
   },
   {
     "modelo": "KT-6808",
     "descripcion": "Mini pulidor de Joyas",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-06.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-07.jpg"
   },
   {
     "modelo": "JY-6808",
     "descripcion": "Correas dentadas de cadena KT-6808, 5 piezas en el paquete, material de nylon, repuesto directo para pulidora de vasos",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-07.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-08.jpg"
   },
   {
     "modelo": "JY-1003",
     "descripcion": "Pines de acero inoxidable",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-08.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-09.jpg"
   },
   {
     "modelo": "1050-A",
     "descripcion": "acero inoxidable magnético pernos de 0,30 mm / 0,50 mm",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-09.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-10.jpg"
   },
   {
     "modelo": "JY-1005",
     "descripcion": "Bolas de acero inoxidable",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-10.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-11.jpg"
   },
   {
     "modelo": "LSE-6C",
     "descripcion": "Limpiador a vapor de joyería. Dimensiones: 9.4\" x 16\" (24 x 41 x 11.8 in)",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-11.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-12.jpg"
   },
   {
     "modelo": "DS300-4B",
     "descripcion": "Limpiador a vapor de joyería. Potencia 2600W, volumen del tanque 3 litros",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-12.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-13.jpg"
   },
   {
     "modelo": "JH-800S/2L",
     "descripcion": "Limpiador a vapor de joyería. Limpieza de vapor a alta presión, tanque de acero SUS 304",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-13.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-14.jpg"
   },
   {
     "modelo": "JY-1001",
     "descripcion": "Pasta para pulido Magnetico",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-14.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-15.jpg"
   },
   {
     "modelo": "JY-1002",
     "descripcion": "Solución para pulido Magnético",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-15.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-16.jpg"
   },
   {
     "modelo": "DH-670",
     "descripcion": "Maquina de soldadura por puntos de pulso",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-16.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-17.jpg"
   },
   {
     "modelo": "JY-005",
     "descripcion": "Maquina de Grabado de doble cabezal",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-17.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-18.jpg"
   },
   {
     "modelo": "1865",
     "descripcion": "Vaso vibratorio",
     "tipo": "BASE",
-    "img": "/catalogo-pages/joyeria-herramientas/page-18.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-19.jpg"
   },
   {
     "modelo": "3064",
     "descripcion": "Microscopio Digital",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-19.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-20.jpg"
   },
   {
     "modelo": "1921",
     "descripcion": "Horno magnético 1 kg",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-20.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-21.jpg"
   },
   {
     "modelo": "JY-006",
     "descripcion": "Horno magnético de 1 a 3 kg",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-21.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-22.jpg"
   },
   {
     "modelo": "JY-007",
     "descripcion": "Horno magnético de 1 a 3 kg",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-22.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-23.jpg"
   },
   {
     "modelo": "CRISOL-1KG/2KG/3KG",
     "descripcion": "Crisol de grafito Capacidad de 1-2 y 3 kg",
     "tipo": "BASE",
-    "img": "/catalogo-pages/joyeria-herramientas/page-23.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-24.jpg"
   },
   {
     "modelo": "708A",
     "descripcion": "Crisoles de grafito superfino 1KG",
     "tipo": "BASE",
-    "img": "/catalogo-pages/joyeria-herramientas/page-24.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-25.jpg"
   },
   {
     "modelo": "054",
     "descripcion": "Bloque De Fundición (Lingote) De Hierro Fundido",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-25.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-26.jpg"
   },
   {
     "modelo": "1416",
     "descripcion": "Bloque de fundición largo 15",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-26.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-27.jpg"
   },
   {
     "modelo": "1659",
     "descripcion": "Pinza para crisol cuadrado",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-27.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-28.jpg"
   },
   {
     "modelo": "1732",
     "descripcion": "Pinzas metálicas para crisol",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-28.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-29.jpg"
   },
   {
     "modelo": "ULTRALIM-113T",
     "descripcion": "ULTRASONIDO DE LIMPIEZA",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-29.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-30.jpg"
   },
   {
     "modelo": "ULTRALIM-120HTD",
     "descripcion": "ULTRASONIDO DE LIMPIEZA DIGITAL",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-30.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-31.jpg"
   },
   {
     "modelo": "2093",
     "descripcion": "Malla con almohadilla para soldadura",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-31.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-32.jpg"
   },
   {
     "modelo": "JY001",
     "descripcion": "Expansor de anillo de mandril de metal",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-32.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-33.jpg"
   },
   {
     "modelo": "JY-008",
     "descripcion": "Juego de Herramientas de doblado de Anillos. Construcción en acero endurecido, dados intercambiables (12-22mm), base para montaje en banco",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-33.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-34.jpg"
   },
   {
     "modelo": "994",
     "descripcion": "Cortador de Emergencia para anillos",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-34.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-35.jpg"
   },
   {
     "modelo": "994.01",
     "descripcion": "Cuchilla de repuesto para corte de anillos",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-35.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-36.jpg"
   },
   {
     "modelo": "JY-9001",
     "descripcion": "Laminador. Sistema de engranajes con relación de reducción, construcción en hierro fundido con rodillos pulidos de alta resistencia al desgaste",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-36.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-37.jpg"
   },
   {
     "modelo": "JY-9002",
     "descripcion": "Laminador. Rodillos de acero endurecido, relación de engranajes 4:1, diseño combinado (chapa e hilo), apertura 5mm, diámetro 65mm, peso 23kg",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-37.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-38.jpg"
   },
   {
     "modelo": "JY-9003",
     "descripcion": "Laminador. Diseño compacto con manivela ergonómica y sistema de ajuste superior para controlar el grosor del material",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-38.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-39.jpg"
   },
   {
     "modelo": "JY-9004",
     "descripcion": "Laminador. Construcción robusta en hierro fundido con rodillos rectificados de alta precisión, sistema de ajuste superior sincronizado",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-39.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-40.jpg"
   },
   {
     "modelo": "JY-9005",
     "descripcion": "Laminador. Rodillos de acero endurecido, relación de engranajes 4:1, apertura de 0 a 5mm",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-40.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-41.jpg"
   },
   {
     "modelo": "256",
     "descripcion": "Mini laminadores 7 rodillos - Tamaño del rollo 75 mm x 45 mm",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-42.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-43.jpg"
   },
   {
     "modelo": "256A",
     "descripcion": "Mini laminadores con 5 rodillos",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-43.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-44.jpg"
   },
   {
     "modelo": "1798",
     "descripcion": "Laminador para Corrugado",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-44.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-45.jpg"
   },
   {
     "modelo": "1923",
     "descripcion": "Maquina cortadora de tiras de metal",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-45.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-46.jpg"
   },
   {
     "modelo": "1678",
     "descripcion": "Laminador corrugado modelo italiano con base",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-46.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-47.jpg"
   },
   {
     "modelo": "999",
     "descripcion": "Juego de medidas para anillos Estándar EE.UU en caja de madera",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-47.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-48.jpg"
   },
   {
     "modelo": "1540",
     "descripcion": "juego de medidas para Anillos calidad Europea 1-36 en la caja de cartón",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-48.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-49.jpg"
   },
   {
     "modelo": "191",
     "descripcion": "Medidor para anillo en Aluminio estándar europeo  1-36",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-49.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-50.jpg"
   },
   {
     "modelo": "1113",
     "descripcion": "Medidor de anillos en madera 3-15",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-50.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-51.jpg"
   },
   {
     "modelo": "1110A",
     "descripcion": "Medidas de anillo de alianza de boda",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-51.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-52.jpg"
   },
   {
     "modelo": "194",
     "descripcion": "Medidas de anillo Metal Plano Estándar de EE. UU. 1-15 [2 mm de espesor]",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-52.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-53.jpg"
   },
   {
     "modelo": "195",
     "descripcion": "Medidas de anillo Estándar europeo 1-36, 41-76 [2 mm de espesor]",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-53.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-54.jpg"
   },
   {
     "modelo": "3003",
     "descripcion": "Bloque de Dapping supremo para formación",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-54.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-55.jpg"
   },
   {
     "modelo": "1241",
     "descripcion": "Juego de troqueles / punzones Jumbo Dapping",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-55.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-56.jpg"
   },
   {
     "modelo": "CH-7056",
     "descripcion": "CALIBRADOR DIGITAL DE MEDIDAS HASTA 150 MM",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-56.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-57.jpg"
   },
   {
     "modelo": "CH-7056A",
     "descripcion": "CALIBRADOR ANALOGO HASTA 100MM",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-57.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-58.jpg"
   },
   {
     "modelo": "PULIDORA DE DOBLE PUNTA CON CUBIERTA CONTRA EL VIENTO",
     "descripcion": "",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-58.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-59.jpg"
   },
   {
     "modelo": "JY-9008",
     "descripcion": "Pulidor de doble punta. Voltaje 110V, sistema de doble eje, puntas cónicas (husillos) de alta precisión, base de soporte reforzada",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-59.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-60.jpg"
   },
   {
     "modelo": "211",
     "descripcion": "Amoladora de pulido",
     "tipo": "MAQUINA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-60.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-61.jpg"
   },
   {
     "modelo": "JY-9011",
     "descripcion": "Marco de sierra de joyero de estilo alemán. Corte de precisión, mango ajustable, uso multiuso",
     "tipo": "SIERRA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-61.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-62.jpg"
   },
   {
     "modelo": "JY-9012",
     "descripcion": "Marco de sierra de joyero de estilo alemán. Incluye 12 cuchillas, mango agarre cómodo, uso multiuso",
     "tipo": "SIERRA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-62.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-63.jpg"
   },
   {
     "modelo": "381",
     "descripcion": "Marco de sierra fijo con mango De lujo",
     "tipo": "SIERRA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-63.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-64.jpg"
   },
   {
     "modelo": "1816",
     "descripcion": "Mini marco de sierra",
     "tipo": "SIERRA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-64.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-65.jpg"
   },
   {
     "modelo": "CH-11025",
     "descripcion": "MANDRIL DE UN AGARRE",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-65.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-66.jpg"
   },
   {
     "modelo": "N30026D",
     "descripcion": "JUEGO DE 3 MANDRILES EN CAJA",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-66.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-67.jpg"
   },
   {
     "modelo": "MG81000S",
     "descripcion": "LUPA CON LUZ Y SOPORTE PARA LA CABEZA",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-67.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-68.jpg"
   },
   {
     "modelo": "MG81001-B",
     "descripcion": "LUPA TIPO VICERA CON LUZ EN CAJA",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-68.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-69.jpg"
   },
   {
     "modelo": "675",
     "descripcion": "Lupa con diadema 2.5x o 2.75x",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-69.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-70.jpg"
   },
   {
     "modelo": "LU(#)XFINA",
     "descripcion": "Lupa de reparación de relojes (2.5X/3X/3.5X/4.5X/5X). Aleación de aluminio, vidrio óptico",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-70.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-71.jpg"
   },
   {
     "modelo": "LUMA-2.5X/3X/3.5X/5X",
     "descripcion": "Lupa de reparación de relojes, lupa de madera maciza, herramientas de reloj y joyería, moderno. Medidas: 2.5X-3X-3.5X-5X",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-71.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-72.jpg"
   },
   {
     "modelo": "N2612",
     "descripcion": "LUPA DE RELOJERO BORDE METAL MEDIDAS 3X,5X,10X",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-72.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-73.jpg"
   },
   {
     "modelo": "N3886-2X/2.5/3/3.5/4/5/10/15/20",
     "descripcion": "LUPA DE RELOJERO BORDE METAL",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-73.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-74.jpg"
   },
   {
     "modelo": "LU#XECO",
     "descripcion": "LUPAS DE RELOJERO ECONOMICAS MEDIDAS 2X,3X,5X,10X",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-74.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-75.jpg"
   },
   {
     "modelo": "156",
     "descripcion": "Lupa 10x Niquelada Superior",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-75.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-76.jpg"
   },
   {
     "modelo": "639",
     "descripcion": "Lupa 8x niquelada",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-76.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-77.jpg"
   },
   {
     "modelo": "1834",
     "descripcion": "Lupas 10X con lentes 18 mm",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-77.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-78.jpg"
   },
   {
     "modelo": "1866",
     "descripcion": "Lupa de aluminio Serie Euro Pro",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-78.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-79.jpg"
   },
   {
     "modelo": "2025L",
     "descripcion": "Lupa de Plástico con Bisel de Metal en Juego de 4",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-79.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-80.jpg"
   },
   {
     "modelo": "701",
     "descripcion": "Lupa con luz de 50 mm, Lente 5X",
     "tipo": "LUPA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-80.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-81.jpg"
   },
   {
     "modelo": "185",
     "descripcion": "Medidor de milímetro de latón",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-81.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-82.jpg"
   },
   {
     "modelo": "185A",
     "descripcion": "Medidor de milímetros de Plástico. Lectura 60mm(2\"), 80mm(3\") y 100mm(4\")",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-81.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-82.jpg"
   },
   {
     "modelo": "1628",
     "descripcion": "Cuchillas para Gravado en acero cromado de alta calidad",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-82.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-83.jpg"
   },
   {
     "modelo": "1280",
     "descripcion": "Juego de 4 alicates para rebordear",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-83.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-84.jpg"
   },
   {
     "modelo": "2028",
     "descripcion": "Juego de 4 mini pinzas más pinzas en cartera",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-84.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-85.jpg"
   },
   {
     "modelo": "297A",
     "descripcion": "Pinza de acero Punta de cadena 5 \"",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-85.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-86.jpg"
   },
   {
     "modelo": "298A",
     "descripcion": "Pinza de acero Corte lateral 5 \"",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-86.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-87.jpg"
   },
   {
     "modelo": "300A",
     "descripcion": "Pinza de acero  Corte superior 5 \"",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-87.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-88.jpg"
   },
   {
     "modelo": "301A",
     "descripcion": "Pinza de acero Punta redonda 5 \"",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-88.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-89.jpg"
   },
   {
     "modelo": "770",
     "descripcion": "Pinza de acero inoxidable de 4.5\"con punta de cadena doblada",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-89.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-90.jpg"
   },
   {
     "modelo": "771",
     "descripcion": "Pinza de acero inoxidable de 5 \"con combinación de punta de cadena",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-90.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-91.jpg"
   },
   {
     "modelo": "1426",
     "descripcion": "Pinza de punta de cadena extra larga",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-91.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-92.jpg"
   },
   {
     "modelo": "YTH-100",
     "descripcion": "PINZA ESPECIAL DE CORTE",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-92.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-93.jpg"
   },
   {
     "modelo": "787",
     "descripcion": "Estante de madera para alicates con cajón",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-93.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-94.jpg"
   },
   {
     "modelo": "1630",
     "descripcion": "Fresas de pulido",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-94.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-95.jpg"
   },
   {
     "modelo": "1425",
     "descripcion": "Juego de 7 pinzas de acero en una caja de madera",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-95.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-96.jpg"
   },
   {
     "modelo": "1201",
     "descripcion": "Juego de 8 pinzas de alta calidad Stella en estuche amarillo",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-96.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-97.jpg"
   },
   {
     "modelo": "1430",
     "descripcion": "Juego de 4 pinzas de Joyeros en una bolsa de plástico",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-97.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-98.jpg"
   },
   {
     "modelo": "1499",
     "descripcion": "Juego de 6 pinzas",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-98.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-99.jpg"
   },
   {
     "modelo": "00-JP",
     "descripcion": "PINZA O BRUCELA VETUS METALICA ESTANDAR SUIZO",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-99.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-100.jpg"
   },
   {
     "modelo": "5SA-JP",
     "descripcion": "PINZA O BRUCELA VETUS METALICA ESTANDAR SUIZO",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-100.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-101.jpg"
   },
   {
     "modelo": "CH-13005",
     "descripcion": "JUEGO DE PINZAS METALICAS X 5 UNDADES",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-101.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-102.jpg"
   },
   {
     "modelo": "CH-13007",
     "descripcion": "JUEGO DE PINZAS METALICAS X 5 UNDADES",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-102.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-103.jpg"
   },
   {
     "modelo": "ESD-259",
     "descripcion": "Pinzas de punta para reparación de relojes, ideales para piezas delicadas, con aislamiento. Longitud aprox. 5.20 pulgadas / 13.2cm",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-103.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-104.jpg"
   },
   {
     "modelo": "ESD-10/12/15",
     "descripcion": "BRUCELA O PINZA METALICA NEGRA X UND",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-104.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-105.jpg"
   },
   {
     "modelo": "ST-12",
     "descripcion": "BRUCELA O PINZA METALICA PUNTA RECTA",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-105.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-106.jpg"
   },
   {
     "modelo": "ST-14",
     "descripcion": "BRUCELA O PINZA METALICA X UND",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-106.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-107.jpg"
   },
   {
     "modelo": "ST-15",
     "descripcion": "BRUCELA  O PINZA CURVA METALICA",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-107.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-108.jpg"
   },
   {
     "modelo": "1020",
     "descripcion": "Juego de 3 pinzas plásticas",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-108.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-109.jpg"
   },
   {
     "modelo": "454",
     "descripcion": "Pinza plástica",
     "tipo": "PINZA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-109.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-110.jpg"
   },
   {
     "modelo": "RT-F021",
     "descripcion": "R”DEER JUEGO DE LIMAS  X UND",
     "tipo": "LIMA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-110.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-111.jpg"
   },
   {
     "modelo": "1731",
     "descripcion": "Fresas recubiertas de diamante Juego set de 20 en caja de madera",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-111.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-112.jpg"
   },
   {
     "modelo": "BLISTER ARETES (PAQUETE 500UND)",
     "descripcion": "TPJ-001/002/003/004/005/006",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-112.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-113.jpg"
   },
   {
     "modelo": "JY-9010",
     "descripcion": "Disco de Muselina 5\" x 50 capas para acabado superficial de piezas metálicas, centro de cuero",
     "tipo": "ABRASIVO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-113.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-114.jpg"
   },
   {
     "modelo": "1096B",
     "descripcion": "Cepillo circular de cerdas negras para pulir, apertura 6mm, 67mm diámetro, 2 filas, núcleo de madera estándar",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-114.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-115.jpg"
   },
   {
     "modelo": "1626",
     "descripcion": "Herramientas para abalorios de solitario",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-115.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-116.jpg"
   },
   {
     "modelo": "1448",
     "descripcion": "sistema de cepillo para rascar set de 3,",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-116.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-117.jpg"
   },
   {
     "modelo": "JY-9013",
     "descripcion": "Cepillo de cerdas de cobre para pulir, 4 filas x 17 filas, mango de madera",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-117.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-118.jpg"
   },
   {
     "modelo": "JY-9014",
     "descripcion": "Cepillo de cerdas de cobre para pulir, 6 filas x 18 filas, mango de madera",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-118.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-119.jpg"
   },
   {
     "modelo": "012-R",
     "descripcion": "Cepillo de lavado de cerdas suaves",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-119.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-120.jpg"
   },
   {
     "modelo": "1008",
     "descripcion": "Cepillo de lavado de cerdas suaves",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-120.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-121.jpg"
   },
   {
     "modelo": "3017",
     "descripcion": "Cepillo de latón con mango blanco",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-121.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-122.jpg"
   },
   {
     "modelo": "013ª",
     "descripcion": "Cepillo de Cerdas de latón para mantenimiento y acabado en el taller",
     "tipo": "CEPILLO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-122.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-123.jpg"
   },
   {
     "modelo": "1284A",
     "descripcion": "Tubo de Brocas HSS de 60 piezas",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-123.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-124.jpg"
   },
   {
     "modelo": "1284B",
     "descripcion": "Tubo de Brocas HSS de 60 piezas 1.05MM A 2.00MM",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-123.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-124.jpg"
   },
   {
     "modelo": "1284C",
     "descripcion": "Tubo de Brocas HSS de 60 piezas 2.05MM A 3.00MM",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-123.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-124.jpg"
   },
   {
     "modelo": "1284D",
     "descripcion": "Tubo de Brocas HSS de 60 piezas 3.05MM A 4.00MM",
     "tipo": "MANDRIL",
-    "img": "/catalogo-pages/joyeria-herramientas/page-123.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-124.jpg"
   },
   {
     "modelo": "1901A",
     "descripcion": "Hoja de cierra Premium ( 6 docenas en estuche)",
     "tipo": "HERRAMIENTA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-124.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-125.jpg"
   },
   {
     "modelo": "1901",
     "descripcion": "Hojas de sierra Golden Alps",
     "tipo": "SIERRA",
-    "img": "/catalogo-pages/joyeria-herramientas/page-125.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-126.jpg"
   },
   {
     "modelo": "1205",
     "descripcion": "Pasta para pulido “MARQUIS”",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-126.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-127.jpg"
   },
   {
     "modelo": "344",
     "descripcion": "Pasta Roja para pulir",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-127.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-128.jpg"
   },
   {
     "modelo": "345",
     "descripcion": "Pasta Marrón para pulir",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-128.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-129.jpg"
   },
   {
     "modelo": "346",
     "descripcion": "Pasta verde para pulir",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-129.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-130.jpg"
   },
   {
     "modelo": "347",
     "descripcion": "Pasta Blanca para pulir",
     "tipo": "QUIMICO",
-    "img": "/catalogo-pages/joyeria-herramientas/page-130.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-131.jpg"
   },
   {
     "modelo": "S-160",
     "descripcion": "Alfombrilla de soldadura grande 17.7 x 11.8 pulgadas, resistente a alta temperatura, antideslizante, ignífuga",
     "tipo": "BASE",
-    "img": "/catalogo-pages/joyeria-herramientas/page-131.jpg"
+    "img": "/catalogo-pages/joyeria-herramientas/page-132.jpg"
   }
 ]
