@@ -164,7 +164,7 @@ const seo = {
   description: trimDesc(seoRaw.description),
 };
 const itemNames: string[] = isStructured
-  ? (products as any[]).map((p) => String(p.modelo ?? p.nombre ?? p.titulo ?? '')).filter(Boolean)
+  ? (products as any[]).map((p) => String(p.modelo ?? p.ref ?? p.nombre ?? p.titulo ?? '')).filter(Boolean)
   : [];
 const tipoCounts: Record<string, number> = {};
 if (isStructured) {
@@ -346,6 +346,7 @@ const catalogJsonLd = {
             <button class="eta-tipo-pill" data-tipo="CON ROSCA">Con Rosca</button>
             <button class="eta-tipo-pill" data-tipo="CON ROSCA Y TUBO">Rosca y Tubo</button>
             <button class="eta-tipo-pill" data-tipo="ECONÓMICAS">Económicas</button>
+            <button class="eta-tipo-pill" data-tipo="ESPECIALES">Especiales</button>
           </div>
           <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
         </div>
@@ -354,24 +355,32 @@ const catalogJsonLd = {
         <div class="eta-grid" id="etaGrid">
           {(products as any[]).map((p) => {
             const safe = (p.ref as string).replace(/\//g, '_');
+            const sold = p.agotada as { todas: boolean; colores?: string[] } | undefined;
+            const soldLabel = sold ? (sold.todas ? 'Agotada' : `Agotada: ${(sold.colores ?? []).join(', ')}`) : undefined;
             return (
               <div
                 class="eta-card-wrapper"
                 data-tipo={p.tipo}
-                data-modelo={(p.ref as string).toLowerCase()}
-                data-medida={(p.medida as string)?.toLowerCase() ?? ''}
+                data-modelo={`${p.ref} ${p.descripcion ?? ''} ${p.notas ?? ''}`.toLowerCase()}
+                data-medida={[p.tubo, p.caja, p.rosca, p.medida].filter(Boolean).join(' ').toLowerCase()}
                 data-color={(p.color as string)?.toLowerCase() ?? ''}
               >
                 <CatalogCard
                   imagenSrc={`/coronas-imgs/${safe}.jpg`}
-                  imagenCatalogoSrc={`/coronas-imgs/${safe}.jpg`}
+                  imagenCatalogoSrc={p.img as string}
                   titulo={p.ref as string}
                   detalles={{}}
                   tipo={p.tipo}
                   isCorona={true}
                   rosca={p.rosca}
+                  tubo={p.tubo}
+                  caja={p.caja}
                   medida={p.medida}
                   color={p.color}
+                  subtitulo={p.descripcion}
+                  chips={p.notas ? [p.notas as string] : undefined}
+                  agotada={soldLabel}
+                  agotadaTotal={!!sold?.todas}
                 />
               </div>
             );

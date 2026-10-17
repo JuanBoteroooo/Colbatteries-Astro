@@ -24,6 +24,10 @@ interface Props {
   isJoyeria?:         boolean;
   isGorras?:          boolean;
   rosca?:             string;
+  tubo?:              string;
+  caja?:              string;
+  agotada?:           string;
+  agotadaTotal?:      boolean;
   medida?:            string;
   color?:             string;
   grosor?:            string;
@@ -42,7 +46,7 @@ const {
   imagenSrc, imagenCatalogoSrc, titulo, detalles,
   tipo, fecha,
   isCorona = false, isWatch = false, isVidrios = false, isModulos = false, isInsumos = false, isHerramientas = false, isJoyeria = false, isGorras = false,
-  rosca, medida, color, grosor, forma, nombre, marca, especificacion,
+  rosca, tubo, caja, agotada, agotadaTotal = false, medida, color, grosor, forma, nombre, marca, especificacion,
   fullTitle = false,
   subtitulo, chips,
 } = Astro.props;
@@ -59,6 +63,7 @@ const BADGE_CLASS: Record<string, string> = {
   'CON ROSCA':        'badge-rosca',
   'CON ROSCA Y TUBO': 'badge-tubo',
   'ECONÓMICAS':       'badge-eco',
+  'ESPECIALES':       'badge-acc',
   'DIGITAL':          'badge-digital',
   'ACCESORIO':        'badge-acc',
   'PLANO':            'badge-vidrio-plano',
@@ -129,6 +134,7 @@ const TIPO_LABEL: Record<string, string> = {
   'CON ROSCA':        'Con Rosca',
   'CON ROSCA Y TUBO': 'Rosca y Tubo',
   'ECONÓMICAS':       'Económica',
+  'ESPECIALES':       'Especial',
   'DIGITAL':          'Digital',
   'ACCESORIO':        'Accesorio',
   'SALTO':            'Salto',
@@ -228,8 +234,10 @@ type SpecItem = { k: string; v: string };
 
 const specs: SpecItem[] = isCorona
   ? [
-      medida ? { k: 'Medida', v: medida.replace(/\s*[Xx]\s*/g, ' × ') } : null,
+      tubo   ? { k: 'Tubo',   v: tubo } : null,
+      caja   ? { k: 'Caja',   v: caja } : null,
       rosca  ? { k: 'Rosca',  v: rosca } : null,
+      medida ? { k: 'Medida', v: medida.replace(/\s*[Xx]\s*/g, ' × ') } : null,
     ].filter((s): s is SpecItem => s !== null)
   : isVidrios
   ? [
@@ -273,7 +281,7 @@ const coronaColors = isCorona && color
   : [];
 ---
 
-<article class="cc" data-img={imagenSrc} data-catalogo-src={imagenCatalogoSrc} data-title={titulo}>
+<article class={`cc${agotadaTotal ? ' cc--agotada' : ''}`} data-img={imagenSrc} data-catalogo-src={imagenCatalogoSrc} data-title={titulo}>
   <!-- Image zone -->
   <div class="cc-img-zone">
     <img
@@ -313,6 +321,7 @@ const coronaColors = isCorona && color
           : tipo ? (TIPO_LABEL[tipo] ?? tipo) : ''}
       </span>
       {!isCorona && !isVidrios && fecha && <span class="cc-fecha-tag">+ Fecha</span>}
+      {agotada && <span class="cc-agotada-tag">{agotada}</span>}
     </div>
     <div class="cc-header">
       {prefix && <span class="cc-prefix">{prefix}</span>}
@@ -496,6 +505,22 @@ const coronaColors = isCorona && color
     text-transform: uppercase;
     color: #7b8aa0;
   }
+
+  .cc-agotada-tag {
+    margin-left: auto;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #c62828;
+    background: rgba(198, 40, 40, 0.08);
+    border: 1px solid rgba(198, 40, 40, 0.25);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+  }
+
+  .cc--agotada .cc-img { opacity: 0.4; filter: grayscale(0.6); }
 
   .cc-fecha-tag {
     margin-left: auto;

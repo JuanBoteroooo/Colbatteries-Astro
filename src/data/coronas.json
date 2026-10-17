@@ -1,89 +1,1205 @@
 [
-  { "ref": "C-1",          "rosca": "0.90MM", "medida": "7.5MM X 4.6MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-2",          "rosca": "0.90MM", "medida": "8.0MM X 5.6MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-3",          "rosca": "0.90MM", "medida": "8.0MM X 4.2MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-4/N",        "rosca": "0.90MM", "medida": "7.0MM X 3.6MM",          "color": "PLATEADA, NEGRA",                   "tipo": "CON ROSCA" },
-  { "ref": "C-5",          "rosca": "0.90MM", "medida": "10.0MM X 6.0MM",         "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-6",          "rosca": "0.90MM", "medida": "8.0MM X 2.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-7",          "rosca": "0.90MM", "medida": "8.0MM X 3.4MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-8",          "rosca": "0.90MM", "medida": "8.0MM X 4.2MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-9",          "rosca": "0.90MM", "medida": "7.5MM X 4.4MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-10",         "rosca": "0.90MM", "medida": "7.5MM X 4.5MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-18D",        "rosca": "0.90MM", "medida": "3.5MM X 1.8MM",          "color": "DORADA",                            "tipo": "CON ROSCA" },
-  { "ref": "C-19",         "rosca": "0.90MM", "medida": "4.0MM X 3.1MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-30",         "rosca": "0.90MM", "medida": "3.5MM X 2.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-32",         "rosca": "0.90MM", "medida": "6.0MM X 3.4MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-33/D",       "rosca": "0.90MM", "medida": "6.0MM X 3.6MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA" },
-  { "ref": "C-35",         "rosca": "0.90MM", "medida": "7.0MM X 3.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-36",         "rosca": "0.90MM", "medida": "7.0MM X 4.6MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-37/N",       "rosca": "0.90MM", "medida": "8.0MM X 7.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-38",         "rosca": "0.90MM", "medida": "7.0MM X 4.2MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-39",         "rosca": "0.90MM", "medida": "9.0MM X 3.7MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-40",         "rosca": "0.90MM", "medida": "7.0MM X 3.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-41",         "rosca": "0.90MM", "medida": "7.0MM X 2.7MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-41T",        "rosca": "0.90MM", "medida": "7.0MM X 2.7MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-42",         "rosca": "0.90MM", "medida": "7.0MM X 3.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-43",         "rosca": "0.90MM", "medida": "7.0MM X 3.6MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-44",         "rosca": "0.90MM", "medida": "7.0MM X 2.8MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-45",         "rosca": "0.90MM", "medida": "9.0MM X 5.7MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-46/D/N",     "rosca": "0.90MM", "medida": "6.5MM X 3.5MM",          "color": "PLATEADA, DORADA, NEGRA",           "tipo": "CON ROSCA" },
-  { "ref": "C-47",         "rosca": "0.90MM", "medida": "6.5MM X 4.7MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-48",         "rosca": "0.90MM", "medida": "6.5MM X 2.7MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-49/D",       "rosca": "0.90MM", "medida": "6.5MM X 3.2MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA" },
-  { "ref": "C-50/D/N/R",   "rosca": "0.90MM", "medida": "5.0MM X 2.5MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA" },
-  { "ref": "C-52",         "rosca": "0.90MM", "medida": "5.5MM X 4.1MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA", "notas": "Con piedra azul" },
-  { "ref": "C-53/D/R",     "rosca": "0.90MM", "medida": "6.5MM X 4.0MM",          "color": "PLATEADA, DORADA, ORO ROSA",        "tipo": "CON ROSCA", "notas": "Con piedra azul" },
-  { "ref": "C-54/D/R",     "rosca": "0.90MM", "medida": "7.0MM X 3.7MM",          "color": "PLATEADA, DORADA, ORO ROSA",        "tipo": "CON ROSCA" },
-  { "ref": "C-55/D",       "rosca": "0.90MM", "medida": "8.0MM X 5.0MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA", "notas": "Con piedra azul" },
-  { "ref": "C-56/D",       "rosca": "0.90MM", "medida": "8.0MM X 5.0MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA", "notas": "Con piedra azul" },
-  { "ref": "C-71",         "rosca": "0.90MM", "medida": "5.5MM X 3.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-72/D",       "rosca": "0.90MM", "medida": "6.0MM X 3.3MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA" },
-  { "ref": "C-73/D",       "rosca": "0.90MM", "medida": "5.5MM X 3.0MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA" },
-  { "ref": "C-75R",        "rosca": "0.90MM", "medida": "5.6MM X 3.0MM",          "color": "ORO ROSA",                          "tipo": "CON ROSCA" },
-  { "ref": "C-76N",        "rosca": "0.90MM", "medida": "5.0MM X 2.8MM",          "color": "NEGRA",                             "tipo": "CON ROSCA" },
-  { "ref": "C-77/D",       "rosca": "0.90MM", "medida": "4.5MM X 2.6MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA" },
-  { "ref": "C-80P/D/N/R",  "rosca": "0.90MM", "medida": "5.0MM X 2.7MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA" },
-  { "ref": "C-81P/D/N/R",  "rosca": "0.90MM", "medida": "5.5MM X 3.0MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA" },
-  { "ref": "C-82P/D/N/R",  "rosca": "0.90MM", "medida": "6.0MM X 3.3MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA" },
-  { "ref": "C-90P/D/N/R",  "rosca": "0.90MM", "medida": "7.0MM X 4.0MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA" },
-  { "ref": "C-91P/D/N/R",  "rosca": "0.90MM", "medida": "8.0MM X 4.5MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA" },
-  { "ref": "C-20/D/N",     "rosca": "0.90MM", "medida": "6.0MM X 2.8MM",          "color": "PLATEADA, DORADA, NEGRA",           "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-21",         "rosca": "0.90MM", "medida": "7.0MM X 4.5MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-23/D",       "rosca": "0.90MM", "medida": "7.0MM X 3.4MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-24/D",       "rosca": "0.90MM", "medida": "7.0MM X 4.2MM",          "color": "PLATEADA, DORADA",                  "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-25",         "rosca": "0.90MM", "medida": "6.0MM X 4.0MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-26/N",       "rosca": "0.90MM", "medida": "7.0MM X 4.0MM",          "color": "PLATEADA, NEGRA",                   "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-27",         "rosca": "0.90MM", "medida": "5.3MM X 2.8MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-28",         "rosca": "0.90MM", "medida": "7.0MM X 4.2MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-29",         "rosca": "0.90MM", "medida": "6.0MM X 3.8MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-100/D/N/R",  "rosca": "0.90MM", "medida": "5.0MM X 2.8MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-101",        "rosca": "0.90MM", "medida": "5.5MM X 3.5MM",          "color": "PLATEADA",                          "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-102/D/R",    "rosca": "0.90MM", "medida": "6.0MM X 2.8MM",          "color": "PLATEADA, DORADA, ORO ROSA",        "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-103D/N/R",   "rosca": "0.90MM", "medida": "6.0MM X 2.7MM",          "color": "DORADA, NEGRA, ORO ROSA",           "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-104D/N/R",   "rosca": "0.90MM", "medida": "6.0MM X 2.8MM",          "color": "DORADA, NEGRA, ORO ROSA",           "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-105/D/R",    "rosca": "0.90MM", "medida": "6.0MM X 3.0MM",          "color": "PLATEADA, DORADA, ORO ROSA",        "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-106N",       "rosca": "0.90MM", "medida": "6.0MM X 2.8MM",          "color": "NEGRA",                             "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-107/D/N/R",  "rosca": "0.90MM", "medida": "6.5MM X 3.2MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-108/D/R",    "rosca": "0.90MM", "medida": "6.5MM X 3.2MM",          "color": "PLATEADA, DORADA, ORO ROSA",        "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-109/N",      "rosca": "0.90MM", "medida": "6.7MM X 3.6MM",          "color": "PLATEADA, NEGRA",                   "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-110/D/R",    "rosca": "0.90MM", "medida": "7.0MM X 4.0MM",          "color": "PLATEADA, DORADA, ORO ROSA",        "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-111D/N/R",   "rosca": "0.90MM", "medida": "7.0MM X 4.3MM",          "color": "DORADA, NEGRA, ORO ROSA",           "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-112D/N/R",   "rosca": "0.90MM", "medida": "7.0MM X 4.0MM",          "color": "DORADA, NEGRA, ORO ROSA",           "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-113D/N/R",   "rosca": "0.90MM", "medida": "7.0MM X 4.3MM",          "color": "DORADA, NEGRA, ORO ROSA",           "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-114/D/N/R",  "rosca": "0.90MM", "medida": "7.4MM X 3.8MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "C-115/D/N/R",  "rosca": "0.90MM", "medida": "8.0MM X 4.4MM",          "color": "PLATEADA, DORADA, NEGRA, ORO ROSA", "tipo": "CON ROSCA Y TUBO" },
-  { "ref": "CE-1/D/N",     "rosca": "0.90MM", "medida": "7.0MM X 4.0MM X 10.0MM", "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-2/D/N",     "rosca": "0.90MM", "medida": "6.0MM X 3.0MM X 11.0MM", "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-3/D/N",     "rosca": "0.90MM", "medida": "6.0MM X 3.0MM X 7.0MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-4/D/N",     "rosca": "0.90MM", "medida": "5.0MM X 3.0MM X 11.0MM", "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-5/D/N",     "rosca": "0.90MM", "medida": "5.0MM X 3.0MM X 8.0MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-6/D/N",     "rosca": "0.90MM", "medida": "6.0MM X 3.0MM",          "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-7/D/N",     "rosca": "0.90MM", "medida": "5.0MM X 3.0MM X 4.0MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-8/D/N",     "rosca": "0.90MM", "medida": "4.0MM X 2.4MM X 8.4MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-9/D/N",     "rosca": "0.90MM", "medida": "3.5MM X 2.2MM X 4.2MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-10/D/N",    "rosca": "0.90MM", "medida": "4.0MM X 2.2MM X 4.2MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-11/D/N",    "rosca": "0.90MM", "medida": "4.0MM X 2.4MM X 4.4MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-12/D/N",    "rosca": "0.90MM", "medida": "3.5MM X 2.2MM X 7.2MM",  "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-13/D/N",    "rosca": "0.90MM", "medida": "7.0MM X 4.0MM X 11.0MM", "color": "PLATEADA, DORADA, NEGRA",           "tipo": "ECONÓMICAS" },
-  { "ref": "CE-14/N",      "rosca": "0.90MM", "medida": "8.0MM X 4.3MM X 10.0MM", "color": "PLATEADA, NEGRA",                   "tipo": "ECONÓMICAS" }
+  {
+    "ref": "C-1",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "7.7MM",
+    "img": "/catalogo-pages/coronas/page-03.jpg"
+  },
+  {
+    "ref": "C-2",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.3MM",
+    "caja": "7.6MM",
+    "img": "/catalogo-pages/coronas/page-04.jpg"
+  },
+  {
+    "ref": "C-3",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "7.6MM",
+    "img": "/catalogo-pages/coronas/page-05.jpg"
+  },
+  {
+    "ref": "C-4/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "6.5MM",
+    "img": "/catalogo-pages/coronas/page-06.jpg"
+  },
+  {
+    "ref": "C-5",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.3MM",
+    "caja": "9.6MM",
+    "img": "/catalogo-pages/coronas/page-07.jpg"
+  },
+  {
+    "ref": "C-6",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.6MM",
+    "caja": "7.7MM",
+    "img": "/catalogo-pages/coronas/page-08.jpg"
+  },
+  {
+    "ref": "C-7",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "7.7MM",
+    "img": "/catalogo-pages/coronas/page-09.jpg"
+  },
+  {
+    "ref": "C-8",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "7.6MM",
+    "img": "/catalogo-pages/coronas/page-10.jpg"
+  },
+  {
+    "ref": "C-9",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.4MM",
+    "caja": "7.1MM",
+    "img": "/catalogo-pages/coronas/page-11.jpg"
+  },
+  {
+    "ref": "C-10",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.4MM",
+    "caja": "7.1MM",
+    "img": "/catalogo-pages/coronas/page-12.jpg"
+  },
+  {
+    "ref": "C-18D",
+    "tipo": "CON ROSCA",
+    "color": "DORADA",
+    "rosca": "0.90MM",
+    "tubo": "1.8MM",
+    "caja": "3.5MM",
+    "img": "/catalogo-pages/coronas/page-13.jpg"
+  },
+  {
+    "ref": "C-19",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.4MM",
+    "caja": "3.6MM",
+    "img": "/catalogo-pages/coronas/page-14.jpg"
+  },
+  {
+    "ref": "C-30",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.6MM",
+    "caja": "3.2MM",
+    "img": "/catalogo-pages/coronas/page-15.jpg"
+  },
+  {
+    "ref": "C-32",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "5.6MM",
+    "img": "/catalogo-pages/coronas/page-16.jpg"
+  },
+  {
+    "ref": "C-33/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "2.4MM",
+    "caja": "5.4MM",
+    "img": "/catalogo-pages/coronas/page-17.jpg"
+  },
+  {
+    "ref": "C-35",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.8MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-18.jpg"
+  },
+  {
+    "ref": "C-36",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "6.6MM",
+    "img": "/catalogo-pages/coronas/page-19.jpg"
+  },
+  {
+    "ref": "C-37/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "7.6MM",
+    "img": "/catalogo-pages/coronas/page-20.jpg"
+  },
+  {
+    "ref": "C-38",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "8.0MM",
+    "img": "/catalogo-pages/coronas/page-21.jpg"
+  },
+  {
+    "ref": "C-39",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "8.7MM",
+    "img": "/catalogo-pages/coronas/page-22.jpg"
+  },
+  {
+    "ref": "C-40",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "agotada": {
+      "todas": true
+    },
+    "img": "/catalogo-pages/coronas/page-23.jpg"
+  },
+  {
+    "ref": "C-41",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "2.7MM",
+    "img": "/catalogo-pages/coronas/page-24.jpg"
+  },
+  {
+    "ref": "C-41T",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "2.7MM",
+    "img": "/catalogo-pages/coronas/page-25.jpg"
+  },
+  {
+    "ref": "C-42",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-26.jpg"
+  },
+  {
+    "ref": "C-43",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "agotada": {
+      "todas": true
+    },
+    "img": "/catalogo-pages/coronas/page-27.jpg"
+  },
+  {
+    "ref": "C-44",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "notas": "Con piedra azul",
+    "agotada": {
+      "todas": true
+    },
+    "img": "/catalogo-pages/coronas/page-28.jpg"
+  },
+  {
+    "ref": "C-45",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.8MM",
+    "caja": "8.6MM",
+    "img": "/catalogo-pages/coronas/page-29.jpg"
+  },
+  {
+    "ref": "C-46/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "agotada": {
+      "todas": true
+    },
+    "img": "/catalogo-pages/coronas/page-30.jpg"
+  },
+  {
+    "ref": "C-47",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "6.2MM",
+    "img": "/catalogo-pages/coronas/page-31.jpg"
+  },
+  {
+    "ref": "C-48",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.5MM",
+    "caja": "6.1MM",
+    "img": "/catalogo-pages/coronas/page-32.jpg"
+  },
+  {
+    "ref": "C-49/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "6.0MM",
+    "img": "/catalogo-pages/coronas/page-33.jpg"
+  },
+  {
+    "ref": "C-50/D/N/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "1.5MM",
+    "caja": "4.8MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "negra",
+        "oro rosa"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-34.jpg"
+  },
+  {
+    "ref": "C-52",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "5.0MM",
+    "notas": "Con piedra azul",
+    "img": "/catalogo-pages/coronas/page-35.jpg"
+  },
+  {
+    "ref": "C-53/D/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "2.8MM",
+    "caja": "6.1MM",
+    "notas": "Con piedra azul",
+    "img": "/catalogo-pages/coronas/page-36.jpg"
+  },
+  {
+    "ref": "C-54/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.3MM",
+    "caja": "6.1MM",
+    "img": "/catalogo-pages/coronas/page-37.jpg"
+  },
+  {
+    "ref": "C-55/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "7.5MM",
+    "notas": "Con piedra azul",
+    "img": "/catalogo-pages/coronas/page-38.jpg"
+  },
+  {
+    "ref": "C-56/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "8.0MM",
+    "notas": "Con piedra azul",
+    "img": "/catalogo-pages/coronas/page-39.jpg"
+  },
+  {
+    "ref": "C-57",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.9MM",
+    "caja": "5.0MM",
+    "img": "/catalogo-pages/coronas/page-40.jpg"
+  },
+  {
+    "ref": "C-58",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "5.5MM",
+    "img": "/catalogo-pages/coronas/page-41.jpg"
+  },
+  {
+    "ref": "C-59",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.5MM",
+    "caja": "4.5MM",
+    "img": "/catalogo-pages/coronas/page-42.jpg"
+  },
+  {
+    "ref": "C-60",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.2MM",
+    "caja": "2.3MM",
+    "img": "/catalogo-pages/coronas/page-43.jpg"
+  },
+  {
+    "ref": "C-62D",
+    "tipo": "CON ROSCA",
+    "color": "DORADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-44.jpg"
+  },
+  {
+    "ref": "C-63D",
+    "tipo": "CON ROSCA",
+    "color": "DORADA",
+    "rosca": "0.90MM",
+    "tubo": "1.0MM",
+    "caja": "3.9MM",
+    "img": "/catalogo-pages/coronas/page-45.jpg"
+  },
+  {
+    "ref": "C-64N",
+    "tipo": "CON ROSCA",
+    "color": "NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "6.9MM",
+    "img": "/catalogo-pages/coronas/page-46.jpg"
+  },
+  {
+    "ref": "C-65",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.8MM",
+    "caja": "5.7MM",
+    "img": "/catalogo-pages/coronas/page-47.jpg"
+  },
+  {
+    "ref": "C-66",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "6.8MM",
+    "img": "/catalogo-pages/coronas/page-48.jpg"
+  },
+  {
+    "ref": "C-67",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "10.0MM",
+    "img": "/catalogo-pages/coronas/page-49.jpg"
+  },
+  {
+    "ref": "C-68/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "9.8MM",
+    "img": "/catalogo-pages/coronas/page-50.jpg"
+  },
+  {
+    "ref": "C-69",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "6.6MM",
+    "img": "/catalogo-pages/coronas/page-51.jpg"
+  },
+  {
+    "ref": "C-70",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-52.jpg"
+  },
+  {
+    "ref": "C-71/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "5.0MM",
+    "img": "/catalogo-pages/coronas/page-53.jpg"
+  },
+  {
+    "ref": "C-72/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "5.1MM",
+    "img": "/catalogo-pages/coronas/page-54.jpg"
+  },
+  {
+    "ref": "C-73/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "1.5MM",
+    "caja": "5.0MM",
+    "img": "/catalogo-pages/coronas/page-55.jpg"
+  },
+  {
+    "ref": "C-74",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-56.jpg"
+  },
+  {
+    "ref": "C-75/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "5.3MM",
+    "img": "/catalogo-pages/coronas/page-57.jpg"
+  },
+  {
+    "ref": "C-76/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "1.4MM",
+    "caja": "4.6MM",
+    "img": "/catalogo-pages/coronas/page-58.jpg"
+  },
+  {
+    "ref": "C-77/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "4.2MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "dorada"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-59.jpg"
+  },
+  {
+    "ref": "C-78D",
+    "tipo": "CON ROSCA",
+    "color": "DORADA",
+    "rosca": "0.90MM",
+    "tubo": "2.9MM",
+    "caja": "4.0MM",
+    "img": "/catalogo-pages/coronas/page-60.jpg"
+  },
+  {
+    "ref": "C-79/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "7.8MM",
+    "img": "/catalogo-pages/coronas/page-61.jpg"
+  },
+  {
+    "ref": "C-80P/D/N/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "4.6MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "plateada",
+        "negra"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-62.jpg"
+  },
+  {
+    "ref": "C-81P/D/N/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "5.3MM",
+    "img": "/catalogo-pages/coronas/page-63.jpg"
+  },
+  {
+    "ref": "C-82P/D/N/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "1.6MM",
+    "caja": "5.7MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "negra"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-64.jpg"
+  },
+  {
+    "ref": "C-83/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "7.1MM",
+    "img": "/catalogo-pages/coronas/page-65.jpg"
+  },
+  {
+    "ref": "C-84/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "7.7MM",
+    "img": "/catalogo-pages/coronas/page-66.jpg"
+  },
+  {
+    "ref": "C-85/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.5MM",
+    "caja": "7.5MM",
+    "img": "/catalogo-pages/coronas/page-67.jpg"
+  },
+  {
+    "ref": "C-86/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "6.0MM",
+    "img": "/catalogo-pages/coronas/page-68.jpg"
+  },
+  {
+    "ref": "C-87/D",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "5.3MM",
+    "img": "/catalogo-pages/coronas/page-69.jpg"
+  },
+  {
+    "ref": "C-88/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "1.5MM",
+    "caja": "3.5MM",
+    "img": "/catalogo-pages/coronas/page-70.jpg"
+  },
+  {
+    "ref": "C-89",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "7.8MM",
+    "img": "/catalogo-pages/coronas/page-71.jpg"
+  },
+  {
+    "ref": "C-90P/D/N/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "2.3MM",
+    "caja": "7.6MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "negra"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-72.jpg"
+  },
+  {
+    "ref": "C-91P/D/N/R",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "2.2MM",
+    "caja": "8.0MM",
+    "img": "/catalogo-pages/coronas/page-73.jpg"
+  },
+  {
+    "ref": "C-92",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "7.7MM",
+    "img": "/catalogo-pages/coronas/page-74.jpg"
+  },
+  {
+    "ref": "C-93/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "5.5MM",
+    "img": "/catalogo-pages/coronas/page-75.jpg"
+  },
+  {
+    "ref": "C-94/D/N",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "1.8MM",
+    "caja": "5.5MM",
+    "img": "/catalogo-pages/coronas/page-76.jpg"
+  },
+  {
+    "ref": "C-95",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "7.0MM",
+    "img": "/catalogo-pages/coronas/page-77.jpg"
+  },
+  {
+    "ref": "C-96N",
+    "tipo": "CON ROSCA",
+    "color": "NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.0MM",
+    "caja": "7.1MM",
+    "img": "/catalogo-pages/coronas/page-78.jpg"
+  },
+  {
+    "ref": "C-97",
+    "tipo": "CON ROSCA",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.5MM",
+    "caja": "6.0MM",
+    "img": "/catalogo-pages/coronas/page-79.jpg"
+  },
+  {
+    "ref": "C-20/D/N",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "5.8MM",
+    "img": "/catalogo-pages/coronas/page-81.jpg"
+  },
+  {
+    "ref": "C-21",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.5MM",
+    "caja": "6.3MM",
+    "img": "/catalogo-pages/coronas/page-82.jpg"
+  },
+  {
+    "ref": "C-23/D",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "3.6MM",
+    "caja": "6.6MM",
+    "img": "/catalogo-pages/coronas/page-83.jpg"
+  },
+  {
+    "ref": "C-24/D",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "4.7MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-84.jpg"
+  },
+  {
+    "ref": "C-25/D",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "3.0MM",
+    "caja": "5.7MM",
+    "img": "/catalogo-pages/coronas/page-85.jpg"
+  },
+  {
+    "ref": "C-26/N",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.6MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-86.jpg"
+  },
+  {
+    "ref": "C-27",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "3.4MM",
+    "caja": "5.0MM",
+    "img": "/catalogo-pages/coronas/page-87.jpg"
+  },
+  {
+    "ref": "C-28",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-88.jpg"
+  },
+  {
+    "ref": "C-29",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "3.8MM",
+    "caja": "6.0MM",
+    "img": "/catalogo-pages/coronas/page-89.jpg"
+  },
+  {
+    "ref": "C-100/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.3MM",
+    "caja": "5.0MM",
+    "img": "/catalogo-pages/coronas/page-90.jpg"
+  },
+  {
+    "ref": "C-101",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.8MM",
+    "caja": "5.6MM",
+    "img": "/catalogo-pages/coronas/page-91.jpg"
+  },
+  {
+    "ref": "C-102/D/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.4MM",
+    "caja": "5.6MM",
+    "img": "/catalogo-pages/coronas/page-92.jpg"
+  },
+  {
+    "ref": "C-103/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.4MM",
+    "caja": "5.8MM",
+    "img": "/catalogo-pages/coronas/page-93.jpg"
+  },
+  {
+    "ref": "C-104/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.8MM",
+    "caja": "5.5MM",
+    "img": "/catalogo-pages/coronas/page-94.jpg"
+  },
+  {
+    "ref": "C-105/D/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.8MM",
+    "caja": "5.5MM",
+    "img": "/catalogo-pages/coronas/page-95.jpg"
+  },
+  {
+    "ref": "C-106/D/N",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.8MM",
+    "caja": "5.5MM",
+    "img": "/catalogo-pages/coronas/page-96.jpg"
+  },
+  {
+    "ref": "C-107/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "6.5MM",
+    "img": "/catalogo-pages/coronas/page-97.jpg"
+  },
+  {
+    "ref": "C-108/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.2MM",
+    "caja": "6.1MM",
+    "img": "/catalogo-pages/coronas/page-98.jpg"
+  },
+  {
+    "ref": "C-109/N",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.6MM",
+    "caja": "5.8MM",
+    "img": "/catalogo-pages/coronas/page-99.jpg"
+  },
+  {
+    "ref": "C-110/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "img": "/catalogo-pages/coronas/page-100.jpg"
+  },
+  {
+    "ref": "C-111/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.8MM",
+    "caja": "6.8MM",
+    "img": "/catalogo-pages/coronas/page-101.jpg"
+  },
+  {
+    "ref": "C-112/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.9MM",
+    "caja": "8.7MM",
+    "img": "/catalogo-pages/coronas/page-102.jpg"
+  },
+  {
+    "ref": "C-113/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "4.4MM",
+    "caja": "6.7MM",
+    "img": "/catalogo-pages/coronas/page-103.jpg"
+  },
+  {
+    "ref": "C-114/D/N/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA, DORADA, NEGRA, ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "3.2MM",
+    "caja": "7.2MM",
+    "img": "/catalogo-pages/coronas/page-104.jpg"
+  },
+  {
+    "ref": "C-115/R",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "ORO ROSA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "7.6MM",
+    "img": "/catalogo-pages/coronas/page-105.jpg"
+  },
+  {
+    "ref": "C-116",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.7MM",
+    "caja": "5.4MM",
+    "img": "/catalogo-pages/coronas/page-106.jpg"
+  },
+  {
+    "ref": "C-117/N",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.8MM",
+    "caja": "6.5MM",
+    "img": "/catalogo-pages/coronas/page-107.jpg"
+  },
+  {
+    "ref": "C-118",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.8MM",
+    "caja": "6.2MM",
+    "img": "/catalogo-pages/coronas/page-108.jpg"
+  },
+  {
+    "ref": "C-119/N",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.0MM",
+    "caja": "6.6MM",
+    "img": "/catalogo-pages/coronas/page-109.jpg"
+  },
+  {
+    "ref": "C-120",
+    "tipo": "CON ROSCA Y TUBO",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "tubo": "2.7MM",
+    "caja": "5.2MM",
+    "img": "/catalogo-pages/coronas/page-110.jpg"
+  },
+  {
+    "ref": "CE-1/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "7.0MM",
+    "caja": "6.8MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "dorada",
+        "negra"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-112.jpg"
+  },
+  {
+    "ref": "CE-2/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.70MM",
+    "tubo": "5.8MM",
+    "caja": "6.0MM",
+    "img": "/catalogo-pages/coronas/page-113.jpg"
+  },
+  {
+    "ref": "CE-3/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "5.5MM",
+    "caja": "6.0MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "dorada",
+        "negra"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-114.jpg"
+  },
+  {
+    "ref": "CE-4/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.8MM",
+    "caja": "4.0MM",
+    "img": "/catalogo-pages/coronas/page-115.jpg"
+  },
+  {
+    "ref": "CE-5/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "img": "/catalogo-pages/coronas/page-116.jpg"
+  },
+  {
+    "ref": "CE-6/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "5.0MM",
+    "caja": "5.5MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "dorada"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-117.jpg"
+  },
+  {
+    "ref": "CE-7/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.0MM",
+    "caja": "4.0MM",
+    "img": "/catalogo-pages/coronas/page-118.jpg"
+  },
+  {
+    "ref": "CE-8/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.80MM",
+    "tubo": "3.6MM",
+    "caja": "4.0MM",
+    "img": "/catalogo-pages/coronas/page-119.jpg"
+  },
+  {
+    "ref": "CE-9/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.2MM",
+    "caja": "2.8MM",
+    "img": "/catalogo-pages/coronas/page-120.jpg"
+  },
+  {
+    "ref": "CE-10/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "3.0MM",
+    "caja": "4.0MM",
+    "img": "/catalogo-pages/coronas/page-121.jpg"
+  },
+  {
+    "ref": "CE-11/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "4.0MM",
+    "caja": "3.8MM",
+    "img": "/catalogo-pages/coronas/page-122.jpg"
+  },
+  {
+    "ref": "CE-12/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "2.8MM",
+    "caja": "3.2MM",
+    "img": "/catalogo-pages/coronas/page-123.jpg"
+  },
+  {
+    "ref": "CE-13/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, DORADA, NEGRA",
+    "rosca": "0.90MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "dorada"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-124.jpg"
+  },
+  {
+    "ref": "CE-14/D/N",
+    "tipo": "ECONÓMICAS",
+    "color": "PLATEADA, NEGRA",
+    "rosca": "0.90MM",
+    "tubo": "7.8MM",
+    "caja": "8.0MM",
+    "agotada": {
+      "todas": false,
+      "colores": [
+        "dorada",
+        "negra"
+      ]
+    },
+    "img": "/catalogo-pages/coronas/page-125.jpg"
+  },
+  {
+    "ref": "PS-01",
+    "tipo": "ESPECIALES",
+    "color": "PLATEADA",
+    "medida": "4.5MM",
+    "descripcion": "Pulsadores lisos, paquete x10",
+    "img": "/catalogo-pages/coronas/page-127.jpg"
+  },
+  {
+    "ref": "CO-EMP",
+    "tipo": "ESPECIALES",
+    "color": "PLATEADA",
+    "rosca": "0.90MM",
+    "descripcion": "Corona especial en empaque individual",
+    "img": "/catalogo-pages/coronas/page-128.jpg"
+  },
+  {
+    "ref": "CH-4013-10A",
+    "tipo": "ESPECIALES",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "SURTIDO",
+    "caja": "SURTIDO",
+    "descripcion": "Caja de coronas surtidas, 100 piezas",
+    "img": "/catalogo-pages/coronas/page-129.jpg"
+  },
+  {
+    "ref": "N4013",
+    "tipo": "ESPECIALES",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "SURTIDO",
+    "caja": "SURTIDO",
+    "descripcion": "Caja de coronas surtidas, 140 piezas",
+    "img": "/catalogo-pages/coronas/page-130.jpg"
+  },
+  {
+    "ref": "CH-4013-20A",
+    "tipo": "ESPECIALES",
+    "color": "PLATEADA, DORADA",
+    "rosca": "0.90MM",
+    "tubo": "SURTIDO",
+    "caja": "SURTIDO",
+    "descripcion": "Caja de coronas surtidas, 300 piezas",
+    "img": "/catalogo-pages/coronas/page-131.jpg"
+  }
 ]
