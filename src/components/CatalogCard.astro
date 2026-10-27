@@ -27,6 +27,7 @@ interface Props {
   tubo?:              string;
   caja?:              string;
   agotada?:           string;
+  oferta?:            boolean;
   agotadaTotal?:      boolean;
   medida?:            string;
   color?:             string;
@@ -46,7 +47,7 @@ const {
   imagenSrc, imagenCatalogoSrc, titulo, detalles,
   tipo, fecha,
   isCorona = false, isWatch = false, isVidrios = false, isModulos = false, isInsumos = false, isHerramientas = false, isJoyeria = false, isGorras = false,
-  rosca, tubo, caja, agotada, agotadaTotal = false, medida, color, grosor, forma, nombre, marca, especificacion,
+  rosca, tubo, caja, agotada, agotadaTotal = false, oferta = false, medida, color, grosor, forma, nombre, marca, especificacion,
   fullTitle = false,
   subtitulo, chips,
 } = Astro.props;
@@ -64,6 +65,9 @@ const BADGE_CLASS: Record<string, string> = {
   'CON ROSCA Y TUBO': 'badge-tubo',
   'ECONÓMICAS':       'badge-eco',
   'ESPECIALES':       'badge-acc',
+  'RESINA PU':        'badge-rosca',
+  'SILICONA':         'badge-rosca',
+  'PISA PULSO':       'badge-acc',
   'DIGITAL':          'badge-digital',
   'ACCESORIO':        'badge-acc',
   'PLANO':            'badge-vidrio-plano',
@@ -135,6 +139,9 @@ const TIPO_LABEL: Record<string, string> = {
   'CON ROSCA Y TUBO': 'Rosca y Tubo',
   'ECONÓMICAS':       'Económica',
   'ESPECIALES':       'Especial',
+  'RESINA PU':        'Resina PU',
+  'SILICONA':         'Silicona',
+  'PISA PULSO':       'Pisa pulso',
   'DIGITAL':          'Digital',
   'ACCESORIO':        'Accesorio',
   'SALTO':            'Salto',
@@ -322,6 +329,7 @@ const coronaColors = isCorona && color
       </span>
       {!isCorona && !isVidrios && fecha && <span class="cc-fecha-tag">+ Fecha</span>}
       {agotada && <span class="cc-agotada-tag">{agotada}</span>}
+      {oferta && <span class="cc-oferta-tag">Oferta</span>}
     </div>
     <div class="cc-header">
       {prefix && <span class="cc-prefix">{prefix}</span>}
@@ -517,6 +525,20 @@ const coronaColors = isCorona && color
     background: rgba(198, 40, 40, 0.08);
     border: 1px solid rgba(198, 40, 40, 0.25);
     padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+  }
+
+  .cc-oferta-tag {
+    margin-left: auto;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #7a4b00;
+    background: #fff3c4;
+    border: 1px solid #f2a900;
+    padding: 0.1rem 0.45rem;
     border-radius: 4px;
   }
 
