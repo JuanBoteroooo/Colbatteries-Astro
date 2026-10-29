@@ -100,19 +100,30 @@ const isFourColumn = fourColumnSlugs.includes(slug);
 
 const isWatch   = isPolemik || isXinjia;
 const products  = isCoronas ? coronasData : isVidrios ? vidriosData : isModulos ? modulosData : isInsumos ? insumosData : isExhibidores ? exhibidoresData : isHerramientas ? herramientasData : isJoyeria ? joyeriaData : isQuimicos ? quimicosData : isHorotec ? horotecData : isPilasRenata ? pilasRenataData : isGorrasP ? gorrasPolemikData : isGorrasL ? gorrasLisasData : isPulsoResina ? pulsoResinaData : isPulsoSilicona ? pulsoSiliconaData : isPulsoCuero ? pulsoCueroData : isPulsoMetalico ? pulsoMetalicosData : isPulsoPvc ? pulsoPvcData : isBatMaxell ? bateriasMaxellData : isPilasEcon ? pilasEconData : isBatRecargables ? bateriasRecargablesData : isCapacitores ? capacitoresData : isBatTianqiu ? batTianqiuData : isBatGp ? batGpData : isETA ? etaData : isRonda ? rondaData : isEpson ? epsonData : isSII ? siiData : isMiyota ? miyotaData : isISA ? isaData : isChinos ? chinosData : isPolemik ? polemikAll : isXinjia ? xinjiaData : [];
-// Pulsos (resina / silicona): size pills come from the data; special pills only when there are enough items
-const pulsoSizes = (m: string) =>
-  [...new Set((String(m ?? '').toUpperCase().match(/(\d+(?:\.\d+)?)\s*MM/g) || []).map((x) => `${parseFloat(x)}mm`))];
-const pulsoFilters = (list: any[]) => {
+// Pulsos (resina / silicona / cuero): size pills come from the data; special pills only when there are enough items
+const pulsoSizes = (m: string) => {
+  const t = String(m ?? '').toUpperCase();
+  const out = new Set<number>();
+  for (const r of t.matchAll(/(\d+)\s*MM\s+AL\s+(\d+)\s*MM/g)) for (let n = +r[1]; n <= +r[2]; n += 2) out.add(n);
+  for (const x of t.match(/(\d+(?:\.\d+)?)\s*MM/g) || []) out.add(parseFloat(x));
+  return [...out].sort((a, b) => a - b).map((n) => `${n}mm`);
+};
+const pulsoMaterialLabel: Record<string, string> = { CUERO: 'Cuero', NYLON: 'Nylon', LONA: 'Lona', 'SINTÉTICO': 'Sintético', EMPAQUE: 'Empaque', 'PISA PULSO': 'Pisa pulso', 'RESINA PU': 'Resina PU', SILICONA: 'Silicona' };
+const pulsoFilters = (list: any[], withMaterials = false) => {
   const counts: Record<string, number> = {};
   for (const x of list) for (const sz of pulsoSizes(x.medida)) counts[sz] = (counts[sz] ?? 0) + 1;
+  const tipos: Record<string, number> = {};
+  for (const x of list) tipos[x.tipo] = (tipos[x.tipo] ?? 0) + 1;
   return {
     sizePills: Object.entries(counts).filter(([, n]) => n >= 8).sort((a, b) => parseFloat(a[0]) - parseFloat(b[0])).map(([sz]) => sz),
-    pisa: list.filter((x) => x.tipo === 'PISA PULSO').length >= 2,
+    materials: withMaterials ? Object.entries(tipos).filter(([, n]) => n >= 2).sort((a, b) => b[1] - a[1]).map(([t]) => ({ token: `MAT-${t.replace(/\s+/g, '-')}`, label: pulsoMaterialLabel[t] ?? t })) : [],
+    pisa: !withMaterials && list.filter((x) => x.tipo === 'PISA PULSO').length >= 2,
     oferta: list.filter((x) => x.oferta).length >= 2,
   };
 };
-const pulsoFilterInfo = isPulsoResina || isPulsoSilicona ? pulsoFilters(products as any[]) : null;
+const pulsoChips = (sizes: string[]) =>
+  sizes.length > 3 ? [`${parseFloat(sizes[0])}–${sizes[sizes.length - 1].replace('mm', '')} mm`] : sizes.map((x) => x.replace('mm', ' mm'));
+const pulsoFilterInfo = isPulsoResina || isPulsoSilicona || isPulsoCuero ? pulsoFilters(products as any[], isPulsoCuero) : null;
 const foldText = (t: string) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 const pdfSlug   = isSII ? 'movimientos-epson' : slug === 'horotec' ? 'HOROTEC' : slug;
 
@@ -1434,6 +1445,7 @@ const catalogJsonLd = {
           </div>
           <div class="eta-tipo-bar" id="etaTipoBar">
             <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            {pulsoFilterInfo?.materials.map((m) => <button class="eta-tipo-pill" data-tipo={m.token}>{m.label}</button>)}
             {pulsoFilterInfo?.sizePills.map((sz) => <button class="eta-tipo-pill" data-tipo={sz}>{sz}</button>)}
             {pulsoFilterInfo?.pisa && <button class="eta-tipo-pill" data-tipo="PISA-PULSO">Pisa pulso</button>}
             {pulsoFilterInfo?.oferta && <button class="eta-tipo-pill" data-tipo="OFERTA">Oferta</button>}
@@ -1447,7 +1459,7 @@ const catalogJsonLd = {
             const sizes = pulsoSizes(p.medida);
             const tokens = [...sizes, ...(p.tipo === 'PISA PULSO' ? ['PISA-PULSO'] : []), ...(p.oferta ? ['OFERTA'] : [])].join(' ');
             const searchText = `${p.modelo} ${p.compat ?? ''} ${p.descripcion ?? ''} ${p.color ?? ''} ${p.medida ?? ''}`.toLowerCase();
-            const sizeChips = [...sizes.slice(0, 3).map((x) => x.replace('mm', ' mm')), ...(sizes.length > 3 ? [`+${sizes.length - 3}`] : [])];
+            const sizeChips = pulsoChips(sizes);
             return (
               <div
                 class="eta-card-wrapper"
@@ -1522,6 +1534,7 @@ const catalogJsonLd = {
           </div>
           <div class="eta-tipo-bar" id="etaTipoBar">
             <button class="eta-tipo-pill active" data-tipo="">Todas</button>
+            {pulsoFilterInfo?.materials.map((m) => <button class="eta-tipo-pill" data-tipo={m.token}>{m.label}</button>)}
             {pulsoFilterInfo?.sizePills.map((sz) => <button class="eta-tipo-pill" data-tipo={sz}>{sz}</button>)}
             {pulsoFilterInfo?.pisa && <button class="eta-tipo-pill" data-tipo="PISA-PULSO">Pisa pulso</button>}
             {pulsoFilterInfo?.oferta && <button class="eta-tipo-pill" data-tipo="OFERTA">Oferta</button>}
@@ -1535,7 +1548,7 @@ const catalogJsonLd = {
             const sizes = pulsoSizes(p.medida);
             const tokens = [...sizes, ...(p.tipo === 'PISA PULSO' ? ['PISA-PULSO'] : []), ...(p.oferta ? ['OFERTA'] : [])].join(' ');
             const searchText = `${p.modelo} ${p.compat ?? ''} ${p.descripcion ?? ''} ${p.color ?? ''} ${p.medida ?? ''}`.toLowerCase();
-            const sizeChips = [...sizes.slice(0, 3).map((x) => x.replace('mm', ' mm')), ...(sizes.length > 3 ? [`+${sizes.length - 3}`] : [])];
+            const sizeChips = pulsoChips(sizes);
             return (
               <div
                 class="eta-card-wrapper"
@@ -2389,13 +2402,9 @@ const catalogJsonLd = {
           </div>
           <div class="eta-tipo-bar" id="etaTipoBar">
             <button class="eta-tipo-pill active" data-tipo="">Todas</button>
-            <button class="eta-tipo-pill" data-tipo="12mm">12mm</button>
-            <button class="eta-tipo-pill" data-tipo="14mm">14mm</button>
-            <button class="eta-tipo-pill" data-tipo="16mm">16mm</button>
-            <button class="eta-tipo-pill" data-tipo="18mm">18mm</button>
-            <button class="eta-tipo-pill" data-tipo="20mm">20mm</button>
-            <button class="eta-tipo-pill" data-tipo="22mm">22mm</button>
-            <button class="eta-tipo-pill" data-tipo="24mm">24mm</button>
+            {pulsoFilterInfo?.materials.map((m) => <button class="eta-tipo-pill" data-tipo={m.token}>{m.label}</button>)}
+            {pulsoFilterInfo?.sizePills.map((sz) => <button class="eta-tipo-pill" data-tipo={sz}>{sz}</button>)}
+            {pulsoFilterInfo?.oferta && <button class="eta-tipo-pill" data-tipo="OFERTA">Oferta</button>}
           </div>
           <span class="eta-results-label"><span id="etaCount">{products.length}</span> REFERENCIAS</span>
         </div>
@@ -2403,24 +2412,25 @@ const catalogJsonLd = {
         <!-- Grid -->
         <div class="eta-grid eta-grid--4col" id="etaGrid">
           {(products as any[]).map((p) => {
-            const safe = (p.modelo as string)
-              .replace(/\//g, '_').replace(/ /g, '-').replace(/#/g, 'num')
-              .replace(/[<>:"|?*\\()\[\]]/g, '_').slice(0, 80);
-            const sizeMatchesCu = [...new Set((p.modelo as string).match(/(?<!\d)(1[2-9]|2[0-9])(?!\d)/g) || [])];
-            const tipoCuero = sizeMatchesCu.length > 0 ? sizeMatchesCu.map(s => `${s}mm`).join(' ') : (p.medida as string ?? '');
+            const sizes = pulsoSizes(p.medida);
+            const tokens = [...sizes, `MAT-${String(p.tipo).replace(/\s+/g, '-')}`, ...(p.oferta ? ['OFERTA'] : [])].join(' ');
+            const searchText = `${p.modelo} ${p.compat ?? ''} ${p.descripcion ?? ''} ${p.color ?? ''} ${p.medida ?? ''} ${(p.detalle ?? []).join(' ')}`.toLowerCase();
             return (
               <div
                 class="eta-card-wrapper"
-                data-tipo={tipoCuero}
-                data-modelo={(p.modelo as string).toLowerCase()}
+                data-tipo={tokens}
+                data-modelo={`${searchText} ${foldText(searchText)}`}
                 data-medida={p.medida}
               >
                 <CatalogCard
-                  imagenSrc={`/images/productos/pulso-cuero/${safe}.jpg`}
+                  imagenSrc={p.foto as string}
                   imagenCatalogoSrc={p.img as string}
                   titulo={p.modelo as string}
                   detalles={{}}
-                  tipo={p.medida}
+                  tipo={p.tipo}
+                  subtitulo={p.compat}
+                  chips={pulsoChips(sizes)}
+                  oferta={!!p.oferta}
                   fullTitle={true}
                 />
               </div>
